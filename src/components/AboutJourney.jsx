@@ -214,13 +214,13 @@ export default function AboutJourney({ onOpenConnect }) {
             <div className="rounded-2xl bg-[#1C1C21] text-[#EFEFEF] border border-[#1C1C21] p-6 sm:p-7 shadow-md">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-[#EFEFEF]/12">
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 shrink-0 rounded-xl border border-[#EFEFEF]/15 bg-[#EFEFEF] p-1 overflow-hidden">
+                  <div className="w-16 h-16 shrink-0 rounded-xl border border-[#EFEFEF]/15 bg-[#EFEFEF] p-1.5 overflow-hidden flex items-center justify-center">
                     <SmartImage
                       src={coachProfile.dhwajamLogo}
                       alt={`${coachProfile.centreName} logo`}
-                      aspectClass="aspect-square"
+                      fit="contain"
                       objectPosition="object-center"
-                      className="rounded-lg"
+                      className="rounded-lg bg-transparent"
                       label="Logo"
                     />
                   </div>
@@ -304,8 +304,7 @@ export default function AboutJourney({ onOpenConnect }) {
                 <SmartImage
                   src={coachProfile.trackImage}
                   alt="Lomada Raju competing on the athletics track in Bib 11"
-                  aspectClass="aspect-[3/4]"
-                  objectPosition="object-top"
+                  fit="contain"
                   className="rounded-xl"
                   label="Track Era • Bib 11"
                 />

@@ -704,7 +704,9 @@ export const podcasts = [
     channel: "SumanTV",
     durationLabel: "20 min 18 sec",
     durationBadge: "20:18",
-    youtubeUrl: "[PASTE_SUMANTV_YOUTUBE_URL_HERE]",
+    youtubeUrl: "https://www.youtube.com/watch?v=NW-LeV7rHco",
+    videoId: "NW-LeV7rHco",
+    thumbnail: "/images/podcast-sumantv.png",
     fallbackImage: "/images/hero-national-excellence.jpg",
     description:
       "In this conversation with SumanTV, I share why daily sweat and physical discipline are the true foundation of health, and what it takes to keep world-class athletes sharp and injury-free.",
@@ -716,7 +718,9 @@ export const podcasts = [
     channel: "Popcorn Media",
     durationLabel: "1 hr 19 min",
     durationBadge: "1:19:11",
-    youtubeUrl: "[PASTE_POPCORN_MEDIA_YOUTUBE_URL_HERE]",
+    youtubeUrl: "https://www.youtube.com/watch?v=e8yMBh4ntCw",
+    videoId: "e8yMBh4ntCw",
+    thumbnail: "/images/podcast-popcorn.png",
     fallbackImage: "/images/02-about-desk-portrait.jpg",
     description:
       "A long, heartfelt sit-down interview where I open up about growing up in Kadapa district, winning national athletics gold medals, and building my career in strength and conditioning.",

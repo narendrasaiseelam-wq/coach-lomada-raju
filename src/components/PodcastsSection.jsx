@@ -11,22 +11,19 @@ function getYouTubeId(url) {
   return match ? match[1] : null;
 }
 
-function PodcastThumbnail({ videoId, fallbackImage, title }) {
+function PodcastThumbnail({ thumbnail, videoId, fallbackImage, title }) {
   const [imgFailed, setImgFailed] = useState(false);
 
-  const src =
-    videoId && !imgFailed
-      ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
-      : fallbackImage;
+  const src = !imgFailed
+    ? thumbnail || (videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : fallbackImage)
+    : fallbackImage;
 
   return (
     <img
       src={src}
       alt={title}
       onError={() => setImgFailed(true)}
-      className={`w-full h-full object-cover ${
-        videoId && !imgFailed ? "object-center" : "object-top"
-      } transition-transform duration-700 ease-out group-hover:scale-[1.03]`}
+      className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.03]"
     />
   );
 }
@@ -47,7 +44,9 @@ export default function PodcastsSection() {
     };
   }, [activePodcast]);
 
-  const activeVideoId = activePodcast ? getYouTubeId(activePodcast.youtubeUrl) : null;
+  const activeVideoId = activePodcast
+    ? activePodcast.videoId || getYouTubeId(activePodcast.youtubeUrl)
+    : null;
 
   return (
     <section
@@ -82,7 +81,7 @@ export default function PodcastsSection() {
         {/* 2-Column Editorial Podcast Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {podcasts.map((podcast, idx) => {
-            const videoId = getYouTubeId(podcast.youtubeUrl);
+            const videoId = podcast.videoId || getYouTubeId(podcast.youtubeUrl);
             const hasValidUrl = Boolean(videoId);
 
             return (
@@ -101,6 +100,7 @@ export default function PodcastsSection() {
                     className="relative aspect-video bg-[#1C1C21] overflow-hidden cursor-pointer border-b border-[#1C1C21]/12"
                   >
                     <PodcastThumbnail
+                      thumbnail={podcast.thumbnail}
                       videoId={videoId}
                       fallbackImage={podcast.fallbackImage}
                       title={podcast.title}
@@ -223,7 +223,7 @@ export default function PodcastsSection() {
               <div className="aspect-video bg-[#141418] flex items-center justify-center">
                 {activeVideoId ? (
                   <iframe
-                    src={`https://www.youtube.com/embed/${activeVideoId}?autoplay=1&rel=0`}
+                    src={`https://www.youtube-nocookie.com/embed/${activeVideoId}?autoplay=1&rel=0`}
                     title={activePodcast.title}
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen

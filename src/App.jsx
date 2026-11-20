@@ -7,6 +7,7 @@ import AboutJourney from "./components/AboutJourney";
 import CoachingInteractive from "./components/CoachingInteractive";
 import CareerTimeline from "./components/CareerTimeline";
 import GalleryLightbox from "./components/GalleryLightbox";
+import PodcastsSection from "./components/PodcastsSection";
 import EducationHonors from "./components/EducationHonors";
 import FooterConnect from "./components/FooterConnect";
 import ConnectModal from "./components/ConnectModal";
@@ -32,6 +33,7 @@ export default function App() {
         <CoachingInteractive onOpenConnect={handleOpenConnect} />
         <CareerTimeline />
         <GalleryLightbox />
+        <PodcastsSection />
         <EducationHonors />
       </main>
 

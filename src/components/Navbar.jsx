@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { id: "coaching", label: "COACHING" },
   { id: "career", label: "CAREER" },
   { id: "gallery", label: "GALLERY" },
+  { id: "podcasts", label: "PODCASTS" },
   { id: "education", label: "EDUCATION" },
   { id: "contact", label: "CONTACT" },
 ];
@@ -70,7 +71,7 @@ export default function Navbar({ onOpenConnect }) {
         </a>
 
         {/* Center: Desktop Links */}
-        <nav className="hidden lg:flex items-center gap-7" aria-label="Primary Navigation">
+        <nav className="hidden xl:flex items-center gap-5" aria-label="Primary Navigation">
           {NAV_LINKS.map((link) => {
             const isActive = activeSection === link.id;
             return (
@@ -111,7 +112,7 @@ export default function Navbar({ onOpenConnect }) {
           <button
             type="button"
             onClick={() => setMobileOpen((prev) => !prev)}
-            className="lg:hidden p-2 border border-[#1C1C21]/15 text-[#1C1C21] hover:bg-[#E2E2E5] transition-colors cursor-pointer"
+            className="xl:hidden p-2 border border-[#1C1C21]/15 text-[#1C1C21] hover:bg-[#E2E2E5] transition-colors cursor-pointer"
             aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={mobileOpen}
           >
@@ -128,7 +129,7 @@ export default function Navbar({ onOpenConnect }) {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25, ease: "easeOut" }}
-            className="lg:hidden overflow-hidden bg-[#EFEFEF] border-b border-[#1C1C21]/15"
+            className="xl:hidden overflow-hidden bg-[#EFEFEF] border-b border-[#1C1C21]/15"
           >
             <div className="px-4 py-4 flex flex-col divide-y divide-[#1C1C21]/10">
               {NAV_LINKS.map((link) => {

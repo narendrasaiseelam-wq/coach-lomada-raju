@@ -695,3 +695,30 @@ export const galleryItems = [
       "Me on the athletics track wearing Bib #11 during my 13 years of competitive running. Winning 43 state and national medals gave me the real-world experience I share with my athletes today.",
   },
 ];
+
+export const podcasts = [
+  {
+    id: "sumantv-interview",
+    number: "01",
+    title: "SumanTV Exclusive: Discipline, Fitness & Champion Conditioning",
+    channel: "SumanTV",
+    durationLabel: "20 min 18 sec",
+    durationBadge: "20:18",
+    youtubeUrl: "[PASTE_SUMANTV_YOUTUBE_URL_HERE]",
+    fallbackImage: "/images/hero-national-excellence.jpg",
+    description:
+      "In this conversation with SumanTV, I share why daily sweat and physical discipline are the true foundation of health, and what it takes to keep world-class athletes sharp and injury-free.",
+  },
+  {
+    id: "popcorn-media-podcast",
+    number: "02",
+    title: "Popcorn Media Podcast: My Full Journey from Chilamkuru to National Gold",
+    channel: "Popcorn Media",
+    durationLabel: "1 hr 19 min",
+    durationBadge: "1:19:11",
+    youtubeUrl: "[PASTE_POPCORN_MEDIA_YOUTUBE_URL_HERE]",
+    fallbackImage: "/images/02-about-desk-portrait.jpg",
+    description:
+      "A long, heartfelt sit-down interview where I open up about growing up in Kadapa district, winning national athletics gold medals, and building my career in strength and conditioning.",
+  },
+];

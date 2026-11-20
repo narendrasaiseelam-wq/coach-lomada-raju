@@ -1,20 +1,14 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Award, ChevronRight, Trophy, Users } from "lucide-react";
-import {
-  championsTrained,
-  notableRoster,
-  sportsAndTeams,
-} from "../data/portfolioData";
+import { championsTrained, notableRoster } from "../data/portfolioData";
+import SmartImage from "./SmartImage";
 
 export default function ChampionsSpotlight() {
   const [selectedId, setSelectedId] = useState(championsTrained[0].id);
-  const [selectedSport, setSelectedSport] = useState(sportsAndTeams[0].sport);
 
   const activeChampion =
     championsTrained.find((c) => c.id === selectedId) || championsTrained[0];
-  const activeSport =
-    sportsAndTeams.find((s) => s.sport === selectedSport) || sportsAndTeams[0];
 
   return (
     <section
@@ -38,15 +32,15 @@ export default function ChampionsSpotlight() {
               </p>
             </div>
             <h2 className="font-editorial font-extrabold uppercase text-4xl sm:text-5xl md:text-6xl tracking-[-0.01em] leading-[0.94] text-[#EFEFEF]">
-              CHAMPIONS CONDITIONED
+              CHAMPIONS I HAVE WORKED WITH
             </h2>
           </div>
           <p className="text-sm text-[#E2E2E5]/75 max-w-md leading-relaxed">
-            Select an athlete to read how individualized strength, landing mechanics, and match-durability programming supported their podium journeys.
+            Click on any athlete to see their achievements and my personal memory of helping them prepare for major tournaments.
           </p>
         </motion.div>
 
-        {/* Interactive Master-Detail Card */}
+        {/* Interactive Master-Detail Card with Real Champion Photos */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           {/* Left Master List */}
           <div className="lg:col-span-5 flex flex-col gap-2.5">
@@ -57,27 +51,27 @@ export default function ChampionsSpotlight() {
                   key={champion.id}
                   type="button"
                   onClick={() => setSelectedId(champion.id)}
-                  className={`w-full text-left px-5 py-4 rounded-2xl flex items-center justify-between gap-4 border transition-all cursor-pointer ${
+                  className={`w-full text-left px-4 py-3.5 rounded-2xl flex items-center justify-between gap-3 border transition-all cursor-pointer ${
                     isSelected
-                      ? "bg-[#EFEFEF]/[0.09] border-[#9E2A2B] shadow-md"
+                      ? "bg-[#EFEFEF]/[0.1] border-[#9E2A2B] shadow-md"
                       : "bg-[#EFEFEF]/[0.02] border-[#EFEFEF]/10 hover:bg-[#EFEFEF]/[0.05] hover:border-[#EFEFEF]/25"
                   }`}
                 >
-                  <div className="flex items-start gap-3.5">
-                    <span className="font-editorial font-bold text-lg text-[#A67C52] tabular-nums pt-0.5">
+                  <div className="flex items-start gap-3">
+                    <span className="font-editorial font-bold text-base text-[#A67C52] tabular-nums pt-0.5">
                       0{index + 1}
                     </span>
                     <div>
-                      <div className="flex flex-wrap items-center gap-2 mb-1">
-                        <h3 className="font-editorial font-bold uppercase text-2xl tracking-wide text-[#EFEFEF]">
+                      <div className="flex flex-wrap items-center gap-2 mb-0.5">
+                        <h3 className="font-editorial font-bold uppercase text-xl sm:text-2xl tracking-wide text-[#EFEFEF]">
                           {champion.name}
                         </h3>
-                        <span className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-[0.14em] px-2.5 py-0.5 rounded-full border border-[#A67C52]/50 bg-[#A67C52]/10 text-[#A67C52]">
+                        <span className="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-[0.12em] px-2 py-0.5 rounded-full border border-[#A67C52]/50 bg-[#A67C52]/10 text-[#A67C52]">
                           <Trophy className="w-2.5 h-2.5" />
                           {champion.badge}
                         </span>
                       </div>
-                      <p className="text-xs text-[#E2E2E5]/70">
+                      <p className="text-xs text-[#E2E2E5]/70 line-clamp-1">
                         {champion.achievement}
                       </p>
                     </div>
@@ -92,8 +86,8 @@ export default function ChampionsSpotlight() {
             })}
           </div>
 
-          {/* Right Detail Panel */}
-          <div className="lg:col-span-7 rounded-2xl border border-[#EFEFEF]/12 bg-[#EFEFEF]/[0.04] p-7 sm:p-10 lg:p-12 flex flex-col justify-center min-h-[320px]">
+          {/* Right Detail Panel with Champion Photo + Complete Achievements */}
+          <div className="lg:col-span-7 rounded-2xl border border-[#EFEFEF]/12 bg-[#EFEFEF]/[0.04] p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeChampion.id}
@@ -101,29 +95,46 @@ export default function ChampionsSpotlight() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -8 }}
                 transition={{ duration: 0.25, ease: "easeOut" }}
+                className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center"
               >
-                <div className="flex flex-wrap items-center gap-2.5 mb-5">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-[#9E2A2B] text-[#EFEFEF] px-3.5 py-1 text-[11px] font-bold uppercase tracking-[0.16em]">
-                    <Trophy className="w-3.5 h-3.5" />
-                    {activeChampion.badge}
-                  </span>
-                  <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#A67C52] rounded-full border border-[#A67C52]/40 px-3.5 py-1">
-                    {activeChampion.category}
-                  </span>
+                {/* Champion Photograph */}
+                <div className="md:col-span-5">
+                  <div className="rounded-xl border border-[#EFEFEF]/15 bg-[#1C1C21] p-1.5 overflow-hidden">
+                    <SmartImage
+                      src={activeChampion.image}
+                      alt={`${activeChampion.name} with Coach Lomada Raju`}
+                      fit="contain"
+                      className="rounded-lg"
+                      label={activeChampion.name}
+                    />
+                  </div>
                 </div>
 
-                <h3 className="font-editorial font-extrabold uppercase text-4xl sm:text-5xl text-[#EFEFEF] tracking-tight leading-none mb-2">
-                  {activeChampion.name}
-                </h3>
+                {/* Champion Story & Complete Achievement Claims */}
+                <div className="md:col-span-7">
+                  <div className="flex flex-wrap items-center gap-2 mb-4">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#9E2A2B] text-[#EFEFEF] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em]">
+                      <Trophy className="w-3 h-3" />
+                      {activeChampion.badge}
+                    </span>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#A67C52] rounded-full border border-[#A67C52]/40 px-3 py-1">
+                      {activeChampion.category}
+                    </span>
+                  </div>
 
-                <p className="text-sm sm:text-base font-semibold text-[#A67C52] mb-6">
-                  {activeChampion.achievement}
-                </p>
+                  <h3 className="font-editorial font-extrabold uppercase text-3xl sm:text-4xl text-[#EFEFEF] tracking-tight leading-none mb-2">
+                    {activeChampion.name}
+                  </h3>
 
-                <div className="border-l-2 border-[#9E2A2B] pl-5">
-                  <p className="text-base sm:text-lg text-[#E2E2E5]/90 leading-relaxed">
-                    {activeChampion.story}
+                  <p className="text-sm font-semibold text-[#A67C52] mb-5 leading-snug">
+                    {activeChampion.achievement}
                   </p>
+
+                  <div className="border-l-2 border-[#9E2A2B] pl-4">
+                    <p className="text-sm sm:text-base text-[#E2E2E5]/90 leading-relaxed">
+                      {activeChampion.story}
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -131,11 +142,11 @@ export default function ChampionsSpotlight() {
         </div>
 
         {/* Notable Roster Strip */}
-        <div className="pt-2 pb-4 border-b border-[#EFEFEF]/12">
+        <div className="pt-2">
           <div className="flex items-center gap-2.5 mb-4">
             <Users className="w-4 h-4 text-[#A67C52]" />
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#A67C52]">
-              Notable Athletes &amp; International Competitors Coached
+              Notable International &amp; National Athletes Conditioned
             </p>
           </div>
           <div className="flex flex-wrap gap-2.5">
@@ -148,68 +159,6 @@ export default function ChampionsSpotlight() {
                 {athlete}
               </span>
             ))}
-          </div>
-        </div>
-
-        {/* Sports & Teams — Clean Horizontal Pill Tabs */}
-        <div>
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#A67C52]">
-              National Squads, Franchises &amp; Multi-Sport Experience
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {sportsAndTeams.map((item) => {
-                const isSelected = item.sport === activeSport.sport;
-                return (
-                  <button
-                    key={item.sport}
-                    type="button"
-                    onClick={() => setSelectedSport(item.sport)}
-                    className={`relative px-4 py-2 rounded-full text-xs font-bold uppercase tracking-[0.12em] transition-colors cursor-pointer ${
-                      isSelected
-                        ? "text-[#1C1C21]"
-                        : "text-[#E2E2E5]/75 hover:text-[#EFEFEF] border border-[#EFEFEF]/15"
-                    }`}
-                  >
-                    {isSelected && (
-                      <motion.span
-                        layoutId="sport-tab-pill"
-                        transition={{ type: "spring", stiffness: 380, damping: 32 }}
-                        className="absolute inset-0 rounded-full bg-[#EFEFEF]"
-                      />
-                    )}
-                    <span className="relative z-10">{item.sport}</span>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="rounded-2xl border border-[#EFEFEF]/12 bg-[#EFEFEF]/[0.04] p-6 sm:p-7">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeSport.sport}
-                initial={{ opacity: 0, y: 8 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -6 }}
-                transition={{ duration: 0.2 }}
-                className="grid grid-cols-1 md:grid-cols-12 gap-4 items-center"
-              >
-                <div className="md:col-span-5">
-                  <h4 className="font-editorial font-bold uppercase text-3xl text-[#EFEFEF] tracking-wide mb-1">
-                    {activeSport.sport}
-                  </h4>
-                  <p className="text-xs sm:text-sm font-semibold text-[#A67C52]">
-                    {activeSport.level}
-                  </p>
-                </div>
-                <div className="md:col-span-7 md:border-l md:border-[#EFEFEF]/12 md:pl-6">
-                  <p className="text-sm text-[#E2E2E5]/85 leading-relaxed">
-                    {activeSport.events}
-                  </p>
-                </div>
-              </motion.div>
-            </AnimatePresence>
           </div>
         </div>
       </div>

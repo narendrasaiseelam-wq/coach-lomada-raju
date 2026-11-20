@@ -1,21 +1,18 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Award, BookOpen, ChevronDown, HelpCircle, ShieldCheck } from "lucide-react";
+import { Award, BookOpen, ShieldCheck } from "lucide-react";
 import {
   educationAndCertifications,
-  faqs,
   honorsAndAwards,
 } from "../data/portfolioData";
 
-const TABS = [
+const CREDENTIAL_TABS = [
   { id: "degrees", label: "Academic Degrees", icon: BookOpen },
   { id: "certifications", label: "SAI & NIS Certifications", icon: ShieldCheck },
-  { id: "honors", label: "State Honours & Awards", icon: Award },
 ];
 
 export default function EducationHonors() {
   const [activeTab, setActiveTab] = useState("degrees");
-  const [openFaqIdx, setOpenFaqIdx] = useState(0);
 
   const degrees = educationAndCertifications.filter((e) => e.category === "Degree");
   const certifications = educationAndCertifications.filter(
@@ -47,9 +44,9 @@ export default function EducationHonors() {
           </h2>
         </motion.div>
 
-        {/* 2-Column Layout: Tabbed Credentials (Left) | Interactive FAQ (Right) */}
+        {/* 2-Column Layout: Degrees & Certifications (Left) | State Honours & Awards (Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-          {/* Left Column: Clean Tabbed Credentials Card */}
+          {/* Left Column: Academic Degrees & SAI/NIS Certifications */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -59,7 +56,7 @@ export default function EducationHonors() {
           >
             {/* Interactive Tabs */}
             <div className="flex flex-wrap gap-2 rounded-2xl border border-[#1C1C21]/12 bg-[#E2E2E5]/75 p-1.5 shadow-xs">
-              {TABS.map((tab) => {
+              {CREDENTIAL_TABS.map((tab) => {
                 const isSelected = activeTab === tab.id;
                 const Icon = tab.icon;
                 return (
@@ -67,7 +64,7 @@ export default function EducationHonors() {
                     key={tab.id}
                     type="button"
                     onClick={() => setActiveTab(tab.id)}
-                    className={`relative flex-1 min-w-[160px] px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-[0.12em] flex items-center justify-center gap-2 transition-colors cursor-pointer ${
+                    className={`relative flex-1 min-w-[180px] px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-[0.12em] flex items-center justify-center gap-2 transition-colors cursor-pointer ${
                       isSelected ? "text-[#EFEFEF]" : "text-[#4A4A52] hover:text-[#1C1C21]"
                     }`}
                   >
@@ -147,94 +144,42 @@ export default function EducationHonors() {
                     ))}
                   </motion.div>
                 )}
-
-                {activeTab === "honors" && (
-                  <motion.div
-                    key="honors"
-                    initial={{ opacity: 0, y: 8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -6 }}
-                    transition={{ duration: 0.22 }}
-                    className="space-y-3 p-2"
-                  >
-                    {honorsAndAwards.map((honor) => (
-                      <div
-                        key={honor.title}
-                        className="rounded-xl bg-[#1C1C21] text-[#EFEFEF] p-5 border-l-4 border-l-[#9E2A2B] flex flex-col sm:flex-row sm:items-center justify-between gap-2 shadow-sm"
-                      >
-                        <div>
-                          <h3 className="font-semibold text-base text-[#EFEFEF] leading-snug">
-                            {honor.title}
-                          </h3>
-                          <p className="text-xs text-[#E2E2E5]/70 mt-0.5">
-                            {honor.venue}
-                          </p>
-                        </div>
-                        <span className="text-xs font-bold uppercase tracking-[0.16em] text-[#A67C52] shrink-0">
-                          {honor.year}
-                        </span>
-                      </div>
-                    ))}
-                  </motion.div>
-                )}
               </AnimatePresence>
             </div>
           </motion.div>
 
-          {/* Right Column: Interactive FAQ Accordion */}
+          {/* Right Column: State Honours & Awards */}
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.15 }}
             transition={{ duration: 0.45, delay: 0.08, ease: "easeOut" }}
-            className="lg:col-span-5"
+            className="lg:col-span-5 rounded-2xl bg-[#1C1C21] text-[#EFEFEF] p-6 sm:p-8 shadow-md"
           >
-            <div className="flex items-center gap-2.5 mb-5">
-              <HelpCircle className="w-4 h-4 text-[#9E2A2B]" />
-              <h3 className="font-editorial font-bold uppercase text-2xl tracking-wide text-[#1C1C21]">
-                Questions Before You Message Coach Raju
+            <div className="flex items-center gap-2.5 pb-4 mb-6 border-b border-[#EFEFEF]/15">
+              <Award className="w-5 h-5 text-[#A67C52]" />
+              <h3 className="font-editorial font-bold uppercase text-2xl tracking-wide text-[#EFEFEF]">
+                State Honours &amp; Awards
               </h3>
             </div>
 
-            <div className="rounded-2xl border border-[#1C1C21]/12 bg-[#E2E2E5]/55 divide-y divide-[#1C1C21]/10 shadow-sm overflow-hidden">
-              {faqs.map((item, idx) => {
-                const isOpen = openFaqIdx === idx;
-                return (
-                  <div key={item.q}>
-                    <button
-                      type="button"
-                      onClick={() => setOpenFaqIdx(isOpen ? null : idx)}
-                      className="w-full text-left p-5 flex items-center justify-between gap-4 hover:bg-[#E2E2E5] transition-colors cursor-pointer"
-                      aria-expanded={isOpen}
-                    >
-                      <span className="font-semibold text-sm sm:text-base text-[#1C1C21]">
-                        {item.q}
-                      </span>
-                      <ChevronDown
-                        className={`w-4 h-4 shrink-0 text-[#9E2A2B] transition-transform duration-200 ${
-                          isOpen ? "rotate-180" : ""
-                        }`}
-                      />
-                    </button>
-
-                    <AnimatePresence initial={false}>
-                      {isOpen && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.22, ease: "easeOut" }}
-                          className="overflow-hidden"
-                        >
-                          <div className="px-5 pb-5 pt-0 text-sm text-[#4A4A52] leading-relaxed">
-                            {item.a}
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                );
-              })}
+            <div className="space-y-5">
+              {honorsAndAwards.map((honor) => (
+                <div
+                  key={honor.title}
+                  className="border-l-2 border-[#9E2A2B] pl-4"
+                >
+                  <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#A67C52] block mb-1">
+                    {honor.year}
+                  </span>
+                  <h4 className="font-semibold text-base text-[#EFEFEF] leading-snug">
+                    {honor.title}
+                  </h4>
+                  <p className="text-xs text-[#E2E2E5]/70 mt-0.5">
+                    {honor.venue}
+                  </p>
+                </div>
+              ))}
             </div>
           </motion.div>
         </div>

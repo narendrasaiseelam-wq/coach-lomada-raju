@@ -13,9 +13,9 @@ import ConnectModal from "./components/ConnectModal";
 
 export default function App() {
   const [connectOpen, setConnectOpen] = useState(false);
-  const [connectAudience, setConnectAudience] = useState("athletes");
+  const [connectAudience, setConnectAudience] = useState("athlete");
 
-  const handleOpenConnect = (audienceId = "athletes") => {
+  const handleOpenConnect = (audienceId = "athlete") => {
     setConnectAudience(audienceId);
     setConnectOpen(true);
   };
@@ -28,8 +28,8 @@ export default function App() {
         <Hero onOpenConnect={handleOpenConnect} />
         <ArenaMarquee />
         <ChampionsSpotlight />
-        <AboutJourney onOpenConnect={handleOpenConnect} />
-        <CoachingInteractive />
+        <AboutJourney />
+        <CoachingInteractive onOpenConnect={handleOpenConnect} />
         <CareerTimeline />
         <GalleryLightbox />
         <EducationHonors />

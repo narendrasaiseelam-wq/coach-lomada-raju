@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import {
+  ArrowLeft,
+  ArrowRight,
   ArrowUpRight,
   Award,
   BookOpen,
@@ -9,66 +11,171 @@ import {
   MapPin,
   Phone,
   Quote,
+  ShieldCheck,
 } from "lucide-react";
 import { coachProfile } from "../data/portfolioData";
 import SmartImage from "./SmartImage";
 
-const LIFE_CHAPTERS = [
+const BOOK_CHAPTERS = [
   {
-    id: "roots",
+    id: "chapter-1",
     number: "01",
-    tabLabel: "Roots & Discipline",
-    subtitle: "Chilamkuru to Hyderabad",
+    tabLabel: "Chapter 01",
+    title: "My Roots in Chilamkuru",
+    subtitle: "1999 – 2009 • YSR Kadapa District",
     icon: Compass,
-    headline: "Son of Kadapa, State Rank 1 Scholar",
-    summary:
-      "Born to Ankalaiah and Ankalamma in Bhadrampalle / Chilamkuru (YSR Kadapa District), Lomada Raju learned early that discipline is built from the ground up.",
-    story:
-      "Moving to Hyderabad for his Bachelor of Arts at Railway Degree College (2006–2009), he balanced rigorous athletics training with academics—going on to secure State First Rank in his B.P.Ed at Govt College, Osmania University (2010–2011) and completing his M.P.Ed in 2013.",
+    quote:
+      "Before there were synthetic tracks or stopwatches, there were harvested farm fields at dawn.",
+    paragraphs: [
+      "I was born to Ankalaiah and Ankalamma in Bhadrampalle / Chilamkuru, a small village in YSR Kadapa District. My parents worked hard as daily labourers, and I helped them before school.",
+      "When I realized sports could change my life, I woke up before sunrise, levelled a harvested farm field into my own running track, and ran every single morning until I earned a sports-quota seat at Railway Degree College in Hyderabad.",
+    ],
     highlights: [
       { label: "Hometown", value: "Bhadrampalle / Chilamkuru, YSR Kadapa" },
-      { label: "Academic Honour", value: "State First Rank — B.P.Ed (Osmania Univ.)" },
+      { label: "Breakthrough", value: "Sports-Quota Seat, Railway Degree College" },
+    ],
+    photos: [
+      {
+        src: "/images/press-2006-national-record.jpg",
+        fit: "cover",
+        objectPosition: "object-top",
+        eyebrow: "EARLY PRESS ARCHIVE",
+        caption:
+          "Newspaper coverage chronicling my rise from Chilamkuru (YSR Kadapa) to Railway Degree College & SAI Hyderabad.",
+        alt: "Early newspaper press archive of Lomada Raju",
+      },
+      {
+        src: "/images/press-eenadu-2023.jpg",
+        fit: "cover",
+        objectPosition: "object-top",
+        eyebrow: "EENADU FEATURE • JULY 2023",
+        caption:
+          "Sharing how dawn runs on levelled village farm fields laid the foundation for my national athletics career.",
+        alt: "Eenadu July 2023 feature on Lomada Raju",
+      },
     ],
   },
   {
-    id: "track",
+    id: "chapter-2",
     number: "02",
-    tabLabel: "13 Years on the Track",
-    subtitle: "1999 — 2013",
+    tabLabel: "Chapter 02",
+    title: "13 Years on the Track",
+    subtitle: "1999 – 2013 • 400m & 4×400m Relay",
     icon: Flame,
-    headline: "43 Medals & a National Meet Record",
-    summary:
-      "Before standing courtside with a stopwatch, Coach Raju spent over thirteen years on the athletics track chasing tenths of a second in the 400m and 4×400m relay.",
-    story:
-      "Across 1999–2013, he won 43 total track medals—14 National (4 Gold, 5 Silver, 5 Bronze) and 29 State (17 Gold, 10 Silver, 2 Bronze). At the 2006 Junior Federation Cup in Chennai, his squad set the National Meet Record of 3:16.43 in the 4×400m relay.",
+    quote:
+      "Those years taught me what real discipline, fatigue, and recovery feel like inside an athlete's body.",
+    paragraphs: [
+      "Before becoming a coach, I lived the life of an athlete for more than thirteen years. Competing in the 400m and 4×400m relay, I won 14 National medals and 29 State medals—and in 2006, our team set the National Meet Record of 3:16.43 at the Junior Federation Cup in Chennai.",
+      "Every tenth of a second I chased on the track still guides how I train athletes today—because I know firsthand how hard the body works under pressure.",
+    ],
     highlights: [
       { label: "National Meet Record", value: "3:16.43 (4×400m Relay, Chennai 2006)" },
-      { label: "Career Medal Haul", value: "14 National & 29 State Medals" },
+      { label: "Medals Won", value: "14 National & 29 State Track Medals" },
+    ],
+    photos: [
+      {
+        src: "/images/03-track-bib-11.jpg",
+        fit: "cover",
+        objectPosition: "object-top",
+        eyebrow: "1999 — 2013 TRACK ERA",
+        caption:
+          "Competing in the 400m & 4×400m relay — 43 National & State medals and 3:16.43 National Meet Record (2006).",
+        alt: "Lomada Raju competing on the athletics track in Bib 11",
+      },
+      {
+        src: "/images/about-assam-inauguration.jpg",
+        fit: "cover",
+        objectPosition: "object-top",
+        eyebrow: "NATIONAL CENTER OF EXCELLENCE",
+        caption:
+          "Representing Indian badminton sports science at the National Center of Excellence inauguration.",
+        alt: "Lomada Raju at the National Center of Excellence inauguration",
+      },
     ],
   },
   {
-    id: "science",
+    id: "chapter-3",
     number: "03",
-    tabLabel: "Science + Yoga Philosophy",
-    subtitle: "2010 — Present",
-    icon: BookOpen,
-    headline: "Modern Sports Science Meets Ancient Yoga",
-    summary:
-      "Transitioning from competitive track to coaching Indian Railways teams in 2010, he fused evidence-based strength & conditioning with breath, mobility, and longevity.",
-    story:
-      "Blending SAI & NIS Patiala strength conditioning certifications with an M.Sc. in Yoga (Annamalai University) and ongoing Ph.D. research in Physical Education, he has mentored Olympic and Paralympic medallists with the Indian National Badminton Team and founded Dhwajam Strength & Conditioning Centre in Hyderabad.",
+    tabLabel: "Chapter 03",
+    title: "My Education & Sports Science",
+    subtitle: "Degrees, SAI, NIS Patiala & Yoga",
+    icon: ShieldCheck,
+    quote:
+      "I wanted my coaching to be backed by real science, not guesswork.",
+    paragraphs: [
+      "I topped the state with Rank 1 in my B.P.Ed at Osmania University and completed my M.P.Ed in Nagpur. To bring the best methods to my athletes, I earned Strength & Conditioning certifications from the Sports Authority of India (SAI) and NIS Patiala.",
+      "I also completed an M.Sc. in Yoga at Annamalai University to help athletes stay flexible and injury-free, and I am currently pursuing my Ph.D. in Physical Education.",
+    ],
     highlights: [
-      { label: "Credentials", value: "SAI & NIS Certified • M.Sc. Yoga • Ph.D. Scholar" },
-      { label: "National Duty", value: "Indian National Badminton Team (2015–2024)" },
+      { label: "State Rank 1", value: "B.P.Ed (Osmania Univ.) & M.P.Ed" },
+      { label: "Science + Yoga", value: "SAI & NIS Certified • M.Sc. Yoga • Ph.D. Scholar" },
+    ],
+    photos: [
+      {
+        src: "/images/intl-gopichand-academy.jpg",
+        fit: "cover",
+        objectPosition: "object-top",
+        eyebrow: "GOPICHAND BADMINTON ACADEMY",
+        caption:
+          "Working alongside Chief National Coach Pullela Gopichand during national squad duty in Hyderabad.",
+        alt: "Lomada Raju with Chief National Coach Pullela Gopichand",
+      },
+      {
+        src: "/images/champ-pv-sindhu-medal.jpg",
+        fit: "cover",
+        objectPosition: "object-top",
+        eyebrow: "OLYMPIC & WORLD PODIUMS",
+        caption:
+          "With Olympic medallist P. V. Sindhu celebrating international championship success.",
+        alt: "Lomada Raju with Olympic medallist P. V. Sindhu",
+      },
+    ],
+  },
+  {
+    id: "chapter-4",
+    number: "04",
+    tabLabel: "Chapter 04",
+    title: "Coaching India & Dhwajam",
+    subtitle: "2010 — Present • Legacy & Academy",
+    icon: BookOpen,
+    quote:
+      "Deep roots create unshakeable athletes—on the podium and in everyday life.",
+    paragraphs: [
+      "Since 2010, I have been fortunate to serve with Indian Railways, Hyderabad Cricket, the Indian National Badminton Team (2015–2024), and the Telugu Warriors in CCL.",
+      "Today, I also lead Dhwajam Strength & Conditioning Centre in Hyderabad—where we train athletes and teams with one core belief: Roots Build Resilience.",
+    ],
+    highlights: [
+      { label: "Academy", value: "Dhwajam Strength & Conditioning Centre" },
+      { label: "Location", value: "Botanical Garden, Kondapur, Hyderabad" },
+    ],
+    isAcademyChapter: true,
+    photos: [
+      {
+        src: "/images/04-dhwajam-logo.png",
+        fit: "contain",
+        objectPosition: "object-center",
+        frameClass: "bg-[#F8F7F4] p-4 aspect-[3/4] flex items-center justify-center",
+        eyebrow: "DHWAJAM S&C CENTRE",
+        caption:
+          "Strength, Flexibility, Endurance, Coordination & Speed — founded by Lomada Raju in Hyderabad.",
+        alt: "Dhwajam Strength & Conditioning Centre emblem",
+      },
+      {
+        src: "/images/02-about-desk-portrait.jpg",
+        fit: "cover",
+        objectPosition: "object-top",
+        eyebrow: "ATHLETE-FIRST MENTORSHIP",
+        caption:
+          "One-on-one assessment and personal planning at Dhwajam Centre, Botanical Garden, Kondapur.",
+        alt: "Coach Lomada Raju at his desk at Dhwajam Centre",
+      },
     ],
   },
 ];
 
-export default function AboutJourney({ onOpenConnect }) {
-  const [activeChapterId, setActiveChapterId] = useState(LIFE_CHAPTERS[0].id);
-
-  const activeChapter =
-    LIFE_CHAPTERS.find((c) => c.id === activeChapterId) || LIFE_CHAPTERS[0];
+export default function AboutJourney() {
+  const [activeChapterIdx, setActiveChapterIdx] = useState(0);
+  const current = BOOK_CHAPTERS[activeChapterIdx];
 
   return (
     <section
@@ -76,7 +183,7 @@ export default function AboutJourney({ onOpenConnect }) {
       className="bg-[#EFEFEF] border-b border-[#1C1C21]/14 py-16 md:py-24"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 space-y-12">
-        {/* 1. Chapter Header & Personal Manifesto (Full-Width Editorial Intro) */}
+        {/* Chapter Header & Personal Manifesto */}
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -88,16 +195,15 @@ export default function AboutJourney({ onOpenConnect }) {
             <div className="flex items-center gap-3 mb-3">
               <span className="h-[2px] w-8 bg-[#9E2A2B]" />
               <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#9E2A2B]">
-                The Man Behind the Athletes
+                In My Own Words
               </p>
             </div>
             <h2 className="font-editorial font-extrabold uppercase text-4xl sm:text-5xl md:text-6xl text-[#1C1C21] leading-[0.92] tracking-[-0.01em]">
-              FROM CHILAMKURU TO{" "}
-              <span className="text-[#9E2A2B]">THE WORLD STAGE.</span>
+              MY STORY:{" "}
+              <span className="text-[#9E2A2B]">FROM A SMALL VILLAGE TO THE WORLD STAGE</span>
             </h2>
           </div>
 
-          {/* Pull-Quote Callout with Warm Bronze Accent Bar */}
           <div className="lg:col-span-5">
             <blockquote className="rounded-2xl border border-[#1C1C21]/10 border-l-4 border-l-[#A67C52] bg-[#E2E2E5]/70 p-5 sm:p-6 shadow-xs">
               <div className="flex items-start gap-3">
@@ -110,131 +216,168 @@ export default function AboutJourney({ onOpenConnect }) {
           </div>
         </motion.div>
 
-        {/* 2. Balanced Bento Grid: Interactive 3-Chapter Switcher + Dhwajam HQ (Left) | 2-Photo Visual Showcase (Right) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          {/* Left Column: 3-Chapter Interactive Story + Dhwajam HQ Card */}
-          <div className="lg:col-span-6 flex flex-col justify-between gap-6">
-            {/* Chapter Switcher Card */}
-            <div className="rounded-2xl border border-[#1C1C21]/12 bg-[#E2E2E5]/55 p-6 sm:p-7 shadow-sm flex-1 flex flex-col justify-between">
-              <div>
-                {/* 3 Tactile Chapter Tabs */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-6 p-1.5 rounded-xl bg-[#EFEFEF] border border-[#1C1C21]/10">
-                  {LIFE_CHAPTERS.map((chapter) => {
-                    const isSelected = chapter.id === activeChapter.id;
-                    const Icon = chapter.icon;
-                    return (
-                      <button
-                        key={chapter.id}
-                        type="button"
-                        onClick={() => setActiveChapterId(chapter.id)}
-                        className={`relative text-left px-3.5 py-2.5 rounded-lg transition-colors cursor-pointer ${
-                          isSelected
-                            ? "text-[#EFEFEF]"
-                            : "text-[#4A4A52] hover:text-[#1C1C21]"
-                        }`}
-                      >
-                        {isSelected && (
-                          <motion.span
-                            layoutId="about-chapter-pill"
-                            transition={{ type: "spring", stiffness: 380, damping: 32 }}
-                            className="absolute inset-0 rounded-lg bg-[#1C1C21]"
-                          />
-                        )}
-                        <div className="relative z-10 flex items-center gap-1.5 mb-0.5">
-                          <Icon
-                            className={`w-3.5 h-3.5 ${
-                              isSelected ? "text-[#A67C52]" : "text-[#9E2A2B]"
-                            }`}
-                          />
-                          <span
-                            className={`text-[10px] font-bold uppercase tracking-[0.14em] ${
-                              isSelected ? "text-[#A67C52]" : "text-[#9E2A2B]"
-                            }`}
-                          >
-                            Ch. {chapter.number}
-                          </span>
-                        </div>
-                        <p className="relative z-10 text-xs font-bold leading-tight">
-                          {chapter.tabLabel}
-                        </p>
-                      </button>
-                    );
-                  })}
-                </div>
-
-                {/* Active Chapter Narrative */}
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={activeChapter.id}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -8 }}
-                    transition={{ duration: 0.24, ease: "easeOut" }}
-                    className="space-y-4"
-                  >
-                    <div>
-                      <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#9E2A2B] mb-1">
-                        Chapter {activeChapter.number} &bull; {activeChapter.subtitle}
-                      </p>
-                      <h3 className="font-editorial font-extrabold uppercase text-3xl sm:text-4xl text-[#1C1C21] leading-none">
-                        {activeChapter.headline}
-                      </h3>
-                    </div>
-
-                    <p className="text-sm sm:text-base font-semibold text-[#1C1C21] leading-relaxed">
-                      {activeChapter.summary}
-                    </p>
-
-                    <p className="text-sm text-[#4A4A52] leading-relaxed">
-                      {activeChapter.story}
-                    </p>
-
-                    {/* Chapter Highlights */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
-                      {activeChapter.highlights.map((hl) => (
-                        <div
-                          key={hl.label}
-                          className="rounded-xl bg-[#EFEFEF] border border-[#1C1C21]/10 p-3.5"
+        {/* Balanced Bento: Interactive 4-Chapter Virtual Book (Left) | Dynamic Synchronized 2-Photo Showcase (Right) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          {/* Left Column: 4-Chapter Virtual Book Reader + Dhwajam Epilogue */}
+          <div className="lg:col-span-6 flex flex-col gap-6">
+            <div className="rounded-2xl border border-[#1C1C21]/12 bg-[#E2E2E5]/60 p-6 sm:p-8 shadow-sm">
+              {/* 4 Chapter Tabs */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6 p-1.5 rounded-xl bg-[#EFEFEF] border border-[#1C1C21]/10">
+                {BOOK_CHAPTERS.map((chapter, idx) => {
+                  const isSelected = idx === activeChapterIdx;
+                  const Icon = chapter.icon;
+                  return (
+                    <button
+                      key={chapter.id}
+                      type="button"
+                      onClick={() => setActiveChapterIdx(idx)}
+                      className={`relative text-left px-3 py-2.5 rounded-lg transition-colors cursor-pointer ${
+                        isSelected
+                          ? "text-[#EFEFEF]"
+                          : "text-[#4A4A52] hover:text-[#1C1C21]"
+                      }`}
+                    >
+                      {isSelected && (
+                        <motion.span
+                          layoutId="virtual-book-tab"
+                          transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                          className="absolute inset-0 rounded-lg bg-[#1C1C21]"
+                        />
+                      )}
+                      <div className="relative z-10 flex items-center gap-1.5 mb-0.5">
+                        <Icon
+                          className={`w-3.5 h-3.5 ${
+                            isSelected ? "text-[#A67C52]" : "text-[#9E2A2B]"
+                          }`}
+                        />
+                        <span
+                          className={`text-[10px] font-bold uppercase tracking-[0.14em] ${
+                            isSelected ? "text-[#A67C52]" : "text-[#9E2A2B]"
+                          }`}
                         >
-                          <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#A67C52] mb-1">
-                            {hl.label}
-                          </p>
-                          <p className="text-xs font-semibold text-[#1C1C21] leading-snug">
-                            {hl.value}
-                          </p>
-                        </div>
-                      ))}
+                          {chapter.tabLabel}
+                        </span>
+                      </div>
+                      <p className="relative z-10 text-[11px] font-bold leading-tight line-clamp-1">
+                        {chapter.title}
+                      </p>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Active Chapter Page */}
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={current.id}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -8 }}
+                  transition={{ duration: 0.24, ease: "easeOut" }}
+                  className="space-y-4"
+                >
+                  <div>
+                    <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#9E2A2B] mb-1">
+                      Chapter {current.number} &bull; {current.subtitle}
+                    </p>
+                    <h3 className="font-editorial font-extrabold uppercase text-3xl sm:text-4xl text-[#1C1C21] leading-none">
+                      {current.title}
+                    </h3>
+                  </div>
+
+                  <p className="text-sm italic font-semibold text-[#1C1C21] border-l-2 border-[#A67C52] pl-3.5 py-0.5">
+                    &ldquo;{current.quote}&rdquo;
+                  </p>
+
+                  {current.paragraphs.map((para) => (
+                    <p key={para} className="text-sm text-[#4A4A52] leading-relaxed">
+                      {para}
+                    </p>
+                  ))}
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                    {current.highlights.map((hl) => (
+                      <div
+                        key={hl.label}
+                        className="rounded-xl bg-[#EFEFEF] border border-[#1C1C21]/10 p-3.5"
+                      >
+                        <p className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#A67C52] mb-1">
+                          {hl.label}
+                        </p>
+                        <p className="text-xs font-semibold text-[#1C1C21] leading-snug">
+                          {hl.value}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+
+                  {current.isAcademyChapter && (
+                    <div className="pt-2">
+                      <a
+                        href="https://dhwajam.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 rounded-xl bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] px-6 py-3.5 text-sm font-bold uppercase tracking-wider transition-colors"
+                      >
+                        <span>Visit Dhwajam Academy</span>
+                        <ArrowUpRight className="w-4 h-4" />
+                      </a>
                     </div>
-                  </motion.div>
-                </AnimatePresence>
+                  )}
+                </motion.div>
+              </AnimatePresence>
+
+              {/* Book Page Navigation Footer */}
+              <div className="mt-6 pt-5 border-t border-[#1C1C21]/10 flex items-center justify-between">
+                <button
+                  type="button"
+                  onClick={() => setActiveChapterIdx((i) => Math.max(0, i - 1))}
+                  disabled={activeChapterIdx === 0}
+                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.14em] text-[#1C1C21] disabled:opacity-35 cursor-pointer disabled:cursor-not-allowed"
+                >
+                  <ArrowLeft className="w-3.5 h-3.5" />
+                  <span>Prev Chapter</span>
+                </button>
+                <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#A67C52]">
+                  Page {activeChapterIdx + 1} of {BOOK_CHAPTERS.length}
+                </span>
+                <button
+                  type="button"
+                  onClick={() =>
+                    setActiveChapterIdx((i) => Math.min(BOOK_CHAPTERS.length - 1, i + 1))
+                  }
+                  disabled={activeChapterIdx === BOOK_CHAPTERS.length - 1}
+                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.14em] text-[#9E2A2B] disabled:opacity-35 cursor-pointer disabled:cursor-not-allowed"
+                >
+                  <span>Next Chapter</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
               </div>
             </div>
 
-            {/* Dark-Graphite Dhwajam Headquarters Card (Aligned Flush at Bottom) */}
+            {/* Dignified 10% Dhwajam Epilogue Bridge Card */}
             <div className="rounded-2xl bg-[#1C1C21] text-[#EFEFEF] border border-[#1C1C21] p-6 sm:p-7 shadow-md">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-[#EFEFEF]/12">
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 shrink-0 rounded-xl border border-[#EFEFEF]/15 bg-[#EFEFEF] p-1.5 overflow-hidden flex items-center justify-center">
-                    <SmartImage
-                      src={coachProfile.dhwajamLogo}
-                      alt={`${coachProfile.centreName} logo`}
-                      fit="contain"
-                      objectPosition="object-center"
-                      className="rounded-lg bg-transparent"
-                      label="Logo"
-                    />
-                  </div>
-                  <div>
-                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#A67C52] mb-0.5">
-                      Training Headquarters
-                    </p>
-                    <h3 className="font-editorial font-extrabold uppercase text-2xl sm:text-3xl text-[#EFEFEF] leading-none mb-1">
-                      {coachProfile.centreName}
-                    </h3>
-                    <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#9E2A2B]">
-                      &ldquo;{coachProfile.centreMotto}&rdquo;
-                    </p>
-                  </div>
+              <div className="flex items-center gap-4 pb-5 border-b border-[#EFEFEF]/12">
+                <div className="w-14 h-14 shrink-0 rounded-full border border-[#EFEFEF]/15 bg-[#EFEFEF] p-1 overflow-hidden flex items-center justify-center">
+                  <SmartImage
+                    src={coachProfile.dhwajamLogo}
+                    alt={`${coachProfile.centreName} logo`}
+                    fit="contain"
+                    objectPosition="object-center"
+                    className="rounded-full bg-transparent"
+                    label="Logo"
+                  />
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#A67C52] mb-0.5">
+                    Founder &amp; Head Coach &bull; 10% Academy Epilogue
+                  </p>
+                  <h3 className="font-editorial font-extrabold uppercase text-2xl sm:text-3xl text-[#EFEFEF] leading-none mb-1">
+                    {coachProfile.centreName}
+                  </h3>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#9E2A2B]">
+                    &ldquo;{coachProfile.centreMotto}&rdquo;
+                  </p>
                 </div>
               </div>
 
@@ -252,79 +395,63 @@ export default function AboutJourney({ onOpenConnect }) {
                   </div>
                 </div>
 
-                <motion.button
-                  type="button"
+                <motion.a
+                  href="https://dhwajam.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  onClick={() => onOpenConnect()}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] shrink-0 transition-colors cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] px-6 py-3.5 text-sm font-bold uppercase tracking-wider shrink-0 transition-colors cursor-pointer"
                 >
-                  <span>Book an Assessment</span>
+                  <span>Explore Dhwajam Academy</span>
                   <ArrowUpRight className="w-4 h-4" />
-                </motion.button>
+                </motion.a>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Balanced 2-Photo Visual Bento Showcase + Compact Stats Strip */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.15 }}
-            transition={{ duration: 0.5, delay: 0.08, ease: "easeOut" }}
-            className="lg:col-span-6 flex flex-col justify-between gap-6"
-          >
-            {/* Tight 2-Photo Row (No Vertical Stretching Inside Cards) */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
-              {/* Photo 1: Off-Court Desk Portrait */}
-              <div className="rounded-2xl border border-[#1C1C21]/12 bg-[#E2E2E5]/65 p-2.5 shadow-sm">
-                <SmartImage
-                  src={coachProfile.aboutImage}
-                  alt="Coach Lomada Raju smiling at his coaching desk"
-                  aspectClass="aspect-[3/4]"
-                  objectPosition="object-top"
-                  className="rounded-xl"
-                  label="Coach Portrait"
-                />
-                <div className="p-3 pt-3.5">
-                  <div className="flex items-center gap-2 mb-1">
-                    <Award className="w-3.5 h-3.5 text-[#9E2A2B]" />
-                    <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#9E2A2B]">
-                      Athlete-First Mentorship
-                    </span>
+          {/* Right Column: Synchronized 2-Photo Visual Showcase + Compact Stats Strip */}
+          <div className="lg:col-span-6 flex flex-col gap-6">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={current.id}
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.28, ease: "easeOut" }}
+                className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start"
+              >
+                {current.photos.map((photo) => (
+                  <div
+                    key={photo.src}
+                    className="rounded-2xl border border-[#1C1C21]/12 bg-[#E2E2E5]/65 p-2.5 shadow-sm"
+                  >
+                    <SmartImage
+                      src={photo.src}
+                      alt={photo.alt}
+                      fit={photo.fit}
+                      aspectClass={photo.fit === "contain" ? "" : "aspect-[3/4]"}
+                      objectPosition={photo.objectPosition}
+                      className={`rounded-xl ${photo.frameClass || ""}`}
+                      label={photo.eyebrow}
+                    />
+                    <div className="p-3 pt-3.5">
+                      <div className="flex items-center gap-2 mb-1">
+                        <Award className="w-3.5 h-3.5 text-[#9E2A2B] shrink-0" />
+                        <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#9E2A2B]">
+                          {photo.eyebrow}
+                        </span>
+                      </div>
+                      <p className="text-xs text-[#4A4A52] leading-relaxed">
+                        {photo.caption}
+                      </p>
+                    </div>
                   </div>
-                  <p className="text-xs text-[#4A4A52] leading-relaxed">
-                    Calm, personal guidance tailored to every athlete&apos;s calendar, recovery, and mindset.
-                  </p>
-                </div>
-              </div>
+                ))}
+              </motion.div>
+            </AnimatePresence>
 
-              {/* Photo 2: Track Sprint Bib #11 */}
-              <div className="rounded-2xl border border-[#1C1C21]/12 bg-[#E2E2E5]/65 p-2.5 shadow-sm">
-                <SmartImage
-                  src={coachProfile.trackImage}
-                  alt="Lomada Raju competing on the athletics track in Bib 11"
-                  fit="contain"
-                  className="rounded-xl"
-                  label="Track Era • Bib 11"
-                />
-                <div className="p-3 pt-3.5">
-                  <div className="flex items-center justify-between gap-2 mb-1">
-                    <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#A67C52]">
-                      1999 — 2013 Track Era
-                    </span>
-                    <span className="text-[10px] font-bold uppercase tracking-[0.14em] text-[#9E2A2B]">
-                      Bib #11
-                    </span>
-                  </div>
-                  <p className="text-xs text-[#4A4A52] leading-relaxed">
-                    400m &amp; 4&times;400m relay competitor — 43 medals &amp; 3:16.43 National Meet Record.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Compact Personal Coaching Philosophy & Stats Strip */}
+            {/* Compact Stats Strip */}
             <div className="rounded-2xl border border-[#1C1C21]/12 bg-[#E2E2E5]/65 p-5 sm:p-6 shadow-sm">
               <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#9E2A2B] mb-3">
                 Track-Tested &bull; Science-Backed
@@ -334,29 +461,23 @@ export default function AboutJourney({ onOpenConnect }) {
                   <p className="font-editorial font-extrabold uppercase text-xl text-[#1C1C21] leading-tight">
                     13+ Years
                   </p>
-                  <p className="text-xs text-[#4A4A52] mt-0.5">
-                    Competitive Track
-                  </p>
+                  <p className="text-xs text-[#4A4A52] mt-0.5">Competitive Track</p>
                 </div>
                 <div className="sm:px-4">
                   <p className="font-editorial font-extrabold uppercase text-xl text-[#1C1C21] leading-tight">
                     State Rank 1
                   </p>
-                  <p className="text-xs text-[#4A4A52] mt-0.5">
-                    B.P.Ed (Osmania Univ.)
-                  </p>
+                  <p className="text-xs text-[#4A4A52] mt-0.5">B.P.Ed (Osmania Univ.)</p>
                 </div>
                 <div className="sm:pl-4">
                   <p className="font-editorial font-extrabold uppercase text-xl text-[#1C1C21] leading-tight">
                     M.Sc. Yoga
                   </p>
-                  <p className="text-xs text-[#4A4A52] mt-0.5">
-                    + Ph.D. Scholar
-                  </p>
+                  <p className="text-xs text-[#4A4A52] mt-0.5">+ Ph.D. Scholar</p>
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -43,7 +43,7 @@ export default function CareerTimeline() {
               </p>
             </div>
             <h2 className="font-editorial font-extrabold uppercase text-4xl sm:text-5xl md:text-6xl text-[#1C1C21] leading-[0.94] tracking-[-0.01em]">
-              CAREER &amp; TRACK RECORD
+              MY CAREER MILESTONES
             </h2>
           </div>
 

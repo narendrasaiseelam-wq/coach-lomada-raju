@@ -1,37 +1,40 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { MessageCircle, Phone, MapPin, X, ArrowUpRight } from "lucide-react";
-import { coachProfile, coachingPathways } from "../data/portfolioData";
+import { coachProfile } from "../data/portfolioData";
 
-const AUDIENCE_OPTIONS = [
+const ENQUIRY_OPTIONS = [
   {
-    id: "athletes",
-    label: "Competitive Athlete",
-    prompt: coachingPathways[0].whatsappPrompt,
+    id: "athlete",
+    label: "Elite / Competitive Athlete Coaching",
+    prompt:
+      "I am a competitive athlete and would like to enquire about personal strength & conditioning coaching.",
   },
   {
-    id: "teams",
-    label: "Sports Team / Academy",
-    prompt: coachingPathways[1].whatsappPrompt,
+    id: "team",
+    label: "Team / Franchise / Academy Consultation",
+    prompt:
+      "I would like to discuss strength & conditioning consultation for a sports team, franchise, or academy.",
   },
   {
-    id: "youth",
-    label: "Kids & Students",
-    prompt: coachingPathways[2].whatsappPrompt,
+    id: "media",
+    label: "Media / Event / Speaking Invitation",
+    prompt:
+      "I am reaching out regarding a media feature, sports event, or speaking invitation.",
   },
   {
-    id: "professionals",
-    label: "Doctor / Officer / Executive",
-    prompt: coachingPathways[3].whatsappPrompt,
+    id: "general",
+    label: "General Enquiry",
+    prompt: "I would like to connect with Coach Lomada Raju.",
   },
 ];
 
-export default function ConnectModal({ isOpen, onClose, initialAudienceId = "athletes" }) {
+export default function ConnectModal({ isOpen, onClose, initialAudienceId = "athlete" }) {
   const [name, setName] = useState("");
   const [userSelection, setUserSelection] = useState(null);
   const [goalNote, setGoalNote] = useState("");
 
-  const selectedAudience = userSelection ?? initialAudienceId;
+  const selectedOptionId = userSelection ?? initialAudienceId;
 
   const handleClose = () => {
     setUserSelection(null);
@@ -56,7 +59,7 @@ export default function ConnectModal({ isOpen, onClose, initialAudienceId = "ath
   }, [isOpen, onClose]);
 
   const activeOption =
-    AUDIENCE_OPTIONS.find((opt) => opt.id === selectedAudience) || AUDIENCE_OPTIONS[0];
+    ENQUIRY_OPTIONS.find((opt) => opt.id === selectedOptionId) || ENQUIRY_OPTIONS[0];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -67,12 +70,12 @@ export default function ConnectModal({ isOpen, onClose, initialAudienceId = "ath
       trimmedName
         ? `Hi Coach Lomada Raju, my name is ${trimmedName}.`
         : "Hi Coach Lomada Raju,",
-      `Category: ${activeOption.label}.`,
-      activeOption.prompt.replace(/^Hi Coach Lomada Raju,\s*/i, ""),
+      `Enquiry Type: ${activeOption.label}.`,
+      activeOption.prompt,
     ];
 
     if (trimmedGoal) {
-      parts.push(`Goal / Sport: ${trimmedGoal}`);
+      parts.push(`Details / Sport: ${trimmedGoal}`);
     }
 
     const message = encodeURIComponent(parts.join(" "));
@@ -111,7 +114,7 @@ export default function ConnectModal({ isOpen, onClose, initialAudienceId = "ath
             <div className="bg-[#1C1C21] text-[#EFEFEF] px-6 py-5 flex items-start justify-between gap-4 border-b border-[#EFEFEF]/10">
               <div>
                 <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#A67C52] mb-1">
-                  Direct Coaching Enquiry
+                  Direct Personal &amp; Professional Enquiry
                 </p>
                 <h2
                   id="connect-modal-title"
@@ -123,7 +126,7 @@ export default function ConnectModal({ isOpen, onClose, initialAudienceId = "ath
               <button
                 type="button"
                 onClick={handleClose}
-                className="p-1.5 text-[#E2E2E5]/70 hover:text-[#EFEFEF] border border-[#EFEFEF]/15 hover:border-[#EFEFEF]/40 transition-colors cursor-pointer"
+                className="p-1.5 rounded-lg text-[#E2E2E5]/70 hover:text-[#EFEFEF] border border-[#EFEFEF]/15 hover:border-[#EFEFEF]/40 transition-colors cursor-pointer"
                 aria-label="Close modal"
               >
                 <X className="w-4 h-4" />
@@ -145,23 +148,23 @@ export default function ConnectModal({ isOpen, onClose, initialAudienceId = "ath
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Enter your full name"
-                  className="w-full bg-[#E2E2E5]/70 border border-[#1C1C21]/20 focus:border-[#9E2A2B] focus:outline-none px-4 py-3 text-sm text-[#1C1C21] placeholder:text-[#4A4A52]/60"
+                  className="w-full rounded-xl bg-[#E2E2E5]/70 border border-[#1C1C21]/20 focus:border-[#9E2A2B] focus:outline-none px-4 py-3 text-sm text-[#1C1C21] placeholder:text-[#4A4A52]/60"
                 />
               </div>
 
               <div>
                 <span className="block text-xs font-bold uppercase tracking-[0.14em] text-[#1C1C21] mb-2">
-                  I am enquiring as
+                  Enquiry Type
                 </span>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                  {AUDIENCE_OPTIONS.map((option) => {
-                    const isSelected = option.id === selectedAudience;
+                  {ENQUIRY_OPTIONS.map((option) => {
+                    const isSelected = option.id === selectedOptionId;
                     return (
                       <button
                         key={option.id}
                         type="button"
                         onClick={() => setUserSelection(option.id)}
-                        className={`text-left px-3.5 py-2.5 text-xs font-semibold border transition-colors cursor-pointer ${
+                        className={`text-left px-3.5 py-2.5 rounded-xl text-xs font-semibold border transition-colors cursor-pointer ${
                           isSelected
                             ? "bg-[#1C1C21] text-[#EFEFEF] border-[#1C1C21]"
                             : "bg-[#E2E2E5]/50 text-[#1C1C21] border-[#1C1C21]/18 hover:border-[#1C1C21]/45"
@@ -179,21 +182,21 @@ export default function ConnectModal({ isOpen, onClose, initialAudienceId = "ath
                   htmlFor="visitor-goal"
                   className="block text-xs font-bold uppercase tracking-[0.14em] text-[#1C1C21] mb-2"
                 >
-                  Sport / Goal <span className="text-[#4A4A52] font-normal">(Optional)</span>
+                  Sport / Details <span className="text-[#4A4A52] font-normal">(Optional)</span>
                 </label>
                 <input
                   id="visitor-goal"
                   type="text"
                   value={goalNote}
                   onChange={(e) => setGoalNote(e.target.value)}
-                  placeholder="e.g., Badminton speed & injury prevention, or online plan"
-                  className="w-full bg-[#E2E2E5]/70 border border-[#1C1C21]/20 focus:border-[#9E2A2B] focus:outline-none px-4 py-3 text-sm text-[#1C1C21] placeholder:text-[#4A4A52]/60"
+                  placeholder="e.g., Badminton conditioning, tournament prep, or speaking event"
+                  className="w-full rounded-xl bg-[#E2E2E5]/70 border border-[#1C1C21]/20 focus:border-[#9E2A2B] focus:outline-none px-4 py-3 text-sm text-[#1C1C21] placeholder:text-[#4A4A52]/60"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] py-3.5 px-5 text-xs font-bold uppercase tracking-[0.16em] flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                className="w-full rounded-xl bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] py-3.5 px-5 text-xs font-bold uppercase tracking-[0.16em] flex items-center justify-center gap-2 transition-colors cursor-pointer"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Send WhatsApp Message</span>

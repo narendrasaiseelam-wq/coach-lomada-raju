@@ -32,6 +32,11 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+section[id],
+footer[id] {
+  scroll-margin-top: 6rem;
+}
+
 body {
   margin: 0;
   background-color: var(--bg-canvas);
@@ -77,6 +82,11 @@ html {
   color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+section[id],
+footer[id] {
+  scroll-margin-top: 6rem;
 }
 
 body {

@@ -11,6 +11,7 @@ const NAV_LINKS = [
   { id: "career", label: "CAREER" },
   { id: "gallery", label: "GALLERY" },
   { id: "education", label: "EDUCATION" },
+  { id: "contact", label: "CONTACT" },
 ];
 
 export default function Navbar({ onOpenConnect }) {
@@ -80,9 +81,8 @@ export default function Navbar({ onOpenConnect }) {
                   e.preventDefault();
                   handleNavClick(link.id);
                 }}
-                className={`relative py-2 text-xs font-bold tracking-[0.14em] uppercase transition-colors ${
-                  isActive ? "text-[#1C1C21]" : "text-[#4A4A52] hover:text-[#1C1C21]"
-                }`}
+                className={`relative py-2 text-xs font-bold tracking-[0.14em] uppercase transition-colors ${isActive ? "text-[#1C1C21]" : "text-[#4A4A52] hover:text-[#1C1C21]"
+                  }`}
               >
                 {link.label}
                 {isActive && (
@@ -102,10 +102,10 @@ export default function Navbar({ onOpenConnect }) {
           <button
             type="button"
             onClick={() => onOpenConnect()}
-            className="inline-flex items-center gap-1.5 rounded-xl bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] px-4 sm:px-5 py-2.5 text-xs font-bold tracking-[0.14em] uppercase shadow-xs transition-colors cursor-pointer"
+            className="inline-flex items-center gap-1.5 rounded-xl bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] px-5 py-2.5 text-sm font-bold tracking-wider uppercase shadow-xs transition-colors cursor-pointer"
           >
             <span>CONNECT</span>
-            <ArrowUpRight className="w-3.5 h-3.5" />
+            <ArrowUpRight className="w-4 h-4" />
           </button>
 
           <button
@@ -141,9 +141,8 @@ export default function Navbar({ onOpenConnect }) {
                       e.preventDefault();
                       handleNavClick(link.id);
                     }}
-                    className={`py-3 flex items-center justify-between text-xs font-bold tracking-[0.16em] uppercase ${
-                      isActive ? "text-[#9E2A2B]" : "text-[#1C1C21]"
-                    }`}
+                    className={`py-3 flex items-center justify-between text-xs font-bold tracking-[0.16em] uppercase ${isActive ? "text-[#9E2A2B]" : "text-[#1C1C21]"
+                      }`}
                   >
                     <span>{link.label}</span>
                     {isActive && <span className="w-2 h-2 bg-[#9E2A2B]" />}

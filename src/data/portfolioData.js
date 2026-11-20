@@ -1,205 +1,287 @@
 export const coachProfile = {
   fullName: "Lomada Raju",
   monogram: "LR",
-  title: "International Strength & Conditioning Coach",
-  tagline: "Fifteen years preparing India's Olympic badminton stars, national cricketers, and champions of every kind.",
-  personalIntro: "Before I ever stood courtside with a stopwatch, I spent thirteen years on the athletics track chasing tenths of a second and national relay medals. From growing up in Chilamkuru to serving with the Indian National Badminton Team at the All England Open and Sudirman Cup, my coaching rule has stayed the same: every program starts with the person in front of me—their sport, their calendar, and their body.",
-  originStory: "Born to Ankalaiah and Ankalamma in Bhadrampalle / Chilamkuru (YSR Kadapa District), I moved to Hyderabad for my degree at Railway Degree College and secured State First Rank in my B.P.Ed. After 13+ years competing as a national 400m and 4×400m relay athlete, I dedicated my life to sports science—blending SAI & NIS strength conditioning with an M.Sc. in Yoga.",
+  title: "International Strength & Conditioning Coach • Hyderabad",
+  specialisationLine:
+    "15+ Years International Strength & Conditioning Specialist — Olympic & Para-Badminton, National Cricket, Athletics & Sports Yoga Science.",
+  tagline:
+    "Fifteen years preparing India's Olympic badminton stars, national cricketers, and champions of every kind.",
+  personalIntro:
+    "Hello, I am Lomada Raju. Before I ever coached India's Olympic and World Champions, I spent 13 years running on the athletics track—starting from a small village called Chilamkuru in Kadapa district. For the last 15+ years, my work has been simple: helping athletes and teams build real strength, speed, and injury-free longevity.",
+  originStory:
+    "I was born to Ankalaiah and Ankalamma in Bhadrampalle / Chilamkuru (YSR Kadapa District). I moved to Hyderabad on a sports-quota seat at Railway Degree College and secured State First Rank in my B.P.Ed. After 13+ years competing as a national 400m and 4×400m relay athlete, I dedicated my life to sports science—blending SAI & NIS strength conditioning with an M.Sc. in Yoga.",
   location: "Inside Botanical Garden, Kondapur, Gachibowli, Hyderabad, India",
-  phonePrimary: "9666692021",
+  phonePrimary: "+91 96666 92021",
+  phoneRaw: "9666692021",
   phoneSecondary: "040-29392021",
   whatsappNumber: "919666692021",
+  email: "coach@lomadaraju.com",
+  emailAlt: "lomadaraju.sc@gmail.com",
   centreName: "Dhwajam Strength & Conditioning Centre",
   centreMotto: "Roots Build Resilience",
-  heroImage: "/images/01-hero-india-blazer.jpg",
-  aboutImage: "/images/02-about-desk-portrait.jpg",
+  heroImage: "/images/hero-national-excellence.jpg",
+  aboutImage: "/images/about-assam-inauguration.jpg",
   trackImage: "/images/03-track-bib-11.jpg",
   dhwajamLogo: "/images/04-dhwajam-logo.png",
+  socialLinks: [
+    { label: "WhatsApp", href: "https://wa.me/919666692021", handle: "+91 96666 92021", active: true },
+    { label: "Instagram", href: null, handle: "Coming Soon", active: false },
+    { label: "LinkedIn", href: null, handle: "Coming Soon", active: false },
+    { label: "Facebook", href: null, handle: "Coming Soon", active: false },
+  ],
 };
 
 export const keyHighlights = [
   { metric: "15+", label: "Years Coaching", detail: "Strength & conditioning since 2010" },
-  { metric: "3:16.43", label: "National Meet Record", detail: "4×400 m relay, Junior Federation Cup (2006)" },
-  { metric: "43", label: "Track Medals Won", detail: "14 National & 29 State medals (1999–2013)" },
-  { metric: "SAI & NIS", label: "Certified Coach", detail: "Sports Authority of India & NIS Patiala (2022)" },
+  { metric: "3:16.43", label: "National Record", detail: "4×400m relay, Junior Federation Cup (2006)" },
+  { metric: "43", label: "Track Medals", detail: "14 National & 29 State medals (1999–2013)" },
+  { metric: "SAI & NIS", label: "Certified", detail: "Sports Authority of India & NIS Patiala (2022)" },
 ];
 
 export const championsTrained = [
   {
     id: "pv-sindhu",
     name: "P. V. Sindhu",
-    achievement: "Olympic Silver Medallist — Rio 2016",
+    achievement:
+      "Olympic Silver Medallist (Rio 2016), Olympic Bronze Medallist (Tokyo 2020) & BWF World Champion",
     category: "Olympic Badminton",
-    badge: "Olympic Silver",
-    story: "Supported conditioning and physical readiness at Pullela Gopichand Badminton Academy and on international tours, building match durability and explosive court coverage for Olympic and BWF World Tour competition.",
+    badge: "2× Olympic Medallist",
+    image: "/images/champ-pv-sindhu-medal.jpg",
+    secondaryImage: "/images/champ-pv-sindhu-training.jpg",
+    story:
+      "I worked with Sindhu at the Pullela Gopichand Badminton Academy and on international tours. When an athlete plays as many back-to-back tournaments as she does, my main focus is keeping her legs fresh, protecting her joints, and making sure she still has explosive court speed in the third game of a tough match.",
   },
   {
     id: "mansi-joshi",
     name: "Mansi Joshi",
-    achievement: "World Champion & Gold Medallist — Basel 2019 (Singles SL3)",
+    achievement: "BWF Para-Badminton World Champion & Gold Medallist (Basel 2019, Singles SL3)",
     category: "Para-Badminton",
     badge: "World Champion",
-    story: "Entrusted by Chief National Coach Pullela Gopichand to personally train Mansi (alongside bronze medallist Vikram Umesh) for four months ahead of Basel 2019. Because single-leg landings put intense strain on the lower back and she could not run or cycle, we engineered custom non-impact stamina and landing-control sessions—culminating in World Championship Gold.",
+    image: "/images/champ-manasi-joshi-trophy.jpg",
+    secondaryImage: "/images/champ-manasi-joshi-rehab.jpg",
+    story:
+      "When Chief Coach Pullela Gopichand asked me to prepare Manasi for the 2019 World Championships, it was a special challenge. Because she plays on one leg, she couldn't run or cycle, and landing put heavy pressure on her lower back. We built custom non-impact stamina and single-leg balance sessions for four months—and watching her win World Championship Gold in Basel was one of the proudest moments of my life.",
   },
   {
     id: "thulasimathi",
     name: "Thulasimathi Murugesan",
-    achievement: "Paralympic Silver Medallist — Paris 2024",
+    achievement: "Paralympic Silver Medallist (Paris 2024) & Asian Para Games Gold Medallist",
     category: "Para-Badminton",
     badge: "Paralympic Silver",
-    story: "Delivered tailored strength, explosive court agility, and injury-prevention conditioning to sustain peak international performance en route to the Paris 2024 Paralympic podium.",
+    image: "/images/champ-tulasi-murugesan.jpg",
+    story:
+      "With Thulasimathi, our goal was simple: build strong core stability, sharp court agility, and injury-free durability so she could handle the pressure of major finals. Seeing her bring home Paralympic Silver from Paris 2024 and Gold at the Asian Para Games made every early morning session worth it.",
   },
   {
     id: "srikanth",
     name: "Srikanth Kidambi",
-    achievement: "Rio 2016 Olympian",
+    achievement:
+      "Rio 2016 Olympian, Former World No. 1 & South Asian Games Gold Medallist (2019)",
     category: "Olympic Badminton",
-    badge: "Olympian",
-    story: "Worked as part of the Indian National Badminton S&C team focusing on multi-directional speed, lower-body power, and tournament recovery across BWF Super Series events.",
+    badge: "Former World No. 1",
+    image: "/images/champ-srikanth-sag-gold.jpg",
+    story:
+      "I supported Srikanth as part of the Indian National Badminton S&C team during his World No. 1 rise and international tours. We focused heavily on quick direction changes, lower-body power, and fast recovery between BWF Super Series rounds and the 2019 South Asian Games.",
   },
   {
     id: "satwik",
-    name: "Sathvik Sai Raj Rankireddy",
-    achievement: "Tokyo 2020 Olympian",
+    name: "Satwiksairaj Rankireddy",
+    achievement:
+      "Tokyo 2020 & Paris 2024 Olympian, Asian Games Gold Medallist & World No. 1 Doubles",
     category: "Olympic Badminton",
-    badge: "Olympian",
-    story: "Conditioned shoulder stability, jump-smash power, and high-intensity rally endurance for elite international men's doubles badminton.",
+    badge: "Asian Games Gold",
+    image: "/images/champ-sai-praneeth-satwik.jpg",
+    story:
+      "Men's doubles is all about speed and shoulder power. With Satwik, I worked on shoulder stability for his heavy jump-smashes, along with high-intensity stamina so he could keep attacking through long three-set battles.",
+  },
+  {
+    id: "sai-praneeth",
+    name: "B. Sai Praneeth",
+    achievement: "BWF World Championships Bronze Medallist & Tokyo 2020 Olympian",
+    category: "Olympic Badminton",
+    badge: "World Bronze",
+    image: "/images/champ-sai-praneeth-satwik.jpg",
+    story:
+      "I worked closely with Sai Praneeth on rally endurance, core strength, and joint care across demanding World Championship and Olympic qualification seasons—helping his body stay ready for long, tactical singles matches.",
+  },
+  {
+    id: "lakshya-sen",
+    name: "Lakshya Sen",
+    achievement: "Commonwealth Games Gold Medallist & Paris 2024 Olympic Semifinalist",
+    category: "Olympic Badminton",
+    badge: "CWG Gold",
+    image: "/images/champ-lakshya-sen-pbl.jpg",
+    story:
+      "Lakshya plays at a very fast tempo on court. Working with him in national and league camps, we focused on explosive lunging strength, quick footwork recovery, and season-long match fitness.",
   },
 ];
 
 export const notableRoster = [
   "Sameer Verma (International Badminton)",
-  "B. Sai Praneeth (World Championship Medallist)",
   "N. Sikki Reddy (Arjuna Awardee, Badminton)",
   "Vikram Umesh (World Para-Badminton Bronze Medallist)",
-  "Pragyan Ojha (Indian International Cricketer)",
+  "Pragyan Ojha (India Test Cricketer)",
   "Tirumalasetti Suman (IPL Cricketer)",
+  "Mamatha Poojary (International Kabaddi)",
   "Meghana (Gymnastics)",
 ];
 
 export const sportsAndTeams = [
   {
     sport: "Badminton",
-    level: "Indian National Team (2015–2024) & Olympic-level athletes",
-    events: "All England Open, Swiss Open, Thomas & Uber Cup (Denmark), Sudirman Cup (Finland), South Asian Games (Nepal — Gold), Asia Championships (Philippines — Bronze), BWF Super Series (Singapore & Malaysia)",
+    level: "Indian National Team (2015–2024) & Olympic / Para-Badminton Squads",
+    events:
+      "I travelled and worked with our national squads at the All England Open, Swiss Open, Thomas & Uber Cup (Denmark), Sudirman Cup (Finland), South Asian Games (Nepal — Gold), Asia Championships (Philippines — Bronze), BWF Super Series, and Chennai Smashers in PBL (2016).",
   },
   {
     sport: "Cricket",
-    level: "IPL, Ranji Trophy, Hyderabad U-23 & U-16, and Celebrity Cricket League",
-    events: "Hyderabad Cricket Association (2013–2014) & S&C Coach for Telugu Warriors in CCL (2025)",
+    level: "Hyderabad U-19 & U-23, Ranji Trophy, IPL & Celebrity Cricket League",
+    events:
+      "I served as S&C Coach for the Hyderabad Cricket Association (2013–2014) and currently lead strength and match-fitness conditioning for the Telugu Warriors in the Celebrity Cricket League (2025–Present).",
   },
   {
-    sport: "Premier Badminton League",
-    level: "Chennai Smashers (2016)",
-    events: "Designed and delivered season-long team strength and conditioning programs",
+    sport: "Athletics",
+    level: "13+ Years Competitive Track & Speed-Power Conditioning",
+    events:
+      "Having won 43 state and national medals myself (including a 3:16.43 National Meet Record in the 4×400m relay), I bring real track sprint mechanics and lactic tolerance directly to my athletes.",
   },
   {
     sport: "Kabaddi, Basketball & Tennis",
-    level: "National, International & Indian Railways Squads",
-    events: "3 years as S&C Coach for Railways Badminton & Kabaddi teams (2010–2012) plus international court competitors",
+    level: "National, International & South Central Railway Squads",
+    events:
+      "I spent 3 years coaching South Central Railway Badminton and Kabaddi teams (2010–2012), and have conditioned international court and mat athletes including Kabaddi star Mamatha Poojary.",
   },
 ];
 
 export const trainingPillars = [
-  { number: "01", title: "Foundation Strength", subtitle: "Stability & Sport-Specific Force", description: "Build overall body strength for power, joint stability, and resilient sport-specific movements." },
-  { number: "02", title: "Explosive Power", subtitle: "Sprints, Jumps & Dynamic Actions", description: "Develop rapid force production for first-step court speed, vertical leaps, and explosive direction changes." },
-  { number: "03", title: "Game Endurance", subtitle: "Sustain High-Speed Performance", description: "Improve quickness and aerobic-anaerobic recovery so you stay sharp in the final rally or final over." },
-  { number: "04", title: "Motor Coordination", subtitle: "Balance, Control & Movement Patterns", description: "Enhance neuromuscular balance, landing mechanics, and precise footwork efficiency." },
-  { number: "05", title: "Flexibility & Longevity", subtitle: "Mobility & Injury Prevention", description: "Increase joint range and movement quality—combining sports science with M.Sc. Yoga methodology to prevent injuries." },
+  {
+    number: "01",
+    title: "Foundation Strength",
+    subtitle: "Stability & Sport-Specific Force",
+    description:
+      "I always start with base strength and joint stability. Before an athlete tries to move fast, their knees, hips, and back must be strong enough to handle the load.",
+  },
+  {
+    number: "02",
+    title: "Explosive Power",
+    subtitle: "Sprints, Jumps & Quick First Step",
+    description:
+      "Once the base is strong, I build rapid force—helping athletes explode off the mark for a shuttle, clear a boundary sprint, or jump higher without losing balance.",
+  },
+  {
+    number: "03",
+    title: "Game Endurance",
+    subtitle: "Staying Sharp Till the Final Point",
+    description:
+      "I train athletes to recover quickly between rallies and overs so their decision-making and speed stay sharp in the final minutes of a match.",
+  },
+  {
+    number: "04",
+    title: "Motor Coordination",
+    subtitle: "Balance, Landing & Footwork Control",
+    description:
+      "Using track drills and balance work, I teach athletes how to land safely and move smoothly so they don't waste energy or twist joints under fatigue.",
+  },
+  {
+    number: "05",
+    title: "Flexibility & Yoga Longevity",
+    subtitle: "Mobility & Injury Prevention",
+    description:
+      "I blend my M.Sc. in Yoga with modern strength science—using breathing, spinal care, and deep mobility to keep athletes pain-free for years.",
+  },
 ];
 
-export const scientificRoadmap = [
-  { step: "01", name: "Assess", headline: "Know your starting point", points: ["Evaluate physical, technical, tactical & psychological status", "Collect baseline movement and fitness data"] },
-  { step: "02", name: "Analyse", headline: "Understand to improve", points: ["Interpret baseline data to identify strengths & weaknesses", "Determine key performance gaps to target"] },
-  { step: "03", name: "Plan", headline: "Plan today for tomorrow", points: ["Design a personalised training plan with clear goals & timelines", "Align training blocks with your competition calendar"] },
-  { step: "04", name: "Train", headline: "Execute with focus", points: ["Implement the plan with discipline, consistency & quality", "Focus on proper technique, intensity, and progression"] },
-  { step: "05", name: "Monitor", headline: "Measure to stay on track", points: ["Track performance, workload, and progress through metrics", "Adjust volume using real-time athlete feedback"] },
-  { step: "06", name: "Recover", headline: "Recover right, perform better", points: ["Restore body and mind via sleep, nutrition & active recovery", "Prevent fatigue and reduce injury risk"] },
-  { step: "07", name: "Adapt", headline: "Adapt & evolve", points: ["Refine programming based on physical response and progress", "Maximise physiological adaptation ahead of competition"] },
-  { step: "08", name: "Perform", headline: "Perform at your best", points: ["Execute with confidence on competition day", "Achieve peak performance when it matters most"] },
-  { step: "09", name: "Review", headline: "Learn, refine, repeat", points: ["Review tournament results and reassess goals", "Discipline today, champions tomorrow!"] },
-];
-
-export const coachingPathways = [
+export const coachingFaqs = [
   {
-    id: "athletes",
-    audience: "Competitive Athletes",
-    badge: "In-Person & Online",
-    headline: "Sport-specific strength, speed, power, and injury prevention.",
-    details: "Individualized programs built around your sport, competition calendar, and body—available in person at Hyderabad or worldwide via personal plans and video check-ins.",
-    whatsappPrompt: "Hi Coach Lomada Raju, I am a competitive athlete and would like to enquire about personal strength & conditioning coaching.",
+    q: "How do you customize a programme to my tournament calendar?",
+    a: "I start every athlete with a simple movement and fitness check. From there, I map out your tournament dates—building heavy strength in the off-season and reducing workload before major competitions so you feel light, fast, and ready on match day.",
   },
   {
-    id: "teams",
-    audience: "Teams & Academies",
-    badge: "Season & Camp Plans",
-    headline: "Season plans and match fitness for clubs, academies, and squads.",
-    details: "Proven team conditioning across Badminton, Cricket, Tennis, Basketball, and Kabaddi—from national camps to the CCL Telugu Warriors.",
-    whatsappPrompt: "Hi Coach Lomada Raju, I would like to discuss a team/academy conditioning program.",
+    q: "Can I train with you in Hyderabad or online from another city?",
+    a: "Yes, both options are open. In Hyderabad, we train in person at Dhwajam Strength & Conditioning Centre (Inside Botanical Garden, Kondapur, Gachibowli). If you live outside Hyderabad or travel on tour, I guide you with weekly plans and video form checks.",
   },
   {
-    id: "youth",
-    audience: "Kids (Ages 6–16) & Students",
-    badge: "Growth & Focus",
-    headline: "Foundational strength, coordination, posture, and academic stamina.",
-    details: "Safe, age-appropriate movement habits, flexibility, and endurance that build long-term athletic potential while supporting school and college focus.",
-    whatsappPrompt: "Hi Coach Lomada Raju, I would like to enquire about a kids/student fitness and movement program.",
+    q: "How does your M.Sc. Yoga background help prevent injuries?",
+    a: "Court and field sports put heavy repetitive stress on the lower back, hips, and shoulders. Combining Yoga breathing and mobility with strength training keeps muscles supple, improves recovery sleep, and prevents common non-contact injuries.",
   },
   {
-    id: "professionals",
-    audience: "Doctors, IAS & IPS Officers, Legislators",
-    badge: "Executive Resilience",
-    headline: "Functional stamina, posture care, and stress adaptation for high-demand roles.",
-    details: "Tailored conditioning, mobility, and breath-work designed for doctors, civil servants, legislators, and busy professionals balancing heavy public responsibilities.",
-    whatsappPrompt: "Hi Coach Lomada Raju, I would like to enquire about health & resilience coaching for working professionals.",
+    q: "How can sports teams or academies book a conditioning camp?",
+    a: "Coaches, academies, and team managers can message me directly through the Contact section below or on WhatsApp (+91 96666 92021). We can plan pre-season fitness testing, short intensive camps, or full-season S&C support.",
   },
 ];
 
 export const careerTimeline = [
   {
     period: "2025 — Present",
-    role: "Strength & Conditioning Coach — Telugu Warriors (CCL) & Founder, Dhwajam",
+    role: "Head S&C Coach — Telugu Warriors (CCL) & Founder, Dhwajam",
     type: "Franchise Cricket & Centre",
-    description: "Delivering team-based strength, physical readiness, and match fitness programs for Telugu Warriors in the Celebrity Cricket League, while leading athlete and executive coaching at Dhwajam Strength & Conditioning Centre, Hyderabad.",
+    description:
+      "I lead strength, warm-up, and match-fitness conditioning for the Telugu Warriors in the Celebrity Cricket League while mentoring athletes at Dhwajam Strength & Conditioning Centre in Hyderabad.",
+  },
+  {
+    period: "2024",
+    role: "Telangana ICON Award Recipient",
+    type: "State Honour",
+    description:
+      "I was honoured with the Telangana ICON Award in recognition of 15 years of work in sports science and conditioning India's international athletes.",
+  },
+  {
+    period: "2022",
+    role: "NIS Patiala Strength & Conditioning Certification",
+    type: "National Certification",
+    description:
+      "I completed my Strength & Conditioning Certification from the National Institute of Sports (NSNIS), Patiala, adding to my SAI certification.",
+  },
+  {
+    period: "2019",
+    role: "Felicitated by Governor of Telangana & Govt. of Andhra Pradesh",
+    type: "State Honour",
+    description:
+      "I was deeply humbled to be felicitated at Raj Bhavan by the Hon'ble Governor of Telangana and at AP Stadium, Vijayawada by the Government of Andhra Pradesh after India's World Championship wins.",
   },
   {
     period: "2015 — 2024",
     role: "Strength & Conditioning Coach — Indian National Badminton Team",
     type: "National Squad",
-    description: "Supported Indian badminton and para-badminton stars at the South Asian Games in Nepal (Gold medal), All England Open, Swiss Open, Thomas & Uber Cup in Denmark, Sudirman Cup in Finland, Asia Badminton Championships in the Philippines (Bronze medal), and BWF Super Series in Singapore & Malaysia.",
+    description:
+      "For nine years, I supported Indian badminton and para-badminton stars at the South Asian Games in Nepal (Gold), All England Open, Swiss Open, Thomas & Uber Cup in Denmark, Sudirman Cup in Finland, Asia Championships in the Philippines (Bronze), and BWF Super Series.",
   },
   {
     period: "2016",
-    role: "Strength & Conditioning Coach — Chennai Smashers (Premier Badminton League)",
+    role: "Strength & Conditioning Coach — Chennai Smashers (PBL)",
     type: "League Badminton",
-    description: "Designed and executed high-tempo team conditioning programs during the Premier Badminton League season.",
+    description:
+      "I designed and ran high-tempo team conditioning programs for Chennai Smashers during the Premier Badminton League season.",
   },
   {
     period: "2013 — 2014",
     role: "Strength & Conditioning Coach — Hyderabad Cricket Association",
     type: "State Cricket",
-    description: "Led athletic development, injury prevention, movement quality, and performance progression for Hyderabad's Under-23 and Under-16 cricket squads.",
+    description:
+      "I worked with Hyderabad's Under-19 and Under-23 cricket squads, focusing on athletic movement, injury prevention, and match stamina.",
   },
   {
     period: "2010 — 2012",
-    role: "Strength & Conditioning Coach — Indian Railways Teams",
+    role: "Strength & Conditioning Coach — South Central Railway Teams",
     type: "Institutional Sport",
-    description: "Served as S&C Coach for Railways squads (including Badminton and Kabaddi) after transitioning from competitive athletics.",
+    description:
+      "My first major coaching role after transitioning from competitive athletics—I served as S&C Coach for Indian Railways Badminton and Kabaddi teams.",
   },
   {
     period: "1999 — 2013",
     role: "National & State Track Athlete (400m & 4×400m Relay)",
     type: "Competitive Career",
-    description: "Over 13 years on the track: won 14 National medals (4 Gold, 5 Silver, 5 Bronze) and 29 State medals (17 Gold, 10 Silver, 2 Bronze), and set the National Meet Record (3:16.43) in the 4×400m relay at the 2006 Junior Federation Cup in Chennai.",
+    description:
+      "I spent over 13 years racing on the track, winning 43 medals—14 National (4 Gold, 5 Silver, 5 Bronze) and 29 State (17 Gold, 10 Silver, 2 Bronze)—and setting the 3:16.43 National Meet Record at the 2006 Junior Federation Cup in Chennai.",
   },
 ];
 
 export const trackRecordMedals = [
-  { year: "2007", event: "Junior Federation Cup — Madurai, Tamil Nadu", discipline: "4×400 m Relay", medal: "Bronze" },
-  { year: "2006", event: "Junior Federation Cup — Chennai, Tamil Nadu", discipline: "4×400 m Relay — National Meet Record (3:16.43)", medal: "Gold" },
-  { year: "2006", event: "Inter Zonal Athletic Meet — Allahabad, Uttar Pradesh", discipline: "4×400 m Relay", medal: "Gold" },
-  { year: "2006", event: "Junior Nationals Athletic Meet — Bangalore, Karnataka", discipline: "4×400 m Relay", medal: "Silver" },
-  { year: "2005", event: "Youth Nationals Athletic Meet — Bangalore, Karnataka", discipline: "4×400 m Relay", medal: "Gold" },
+  { year: "2007", event: "Junior Federation Cup — Madurai, Tamil Nadu", discipline: "4×400m Relay", medal: "Bronze" },
+  { year: "2006", event: "Junior Federation Cup — Chennai, Tamil Nadu", discipline: "4×400m Relay — National Meet Record (3:16.43)", medal: "Gold" },
+  { year: "2006", event: "Inter Zonal Athletic Meet — Allahabad, Uttar Pradesh", discipline: "4×400m Relay", medal: "Gold" },
+  { year: "2006", event: "Junior Nationals Athletic Meet — Bangalore, Karnataka", discipline: "4×400m Relay", medal: "Silver" },
+  { year: "2005", event: "Youth Nationals Athletic Meet — Bangalore, Karnataka", discipline: "4×400m Relay", medal: "Gold" },
 ];
 
 export const educationAndCertifications = [
@@ -220,104 +302,396 @@ export const honorsAndAwards = [
   { year: "2019", title: "Felicitated by the Government of Andhra Pradesh", venue: "AP Stadium, Vijayawada" },
 ];
 
-export const faqs = [
-  {
-    q: "Who can train with Lomada Raju / Dhwajam?",
-    a: "We coach competitive athletes (badminton, cricket, tennis, basketball, kabaddi, athletics), full sports teams and academies, children (ages 6–16), students, and working professionals including doctors, IAS/IPS officers, and legislators.",
-  },
-  {
-    q: "How do I start?",
-    a: "Simply click Connect to send a quick WhatsApp message with your name and goal. Every journey begins with a baseline physical and movement assessment before we write a single workout.",
-  },
-  {
-    q: "Can I train online if I am not in Hyderabad?",
-    a: "Yes. Online coaching includes customized periodized programs, technique video check-ins, and regular progress reviews so distance never gets in the way of your training.",
-  },
-  {
-    q: "Where is the centre located, and what are the timings?",
-    a: "Dhwajam Strength & Conditioning Centre is located Inside Botanical Garden, Kondapur, Gachibowli, Hyderabad. Session timings are shared upon enquiry based on your program batch.",
-  },
-];
-
 export const galleryItems = [
+  // --- Champions & Podiums: P. V. Sindhu ---
   {
-    id: "all-england",
-    title: "Yonex All England Open Badminton Championships",
-    category: "International Badminton",
-    location: "Birmingham, UK",
-    image: "/images/05-gallery-all-england.jpg",
-    caption: "Courtside with the Indian contingent at the Yonex All England Open.",
-  },
-  {
-    id: "sudirman-cup",
-    title: "With the Sudirman Cup",
-    category: "International Badminton",
-    location: "BWF World Mixed Team Championships",
-    image: "/images/06-gallery-sudirman-cup.jpg",
-    caption: "Standing beside the iconic Sudirman Cup trophy on international duty.",
-  },
-  {
-    id: "wuhan-2017",
-    title: "Badminton Asia Championships",
-    category: "International Badminton",
-    location: "Wuhan, China (2017)",
-    image: "/images/07-gallery-wuhan-2017.jpg",
-    caption: "Representing India at the 2017 Badminton Asia Championships in Wuhan.",
-  },
-  {
-    id: "chengdu-2026",
-    title: "Badminton Asia U17 & U15 Junior Championships",
-    category: "International Badminton",
-    location: "Wenjiang, Chengdu, China (2026)",
-    image: "/images/08-gallery-chengdu-banner.jpg",
-    caption: "Coaching India's rising junior badminton stars in Chengdu, China.",
-  },
-  {
-    id: "chengdu-mascots",
-    title: "Chengdu 2026 with Championship Mascots",
-    category: "International Badminton",
-    location: "Chengdu, China (2026)",
-    image: "/images/09-gallery-chengdu-mascots.jpg",
-    caption: "Off-court moment at the Badminton Asia U17 & U15 Junior Championships.",
-  },
-  {
-    id: "gopichand-academy-medals",
-    title: "Gopichand Academy — Celebrating Podium Medals",
-    category: "International Badminton",
+    id: "champ-pv-sindhu-medal",
+    title: "Celebrating Olympic Success with P. V. Sindhu",
+    category: "Champions & Podiums",
+    subCategory: "P. V. Sindhu",
     location: "Hyderabad",
-    image: "/images/10-gallery-gopichand-medal.jpg",
-    caption: "At Pullela Gopichand Badminton Academy celebrating international medal wins.",
+    year: "2016–2021",
+    image: "/images/champ-pv-sindhu-medal.jpg",
+    description:
+      "A proud moment with two-time Olympic medallist P. V. Sindhu. We spent years building the stamina and leg durability she needed to survive back-to-back BWF World Tour and Olympic battles.",
   },
   {
-    id: "national-squad-camp",
-    title: "Indian National Squad & Coaching Staff",
-    category: "International Badminton",
+    id: "champ-pv-sindhu-academy",
+    title: "In the Trophy Hall with P. V. Sindhu",
+    category: "Champions & Podiums",
+    subCategory: "P. V. Sindhu",
+    location: "Pullela Gopichand Academy, Hyderabad",
+    year: "2019",
+    image: "/images/champ-pv-sindhu-academy.jpg",
+    description:
+      "A quiet moment with Sindhu inside the Pullela Gopichand Badminton Academy trophy room. Moments like this remind me how much daily discipline goes into every international medal.",
+  },
+  {
+    id: "champ-pv-sindhu-training",
+    title: "Courtside Conditioning with P. V. Sindhu",
+    category: "Champions & Podiums",
+    subCategory: "P. V. Sindhu",
+    location: "Gopichand Academy, Hyderabad",
+    year: "2020",
+    image: "/images/champ-pv-sindhu-training.jpg",
+    description:
+      "Checking in with Sindhu courtside during an intense physical preparation block. Our focus here was keeping her first step sharp and protecting her knees during heavy tournament loading.",
+  },
+  {
+    id: "champ-pv-sindhu-field",
+    title: "Outdoor Grass Mobility & Lunge Work",
+    category: "Champions & Podiums",
+    subCategory: "P. V. Sindhu",
     location: "Hyderabad National Camp",
-    image: "/images/11-gallery-squad-camp.jpg",
-    caption: "With Chief National Coach Pullela Gopichand and national team athletes.",
+    year: "2021",
+    image: "/images/champ-pv-sindhu-field.jpg",
+    description:
+      "Taking Sindhu onto the grass for lunge mechanics and hip mobility work ahead of Tokyo. Training on grass reduces hard-court impact while building strong lower-body control.",
   },
   {
-    id: "ccl-stadium",
-    title: "Celebrity Cricket League — Match Night",
-    category: "Cricket & CCL",
-    location: "KSCA Stadium",
-    image: "/images/12-gallery-ccl-stadium.jpg",
-    caption: "Under stadium floodlights in Telugu Warriors kit during CCL.",
+    id: "champ-pv-sindhu-wallbar",
+    title: "Wall-Bar Core Session with P. V. Sindhu",
+    category: "Champions & Podiums",
+    subCategory: "P. V. Sindhu",
+    location: "National S&C Gym, Hyderabad",
+    year: "2021",
+    image: "/images/champ-pv-sindhu-wallbar.jpg",
+    description:
+      "Guiding Sindhu through wall-bar core stability work in the gym. A strong, controlled core helps an athlete recover balance faster after every overhead jump-smash.",
+  },
+
+  // --- Champions & Podiums: Manasi Joshi ---
+  {
+    id: "champ-manasi-joshi-trophy",
+    title: "Manasi Joshi's Basel 2019 World Gold",
+    category: "Champions & Podiums",
+    subCategory: "Manasi Joshi",
+    location: "Hyderabad",
+    year: "2019",
+    image: "/images/champ-manasi-joshi-trophy.jpg",
+    description:
+      "Standing with Manasi Joshi and her Basel 2019 World Championship Gold trophy. After four months of custom non-impact training, seeing her on top of the podium was unforgettable.",
   },
   {
-    id: "telugu-warriors-team",
-    title: "Telugu Warriors Squad — CCL 2025",
+    id: "champ-manasi-joshi-journey",
+    title: "Beginning Our 4-Month Basel Preparation",
+    category: "Champions & Podiums",
+    subCategory: "Manasi Joshi",
+    location: "Gopichand Academy, Hyderabad",
+    year: "2019",
+    image: "/images/champ-manasi-joshi-journey.jpg",
+    description:
+      "An early photo with Manasi when Chief Coach Gopichand entrusted me with her conditioning. Since she could not run or cycle, we had to design a completely new way to build her match stamina.",
+  },
+  {
+    id: "champ-manasi-joshi-rehab",
+    title: "Non-Impact Stamina & Landing Control",
+    category: "Champions & Podiums",
+    subCategory: "Manasi Joshi",
+    location: "Gopichand Academy, Hyderabad",
+    year: "2019",
+    image: "/images/champ-manasi-joshi-rehab.jpg",
+    description:
+      "Working on spine-safe endurance and single-leg landing control with Manasi. Protecting her lower back while increasing her court speed was the key to her World Championship run.",
+  },
+  {
+    id: "champ-manasi-joshi-gym",
+    title: "Strength & Balance Work in the Gym",
+    category: "Champions & Podiums",
+    subCategory: "Manasi Joshi",
+    location: "Hyderabad S&C Facility",
+    year: "2019",
+    image: "/images/champ-manasi-joshi-gym.jpg",
+    description:
+      "Guiding Manasi through upper-body and core strength blocks in the weight room. Every kilo of controlled strength helped her move with more confidence on court.",
+  },
+
+  // --- Champions & Podiums: Thulasimathi Murugesan ---
+  {
+    id: "champ-tulasi-murugesan",
+    title: "Thulasimathi Murugesan — Paris 2024 Paralympic Silver",
+    category: "Champions & Podiums",
+    subCategory: "Thulasimathi Murugesan",
+    location: "Hyderabad",
+    year: "2024",
+    image: "/images/champ-tulasi-murugesan.jpg",
+    description:
+      "With Thulasimathi Murugesan after her historic Paris 2024 Paralympic Silver and Asian Para Games Gold. Her discipline in every strength and recovery session paid off on the biggest stage.",
+  },
+  {
+    id: "champ-tulasi-core",
+    title: "Courtside Core Stability with Thulasimathi",
+    category: "Champions & Podiums",
+    subCategory: "Thulasimathi Murugesan",
+    location: "National Para-Badminton Camp",
+    year: "2024",
+    image: "/images/champ-tulasi-core.jpg",
+    description:
+      "Coaching Thulasimathi through courtside core and balance drills. Strong trunk control gave her the stability to lunge deep and recover fast during tough international finals.",
+  },
+
+  // --- Champions & Podiums: Srikanth & Men's Squad ---
+  {
+    id: "champ-srikanth-sag-gold",
+    title: "Srikanth Kidambi — South Asian Games Gold",
+    category: "Champions & Podiums",
+    subCategory: "Srikanth & Men's Squad",
+    location: "Kathmandu, Nepal",
+    year: "2019",
+    image: "/images/champ-srikanth-sag-gold.jpg",
+    description:
+      "With former World No. 1 Srikanth Kidambi during our Gold-medal campaign at the 2019 South Asian Games in Nepal. Keeping our legs fresh across back-to-back ties was our top priority.",
+  },
+  {
+    id: "champ-srikanth-court",
+    title: "Post-Session Portrait with Srikanth Kidambi",
+    category: "Champions & Podiums",
+    subCategory: "Srikanth & Men's Squad",
+    location: "Gopichand Academy, Hyderabad",
+    year: "2018",
+    image: "/images/champ-srikanth-court.jpg",
+    description:
+      "After an intense speed and agility session with Srikanth. We worked regularly on multi-directional footwork and deceleration so he could attack the net cleanly.",
+  },
+  {
+    id: "champ-sai-praneeth-satwik",
+    title: "With B. Sai Praneeth & Satwiksairaj Rankireddy",
+    category: "Champions & Podiums",
+    subCategory: "Srikanth & Men's Squad",
+    location: "Indian National Camp",
+    year: "2019",
+    image: "/images/champ-sai-praneeth-satwik.jpg",
+    description:
+      "With World Bronze medallist B. Sai Praneeth and Asian Games Gold medallist Satwiksairaj Rankireddy at camp. I loved balancing Satwik's explosive smash power with Sai's rally endurance.",
+  },
+
+  // --- Champions & Podiums: Sikki Reddy & Lakshya Sen ---
+  {
+    id: "champ-sikki-reddy-group",
+    title: "With N. Sikki Reddy & Women's Doubles Squad",
+    category: "Champions & Podiums",
+    subCategory: "Sikki Reddy & Lakshya Sen",
+    location: "Hyderabad National Camp",
+    year: "2020",
+    image: "/images/champ-sikki-reddy-group.jpg",
+    description:
+      "A group conditioning session with Arjuna Awardee N. Sikki Reddy and our women's doubles squad. Quick reaction speed and shoulder care were part of our daily routine.",
+  },
+  {
+    id: "champ-lakshya-sen-pbl",
+    title: "With Lakshya Sen on the League & National Circuit",
+    category: "Champions & Podiums",
+    subCategory: "Sikki Reddy & Lakshya Sen",
+    location: "National & League Circuit",
+    year: "2022",
+    image: "/images/champ-lakshya-sen-pbl.jpg",
+    description:
+      "Alongside Commonwealth Games Gold medallist Lakshya Sen during squad preparation. His work ethic in high-tempo footwork and recovery drills has always stood out.",
+  },
+
+  // --- International Tours ---
+  {
+    id: "intl-all-england",
+    title: "Yonex All England Open Badminton Championships",
+    category: "International Tours",
+    location: "Birmingham, UK",
+    year: "2018",
+    image: "/images/intl-all-england.jpg",
+    description:
+      "At the historic Yonex All England Open in Birmingham with the Indian National Team. On long overseas tours, I focus on travel recovery, sleep routines, and sharp match warm-ups.",
+  },
+  {
+    id: "intl-sudirman-cup",
+    title: "Beside the BWF Sudirman Cup Trophy",
+    category: "International Tours",
+    location: "BWF World Mixed Team Championships",
+    year: "2021",
+    image: "/images/intl-sudirman-cup.jpg",
+    description:
+      "Standing beside the Sudirman Cup trophy while on national S&C duty. Team championships require coordinating warm-ups and recovery across singles and doubles players all day.",
+  },
+  {
+    id: "intl-wuhan-2017",
+    title: "Badminton Asia Championships — Wuhan",
+    category: "International Tours",
+    location: "Wuhan, China",
+    year: "2017",
+    image: "/images/intl-wuhan-2017.jpg",
+    description:
+      "Serving with Team India at the 2017 Badminton Asia Championships in Wuhan. Every morning began with activation drills and ended with structured cool-downs for the players.",
+  },
+  {
+    id: "intl-chengdu-2026",
+    title: "Badminton Asia U17 & U15 Junior Championships",
+    category: "International Tours",
+    location: "Chengdu, China",
+    year: "2026",
+    image: "/images/intl-chengdu-2026.jpg",
+    description:
+      "Mentoring India's rising U17 and U15 junior shuttlers in Chengdu, China. Teaching young athletes proper warm-ups and safe movement early protects their careers for years to come.",
+  },
+  {
+    id: "intl-sag-2019-gold",
+    title: "13th South Asian Games — Gold Medal Contingent",
+    category: "International Tours",
+    location: "Kathmandu, Nepal",
+    year: "2019",
+    image: "/images/intl-sag-2019-gold.jpg",
+    description:
+      "Celebrating with our Indian Badminton contingent after winning Gold at the 13th South Asian Games in Kathmandu. Smart hydration and recovery kept everyone fresh in the cold mountain air.",
+  },
+  {
+    id: "intl-manila-bronze",
+    title: "Badminton Asia Championships — Manila Bronze",
+    category: "International Tours",
+    location: "Manila, Philippines",
+    year: "2022",
+    image: "/images/intl-manila-bronze.jpg",
+    description:
+      "With our Indian squad celebrating Bronze at the Badminton Asia Championships in Manila. Tournaments like this test how well an athlete's body handles knockout pressure.",
+  },
+  {
+    id: "intl-europe-camp",
+    title: "European International Training Camp",
+    category: "International Tours",
+    location: "Europe",
+    year: "2021",
+    image: "/images/intl-europe-camp.jpg",
+    description:
+      "On tour in Europe with our Indian shuttlers and coaching staff between BWF tournaments. Managing training load on the road is just as important as the workouts themselves.",
+  },
+  {
+    id: "intl-tan-kim-her",
+    title: "Working Alongside Coach Tan Kim Her",
+    category: "International Tours",
+    location: "International Badminton Circuit",
+    year: "2018",
+    image: "/images/intl-tan-kim-her.jpg",
+    description:
+      "Collaborating with renowned doubles coach Tan Kim Her. Aligning what we do in the gym with what the head coach wants on court always brings out the best in doubles pairs.",
+  },
+  {
+    id: "intl-gopichand-academy",
+    title: "With Chief Coach Pullela Gopichand & Squad",
+    category: "International Tours",
+    location: "Hyderabad",
+    year: "2019",
+    image: "/images/intl-gopichand-academy.jpg",
+    description:
+      "Standing with Chief National Coach Pullela Gopichand and our national team players in Hyderabad. Working under Gopichand sir's trust taught me so much about high-performance preparation.",
+  },
+  {
+    id: "intl-nce-coaches",
+    title: "National Centre of Excellence — Coaching Team",
+    category: "International Tours",
+    location: "Guwahati, Assam",
+    year: "2023",
+    image: "/images/intl-nce-coaches.jpg",
+    description:
+      "With fellow national coaches and sports science colleagues at the National Centre of Excellence. Sharing screening and conditioning standards helps young talent across every region.",
+  },
+  {
+    id: "about-assam-inauguration",
+    title: "National Centre Inauguration — Assam",
+    category: "International Tours",
+    location: "Guwahati, Assam",
+    year: "2023",
+    image: "/images/about-assam-inauguration.jpg",
+    description:
+      "At the inauguration of the National Centre of Excellence in Assam. Seeing world-class training facilities reach Northeast India was a proud moment for Indian badminton.",
+  },
+
+  // --- Cricket & CCL ---
+  {
+    id: "ccl-rajamouli",
+    title: "With S. S. Rajamouli — Telugu Warriors CCL",
     category: "Cricket & CCL",
     location: "Celebrity Cricket League",
-    image: "/images/13-gallery-telugu-warriors.jpg",
-    caption: "Full squad photo after delivering season strength and match fitness programs.",
+    year: "2025",
+    image: "/images/ccl-rajamouli.jpg",
+    description:
+      "With acclaimed filmmaker S. S. Rajamouli during our Telugu Warriors Celebrity Cricket League campaign. Bringing national-team fitness discipline into the CCL dressing room was a great experience.",
+  },
+  {
+    id: "ccl-nagarjuna",
+    title: "With Akkineni Nagarjuna & Telugu Warriors",
+    category: "Cricket & CCL",
+    location: "Hyderabad / CCL Stadium",
+    year: "2025",
+    image: "/images/ccl-nagarjuna.jpg",
+    description:
+      "With veteran actor Akkineni Nagarjuna and our Telugu Warriors squad during team warm-ups. Good warm-ups and sprint readiness help players enjoy the game without pulling muscles.",
+  },
+  {
+    id: "ccl-akhil",
+    title: "With Captain Akhil Akkineni — CCL Prep",
+    category: "Cricket & CCL",
+    location: "Celebrity Cricket League",
+    year: "2025",
+    image: "/images/ccl-akhil.jpg",
+    description:
+      "With Telugu Warriors captain Akhil Akkineni working on sprint speed and match fitness. We built simple, effective routines around busy film shooting schedules.",
+  },
+  {
+    id: "ccl-dugout-focus",
+    title: "From the Dugout — Match Night Focus",
+    category: "Cricket & CCL",
+    location: "KSCA Stadium",
+    year: "2025",
+    image: "/images/ccl-dugout-focus.jpg",
+    description:
+      "Watching the match closely from the Telugu Warriors dugout under stadium floodlights. I keep a close eye on player hydration, cramp prevention, and recovery between innings.",
+  },
+
+  // --- Press & Track Archives ---
+  {
+    id: "press-eenadu-2023",
+    title: "Eenadu Feature (2023) — Chilamkuru to World Stage",
+    category: "Press & Track Archives",
+    location: "Eenadu Daily, Telangana & AP",
+    year: "2023",
+    image: "/images/press-eenadu-2023.jpg",
+    description:
+      "A 2023 Eenadu Sunday feature sharing my journey from levelling farm fields in Chilamkuru to conditioning India's Olympic medallists. Seeing my village story in print meant the world to my family.",
+  },
+  {
+    id: "press-the-hindu-manasi",
+    title: "Deccan Chronicle — Chief Minister's Cup 800m",
+    category: "Press & Track Archives",
+    location: "Gachibowli Stadium, Hyderabad",
+    year: "2006",
+    image: "/images/press-the-hindu-manasi.jpg",
+    description:
+      "An old Deccan Chronicle newspaper photo of me racing the 800m at Gachibowli Stadium. Those tough track races taught me what real lactic fatigue feels like inside an athlete's legs.",
+  },
+  {
+    id: "press-2006-national-record",
+    title: "2006 National Meet Record Press Archive (3:16.43)",
+    category: "Press & Track Archives",
+    location: "Chennai Junior Federation Cup",
+    year: "2006",
+    image: "/images/press-2006-national-record.jpg",
+    description:
+      "Newspaper coverage from 2006 when our 4×400m relay team broke the National Meet Record in 3:16.43 at the Junior Federation Cup in Chennai. One of the happiest days of my running career.",
   },
   {
     id: "press-manasi-pv-governor",
-    title: "In The Press — Telangana Today & Sakshi",
-    category: "Track & Press",
+    title: "Telangana Today & Sakshi — Honours & Champions",
+    category: "Press & Track Archives",
     location: "Hyderabad & YSR Kadapa",
+    year: "2019",
     image: "/images/14-press-clippings.jpg",
-    caption: "Newspaper coverage featuring World Champion Manasi Joshi, P.V. Sindhu, and felicitation by the Hon'ble Governor of Telangana.",
+    description:
+      "Press clippings featuring Manasi Joshi's World Gold, P. V. Sindhu, and my felicitation by the Hon'ble Governor of Telangana at Raj Bhavan. Looking back at these reminds me how far hard work can take you.",
+  },
+  {
+    id: "track-bib-11-archive",
+    title: "My Track Days — Bib #11 (400m & 4×400m)",
+    category: "Press & Track Archives",
+    location: "National Athletics Meets",
+    year: "1999–2013",
+    image: "/images/03-track-bib-11.jpg",
+    description:
+      "Me on the athletics track wearing Bib #11 during my 13 years of competitive running. Winning 43 state and national medals gave me the real-world experience I share with my athletes today.",
   },
 ];

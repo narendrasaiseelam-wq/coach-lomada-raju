@@ -31,7 +31,6 @@ function AnimatedMetric({ value }) {
     }
 
     if (value === "3:16.43") {
-      // Total seconds = 3 * 60 + 16.43 = 196.43
       const controls = animate(0, 196.43, {
         duration: 1.4,
         ease: "easeOut",
@@ -48,27 +47,27 @@ function AnimatedMetric({ value }) {
   return <span ref={ref}>{display}</span>;
 }
 
-export default function Hero({ onOpenConnect }) {
+export default function Hero() {
   const portraitWrapperRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: portraitWrapperRef,
     offset: ["start end", "end start"],
   });
-  const portraitY = useTransform(scrollYProgress, [0, 1], [-14, 18]);
+  const portraitY = useTransform(scrollYProgress, [0, 1], [-10, 14]);
 
-  const scrollToAbout = () => {
-    const el = document.getElementById("about");
+  const scrollToSection = (id) => {
+    const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <section
       id="home"
-      className="relative bg-[#EFEFEF] border-b border-[#1C1C21]/14 overflow-hidden"
+      className="relative bg-[#EFEFEF] border-b border-[#1C1C21]/14 overflow-hidden scroll-mt-24"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pt-10 pb-14 md:pt-14 md:pb-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pt-28 lg:pt-32 pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          {/* Left Column: Editorial Headline, Intro, CTAs */}
+          {/* Left Column: Headline, Specialisation, Intro, Exact CTAs & Metrics */}
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
@@ -84,13 +83,13 @@ export default function Hero({ onOpenConnect }) {
             </div>
 
             {/* Massive Condensed Display Headline */}
-            <h1 className="font-editorial font-extrabold uppercase text-[#1C1C21] text-[3.75rem] sm:text-[5.25rem] xl:text-[6.5rem] leading-[0.88] tracking-[-0.02em] mb-6">
+            <h1 className="font-editorial font-extrabold uppercase text-[#1C1C21] text-[3.75rem] sm:text-[5.25rem] xl:text-[6.25rem] leading-[0.88] tracking-[-0.02em] mb-5">
               {coachProfile.fullName}
             </h1>
 
-            {/* Tagline */}
-            <p className="text-lg sm:text-xl font-semibold text-[#1C1C21] leading-snug max-w-2xl mb-4">
-              {coachProfile.tagline}
+            {/* Explicit Professional Experience & Specialisation */}
+            <p className="text-sm sm:text-base font-bold text-[#9E2A2B] leading-snug max-w-2xl mb-4 border-l-2 border-[#A67C52] pl-3.5">
+              {coachProfile.specialisationLine}
             </p>
 
             {/* Conversational First-Person Intro */}
@@ -98,32 +97,32 @@ export default function Hero({ onOpenConnect }) {
               {coachProfile.personalIntro}
             </p>
 
-            {/* Action Buttons */}
+            {/* Exact Required CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4 mb-10">
               <motion.button
                 type="button"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                onClick={() => onOpenConnect()}
-                className="inline-flex items-center gap-2 bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] px-6 py-3.5 rounded-xl text-xs font-bold tracking-[0.16em] uppercase shadow-sm hover:shadow-md transition-all cursor-pointer"
+                onClick={() => scrollToSection("coaching")}
+                className="inline-flex items-center gap-2 bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] px-6 py-3.5 rounded-xl text-sm font-bold tracking-wider uppercase shadow-sm hover:shadow-md transition-all cursor-pointer"
               >
-                <span>CONNECT WITH COACH</span>
-                <ArrowUpRight className="w-4 h-4" />
+                <span>Explore coaching</span>
+                <ArrowDownRight className="w-4 h-4" />
               </motion.button>
 
               <motion.button
                 type="button"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                onClick={scrollToAbout}
-                className="inline-flex items-center gap-2 border border-[#1C1C21]/20 hover:border-[#1C1C21]/45 bg-[#EFEFEF] hover:bg-[#E2E2E5] text-[#1C1C21] px-6 py-3.5 rounded-xl text-xs font-bold tracking-[0.16em] uppercase shadow-xs hover:shadow-sm transition-all cursor-pointer"
+                onClick={() => scrollToSection("contact")}
+                className="inline-flex items-center gap-2 border border-[#1C1C21]/25 hover:border-[#1C1C21]/50 bg-[#EFEFEF] hover:bg-[#E2E2E5] text-[#1C1C21] px-6 py-3.5 rounded-xl text-sm font-bold tracking-wider uppercase shadow-xs hover:shadow-sm transition-all cursor-pointer"
               >
-                <span>EXPLORE HIS JOURNEY</span>
-                <ArrowDownRight className="w-4 h-4 text-[#9E2A2B]" />
+                <span>Contact coach</span>
+                <ArrowUpRight className="w-4 h-4 text-[#9E2A2B]" />
               </motion.button>
             </div>
 
-            {/* Bottom 4-Column Metric Bar with Animated Counters */}
+            {/* Bottom 4-Column Metric Bar */}
             <div className="rounded-2xl border border-[#1C1C21]/12 bg-[#E2E2E5]/70 shadow-sm overflow-hidden">
               <div className="grid grid-cols-2 sm:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-[#1C1C21]/10">
                 {keyHighlights.map((item) => (
@@ -143,7 +142,7 @@ export default function Hero({ onOpenConnect }) {
             </div>
           </motion.div>
 
-          {/* Right Column: Editorial Portrait Frame with Subtle Parallax */}
+          {/* Right Column: Full-Length Portrait with Zero Overlap */}
           <motion.div
             ref={portraitWrapperRef}
             initial={{ opacity: 0, y: 24 }}
@@ -152,17 +151,17 @@ export default function Hero({ onOpenConnect }) {
             style={{ y: portraitY }}
             className="lg:col-span-5 relative flex justify-center lg:justify-end"
           >
-            <div className="relative w-full max-w-[448px] rounded-2xl border border-[#1C1C21]/12 p-2.5 bg-[#E2E2E5] shadow-sm overflow-hidden">
+            <div className="w-full max-w-[440px] rounded-2xl border border-[#1C1C21]/12 p-2.5 bg-[#E2E2E5] shadow-sm overflow-hidden">
               <SmartImage
                 src={coachProfile.heroImage}
-                alt="Coach Lomada Raju in official Indian National Team blazer"
-                aspectClass="aspect-[4/5] max-h-[560px]"
+                alt="Coach Lomada Raju receiving National Excellence recognition"
+                aspectClass="aspect-[3/4] max-h-[540px]"
                 objectPosition="object-top"
                 className="rounded-t-xl"
-                label="Hero Portrait"
+                label="National Excellence"
               />
 
-              {/* Integrated Credential Caption Footer Bar */}
+              {/* Clean Integrated Footer Bar */}
               <div className="rounded-b-xl bg-[#1C1C21] text-[#EFEFEF] p-4 sm:px-5 sm:py-4 border-t border-[#A67C52]/30">
                 <div className="flex items-start gap-3">
                   <ShieldCheck className="w-5 h-5 text-[#A67C52] shrink-0 mt-0.5" />

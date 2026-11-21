@@ -152,24 +152,28 @@ export const sportsAndTeams = [
   {
     sport: "Badminton",
     level: "Indian National Team (2015–2024) & Olympic / Para-Badminton Squads",
+    image: "/images/intl-gopichand-academy.jpg",
     events:
       "I travelled and worked with our national squads at the All England Open, Swiss Open, Thomas & Uber Cup (Denmark), Sudirman Cup (Finland), South Asian Games (Nepal — Gold), Asia Championships (Philippines — Bronze), BWF Super Series, and Chennai Smashers in PBL (2016).",
   },
   {
     sport: "Cricket",
     level: "Hyderabad U-19 & U-23, Ranji Trophy, IPL & Celebrity Cricket League",
+    image: "/images/ccl-stadium-lineup.jpg",
     events:
       "I served as S&C Coach for the Hyderabad Cricket Association (2013–2014) and currently lead strength and match-fitness conditioning for the Telugu Warriors in the Celebrity Cricket League (2025–Present).",
   },
   {
     sport: "Athletics",
     level: "13+ Years Competitive Track & Speed-Power Conditioning",
+    image: "/images/03-track-bib-11.jpg",
     events:
       "Having won 43 state and national medals myself (including a 3:16.43 National Meet Record in the 4×400m relay), I bring real track sprint mechanics and lactic tolerance directly to my athletes.",
   },
   {
     sport: "Kabaddi, Basketball & Tennis",
     level: "National, International & South Central Railway Squads",
+    image: "/images/intl-nce-coaches.jpg",
     events:
       "I spent 3 years coaching South Central Railway Badminton and Kabaddi teams (2010–2012), and have conditioned international court and mat athletes including Kabaddi star Mamatha Poojary.",
   },
@@ -665,6 +669,46 @@ export const galleryItems = [
   },
 
   // --- Cricket & CCL ---
+  {
+    id: "ccl-locker-room-briefing",
+    title: "Pre-Match Conditioning & Locker Room Briefing — Telugu Warriors",
+    category: "Cricket & CCL",
+    location: "Celebrity Cricket League (CCL)",
+    year: "2025",
+    image: "/images/ccl-locker-room-briefing.jpg",
+    description:
+      "Preparing players' physical readiness, activation routines, and recovery protocols in the locker room ahead of high-intensity CCL matches. Keeping the squad loose and injury-free makes all the difference on match night.",
+  },
+  {
+    id: "ccl-pitch-huddle",
+    title: "On-Field Team Huddle — Telugu Warriors Squad",
+    category: "Cricket & CCL",
+    location: "CCL Stadium Pitch",
+    year: "2025",
+    image: "/images/ccl-pitch-huddle.jpg",
+    description:
+      "Standing with the Telugu Warriors playing squad and leadership during pre-match warm-ups and tactical discussions on the pitch. Structured mobility and sprint drills sharpen reaction speed before the first ball.",
+  },
+  {
+    id: "ccl-stadium-lineup",
+    title: "Full Telugu Warriors Contingent Under Floodlights",
+    category: "Cricket & CCL",
+    location: "Celebrity Cricket League",
+    year: "2025",
+    image: "/images/ccl-stadium-lineup.jpg",
+    description:
+      "Lining up alongside the entire Telugu Warriors squad and support staff in front of a packed stadium crowd under floodlights. Proud to bring disciplined sports science to such a passionate team.",
+  },
+  {
+    id: "ccl-karnataka-dycm",
+    title: "With Hon'ble Deputy CM of Karnataka, Shri D. K. Shivakumar — CCL Pitch",
+    category: "Cricket & CCL",
+    location: "Bengaluru • Celebrity Cricket League",
+    year: "2025",
+    image: "/images/ccl-karnataka-dycm.jpg",
+    description:
+      "Greeting Hon'ble Deputy Chief Minister of Karnataka Shri D. K. Shivakumar on the pitch in Bengaluru alongside Captain Akhil Akkineni and the Telugu Warriors squad.",
+  },
   {
     id: "ccl-rajamouli",
     title: "With S. S. Rajamouli — Telugu Warriors CCL",

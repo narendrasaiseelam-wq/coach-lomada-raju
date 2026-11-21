@@ -177,7 +177,19 @@ export default function CoachingInteractive({ onOpenConnect }) {
                 transition={{ duration: 0.2 }}
                 className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center"
               >
-                <div className="lg:col-span-5">
+                {activeSport.image && (
+                  <div className="lg:col-span-4">
+                    <div className="aspect-[16/10] rounded-xl overflow-hidden border border-[#EFEFEF]/15 bg-[#141418]">
+                      <img
+                        src={activeSport.image}
+                        alt={activeSport.sport}
+                        className="w-full h-full object-cover object-top"
+                      />
+                    </div>
+                  </div>
+                )}
+
+                <div className={activeSport.image ? "lg:col-span-3" : "lg:col-span-5"}>
                   <h4 className="font-editorial font-extrabold uppercase text-3xl sm:text-4xl text-[#EFEFEF] tracking-wide mb-1.5">
                     {activeSport.sport}
                   </h4>
@@ -186,7 +198,11 @@ export default function CoachingInteractive({ onOpenConnect }) {
                   </p>
                 </div>
 
-                <div className="lg:col-span-5 lg:border-l lg:border-[#EFEFEF]/12 lg:pl-6">
+                <div
+                  className={`${
+                    activeSport.image ? "lg:col-span-3" : "lg:col-span-5"
+                  } lg:border-l lg:border-[#EFEFEF]/12 lg:pl-6`}
+                >
                   <p className="text-sm text-[#E2E2E5]/85 leading-relaxed">
                     {activeSport.events}
                   </p>

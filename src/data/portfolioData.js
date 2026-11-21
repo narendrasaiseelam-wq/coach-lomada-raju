@@ -126,6 +126,17 @@ export const championsTrained = [
     story:
       "Alongside Manasi Joshi, Chief Coach Pullela Gopichand entrusted me with Vikram Umesh's physical preparation ahead of the 2019 BWF Para-Badminton World Championships in Basel. We built custom court-movement stability, core endurance, and recovery protocols tailored to para-badminton demands—helping him bring home a World Championship Bronze medal for India.",
   },
+  {
+    id: "indian-junior-squad",
+    name: "Indian Junior Squad (U-15 & U-17)",
+    achievement:
+      "Badminton Asia U-17 & U-15 Junior Championships — Official Indian Contingent (Chengdu, China)",
+    category: "National Junior Contingent",
+    badge: "BADMINTON ASIA • CHENGDU",
+    image: "/images/intl-chengdu-court-squad.jpg",
+    story:
+      "Preparing India's U-15 and U-17 national squads for the Badminton Asia Junior Championships in Chengdu, China was about building strong athletic foundations early. Working closely with the coaching team, I focused on movement agility, core stability, and match recovery so our young shuttlers could compete fearlessly on the international stage.",
+  },
 ];
 
 export const notableRoster = [
@@ -227,7 +238,7 @@ export const careerTimeline = [
     role: "Head S&C Coach — Telugu Warriors (CCL) & Founder, Dhwajam",
     type: "Franchise Cricket & Centre",
     description:
-      "I lead strength, warm-up, and match-fitness conditioning for the Telugu Warriors in the Celebrity Cricket League while mentoring athletes at Dhwajam Strength & Conditioning Centre in Hyderabad.",
+      "I lead strength, warm-up, and match-fitness conditioning for the Telugu Warriors in the Celebrity Cricket League, serve with the Indian contingent at the Badminton Asia U-15 & U-17 Junior Championships (Chengdu, China), and mentor athletes at Dhwajam Strength & Conditioning Centre in Hyderabad.",
   },
   {
     period: "2024",
@@ -541,6 +552,36 @@ export const galleryItems = [
     image: "/images/intl-wuhan-2017.jpg",
     description:
       "Serving with Team India at the 2017 Badminton Asia Championships in Wuhan. Every morning began with activation drills and ended with structured cool-downs for the players.",
+  },
+  {
+    id: "intl-chengdu-court-squad",
+    title: "Badminton Asia U-15 & U-17 Championships — Courtside Contingent",
+    category: "International Tours",
+    location: "Chengdu, China",
+    year: "2026",
+    image: "/images/intl-chengdu-court-squad.jpg",
+    description:
+      "Full Indian U-15 and U-17 national contingent courtside at the Badminton Asia Junior Championships in Chengdu, China. Supporting our junior shuttlers with pre-match activation and recovery protocols across intense international rounds.",
+  },
+  {
+    id: "intl-chengdu-camp-squad",
+    title: "Team India U-15 & U-17 National Camp & Pre-Tour Conditioning",
+    category: "International Tours",
+    location: "National Coaching Camp",
+    year: "2026",
+    image: "/images/intl-chengdu-camp-squad.jpg",
+    description:
+      "With the complete Indian U-15 and U-17 squad and coaching staff in white Team India training kits. We built speed, footwork control, and injury-prevention habits ahead of the Chengdu continental tournament.",
+  },
+  {
+    id: "intl-chengdu-blazer-squad",
+    title: "Official Indian Contingent in Formal Blazers — Chengdu, China",
+    category: "International Tours",
+    location: "Chengdu, China",
+    year: "2026",
+    image: "/images/intl-chengdu-blazer-squad.jpg",
+    description:
+      "Full Indian U-15 and U-17 contingent in formal Team India blazers at the National Centre of Excellence ahead of the Badminton Asia Junior Championships. A proud moment representing India alongside dedicated national coaches.",
   },
   {
     id: "intl-chengdu-2026",

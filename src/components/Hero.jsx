@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { animate, motion, useInView, useScroll, useTransform } from "framer-motion";
 import { ArrowDownRight, ArrowUpRight, ShieldCheck } from "lucide-react";
 import { affiliations, coachProfile, keyHighlights } from "../data/portfolioData";
-import SmartImage from "./SmartImage";
 
 function AnimatedMetric({ value }) {
   const ref = useRef(null);
@@ -65,7 +64,37 @@ export default function Hero() {
       id="home"
       className="relative bg-[#EFEFEF] border-b border-[#1C1C21]/14 overflow-hidden scroll-mt-24"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pt-28 lg:pt-32 pb-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pt-8 lg:pt-10 pb-16">
+        {/* Top Bar: National & League Affiliations (7 Official Logos) */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45, ease: "easeOut" }}
+          className="pb-6 mb-8 border-b border-stone-200/80"
+        >
+          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#4A4A52] mb-3">
+            National &amp; League Affiliations
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5">
+            {affiliations.map((org) => (
+              <div
+                key={org.shortName}
+                className="flex items-center gap-2.5 bg-white/95 rounded-xl border border-[#1C1C21]/10 px-3 py-2 shadow-xs"
+                title={org.name}
+              >
+                <img
+                  src={org.logo}
+                  alt={org.name}
+                  className="w-7 h-7 object-contain shrink-0"
+                />
+                <span className="text-[11px] font-bold text-[#1C1C21] leading-tight">
+                  {org.shortName}
+                </span>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Column: Headline, Specialisation, Intro, Exact CTAs & Metrics */}
           <motion.div
@@ -144,7 +173,7 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Right Column: Seamless Portrait Card with Zoomed Framing */}
+          {/* Right Column: Edge-to-Edge Seamless Portrait Card */}
           <motion.div
             ref={portraitWrapperRef}
             initial={{ opacity: 0, y: 24 }}
@@ -154,14 +183,13 @@ export default function Hero() {
             className="lg:col-span-5 relative flex justify-center lg:justify-end"
           >
             <div className="w-full max-w-[440px] rounded-2xl overflow-hidden border border-stone-200 shadow-xl bg-[#1C1C21]">
-              <SmartImage
-                src={coachProfile.heroImage}
-                alt="Coach Lomada Raju receiving National Excellence recognition"
-                aspectClass="aspect-[4/5] max-h-[520px] overflow-hidden"
-                objectPosition="object-top"
-                imgClassName="scale-[1.35] origin-top group-hover:scale-[1.38]"
-                label="National Excellence"
-              />
+              <div className="aspect-[4/5] w-full overflow-hidden bg-[#1C1C21]">
+                <img
+                  src={coachProfile.heroImage}
+                  alt="Coach Lomada Raju receiving National Excellence recognition"
+                  className="w-full h-full object-cover object-[48%_22%] block"
+                />
+              </div>
 
               {/* Seamless Integrated Footer Bar */}
               <div className="bg-[#1C1C21] text-[#EFEFEF] p-4 sm:px-5 sm:py-4 border-t border-[#A67C52]/30">
@@ -180,36 +208,6 @@ export default function Hero() {
             </div>
           </motion.div>
         </div>
-
-        {/* National & League Affiliations Logo Bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-          className="mt-12 pt-8 border-t border-[#1C1C21]/12"
-        >
-          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#4A4A52] mb-4">
-            National &amp; League Affiliations
-          </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
-            {affiliations.map((org) => (
-              <div
-                key={org.shortName}
-                className="flex items-center gap-2.5 bg-white/95 rounded-xl border border-[#1C1C21]/10 px-3 py-2.5 shadow-xs"
-                title={org.name}
-              >
-                <img
-                  src={org.logo}
-                  alt={org.name}
-                  className="w-8 h-8 object-contain shrink-0"
-                />
-                <span className="text-[11px] font-bold text-[#1C1C21] leading-tight">
-                  {org.shortName}
-                </span>
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );

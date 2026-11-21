@@ -112,6 +112,15 @@ const BOOK_CHAPTERS = [
     ],
     photos: [
       {
+        src: "/images/press-eenadu-athletics-raju.jpg",
+        fit: "cover",
+        objectPosition: "object-top",
+        eyebrow: "EENADU FEATURE • NIS TOPPER",
+        caption:
+          "Newspaper feature documenting my Railway Degree College honours and selection as the sole South Indian among 30 candidates at NIS Patiala.",
+        alt: "Eenadu feature on Lomada Raju's NIS Patiala selection",
+      },
+      {
         src: "/images/intl-gopichand-academy.jpg",
         fit: "cover",
         objectPosition: "object-top",
@@ -119,15 +128,6 @@ const BOOK_CHAPTERS = [
         caption:
           "Working alongside Chief National Coach Pullela Gopichand during national squad duty in Hyderabad.",
         alt: "Lomada Raju with Chief National Coach Pullela Gopichand",
-      },
-      {
-        src: "/images/champ-pv-sindhu-medal.jpg",
-        fit: "cover",
-        objectPosition: "object-top",
-        eyebrow: "OLYMPIC & WORLD PODIUMS",
-        caption:
-          "With Olympic medallist P. V. Sindhu celebrating international championship success.",
-        alt: "Lomada Raju with Olympic medallist P. V. Sindhu",
       },
     ],
   },

@@ -708,6 +708,36 @@ export const galleryItems = [
 
   // --- Press & Track Archives ---
   {
+    id: "press-eenadu-athletics-raju",
+    title: 'Eenadu Feature: "Athletics Lo Ra-Raju" — Village to NIS Topper',
+    category: "Press & Track Archives",
+    location: "Eenadu Daily • Andhra Pradesh",
+    year: "Press Feature",
+    image: "/images/press-eenadu-athletics-raju.jpg",
+    description:
+      "Eenadu feature highlighting my Railway Degree College championship honours, being the sole South Indian selected among 30 candidates at NIS Patiala, and felicitation by Prakasam SP Srikanth.",
+  },
+  {
+    id: "press-way2news-thomas-cup",
+    title: "Way2News Feature: India Enters Thomas Cup Knockouts After 10 Years",
+    category: "Press & Track Archives",
+    location: "Way2News • BWF Thomas Cup",
+    year: "2021",
+    image: "/images/press-way2news-thomas-cup.jpg",
+    description:
+      "Celebrating inside the Indian Men's Badminton Team huddle alongside B. Sai Praneeth, Satwiksairaj Rankireddy, and Chirag Shetty after India's dominant 5–0 group victory at the Thomas Cup.",
+  },
+  {
+    id: "press-sakshi-2019-feature",
+    title: "Sakshi Newspaper Feature: Conditioning India's Champions & Governor Felicitation",
+    category: "Press & Track Archives",
+    location: "Sakshi Daily • YSR Kadapa",
+    year: "Sept 2019",
+    image: "/images/press-sakshi-2019-feature.jpg",
+    description:
+      "Sakshi feature capturing my core training with P. V. Sindhu, personal conditioning for World Champion Manasi Joshi, and Raj Bhavan felicitation by Telangana Governor E. S. L. Narasimhan.",
+  },
+  {
     id: "press-sportstar-tulasi-2024",
     title: "Sportstar Feature: Thulasimathi's Paris 2024 Paralympic Silver Reunion",
     category: "Press & Track Archives",

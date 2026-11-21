@@ -25,7 +25,7 @@ const CHAMPION_SUBCATEGORIES = [
   "All Champions",
   "P. V. Sindhu",
   "Manasi Joshi",
-  "Thulasimathi Murugesan",
+  "Thulasimathi & Para-Badminton",
   "Srikanth & Men's Squad",
   "Sikki Reddy & Lakshya Sen",
 ];

@@ -110,7 +110,7 @@ export const championsTrained = [
     achievement: "BWF Para-Badminton World Championships Bronze Medallist (Basel 2019)",
     category: "Para-Badminton",
     badge: "WORLD PARA BRONZE",
-    image: "/images/intl-gopichand-academy.jpg",
+    image: "/images/champ-vikram-umesh.jpg",
     story:
       "Alongside Manasi Joshi, Chief Coach Pullela Gopichand entrusted me with Vikram Umesh's physical preparation ahead of the 2019 BWF Para-Badminton World Championships in Basel. We built custom court-movement stability, core endurance, and recovery protocols tailored to para-badminton demands—helping him bring home a World Championship Bronze medal for India.",
   },
@@ -405,12 +405,12 @@ export const galleryItems = [
       "Guiding Manasi through upper-body and core strength blocks in the weight room. Every kilo of controlled strength helped her move with more confidence on court.",
   },
 
-  // --- Champions & Podiums: Thulasimathi Murugesan ---
+  // --- Champions & Podiums: Thulasimathi & Para-Badminton ---
   {
     id: "champ-tulasi-murugesan",
     title: "Thulasimathi Murugesan — Paris 2024 Paralympic Silver",
     category: "Champions & Podiums",
-    subCategory: "Thulasimathi Murugesan",
+    subCategory: "Thulasimathi & Para-Badminton",
     location: "Hyderabad",
     year: "2024",
     image: "/images/champ-tulasi-murugesan.jpg",
@@ -421,12 +421,23 @@ export const galleryItems = [
     id: "champ-tulasi-core",
     title: "Courtside Core Stability with Thulasimathi",
     category: "Champions & Podiums",
-    subCategory: "Thulasimathi Murugesan",
+    subCategory: "Thulasimathi & Para-Badminton",
     location: "National Para-Badminton Camp",
     year: "2024",
     image: "/images/champ-tulasi-core.jpg",
     description:
       "Coaching Thulasimathi through courtside core and balance drills. Strong trunk control gave her the stability to lunge deep and recover fast during tough international finals.",
+  },
+  {
+    id: "champ-vikram-umesh",
+    title: "Vikram Umesh — Basel 2019 World Championships Bronze",
+    category: "Champions & Podiums",
+    subCategory: "Thulasimathi & Para-Badminton",
+    location: "Hyderabad",
+    year: "2019",
+    image: "/images/champ-vikram-umesh.jpg",
+    description:
+      "Standing beside Para-Badminton World Championships Bronze medallist Vikram Umesh. Alongside Manasi Joshi, Chief Coach Pullela Gopichand entrusted me with preparing Vikram for Basel 2019—where our court-movement stability and core endurance blocks helped him win World Bronze for India.",
   },
 
   // --- Champions & Podiums: Srikanth & Men's Squad ---

@@ -1,7 +1,7 @@
 export const coachProfile = {
   fullName: "Lomada Raju",
   monogram: "LR",
-  title: "International Strength & Conditioning Coach • Hyderabad",
+  title: "International Strength & Conditioning Coach",
   specialisationLine:
     "15+ Years International Strength & Conditioning Specialist — Olympic & Para-Badminton, National Cricket, Athletics & Sports Yoga Science.",
   tagline:
@@ -35,7 +35,7 @@ export const keyHighlights = [
   { metric: "15+", label: "Years Coaching", detail: "Strength & conditioning since 2010" },
   { metric: "3:16.43", label: "National Record", detail: "4×400m relay, Junior Federation Cup (2006)" },
   { metric: "43", label: "Track Medals", detail: "14 National & 29 State medals (1999–2013)" },
-  { metric: "SAI & NIS", label: "Certified", detail: "Sports Authority of India & NIS Patiala (2022)" },
+  { metric: "SAI & NIS", label: "Certified", detail: "BAI, Sports Authority of India & NIS Patiala (2022)" },
 ];
 
 export const championsTrained = [
@@ -84,15 +84,15 @@ export const championsTrained = [
       "I supported Srikanth as part of the Indian National Badminton S&C team during his World No. 1 rise and international tours. We focused heavily on quick direction changes, lower-body power, and fast recovery between BWF Super Series rounds and the 2019 South Asian Games.",
   },
   {
-    id: "satwik",
-    name: "Satwiksairaj Rankireddy",
+    id: "satwik-chirag",
+    name: "Satwiksairaj Rankireddy & Chirag Shetty",
     achievement:
-      "Tokyo 2020 & Paris 2024 Olympian, Asian Games Gold Medallist & World No. 1 Doubles",
+      "Tokyo 2020 & Paris 2024 Olympians, Asian Games Gold Medallists & World No. 1 Men's Doubles Pair",
     category: "Olympic Badminton",
     badge: "Asian Games Gold",
     image: "/images/champ-sai-praneeth-satwik.jpg",
     story:
-      "Men's doubles is all about speed and shoulder power. With Satwik, I worked on shoulder stability for his heavy jump-smashes, along with high-intensity stamina so he could keep attacking through long three-set battles.",
+      "Men's doubles at the World No. 1 level demands explosive speed and shoulder durability. Working with Satwiksairaj Rankireddy and Chirag Shetty, I focused on shoulder stability for heavy jump-smashes, rapid net-recovery footwork, and high-intensity stamina for long three-set battles.",
   },
   {
     id: "sai-praneeth",
@@ -100,26 +100,25 @@ export const championsTrained = [
     achievement: "BWF World Championships Bronze Medallist & Tokyo 2020 Olympian",
     category: "Olympic Badminton",
     badge: "World Bronze",
-    image: "/images/champ-sai-praneeth-satwik.jpg",
+    image: "/images/champ-sai-praneeth-medal.jpg",
     story:
       "I worked closely with Sai Praneeth on rally endurance, core strength, and joint care across demanding World Championship and Olympic qualification seasons—helping his body stay ready for long, tactical singles matches.",
   },
   {
-    id: "lakshya-sen",
-    name: "Lakshya Sen",
-    achievement: "Commonwealth Games Gold Medallist & Paris 2024 Olympic Semifinalist",
-    category: "Olympic Badminton",
-    badge: "CWG Gold",
-    image: "/images/champ-lakshya-sen-pbl.jpg",
+    id: "vikram-umesh",
+    name: "Vikram Umesh",
+    achievement: "BWF Para-Badminton World Championships Bronze Medallist (Basel 2019)",
+    category: "Para-Badminton",
+    badge: "WORLD PARA BRONZE",
+    image: "/images/intl-gopichand-academy.jpg",
     story:
-      "Lakshya plays at a very fast tempo on court. Working with him in national and league camps, we focused on explosive lunging strength, quick footwork recovery, and season-long match fitness.",
+      "Alongside Manasi Joshi, Chief Coach Pullela Gopichand entrusted me with Vikram Umesh's physical preparation ahead of the 2019 BWF Para-Badminton World Championships in Basel. We built custom court-movement stability, core endurance, and recovery protocols tailored to para-badminton demands—helping him bring home a World Championship Bronze medal for India.",
   },
 ];
 
 export const notableRoster = [
   "Sameer Verma (International Badminton)",
   "N. Sikki Reddy (Arjuna Awardee, Badminton)",
-  "Vikram Umesh (World Para-Badminton Bronze Medallist)",
   "Pragyan Ojha (India Test Cricketer)",
   "Tirumalasetti Suman (IPL Cricketer)",
   "Mamatha Poojary (International Kabaddi)",

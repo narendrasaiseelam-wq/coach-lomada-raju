@@ -90,33 +90,59 @@ export default function CareerTimeline() {
               <div className="space-y-6">
                 {filteredItems.map((item) => (
                   <motion.article
-                    key={item.period + item.role}
+                    key={item.id}
+                    id={item.id}
                     layout
                     initial={{ opacity: 0, y: 14 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
-                    className="relative rounded-2xl border border-[#1C1C21]/12 bg-[#E2E2E5]/55 p-6 shadow-sm hover:shadow-md transition-all"
+                    className="relative scroll-mt-28 rounded-2xl border border-[#1C1C21]/12 bg-[#E2E2E5]/55 p-6 shadow-sm hover:shadow-md transition-all"
                   >
                     {/* Spine Node Marker */}
                     <span className="absolute -left-[27px] sm:-left-[35px] top-7 w-3.5 h-3.5 rounded-full bg-[#EFEFEF] border-2 border-[#9E2A2B]" />
 
-                    <div className="flex flex-wrap items-center justify-between gap-2 mb-2.5">
-                      <span className="font-editorial font-bold text-lg tracking-wider uppercase text-[#9E2A2B]">
-                        {item.period}
-                      </span>
+                    <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
+                      <div className="flex items-center gap-2.5">
+                        {item.orgLogo && (
+                          <span className="w-8 h-8 rounded-lg bg-white border border-[#1C1C21]/10 p-1 flex items-center justify-center shrink-0">
+                            <img
+                              src={item.orgLogo}
+                              alt=""
+                              className="w-full h-full object-contain"
+                            />
+                          </span>
+                        )}
+                        <span className="font-editorial font-bold text-lg tracking-wider uppercase text-[#9E2A2B]">
+                          {item.period}
+                        </span>
+                      </div>
                       <span className="text-[10px] font-bold uppercase tracking-[0.16em] px-3 py-1 rounded-full border border-[#A67C52]/50 text-[#A67C52] bg-[#EFEFEF]">
                         {item.type}
                       </span>
                     </div>
 
-                    <h3 className="font-editorial font-bold uppercase text-2xl sm:text-3xl text-[#1C1C21] leading-tight mb-3">
-                      {item.role}
-                    </h3>
+                    <div className="flex flex-col sm:flex-row gap-4 items-start">
+                      <div className="flex-1">
+                        <h3 className="font-editorial font-bold uppercase text-2xl sm:text-3xl text-[#1C1C21] leading-tight mb-2.5">
+                          {item.role}
+                        </h3>
 
-                    <p className="text-sm text-[#4A4A52] leading-relaxed">
-                      {item.description}
-                    </p>
+                        <p className="text-sm text-[#4A4A52] leading-relaxed">
+                          {item.description}
+                        </p>
+                      </div>
+
+                      {item.image && (
+                        <div className="w-full sm:w-36 h-28 shrink-0 rounded-xl overflow-hidden border border-[#1C1C21]/12 bg-[#EFEFEF]">
+                          <img
+                            src={item.image}
+                            alt={item.role}
+                            className="w-full h-full object-cover object-top"
+                          />
+                        </div>
+                      )}
+                    </div>
                   </motion.article>
                 ))}
               </div>

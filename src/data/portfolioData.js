@@ -33,13 +33,13 @@ export const coachProfile = {
 };
 
 export const affiliations = [
-  { name: "Sports Authority of India", shortName: "SAI", logo: "/images/logos/sai.png" },
-  { name: "Badminton Association of India", shortName: "BAI", logo: "/images/logos/bai.png" },
-  { name: "Chennai Smashers (PBL)", shortName: "Chennai Smashers", logo: "/images/logos/chennai-smashers.png" },
-  { name: "Indian Athletics", shortName: "Athletics India", logo: "/images/logos/athletics-india.png" },
-  { name: "Hyderabad Cricket Association", shortName: "HCA", logo: "/images/logos/hca.png" },
-  { name: "Telugu Warriors (CCL)", shortName: "Telugu Warriors", logo: "/images/logos/telugu-warriors-ccl.png" },
-  { name: "South Central Railway", shortName: "South Central Railway", logo: "/images/logos/south-central-railway.png" },
+  { name: "Sports Authority of India", shortName: "SAI", logo: "/images/logos/sai.png", targetId: "education" },
+  { name: "Badminton Association of India", shortName: "BAI", logo: "/images/logos/bai.png", targetId: "milestone-bai" },
+  { name: "Chennai Smashers (PBL)", shortName: "Chennai Smashers", logo: "/images/logos/chennai-smashers.png", targetId: "milestone-pbl" },
+  { name: "Indian Athletics", shortName: "Athletics India", logo: "/images/logos/athletics-india.png", targetId: "milestone-athletics" },
+  { name: "Hyderabad Cricket Association", shortName: "HCA", logo: "/images/logos/hca.png", targetId: "milestone-hca" },
+  { name: "Telugu Warriors (CCL)", shortName: "Telugu Warriors", logo: "/images/logos/telugu-warriors-ccl.png", targetId: "milestone-2025" },
+  { name: "South Central Railway", shortName: "South Central Railway", logo: "/images/logos/south-central-railway.png", targetId: "milestone-railways" },
 ];
 
 export const keyHighlights = [
@@ -238,65 +238,102 @@ export const coachingFaqs = [
 
 export const careerTimeline = [
   {
-    period: "2025 — Present",
-    role: "Head S&C Coach — Telugu Warriors (CCL) & Founder, Dhwajam",
-    type: "Franchise Cricket & Centre",
+    id: "milestone-dhwajam",
+    period: "PRESENT",
+    role: "Founder & Head Coach — Dhwajam Strength & Conditioning Centre",
+    type: "MY TRAINING CENTRE • HYDERABAD",
+    orgLogo: "/images/04-dhwajam-logo.png",
+    image: "/images/02-about-desk-portrait.jpg",
     description:
-      "I lead strength, warm-up, and match-fitness conditioning for the Telugu Warriors in the Celebrity Cricket League, serve with the Indian contingent at the Badminton Asia U-15 & U-17 Junior Championships (Chengdu, China), and mentor athletes at Dhwajam Strength & Conditioning Centre in Hyderabad.",
+      "Today, I lead Dhwajam Strength & Conditioning Centre inside Botanical Garden, Kondapur, Hyderabad—mentoring emerging athletes, national competitors, and fitness seekers through science-backed conditioning and sports yoga.",
   },
   {
+    id: "milestone-2025",
+    period: "2025",
+    role: "Head S&C Coach — Telugu Warriors (CCL) & India Junior Contingent",
+    type: "FRANCHISE CRICKET & INTERNATIONAL DUTY",
+    orgLogo: "/images/logos/telugu-warriors-ccl.png",
+    image: "/images/ccl-stadium-lineup.jpg",
+    description:
+      "Led team-based strength, warm-up, and match-fitness conditioning for the Telugu Warriors in the Celebrity Cricket League (CCL), alongside serving as S&C Coach for the Indian contingent at the Badminton Asia U-15 & U-17 Junior Championships in Chengdu, China.",
+  },
+  {
+    id: "milestone-2024",
     period: "2024",
     role: "Telangana ICON Award Recipient",
     type: "State Honour",
+    orgLogo: "/images/logos/sai.png",
+    image: "/images/14-press-clippings.jpg",
     description:
       "I was honoured with the Telangana ICON Award in recognition of 15 years of work in sports science and conditioning India's international athletes.",
   },
   {
+    id: "milestone-nis",
     period: "2022",
-    role: "NIS Patiala Strength & Conditioning Certification",
+    role: "NIS Patiala & SAI Strength & Conditioning Certification",
     type: "National Certification",
+    orgLogo: "/images/logos/sai.png",
+    image: "/images/press-eenadu-athletics-raju.jpg",
     description:
-      "I completed my Strength & Conditioning Certification from the National Institute of Sports (NSNIS), Patiala, adding to my SAI certification.",
+      "I completed my Strength & Conditioning Certification from the National Institute of Sports (NIS), Patiala, adding to my Sports Authority of India (SAI) certification.",
   },
   {
+    id: "milestone-2019",
     period: "2019",
-    role: "Felicitated by Governor of Telangana & Govt. of Andhra Pradesh",
+    role: "State Honours by Governor of Telangana & Govt. of AP",
     type: "State Honour",
+    orgLogo: "/images/logos/bai.png",
+    image: "/images/press-sakshi-2019-feature.jpg",
     description:
       "I was deeply humbled to be felicitated at Raj Bhavan by the Hon'ble Governor of Telangana and at AP Stadium, Vijayawada by the Government of Andhra Pradesh after India's World Championship wins.",
   },
   {
-    period: "2015 — 2024",
+    id: "milestone-bai",
+    period: "2015 – 2024",
     role: "Strength & Conditioning Coach — Indian National Badminton Team",
     type: "National Squad",
+    orgLogo: "/images/logos/bai.png",
+    image: "/images/hero-national-excellence.jpg",
     description:
       "For nine years, I supported Indian badminton and para-badminton stars across major international tours: South Asian Games in Nepal (Gold Medal), All England Open (UK), Swiss Open (Switzerland), Thomas & Uber Cup (Denmark), Sudirman Cup (Finland), Badminton Asia Championships in Manila, Philippines (Bronze Medal), and BWF Super Series (Singapore & Malaysia).",
   },
   {
+    id: "milestone-pbl",
     period: "2016",
-    role: "Strength & Conditioning Coach — Chennai Smashers (PBL)",
+    role: "Premier Badminton League — Chennai Smashers",
     type: "League Badminton",
+    orgLogo: "/images/logos/chennai-smashers.png",
+    image: "/images/intl-gopichand-academy.jpg",
     description:
       "I designed and ran high-tempo team conditioning programs for Chennai Smashers during the Premier Badminton League season.",
   },
   {
-    period: "2013 — 2014",
+    id: "milestone-hca",
+    period: "2013 – 2014",
     role: "Strength & Conditioning Coach — Hyderabad Cricket Association",
     type: "State Cricket",
+    orgLogo: "/images/logos/hca.png",
+    image: "/images/ccl-locker-room-briefing.jpg",
     description:
       "I worked with Hyderabad's Under-23 and Under-16 cricket squads, focusing on athletic development, injury prevention, and match stamina.",
   },
   {
-    period: "2010 — 2012",
-    role: "Strength & Conditioning Coach — South Central Railway Teams",
+    id: "milestone-railways",
+    period: "2010 – 2012",
+    role: "Indian Railways & South Central Railway Teams",
     type: "Institutional Sport",
+    orgLogo: "/images/logos/south-central-railway.png",
+    image: "/images/about-assam-inauguration.jpg",
     description:
       "My first major coaching role after transitioning from competitive athletics—I served as S&C Coach for Indian Railways Badminton and Kabaddi teams.",
   },
   {
-    period: "1999 — 2013",
-    role: "National & State Track Athlete (400m & 4×400m Relay)",
+    id: "milestone-athletics",
+    period: "1999 – 2013",
+    role: "National Track & Field Athlete — 43 Medals & 3:16.43 Record",
     type: "Competitive Career",
+    orgLogo: "/images/logos/athletics-india.png",
+    image: "/images/03-track-bib-11.jpg",
     description:
       "I spent over 13 years racing on the track, winning 43 medals: 14 National Medals (4 Gold, 5 Silver, 5 Bronze — including Youth Nationals Gold Bangalore 2005, Junior Federation Cup Gold & Unbroken Meet Record 03:16.43 Chennai 2006, Inter-Zonal Meet Gold Allahabad 2006, Junior Nationals Silver Bangalore 2006, and Junior Federation Cup Bronze Madurai 2007) and 29 State Medals (17 Gold, 10 Silver, 2 Bronze).",
   },

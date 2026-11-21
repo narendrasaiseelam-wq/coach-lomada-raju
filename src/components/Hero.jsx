@@ -54,9 +54,12 @@ export default function Hero() {
   });
   const portraitY = useTransform(scrollYProgress, [0, 1], [-10, 14]);
 
-  const scrollToSection = (id) => {
+  const scrollToSection = (id, yOffset = -84) => {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (el) {
+      const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
   };
 
   return (
@@ -65,7 +68,7 @@ export default function Hero() {
       className="relative bg-[#EFEFEF] border-b border-[#1C1C21]/14 overflow-hidden scroll-mt-24"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pt-8 lg:pt-10 pb-16">
-        {/* Top Bar: National & League Affiliations (7 Official Logos) */}
+        {/* Top Bar: Interactive National & League Affiliations (7 Official Logos) */}
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -73,14 +76,16 @@ export default function Hero() {
           className="pb-6 mb-8 border-b border-stone-200/80"
         >
           <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#4A4A52] mb-3">
-            National &amp; League Affiliations
+            National &amp; League Affiliations &bull; Click to Jump to Milestone
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5">
             {affiliations.map((org) => (
-              <div
+              <button
                 key={org.shortName}
-                className="flex items-center gap-2.5 bg-white/95 rounded-xl border border-[#1C1C21]/10 px-3 py-2 shadow-xs"
-                title={org.name}
+                type="button"
+                onClick={() => scrollToSection(org.targetId, -96)}
+                className="flex items-center gap-2.5 bg-white/95 rounded-xl border border-[#1C1C21]/10 px-3 py-2 shadow-xs cursor-pointer hover:border-[#9E2A2B] hover:shadow-md transition-all text-left"
+                title={`Jump to ${org.name}`}
               >
                 <img
                   src={org.logo}
@@ -90,7 +95,7 @@ export default function Hero() {
                 <span className="text-[11px] font-bold text-[#1C1C21] leading-tight">
                   {org.shortName}
                 </span>
-              </div>
+              </button>
             ))}
           </div>
         </motion.div>

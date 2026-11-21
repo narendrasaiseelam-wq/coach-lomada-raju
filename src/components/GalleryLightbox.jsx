@@ -35,6 +35,17 @@ export default function GalleryLightbox() {
   const [activeSubCategory, setActiveSubCategory] = useState("All Champions");
   const [lightboxIndex, setLightboxIndex] = useState(null);
   const [isZoomed, setIsZoomed] = useState(false);
+  const [showAllMobile, setShowAllMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== "undefined" ? window.matchMedia("(max-width: 767px)").matches : false
+  );
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 767px)");
+    const handleChange = (e) => setIsMobile(e.matches);
+    mq.addEventListener("change", handleChange);
+    return () => mq.removeEventListener("change", handleChange);
+  }, []);
 
   const getCategoryCount = (category) => {
     if (category === "All Moments") return galleryItems.length;
@@ -65,6 +76,11 @@ export default function GalleryLightbox() {
     lightboxIndex !== null && filteredItems[lightboxIndex]
       ? filteredItems[lightboxIndex]
       : null;
+
+  const visibleItems =
+    isMobile && !showAllMobile && filteredItems.length > 6
+      ? filteredItems.slice(0, 6)
+      : filteredItems;
 
   const closeLightbox = useCallback(() => {
     setLightboxIndex(null);
@@ -131,8 +147,8 @@ export default function GalleryLightbox() {
               </h2>
             </div>
 
-            {/* Primary Category Tabs */}
-            <div className="inline-flex flex-wrap gap-1 rounded-xl border border-[#1C1C21]/15 bg-[#EFEFEF] p-1.5 self-start lg:self-auto shadow-xs">
+            {/* Primary Category Tabs (Horizontal scroll on mobile, wrap on desktop) */}
+            <div className="flex flex-nowrap md:flex-wrap overflow-x-auto no-scrollbar gap-1 rounded-xl border border-[#1C1C21]/15 bg-[#EFEFEF] p-1.5 max-w-full shadow-xs">
               {CATEGORIES.map((category) => {
                 const isSelected = activeCategory === category;
                 const count = getCategoryCount(category);
@@ -143,9 +159,10 @@ export default function GalleryLightbox() {
                     onClick={() => {
                       setActiveCategory(category);
                       setActiveSubCategory("All Champions");
+                      setShowAllMobile(false);
                       setLightboxIndex(null);
                     }}
-                    className={`relative px-4 py-2.5 rounded-lg text-sm font-bold uppercase tracking-wider transition-colors cursor-pointer flex items-center gap-1.5 ${
+                    className={`relative shrink-0 px-4 py-2.5 rounded-lg text-sm font-bold uppercase tracking-wider transition-colors cursor-pointer flex items-center gap-1.5 ${
                       isSelected ? "text-[#EFEFEF]" : "text-[#4A4A52] hover:text-[#1C1C21]"
                     }`}
                   >
@@ -156,7 +173,7 @@ export default function GalleryLightbox() {
                         className="absolute inset-0 rounded-lg bg-[#9E2A2B]"
                       />
                     )}
-                    <span className="relative z-10">{category}</span>
+                    <span className="relative z-10 whitespace-nowrap">{category}</span>
                     <span
                       className={`relative z-10 text-[10px] tabular-nums ${
                         isSelected ? "text-[#EFEFEF]/80" : "text-[#A67C52]"
@@ -170,7 +187,7 @@ export default function GalleryLightbox() {
             </div>
           </div>
 
-          {/* Dynamic Sub-Section Pills (Smoothly slides open when Champions & Podiums is active) */}
+          {/* Dynamic Sub-Section Pills (Horizontal scroll on mobile, wrap on desktop) */}
           <AnimatePresence>
             {activeCategory === "Champions & Podiums" && (
               <motion.div
@@ -180,8 +197,8 @@ export default function GalleryLightbox() {
                 transition={{ duration: 0.24, ease: "easeOut" }}
                 className="overflow-hidden"
               >
-                <div className="pt-2 flex flex-wrap items-center gap-2">
-                  <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#4A4A52] mr-1">
+                <div className="pt-2 flex flex-nowrap md:flex-wrap overflow-x-auto no-scrollbar items-center gap-2">
+                  <span className="shrink-0 text-[11px] font-bold uppercase tracking-[0.16em] text-[#4A4A52] mr-1">
                     Filter by Champion:
                   </span>
                   {CHAMPION_SUBCATEGORIES.map((sub) => {
@@ -193,9 +210,10 @@ export default function GalleryLightbox() {
                         type="button"
                         onClick={() => {
                           setActiveSubCategory(sub);
+                          setShowAllMobile(false);
                           setLightboxIndex(null);
                         }}
-                        className={`relative px-3.5 py-1.5 rounded-full text-xs font-semibold transition-colors cursor-pointer flex items-center gap-1.5 border ${
+                        className={`relative shrink-0 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-colors cursor-pointer flex items-center gap-1.5 border ${
                           isSubSelected
                             ? "border-[#1C1C21] text-[#EFEFEF]"
                             : "border-[#1C1C21]/15 bg-[#EFEFEF] text-[#1C1C21] hover:border-[#1C1C21]/40"
@@ -208,7 +226,7 @@ export default function GalleryLightbox() {
                             className="absolute inset-0 rounded-full bg-[#1C1C21]"
                           />
                         )}
-                        <span className="relative z-10">{sub}</span>
+                        <span className="relative z-10 whitespace-nowrap">{sub}</span>
                         <span
                           className={`relative z-10 text-[10px] tabular-nums ${
                             isSubSelected ? "text-[#A67C52]" : "text-[#9E2A2B]"
@@ -228,7 +246,7 @@ export default function GalleryLightbox() {
         {/* Uncropped CSS Columns Masonry Layout */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6 pt-10">
           <AnimatePresence mode="popLayout">
-            {filteredItems.map((item, idx) => (
+            {visibleItems.map((item, idx) => (
               <motion.article
                 key={item.id}
                 layout
@@ -286,6 +304,21 @@ export default function GalleryLightbox() {
             ))}
           </AnimatePresence>
         </div>
+
+        {/* Mobile Show All / Show Less Toggle */}
+        {isMobile && filteredItems.length > 6 && (
+          <div className="pt-8 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setShowAllMobile((prev) => !prev)}
+              className="w-full sm:w-auto rounded-xl border border-[#1C1C21]/25 bg-[#EFEFEF] hover:bg-[#1C1C21] hover:text-[#EFEFEF] text-[#1C1C21] px-6 py-3.5 text-sm font-bold uppercase tracking-wider shadow-xs transition-colors cursor-pointer"
+            >
+              {showAllMobile
+                ? "Show Less"
+                : `Show All Photos (${filteredItems.length - 6} more)`}
+            </button>
+          </div>
+        )}
       </div>
 
       {/* Elevated Full-Screen Lightbox Modal with Editorial Sidebar */}

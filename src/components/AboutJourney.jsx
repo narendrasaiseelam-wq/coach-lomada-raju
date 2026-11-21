@@ -231,11 +231,10 @@ export default function AboutJourney() {
                       key={chapter.id}
                       type="button"
                       onClick={() => setActiveChapterIdx(idx)}
-                      className={`relative text-left px-3 py-2.5 rounded-lg transition-colors cursor-pointer ${
-                        isSelected
+                      className={`relative text-left px-3 py-2.5 rounded-lg transition-colors cursor-pointer ${isSelected
                           ? "text-[#EFEFEF]"
                           : "text-[#4A4A52] hover:text-[#1C1C21]"
-                      }`}
+                        }`}
                     >
                       {isSelected && (
                         <motion.span
@@ -246,19 +245,17 @@ export default function AboutJourney() {
                       )}
                       <div className="relative z-10 flex items-center gap-1.5 mb-0.5">
                         <Icon
-                          className={`w-3.5 h-3.5 ${
-                            isSelected ? "text-[#A67C52]" : "text-[#9E2A2B]"
-                          }`}
+                          className={`w-3.5 h-3.5 ${isSelected ? "text-[#A67C52]" : "text-[#9E2A2B]"
+                            }`}
                         />
                         <span
-                          className={`text-[10px] font-bold uppercase tracking-[0.14em] ${
-                            isSelected ? "text-[#A67C52]" : "text-[#9E2A2B]"
-                          }`}
+                          className={`text-[10px] font-bold uppercase tracking-[0.14em] ${isSelected ? "text-[#A67C52]" : "text-[#9E2A2B]"
+                            }`}
                         >
                           {chapter.tabLabel}
                         </span>
                       </div>
-                      <p className="relative z-10 text-[11px] font-bold leading-tight line-clamp-1">
+                      <p className="relative z-10 text-xs font-bold leading-snug">
                         {chapter.title}
                       </p>
                     </button>
@@ -412,7 +409,7 @@ export default function AboutJourney() {
                   rel="noopener noreferrer"
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] px-6 py-3.5 text-sm font-bold uppercase tracking-wider shrink-0 transition-colors cursor-pointer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] px-6 py-3.5 text-sm font-bold uppercase tracking-wider shrink-0 transition-colors cursor-pointer"
                 >
                   <span>EXPLORE DHWAJAM ACADEMY</span>
                   <ArrowUpRight className="w-4 h-4" />

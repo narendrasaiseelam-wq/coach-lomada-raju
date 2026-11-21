@@ -1,19 +1,62 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Award, ChevronRight, Trophy, Users } from "lucide-react";
+import {
+  ArrowLeft,
+  ArrowRight,
+  Award,
+  ChevronRight,
+  Trophy,
+  Users,
+  X,
+} from "lucide-react";
 import { championsTrained, notableRoster } from "../data/portfolioData";
 import SmartImage from "./SmartImage";
 
 export default function ChampionsSpotlight() {
   const [selectedId, setSelectedId] = useState(championsTrained[0].id);
+  const [mobileModalOpen, setMobileModalOpen] = useState(false);
 
-  const activeChampion =
-    championsTrained.find((c) => c.id === selectedId) || championsTrained[0];
+  const activeIndex = Math.max(
+    0,
+    championsTrained.findIndex((c) => c.id === selectedId)
+  );
+  const activeChampion = championsTrained[activeIndex] || championsTrained[0];
+
+  useEffect(() => {
+    if (!mobileModalOpen) return;
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") setMobileModalOpen(false);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [mobileModalOpen]);
+
+  const handleSelectChampion = (id) => {
+    setSelectedId(id);
+    if (typeof window !== "undefined" && window.innerWidth < 1024) {
+      setMobileModalOpen(true);
+    }
+  };
+
+  const handlePrevChampion = () => {
+    const prevIdx =
+      (activeIndex - 1 + championsTrained.length) % championsTrained.length;
+    setSelectedId(championsTrained[prevIdx].id);
+  };
+
+  const handleNextChampion = () => {
+    const nextIdx = (activeIndex + 1) % championsTrained.length;
+    setSelectedId(championsTrained[nextIdx].id);
+  };
 
   return (
     <section
       id="champions"
-      className="bg-[#1C1C21] text-[#EFEFEF] border-b border-[#EFEFEF]/10 py-16 md:py-24"
+      className="bg-[#1C1C21] text-[#EFEFEF] border-b border-[#EFEFEF]/10 py-16 md:py-24 scroll-mt-24"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 space-y-12">
         {/* Section Header */}
@@ -36,11 +79,11 @@ export default function ChampionsSpotlight() {
             </h2>
           </div>
           <p className="text-sm text-[#E2E2E5]/75 max-w-md leading-relaxed">
-            Click on any athlete to see their achievements and my personal memory of helping them prepare for major tournaments.
+            Tap any athlete to see their achievements and my personal memory of helping them prepare for major tournaments.
           </p>
         </motion.div>
 
-        {/* Interactive Master-Detail Card with Real Champion Photos */}
+        {/* Interactive Master-Detail (Side-by-Side on Desktop, Modal Sheet on Mobile) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           {/* Left Master List */}
           <div className="lg:col-span-5 flex flex-col gap-2.5">
@@ -50,7 +93,7 @@ export default function ChampionsSpotlight() {
                 <button
                   key={champion.id}
                   type="button"
-                  onClick={() => setSelectedId(champion.id)}
+                  onClick={() => handleSelectChampion(champion.id)}
                   className={`w-full text-left px-4 py-3.5 rounded-2xl flex items-center justify-between gap-3 border transition-all cursor-pointer ${
                     isSelected
                       ? "bg-[#EFEFEF]/[0.1] border-[#9E2A2B] shadow-md"
@@ -86,8 +129,8 @@ export default function ChampionsSpotlight() {
             })}
           </div>
 
-          {/* Right Detail Panel with Champion Photo + Complete Achievements */}
-          <div className="lg:col-span-7 rounded-2xl border border-[#EFEFEF]/12 bg-[#EFEFEF]/[0.04] p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
+          {/* Right Detail Panel (Desktop only; Mobile uses dedicated modal sheet) */}
+          <div className="hidden lg:flex lg:col-span-7 rounded-2xl border border-[#EFEFEF]/12 bg-[#EFEFEF]/[0.04] p-8 lg:p-10 flex-col justify-center">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeChampion.id}
@@ -162,6 +205,111 @@ export default function ChampionsSpotlight() {
           </div>
         </div>
       </div>
+
+      {/* Dedicated Mobile Champion Detail Modal (< 1024px) */}
+      <AnimatePresence>
+        {mobileModalOpen && (
+          <div
+            className="fixed inset-0 z-50 lg:hidden flex items-end sm:items-center justify-center p-0 sm:p-4"
+            role="dialog"
+            aria-modal="true"
+            aria-label={`${activeChampion.name} Spotlight`}
+          >
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              onClick={() => setMobileModalOpen(false)}
+              className="fixed inset-0 bg-[#1C1C21]/85 backdrop-blur-xs"
+            />
+
+            <motion.div
+              initial={{ opacity: 0, y: 32 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 24 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              className="relative z-10 w-full max-h-[92vh] sm:max-w-lg rounded-t-2xl sm:rounded-2xl bg-[#1C1C21] text-[#EFEFEF] border border-[#EFEFEF]/15 shadow-2xl flex flex-col overflow-hidden"
+            >
+              {/* Top Bar with Prominent Close Button */}
+              <div className="px-5 py-4 border-b border-[#EFEFEF]/12 flex items-center justify-between gap-3 shrink-0 bg-[#1C1C21]">
+                <span className="text-xs font-bold uppercase tracking-[0.16em] text-[#A67C52] tabular-nums">
+                  Champion 0{activeIndex + 1} / 0{championsTrained.length}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => setMobileModalOpen(false)}
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-[#EFEFEF]/10 hover:bg-[#9E2A2B] text-[#EFEFEF] px-3 py-1.5 text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                  aria-label="Close champion details"
+                >
+                  <span>Close</span>
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+
+              {/* Scrollable Content */}
+              <div className="p-5 overflow-y-auto space-y-5">
+                <div className="rounded-xl border border-[#EFEFEF]/15 bg-[#141418] p-1.5 overflow-hidden">
+                  <SmartImage
+                    src={activeChampion.image}
+                    alt={`${activeChampion.name} with Coach Lomada Raju`}
+                    fit="contain"
+                    objectPosition="object-top"
+                    className="rounded-lg max-h-[320px] mx-auto"
+                    label={activeChampion.name}
+                  />
+                </div>
+
+                <div className="space-y-3">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#9E2A2B] text-[#EFEFEF] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em]">
+                      <Trophy className="w-3 h-3" />
+                      {activeChampion.badge}
+                    </span>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#A67C52] rounded-full border border-[#A67C52]/40 px-3 py-1">
+                      {activeChampion.category}
+                    </span>
+                  </div>
+
+                  <h3 className="font-editorial font-extrabold uppercase text-3xl text-[#EFEFEF] leading-none">
+                    {activeChampion.name}
+                  </h3>
+
+                  <p className="text-sm font-semibold text-[#A67C52] leading-snug">
+                    {activeChampion.achievement}
+                  </p>
+
+                  <div className="border-l-2 border-[#9E2A2B] pl-4">
+                    <p className="text-sm text-[#E2E2E5]/90 leading-relaxed">
+                      {activeChampion.story}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Prev / Next Champion Footer */}
+              <div className="px-5 py-4 border-t border-[#EFEFEF]/12 bg-[#141418] flex items-center justify-between gap-3 shrink-0">
+                <button
+                  type="button"
+                  onClick={handlePrevChampion}
+                  className="inline-flex items-center gap-1.5 rounded-xl border border-[#EFEFEF]/20 hover:border-[#EFEFEF] px-3.5 py-2.5 text-xs font-bold uppercase tracking-wider text-[#EFEFEF] transition-colors cursor-pointer"
+                >
+                  <ArrowLeft className="w-3.5 h-3.5" />
+                  <span>Previous Champion</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={handleNextChampion}
+                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#9E2A2B] hover:bg-[#7F2021] px-3.5 py-2.5 text-xs font-bold uppercase tracking-wider text-[#EFEFEF] transition-colors cursor-pointer"
+                >
+                  <span>Next Champion</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

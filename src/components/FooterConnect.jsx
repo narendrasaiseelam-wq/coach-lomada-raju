@@ -434,7 +434,7 @@ export default function FooterConnect({ onOpenConnect }) {
         </div>
       </footer>
 
-      {/* Floating "Message Coach" Quick-Action Pill (appears after scrolling past 550px) */}
+      {/* Floating "Message Coach" Quick-Action Pill (Desktop only, appears after scrolling past 550px) */}
       <AnimatePresence>
         {showFloating && (
           <motion.button
@@ -446,7 +446,7 @@ export default function FooterConnect({ onOpenConnect }) {
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.97 }}
             onClick={() => onOpenConnect()}
-            className="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] border border-[#EFEFEF]/20 shadow-lg cursor-pointer"
+            className="hidden md:inline-flex fixed bottom-5 right-5 z-40 items-center gap-2 rounded-full bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] border border-[#EFEFEF]/20 shadow-lg cursor-pointer"
             aria-label="Message Coach Lomada Raju"
           >
             <MessageCircle className="w-4 h-4" />

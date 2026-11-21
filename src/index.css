@@ -52,6 +52,15 @@ body {
   border-color: var(--divider-hairline);
 }
 
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 @theme {
   --font-display: "Barlow Condensed", sans-serif;
   --font-sans: "Plus Jakarta Sans", sans-serif;
@@ -102,4 +111,13 @@ body {
 
 .hairline-border {
   border-color: var(--divider-hairline);
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }

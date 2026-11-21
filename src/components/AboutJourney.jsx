@@ -192,15 +192,12 @@ export default function AboutJourney() {
           className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end pb-10 border-b border-[#1C1C21]/14"
         >
           <div className="lg:col-span-7">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="h-[2px] w-8 bg-[#9E2A2B]" />
-              <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#9E2A2B]">
-                In My Own Words
-              </p>
-            </div>
-            <h2 className="font-editorial font-extrabold uppercase text-4xl sm:text-5xl md:text-6xl text-[#1C1C21] leading-[0.92] tracking-[-0.01em]">
-              MY STORY:{" "}
-              <span className="text-[#9E2A2B]">FROM A SMALL VILLAGE TO THE WORLD STAGE</span>
+            <h2 className="font-editorial font-extrabold uppercase text-4xl sm:text-5xl md:text-6xl text-[#1C1C21] leading-[0.94] tracking-[-0.01em]">
+              MY STORY:
+              <br />
+              <span className="text-[#9E2A2B]">
+                FROM A SMALL VILLAGE TO THE WORLD STAGE
+              </span>
             </h2>
           </div>
 
@@ -366,11 +363,14 @@ export default function AboutJourney() {
                   />
                 </div>
                 <div>
-                  <h3 className="font-editorial font-extrabold uppercase text-2xl sm:text-3xl text-[#EFEFEF] leading-tight tracking-wide mb-1">
-                    {coachProfile.centreName}
+                  <h3 className="font-editorial text-3xl sm:text-4xl font-extrabold uppercase tracking-tight text-white leading-none">
+                    DHWAJAM
                   </h3>
-                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#A67C52]">
+                  <p className="text-xs sm:text-sm font-bold uppercase tracking-[0.22em] text-amber-400/90 mt-1">
                     {coachProfile.centreMotto}
+                  </p>
+                  <p className="text-base sm:text-lg font-medium text-stone-300 mt-1.5 leading-snug">
+                    Strength &amp; Conditioning Centre
                   </p>
                 </div>
               </div>

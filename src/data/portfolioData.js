@@ -76,12 +76,13 @@ export const championsTrained = [
   {
     id: "thulasimathi",
     name: "Thulasimathi Murugesan",
-    achievement: "Paralympic Silver Medallist (Paris 2024) & Asian Para Games Gold Medallist",
+    achievement:
+      "Paralympic Silver Medallist (Paris 2024 — Women's Singles SU5), BWF World Championships Silver (Thailand 2024) & Asian Para Games Gold, Silver & Bronze",
     category: "Para-Badminton",
     badge: "Paralympic Silver",
     image: "/images/champ-tulasi-murugesan.jpg",
     story:
-      "With Thulasimathi, our goal was simple: build strong core stability, sharp court agility, and injury-free durability so she could handle the pressure of major finals. Seeing her bring home Paralympic Silver from Paris 2024 and Gold at the Asian Para Games made every early morning session worth it.",
+      "When Thulasimathi joined me at Gopichand Academy about two years before Paris, she was still chasing her first major international medal. Because a congenital left-hand condition affected her grip and balance during forehand smashes, we built a custom programme around sand training, targeted weights, and medicine-ball work—carefully balancing her workload so she grew stronger without overloading. Watching her fight through tough sessions to win Asian Para Games Gold and become the first Indian woman para-shuttler to win a Paralympic Silver medal in Paris was unforgettable.",
   },
   {
     id: "srikanth",
@@ -665,6 +666,16 @@ export const galleryItems = [
   },
 
   // --- Press & Track Archives ---
+  {
+    id: "press-sportstar-tulasi-2024",
+    title: "Sportstar Feature: Thulasimathi's Paris 2024 Paralympic Silver Reunion",
+    category: "Press & Track Archives",
+    location: "Sportstar • The Hindu Group",
+    year: "Sep 2024",
+    image: "/images/champ-tulasi-murugesan.jpg",
+    description:
+      "Featured in Sportstar (Sept 11, 2024) celebrating Thulasimathi Murugesan's historic Paris 2024 Paralympic Silver medal. As I shared in the interview, our key was carefully balancing sand training, weights, and medicine-ball work so she built power without overloading or risking injury.",
+  },
   {
     id: "press-eenadu-2023",
     title: "Eenadu Feature (2023) — Chilamkuru to World Stage",

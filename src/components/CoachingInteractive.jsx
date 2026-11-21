@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowUpRight, ChevronDown, HelpCircle, Trophy } from "lucide-react";
+import { ArrowUpRight, ChevronDown, HelpCircle, Quote, Trophy } from "lucide-react";
 import { coachingFaqs, sportsAndTeams, trainingPillars } from "../data/portfolioData";
 
 export default function CoachingInteractive({ onOpenConnect }) {
@@ -41,6 +41,19 @@ export default function CoachingInteractive({ onOpenConnect }) {
               How I build an athlete step by step—starting with joint stability and base strength before adding speed, and using Yoga science to prevent injuries.
             </p>
           </motion.div>
+
+          {/* Coach Raju's Fitness Philosophy Quote (Sportstar, Sept 2024) */}
+          <blockquote className="mb-8 rounded-2xl border border-[#1C1C21]/10 border-l-4 border-l-[#9E2A2B] bg-[#EFEFEF] p-5 sm:p-6 shadow-xs flex items-start gap-3.5">
+            <Quote className="w-5 h-5 text-[#A67C52] shrink-0 mt-0.5" />
+            <div>
+              <p className="text-sm sm:text-base font-semibold text-[#1C1C21] leading-relaxed">
+                &ldquo;Once an athlete masters the basics and skills, the focus has to be on fitness—without that foundation, it is never easy to stay consistent at the highest level.&rdquo;
+              </p>
+              <footer className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#9E2A2B] mt-2">
+                &mdash; Lomada Raju (Sportstar, Sept 2024)
+              </footer>
+            </div>
+          </blockquote>
 
           {/* 5 Core Conditioning Pillars */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">

@@ -209,6 +209,7 @@ export default function ConnectModal({ isOpen, onClose, initialAudienceId = "ath
                   <Phone className="w-3.5 h-3.5 text-[#9E2A2B] shrink-0" />
                   <span>
                     Direct: <strong className="text-[#1C1C21]">{coachProfile.phonePrimary}</strong> &bull;{" "}
+                    <strong className="text-[#1C1C21]">{coachProfile.phoneAlt}</strong> &bull;{" "}
                     {coachProfile.phoneSecondary}
                   </span>
                 </div>

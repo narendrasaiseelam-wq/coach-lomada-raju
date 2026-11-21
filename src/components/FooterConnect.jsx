@@ -165,12 +165,6 @@ export default function FooterConnect({ onOpenConnect }) {
                     >
                       {coachProfile.email}
                     </a>
-                    <a
-                      href={`mailto:${coachProfile.emailAlt}`}
-                      className="text-xs text-[#E2E2E5]/70 hover:text-[#A67C52] transition-colors"
-                    >
-                      {coachProfile.emailAlt}
-                    </a>
                   </div>
                 </div>
 
@@ -186,6 +180,13 @@ export default function FooterConnect({ onOpenConnect }) {
                         className="font-semibold text-[#EFEFEF] hover:text-[#A67C52] transition-colors"
                       >
                         {coachProfile.phonePrimary}
+                      </a>
+                      <span className="text-[#EFEFEF]/30">&bull;</span>
+                      <a
+                        href={`tel:${coachProfile.phoneAltRaw}`}
+                        className="font-semibold text-[#EFEFEF] hover:text-[#A67C52] transition-colors"
+                      >
+                        {coachProfile.phoneAlt}
                       </a>
                       <span className="text-[#EFEFEF]/30">&bull;</span>
                       <a

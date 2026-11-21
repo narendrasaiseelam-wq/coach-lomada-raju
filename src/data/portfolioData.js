@@ -13,10 +13,11 @@ export const coachProfile = {
   location: "Inside Botanical Garden, Kondapur, Gachibowli, Hyderabad, India",
   phonePrimary: "+91 96666 92021",
   phoneRaw: "9666692021",
+  phoneAlt: "+91 97033 27007",
+  phoneAltRaw: "9703327007",
   phoneSecondary: "040-29392021",
   whatsappNumber: "919666692021",
-  email: "coach@lomadaraju.com",
-  emailAlt: "lomadaraju.sc@gmail.com",
+  email: "lomada.raju1988@gmail.com",
   centreName: "Dhwajam Strength & Conditioning Centre",
   centreMotto: "Roots Build Resilience",
   heroImage: "/images/hero-national-excellence.jpg",
@@ -30,6 +31,16 @@ export const coachProfile = {
     { label: "Facebook", href: null, handle: "Coming Soon", active: false },
   ],
 };
+
+export const affiliations = [
+  { name: "Sports Authority of India", shortName: "SAI", logo: "/images/logos/sai.png" },
+  { name: "Badminton Association of India", shortName: "BAI", logo: "/images/logos/bai.png" },
+  { name: "Chennai Smashers (PBL)", shortName: "Chennai Smashers", logo: "/images/logos/chennai-smashers.png" },
+  { name: "Indian Athletics", shortName: "Athletics India", logo: "/images/logos/athletics-india.png" },
+  { name: "Hyderabad Cricket Association", shortName: "HCA", logo: "/images/logos/hca.png" },
+  { name: "Telugu Warriors (CCL)", shortName: "Telugu Warriors", logo: "/images/logos/telugu-warriors-ccl.png" },
+  { name: "South Central Railway", shortName: "South Central Railway", logo: "/images/logos/south-central-railway.png" },
+];
 
 export const keyHighlights = [
   { metric: "15+", label: "Years Coaching", detail: "Strength & conditioning since 2010" },
@@ -243,7 +254,7 @@ export const careerTimeline = [
     role: "Strength & Conditioning Coach — Indian National Badminton Team",
     type: "National Squad",
     description:
-      "For nine years, I supported Indian badminton and para-badminton stars at the South Asian Games in Nepal (Gold), All England Open, Swiss Open, Thomas & Uber Cup in Denmark, Sudirman Cup in Finland, Asia Championships in the Philippines (Bronze), and BWF Super Series.",
+      "For nine years, I supported Indian badminton and para-badminton stars across major international tours: South Asian Games in Nepal (Gold Medal), All England Open (UK), Swiss Open (Switzerland), Thomas & Uber Cup (Denmark), Sudirman Cup (Finland), Badminton Asia Championships in Manila, Philippines (Bronze Medal), and BWF Super Series (Singapore & Malaysia).",
   },
   {
     period: "2016",
@@ -257,7 +268,7 @@ export const careerTimeline = [
     role: "Strength & Conditioning Coach — Hyderabad Cricket Association",
     type: "State Cricket",
     description:
-      "I worked with Hyderabad's Under-19 and Under-23 cricket squads, focusing on athletic movement, injury prevention, and match stamina.",
+      "I worked with Hyderabad's Under-23 and Under-16 cricket squads, focusing on athletic development, injury prevention, and match stamina.",
   },
   {
     period: "2010 — 2012",
@@ -271,14 +282,14 @@ export const careerTimeline = [
     role: "National & State Track Athlete (400m & 4×400m Relay)",
     type: "Competitive Career",
     description:
-      "I spent over 13 years racing on the track, winning 43 medals—14 National (4 Gold, 5 Silver, 5 Bronze) and 29 State (17 Gold, 10 Silver, 2 Bronze)—and setting the 3:16.43 National Meet Record at the 2006 Junior Federation Cup in Chennai.",
+      "I spent over 13 years racing on the track, winning 43 medals: 14 National Medals (4 Gold, 5 Silver, 5 Bronze — including Youth Nationals Gold Bangalore 2005, Junior Federation Cup Gold & Unbroken Meet Record 03:16.43 Chennai 2006, Inter-Zonal Meet Gold Allahabad 2006, Junior Nationals Silver Bangalore 2006, and Junior Federation Cup Bronze Madurai 2007) and 29 State Medals (17 Gold, 10 Silver, 2 Bronze).",
   },
 ];
 
 export const trackRecordMedals = [
   { year: "2007", event: "Junior Federation Cup — Madurai, Tamil Nadu", discipline: "4×400m Relay", medal: "Bronze" },
-  { year: "2006", event: "Junior Federation Cup — Chennai, Tamil Nadu", discipline: "4×400m Relay — National Meet Record (3:16.43)", medal: "Gold" },
-  { year: "2006", event: "Inter Zonal Athletic Meet — Allahabad, Uttar Pradesh", discipline: "4×400m Relay", medal: "Gold" },
+  { year: "2006", event: "Junior Federation Cup — Chennai, Tamil Nadu", discipline: "4×400m Relay — Unbroken Meet Record (03:16.43)", medal: "Gold" },
+  { year: "2006", event: "Inter-Zonal Athletic Meet — Allahabad, Uttar Pradesh", discipline: "4×400m Relay", medal: "Gold" },
   { year: "2006", event: "Junior Nationals Athletic Meet — Bangalore, Karnataka", discipline: "4×400m Relay", medal: "Silver" },
   { year: "2005", event: "Youth Nationals Athletic Meet — Bangalore, Karnataka", discipline: "4×400m Relay", medal: "Gold" },
 ];
@@ -286,13 +297,13 @@ export const trackRecordMedals = [
 export const educationAndCertifications = [
   { degree: "Ph.D. in Physical Education (Scholar, In Progress)", institution: "Kalinga University, Raipur", year: "In Progress", category: "Degree" },
   { degree: "M.Sc. in Yoga", institution: "Annamalai University, Chidambaram", year: "Postgraduate", category: "Degree" },
-  { degree: "M.P.Ed (Master of Physical Education)", institution: "Nashik Rao Tirpude College, Nagpur", year: "2013", category: "Degree" },
-  { degree: "B.P.Ed (Bachelor of Physical Education — State Rank 1)", institution: "Govt College, Osmania University", year: "2010–2011", category: "Degree" },
-  { degree: "Postgraduate Diploma in Yoga", institution: "Alagappa University", year: "Diploma", category: "Degree" },
-  { degree: "Bachelor of Arts (B.A.)", institution: "Railway Degree College, Hyderabad", year: "2006–2009", category: "Degree" },
+  { degree: "M.P.Ed. (Master of Physical Education)", institution: "Nashik Rao Tirpude College, Nagpur", year: "2013", category: "Degree" },
+  { degree: "B.P.Ed. (Bachelor of Physical Education — State Rank 1)", institution: "Govt. College of Physical Education, Osmania University", year: "2010–2011", category: "Degree" },
+  { degree: "P.G. Diploma in Yoga", institution: "Alagappa University", year: "Diploma", category: "Degree" },
+  { degree: "B.A. (Bachelor of Arts)", institution: "Railway Degree College, Hyderabad", year: "2006–2009", category: "Degree" },
   { degree: "SAI Certified Strength & Conditioning Coach", institution: "Sports Authority of India", year: "Certified", category: "Certification" },
-  { degree: "NIS Strength & Conditioning Certification", institution: "National Institute of Sports (NSNIS), Patiala", year: "2022", category: "Certification" },
-  { degree: "NIS Certificate in Health & Fitness (6 Weeks)", institution: "National Institute of Sports, Patiala, Punjab", year: "Certified", category: "Certification" },
+  { degree: "NIS Strength & Conditioning Certification", institution: "National Institute of Sports (NIS), Patiala", year: "2022", category: "Certification" },
+  { degree: "NIS 6-Week Certificate in Health & Fitness", institution: "National Institute of Sports (NIS), Patiala, Punjab", year: "Certified", category: "Certification" },
 ];
 
 export const honorsAndAwards = [

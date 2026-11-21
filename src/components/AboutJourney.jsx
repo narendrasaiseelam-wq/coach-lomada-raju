@@ -355,8 +355,8 @@ export default function AboutJourney() {
               </div>
             </div>
 
-            {/* Dignified 10% Dhwajam Epilogue Bridge Card */}
-            <div className="rounded-2xl bg-[#1C1C21] text-[#EFEFEF] border border-[#1C1C21] p-6 sm:p-7 shadow-md">
+            {/* Dignified Dhwajam Epilogue Bridge Card */}
+            <div className="rounded-2xl bg-[#1C1C21] text-[#EFEFEF] border border-[#1C1C21] p-6 sm:p-8 shadow-md">
               <div className="flex items-center gap-4 pb-5 border-b border-[#EFEFEF]/12">
                 <div className="w-14 h-14 shrink-0 rounded-full border border-[#EFEFEF]/15 bg-[#EFEFEF] p-1 overflow-hidden flex items-center justify-center">
                   <SmartImage
@@ -369,29 +369,40 @@ export default function AboutJourney() {
                   />
                 </div>
                 <div>
-                  <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#A67C52] mb-0.5">
-                    Founder &amp; Head Coach &bull; 10% Academy Epilogue
-                  </p>
-                  <h3 className="font-editorial font-extrabold uppercase text-2xl sm:text-3xl text-[#EFEFEF] leading-none mb-1">
+                  <h3 className="font-editorial font-extrabold uppercase text-2xl sm:text-3xl text-[#EFEFEF] leading-tight tracking-wide mb-1">
                     {coachProfile.centreName}
                   </h3>
-                  <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#9E2A2B]">
-                    &ldquo;{coachProfile.centreMotto}&rdquo;
+                  <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#A67C52]">
+                    {coachProfile.centreMotto}
                   </p>
                 </div>
               </div>
 
-              <div className="pt-5 flex flex-col sm:flex-row sm:items-end justify-between gap-5">
-                <div className="space-y-2 text-xs sm:text-sm text-[#E2E2E5]/80">
-                  <div className="flex items-start gap-2">
-                    <MapPin className="w-4 h-4 text-[#9E2A2B] shrink-0 mt-0.5" />
-                    <span>{coachProfile.location}</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Phone className="w-4 h-4 text-[#9E2A2B] shrink-0" />
+              <div className="pt-5 flex flex-col sm:flex-row sm:items-center justify-between gap-5">
+                <div className="space-y-2.5 text-xs sm:text-sm text-[#E2E2E5]/85">
+                  <div className="flex items-start gap-2.5 leading-relaxed">
+                    <MapPin className="w-4 h-4 text-[#9E2A2B] shrink-0 mt-1" />
                     <span>
-                      {coachProfile.phonePrimary} &bull; {coachProfile.phoneSecondary}
+                      Inside Botanical Garden, Kondapur, Gachibowli, Hyderabad, Telangana
                     </span>
+                  </div>
+                  <div className="flex items-center gap-2.5">
+                    <Phone className="w-4 h-4 text-[#9E2A2B] shrink-0" />
+                    <div className="flex flex-wrap items-center gap-2">
+                      <a
+                        href={`tel:${coachProfile.phoneRaw}`}
+                        className="font-semibold text-[#EFEFEF] hover:text-[#A67C52] transition-colors"
+                      >
+                        {coachProfile.phonePrimary}
+                      </a>
+                      <span className="text-[#EFEFEF]/30">&bull;</span>
+                      <a
+                        href={`tel:${coachProfile.phoneSecondary}`}
+                        className="font-semibold text-[#EFEFEF] hover:text-[#A67C52] transition-colors"
+                      >
+                        {coachProfile.phoneSecondary}
+                      </a>
+                    </div>
                   </div>
                 </div>
 
@@ -403,7 +414,7 @@ export default function AboutJourney() {
                   whileTap={{ scale: 0.98 }}
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] px-6 py-3.5 text-sm font-bold uppercase tracking-wider shrink-0 transition-colors cursor-pointer"
                 >
-                  <span>Explore Dhwajam Academy</span>
+                  <span>EXPLORE DHWAJAM ACADEMY</span>
                   <ArrowUpRight className="w-4 h-4" />
                 </motion.a>
               </div>

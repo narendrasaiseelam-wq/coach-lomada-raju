@@ -623,14 +623,14 @@ export const galleryItems = [
       "With veteran actor Akkineni Nagarjuna and our Telugu Warriors squad during team warm-ups. Good warm-ups and sprint readiness help players enjoy the game without pulling muscles.",
   },
   {
-    id: "ccl-akhil",
-    title: "With Captain Akhil Akkineni — CCL Prep",
+    id: "ccl-nikhil",
+    title: "With Actor Nikhil Siddhartha — Telugu Warriors CCL",
     category: "Cricket & CCL",
     location: "Celebrity Cricket League",
     year: "2025",
     image: "/images/ccl-akhil.jpg",
     description:
-      "With Telugu Warriors captain Akhil Akkineni working on sprint speed and match fitness. We built simple, effective routines around busy film shooting schedules.",
+      "On-field match readiness and athletic conditioning with Tollywood star Nikhil Siddhartha during Celebrity Cricket League fixtures.",
   },
   {
     id: "ccl-dugout-focus",

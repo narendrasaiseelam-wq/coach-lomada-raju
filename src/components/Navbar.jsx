@@ -17,7 +17,7 @@ const NAV_LINKS = [
 
 export default function Navbar({ onOpenConnect }) {
   const [activeSection, setActiveSection] = useState("home");
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,13 +36,35 @@ export default function Navbar({ onOpenConnect }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavClick = (id) => {
-    setActiveSection(id);
-    setMobileOpen(false);
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
     }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
+  const handleNavClick = (e, targetId) => {
+    e.preventDefault();
+    setActiveSection(targetId);
+    setMobileMenuOpen(false);
+    document.body.style.overflow = "";
+
+    setTimeout(() => {
+      if (targetId === "home") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
+      const el = document.getElementById(targetId);
+      if (el) {
+        const yOffset = -84;
+        const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 120);
   };
 
   return (
@@ -51,10 +73,7 @@ export default function Navbar({ onOpenConnect }) {
         {/* Left: Monogram + Brand */}
         <a
           href="#home"
-          onClick={(e) => {
-            e.preventDefault();
-            handleNavClick("home");
-          }}
+          onClick={(e) => handleNavClick(e, "home")}
           className="flex items-center gap-3 group shrink-0"
         >
           <span className="w-9 h-9 rounded-lg bg-[#1C1C21] text-[#EFEFEF] font-editorial font-extrabold text-lg tracking-wider flex items-center justify-center border border-[#1C1C21] group-hover:bg-[#9E2A2B] group-hover:border-[#9E2A2B] transition-colors">
@@ -78,12 +97,10 @@ export default function Navbar({ onOpenConnect }) {
               <a
                 key={link.id}
                 href={`#${link.id}`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(link.id);
-                }}
-                className={`relative py-2 text-xs font-bold tracking-[0.14em] uppercase transition-colors ${isActive ? "text-[#1C1C21]" : "text-[#4A4A52] hover:text-[#1C1C21]"
-                  }`}
+                onClick={(e) => handleNavClick(e, link.id)}
+                className={`relative py-2 text-xs font-bold tracking-[0.14em] uppercase transition-colors ${
+                  isActive ? "text-[#1C1C21]" : "text-[#4A4A52] hover:text-[#1C1C21]"
+                }`}
               >
                 {link.label}
                 {isActive && (
@@ -98,12 +115,12 @@ export default function Navbar({ onOpenConnect }) {
           })}
         </nav>
 
-        {/* Right: Connect CTA + Mobile Menu Toggle */}
-        <div className="flex items-center gap-3">
+        {/* Right: Compact Connect CTA + Mobile Menu Toggle */}
+        <div className="flex items-center gap-2.5">
           <button
             type="button"
             onClick={() => onOpenConnect()}
-            className="inline-flex items-center gap-1.5 rounded-xl bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] px-5 py-2.5 text-sm font-bold tracking-wider uppercase shadow-xs transition-colors cursor-pointer"
+            className="inline-flex items-center gap-1.5 rounded-xl bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold tracking-wider uppercase shadow-xs transition-colors cursor-pointer"
           >
             <span>CONNECT</span>
             <ArrowUpRight className="w-4 h-4" />
@@ -111,59 +128,61 @@ export default function Navbar({ onOpenConnect }) {
 
           <button
             type="button"
-            onClick={() => setMobileOpen((prev) => !prev)}
-            className="xl:hidden p-2 border border-[#1C1C21]/15 text-[#1C1C21] hover:bg-[#E2E2E5] transition-colors cursor-pointer"
-            aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
-            aria-expanded={mobileOpen}
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
+            className="xl:hidden p-2.5 rounded-xl border border-[#1C1C21]/15 text-[#1C1C21] hover:bg-[#E2E2E5] transition-colors cursor-pointer"
+            aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={mobileMenuOpen}
           >
-            {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
 
       {/* Responsive Mobile Menu Drawer */}
       <AnimatePresence>
-        {mobileOpen && (
+        {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
-            className="xl:hidden overflow-hidden bg-[#EFEFEF] border-b border-[#1C1C21]/15"
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="xl:hidden overflow-hidden bg-[#EFEFEF] border-b border-[#1C1C21]/15 shadow-lg max-h-[calc(100vh-4rem)] overflow-y-auto"
           >
-            <div className="px-4 py-4 flex flex-col divide-y divide-[#1C1C21]/10">
+            <nav className="px-4 py-4 flex flex-col gap-1" aria-label="Mobile Navigation">
               {NAV_LINKS.map((link) => {
                 const isActive = activeSection === link.id;
                 return (
                   <a
                     key={link.id}
                     href={`#${link.id}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleNavClick(link.id);
-                    }}
-                    className={`py-3 flex items-center justify-between text-xs font-bold tracking-[0.16em] uppercase ${isActive ? "text-[#9E2A2B]" : "text-[#1C1C21]"
-                      }`}
+                    onClick={(e) => handleNavClick(e, link.id)}
+                    className={`py-3.5 px-4 text-base font-medium rounded-xl flex items-center justify-between tracking-wide uppercase transition-colors ${
+                      isActive
+                        ? "bg-[#9E2A2B]/10 text-[#9E2A2B] font-semibold"
+                        : "text-[#1C1C21] hover:bg-[#E2E2E5]/70"
+                    }`}
                   >
                     <span>{link.label}</span>
-                    {isActive && <span className="w-2 h-2 bg-[#9E2A2B]" />}
+                    {isActive && <span className="w-2 h-2 rounded-full bg-[#9E2A2B]" />}
                   </a>
                 );
               })}
-              <div className="pt-4 pb-2">
+
+              <div className="pt-3 mt-2 border-t border-[#1C1C21]/12 pb-2">
                 <button
                   type="button"
                   onClick={() => {
-                    setMobileOpen(false);
+                    setMobileMenuOpen(false);
+                    document.body.style.overflow = "";
                     onOpenConnect();
                   }}
-                  className="w-full py-3 bg-[#9E2A2B] text-[#EFEFEF] text-xs font-bold tracking-[0.16em] uppercase flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-3.5 px-5 rounded-xl bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] text-sm font-bold tracking-wider uppercase flex items-center justify-center gap-2 shadow-sm transition-colors cursor-pointer"
                 >
-                  <span>CONNECT WITH COACH</span>
+                  <span>START YOUR TRAINING JOURNEY / CONNECT</span>
                   <ArrowUpRight className="w-4 h-4" />
                 </button>
               </div>
-            </div>
+            </nav>
           </motion.div>
         )}
       </AnimatePresence>

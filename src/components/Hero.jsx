@@ -87,9 +87,11 @@ export default function Hero() {
               {coachProfile.fullName}
             </h1>
 
-            {/* Explicit Professional Experience & Specialisation */}
+            {/* Explicit Professional Experience & Specialisation (Two-Line Block) */}
             <p className="text-sm sm:text-base font-bold text-[#9E2A2B] leading-snug max-w-2xl mb-4 border-l-2 border-[#A67C52] pl-3.5">
-              {coachProfile.specialisationLine}
+              15+ Years International Strength &amp; Conditioning Specialist &mdash;
+              <br />
+              Olympic &amp; Para-Badminton, National Cricket, Athletics &amp; Sports Yoga Science.
             </p>
 
             {/* Conversational First-Person Intro */}
@@ -126,8 +128,8 @@ export default function Hero() {
             <div className="rounded-2xl border border-[#1C1C21]/12 bg-[#E2E2E5]/70 shadow-sm overflow-hidden">
               <div className="grid grid-cols-2 sm:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-[#1C1C21]/10">
                 {keyHighlights.map((item) => (
-                  <div key={item.label} className="p-4 sm:px-5 sm:py-5">
-                    <div className="font-editorial font-extrabold text-2xl sm:text-3xl text-[#1C1C21] tracking-tight leading-none mb-1.5 tabular-nums">
+                  <div key={item.label} className="p-4 sm:px-4 sm:py-5">
+                    <div className="font-editorial font-extrabold text-xl sm:text-2xl text-[#1C1C21] tracking-tight leading-none mb-1.5 tabular-nums whitespace-nowrap">
                       <AnimatedMetric value={item.metric} />
                     </div>
                     <div className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#9E2A2B] mb-1">
@@ -142,7 +144,7 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Right Column: Full-Length Portrait with Zero Overlap */}
+          {/* Right Column: Seamless Portrait Card with Zoomed Framing */}
           <motion.div
             ref={portraitWrapperRef}
             initial={{ opacity: 0, y: 24 }}
@@ -151,18 +153,18 @@ export default function Hero() {
             style={{ y: portraitY }}
             className="lg:col-span-5 relative flex justify-center lg:justify-end"
           >
-            <div className="w-full max-w-[440px] rounded-2xl border border-[#1C1C21]/12 p-2.5 bg-[#E2E2E5] shadow-sm overflow-hidden">
+            <div className="w-full max-w-[440px] rounded-2xl overflow-hidden border border-stone-200 shadow-xl bg-[#1C1C21]">
               <SmartImage
                 src={coachProfile.heroImage}
                 alt="Coach Lomada Raju receiving National Excellence recognition"
                 aspectClass="aspect-[3/4] max-h-[540px]"
-                objectPosition="object-top"
-                className="rounded-t-xl"
+                objectPosition="object-[50%_22%]"
+                imgClassName="scale-[1.22] group-hover:scale-[1.25]"
                 label="National Excellence"
               />
 
-              {/* Clean Integrated Footer Bar */}
-              <div className="rounded-b-xl bg-[#1C1C21] text-[#EFEFEF] p-4 sm:px-5 sm:py-4 border-t border-[#A67C52]/30">
+              {/* Seamless Integrated Footer Bar */}
+              <div className="bg-[#1C1C21] text-[#EFEFEF] p-4 sm:px-5 sm:py-4 border-t border-[#A67C52]/30">
                 <div className="flex items-start gap-3">
                   <ShieldCheck className="w-5 h-5 text-[#A67C52] shrink-0 mt-0.5" />
                   <div>
@@ -170,7 +172,7 @@ export default function Hero() {
                       Verified National Credential
                     </p>
                     <p className="text-xs sm:text-sm font-semibold text-[#EFEFEF] leading-snug">
-                      Indian National Badminton S&amp;C &bull; SAI &amp; NIS Certified
+                      Indian National Badminton S&amp;C &bull; BAI, SAI &amp; NIS Certified
                     </p>
                   </div>
                 </div>

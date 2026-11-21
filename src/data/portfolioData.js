@@ -35,7 +35,7 @@ export const keyHighlights = [
   { metric: "15+", label: "Years Coaching", detail: "Strength & conditioning since 2010" },
   { metric: "3:16.43", label: "National Record", detail: "4×400m relay, Junior Federation Cup (2006)" },
   { metric: "43", label: "Track Medals", detail: "14 National & 29 State medals (1999–2013)" },
-  { metric: "SAI & NIS", label: "Certified", detail: "BAI, Sports Authority of India & NIS Patiala (2022)" },
+  { metric: "BAI - SAI & NIS", label: "Certified", detail: "Badminton Association of India, SAI & NIS Patiala" },
 ];
 
 export const championsTrained = [

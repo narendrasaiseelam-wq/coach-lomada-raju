@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
-import { Medal, Trophy } from "lucide-react";
+import { Award, Medal, Trophy } from "lucide-react";
 import { careerTimeline, trackRecordMedals } from "../data/portfolioData";
 
 const FILTERS = ["All", "Coaching Career", "Track Athlete"];
@@ -104,13 +104,17 @@ export default function CareerTimeline() {
 
                     <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
                       <div className="flex items-center gap-2.5">
-                        {item.orgLogo && (
+                        {item.orgLogo ? (
                           <span className="w-8 h-8 rounded-lg bg-white border border-[#1C1C21]/10 p-1 flex items-center justify-center shrink-0">
                             <img
                               src={item.orgLogo}
                               alt=""
                               className="w-full h-full object-contain"
                             />
+                          </span>
+                        ) : (
+                          <span className="w-8 h-8 rounded-lg bg-[#9E2A2B]/10 border border-[#9E2A2B]/30 text-[#9E2A2B] flex items-center justify-center shrink-0">
+                            <Award className="w-4 h-4" />
                           </span>
                         )}
                         <span className="font-editorial font-bold text-lg tracking-wider uppercase text-[#9E2A2B]">

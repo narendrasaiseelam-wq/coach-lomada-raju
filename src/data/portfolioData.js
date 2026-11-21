@@ -262,8 +262,8 @@ export const careerTimeline = [
     period: "2024",
     role: "Telangana ICON Award Recipient",
     type: "State Honour",
-    orgLogo: "/images/logos/sai.png",
-    image: "/images/14-press-clippings.jpg",
+    orgLogo: null,
+    image: "/images/career-telangana-icon-2024.jpg",
     description:
       "I was honoured with the Telangana ICON Award in recognition of 15 years of work in sports science and conditioning India's international athletes.",
   },
@@ -282,7 +282,7 @@ export const careerTimeline = [
     period: "2019",
     role: "State Honours by Governor of Telangana & Govt. of AP",
     type: "State Honour",
-    orgLogo: "/images/logos/bai.png",
+    orgLogo: null,
     image: "/images/press-sakshi-2019-feature.jpg",
     description:
       "I was deeply humbled to be felicitated at Raj Bhavan by the Hon'ble Governor of Telangana and at AP Stadium, Vijayawada by the Government of Andhra Pradesh after India's World Championship wins.",
@@ -293,7 +293,7 @@ export const careerTimeline = [
     role: "Strength & Conditioning Coach — Indian National Badminton Team",
     type: "National Squad",
     orgLogo: "/images/logos/bai.png",
-    image: "/images/hero-national-excellence.jpg",
+    image: "/images/career-indian-badminton-squad.jpg",
     description:
       "For nine years, I supported Indian badminton and para-badminton stars across major international tours: South Asian Games in Nepal (Gold Medal), All England Open (UK), Swiss Open (Switzerland), Thomas & Uber Cup (Denmark), Sudirman Cup (Finland), Badminton Asia Championships in Manila, Philippines (Bronze Medal), and BWF Super Series (Singapore & Malaysia).",
   },
@@ -303,7 +303,7 @@ export const careerTimeline = [
     role: "Premier Badminton League — Chennai Smashers",
     type: "League Badminton",
     orgLogo: "/images/logos/chennai-smashers.png",
-    image: "/images/intl-gopichand-academy.jpg",
+    image: "/images/career-chennai-smashers-pbl.jpg",
     description:
       "I designed and ran high-tempo team conditioning programs for Chennai Smashers during the Premier Badminton League season.",
   },
@@ -313,7 +313,7 @@ export const careerTimeline = [
     role: "Strength & Conditioning Coach — Hyderabad Cricket Association",
     type: "State Cricket",
     orgLogo: "/images/logos/hca.png",
-    image: "/images/ccl-locker-room-briefing.jpg",
+    image: null,
     description:
       "I worked with Hyderabad's Under-23 and Under-16 cricket squads, focusing on athletic development, injury prevention, and match stamina.",
   },
@@ -323,7 +323,7 @@ export const careerTimeline = [
     role: "Indian Railways & South Central Railway Teams",
     type: "Institutional Sport",
     orgLogo: "/images/logos/south-central-railway.png",
-    image: "/images/about-assam-inauguration.jpg",
+    image: null,
     description:
       "My first major coaching role after transitioning from competitive athletics—I served as S&C Coach for Indian Railways Badminton and Kabaddi teams.",
   },

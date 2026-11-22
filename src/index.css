@@ -7,7 +7,7 @@
   --color-canvas: #EFEFEF;
   --color-surface: #E2E2E5;
   --color-graphite: #1C1C21;
-  --color-crimson: #9E2A2B;
+  --color-crimson: #B45309;
   --color-bronze: #A67C52;
   --color-muted: #4A4A52;
 }
@@ -16,7 +16,7 @@
   --bg-canvas: #EFEFEF;
   --bg-surface: #E2E2E5;
   --bg-dark: #1C1C21;
-  --accent-crimson: #9E2A2B;
+  --accent-crimson: #B45309;
   --accent-bronze: #A67C52;
   --text-primary: #1C1C21;
   --text-muted: #4A4A52;
@@ -68,7 +68,7 @@ body {
   --color-canvas: #EFEFEF;
   --color-surface: #E2E2E5;
   --color-graphite: #1C1C21;
-  --color-crimson: #9E2A2B;
+  --color-crimson: #B45309;
   --color-bronze: #A67C52;
   --color-muted: #4A4A52;
 }
@@ -77,7 +77,7 @@ body {
   --bg-canvas: #EFEFEF;
   --bg-surface: #E2E2E5;
   --bg-dark: #1C1C21;
-  --accent-crimson: #9E2A2B;
+  --accent-crimson: #B45309;
   --accent-bronze: #A67C52;
   --text-primary: #1C1C21;
   --text-muted: #4A4A52;

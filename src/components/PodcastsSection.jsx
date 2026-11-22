@@ -64,8 +64,8 @@ export default function PodcastsSection() {
         >
           <div>
             <div className="flex items-center gap-3 mb-3">
-              <span className="h-[2px] w-8 bg-[#1D4ED8]" />
-              <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#1D4ED8]">
+              <span className="h-[2px] w-8 bg-[#B45309]" />
+              <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#B45309]">
                 In Conversation
               </p>
             </div>
@@ -106,7 +106,7 @@ export default function PodcastsSection() {
                       title={podcast.title}
                     />
                     <div className="absolute inset-0 bg-[#1C1C21]/30 group-hover:bg-[#1C1C21]/20 transition-colors flex items-center justify-center">
-                      <span className="w-16 h-16 rounded-full bg-[#1D4ED8] group-hover:bg-[#1E40AF] text-[#EFEFEF] flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-105">
+                      <span className="w-16 h-16 rounded-full bg-[#B45309] group-hover:bg-[#92400E] text-[#EFEFEF] flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-105">
                         <Play className="w-7 h-7 fill-current ml-1" />
                       </span>
                     </div>
@@ -126,7 +126,7 @@ export default function PodcastsSection() {
 
                   {/* Card Body */}
                   <div className="p-6 sm:p-7 space-y-3">
-                    <div className="flex items-center justify-between gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#1D4ED8]">
+                    <div className="flex items-center justify-between gap-2 text-xs font-bold uppercase tracking-[0.14em] text-[#B45309]">
                       <span>Podcast {podcast.number}</span>
                       <span className="text-[#A67C52]">{podcast.durationLabel}</span>
                     </div>
@@ -146,7 +146,7 @@ export default function PodcastsSection() {
                   <button
                     type="button"
                     onClick={() => setActivePodcast(podcast)}
-                    className="inline-flex items-center gap-2 rounded-xl bg-[#1D4ED8] hover:bg-[#1E40AF] text-[#EFEFEF] px-6 py-3.5 text-sm font-bold uppercase tracking-wider shadow-xs transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-2 rounded-xl bg-[#B45309] hover:bg-[#92400E] text-[#EFEFEF] px-6 py-3.5 text-sm font-bold uppercase tracking-wider shadow-xs transition-colors cursor-pointer"
                   >
                     <Play className="w-4 h-4 fill-current" />
                     <span>Watch Here</span>
@@ -160,7 +160,7 @@ export default function PodcastsSection() {
                       className="inline-flex items-center gap-2 rounded-xl border border-[#1C1C21]/25 hover:border-[#1C1C21] bg-[#EFEFEF] hover:bg-[#E2E2E5] text-[#1C1C21] px-6 py-3.5 text-sm font-bold uppercase tracking-wider transition-colors"
                     >
                       <span>Open on YouTube</span>
-                      <ArrowUpRight className="w-4 h-4 text-[#1D4ED8]" />
+                      <ArrowUpRight className="w-4 h-4 text-[#B45309]" />
                     </a>
                   ) : (
                     <span className="inline-flex items-center gap-2 rounded-xl border border-[#1C1C21]/15 bg-[#EFEFEF]/60 text-[#4A4A52] px-5 py-3.5 text-xs font-bold uppercase tracking-wider">
@@ -212,7 +212,7 @@ export default function PodcastsSection() {
                 <button
                   type="button"
                   onClick={() => setActivePodcast(null)}
-                  className="p-2 rounded-lg border border-[#EFEFEF]/20 hover:border-[#1D4ED8] hover:bg-[#1D4ED8] transition-colors cursor-pointer shrink-0"
+                  className="p-2 rounded-lg border border-[#EFEFEF]/20 hover:border-[#B45309] hover:bg-[#B45309] transition-colors cursor-pointer shrink-0"
                   aria-label="Close video player"
                 >
                   <X className="w-4 h-4" />
@@ -231,7 +231,7 @@ export default function PodcastsSection() {
                   />
                 ) : (
                   <div className="p-8 text-center max-w-md space-y-3">
-                    <div className="w-12 h-12 rounded-full bg-[#1D4ED8]/20 border border-[#1D4ED8] text-[#60A5FA] flex items-center justify-center mx-auto">
+                    <div className="w-12 h-12 rounded-full bg-[#B45309]/20 border border-[#B45309] text-[#F59E0B] flex items-center justify-center mx-auto">
                       <Mic className="w-5 h-5" />
                     </div>
                     <h4 className="font-editorial font-bold uppercase text-2xl text-[#EFEFEF]">

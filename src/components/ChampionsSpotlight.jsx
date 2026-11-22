@@ -95,7 +95,7 @@ export default function ChampionsSpotlight() {
                   type="button"
                   onClick={() => handleSelectChampion(champion.id)}
                   className={`w-full text-left px-4 py-3.5 rounded-2xl flex items-center justify-between gap-3 border transition-all cursor-pointer ${isSelected
-                      ? "bg-[#EFEFEF]/[0.1] border-[#1D4ED8] shadow-md"
+                      ? "bg-[#EFEFEF]/[0.1] border-[#B45309] shadow-md"
                       : "bg-[#EFEFEF]/[0.02] border-[#EFEFEF]/10 hover:bg-[#EFEFEF]/[0.05] hover:border-[#EFEFEF]/25"
                     }`}
                 >
@@ -119,7 +119,7 @@ export default function ChampionsSpotlight() {
                     </div>
                   </div>
                   <ChevronRight
-                    className={`w-4 h-4 shrink-0 transition-transform ${isSelected ? "text-[#60A5FA] translate-x-0.5" : "text-[#E2E2E5]/40"
+                    className={`w-4 h-4 shrink-0 transition-transform ${isSelected ? "text-[#F59E0B] translate-x-0.5" : "text-[#E2E2E5]/40"
                       }`}
                   />
                 </button>
@@ -154,7 +154,7 @@ export default function ChampionsSpotlight() {
                 {/* Champion Story & Complete Achievement Claims */}
                 <div className="md:col-span-7">
                   <div className="flex flex-wrap items-center gap-2 mb-4">
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#1D4ED8] text-[#EFEFEF] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em]">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#B45309] text-[#EFEFEF] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em]">
                       <Trophy className="w-3 h-3" />
                       {activeChampion.badge}
                     </span>
@@ -171,7 +171,7 @@ export default function ChampionsSpotlight() {
                     {activeChampion.achievement}
                   </p>
 
-                  <div className="border-l-2 border-[#1D4ED8] pl-4">
+                  <div className="border-l-2 border-[#B45309] pl-4">
                     <p className="text-sm sm:text-base text-[#E2E2E5]/90 leading-relaxed">
                       {activeChampion.story}
                     </p>
@@ -237,7 +237,7 @@ export default function ChampionsSpotlight() {
                 <button
                   type="button"
                   onClick={() => setMobileModalOpen(false)}
-                  className="inline-flex items-center gap-1.5 rounded-lg bg-[#EFEFEF]/10 hover:bg-[#1D4ED8] text-[#EFEFEF] px-3 py-1.5 text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-[#EFEFEF]/10 hover:bg-[#B45309] text-[#EFEFEF] px-3 py-1.5 text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
                   aria-label="Close champion details"
                 >
                   <span>Close</span>
@@ -260,7 +260,7 @@ export default function ChampionsSpotlight() {
 
                 <div className="space-y-3">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#1D4ED8] text-[#EFEFEF] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em]">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#B45309] text-[#EFEFEF] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em]">
                       <Trophy className="w-3 h-3" />
                       {activeChampion.badge}
                     </span>
@@ -277,7 +277,7 @@ export default function ChampionsSpotlight() {
                     {activeChampion.achievement}
                   </p>
 
-                  <div className="border-l-2 border-[#1D4ED8] pl-4">
+                  <div className="border-l-2 border-[#B45309] pl-4">
                     <p className="text-sm text-[#E2E2E5]/90 leading-relaxed">
                       {activeChampion.story}
                     </p>
@@ -298,7 +298,7 @@ export default function ChampionsSpotlight() {
                 <button
                   type="button"
                   onClick={handleNextChampion}
-                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#1D4ED8] hover:bg-[#1E40AF] px-3.5 py-2.5 text-xs font-bold uppercase tracking-wider text-[#EFEFEF] transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#B45309] hover:bg-[#92400E] px-3.5 py-2.5 text-xs font-bold uppercase tracking-wider text-[#EFEFEF] transition-colors cursor-pointer"
                 >
                   <span>Next Champion</span>
                   <ArrowRight className="w-3.5 h-3.5" />

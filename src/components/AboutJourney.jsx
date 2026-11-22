@@ -195,7 +195,7 @@ export default function AboutJourney() {
             <h2 className="font-editorial font-extrabold uppercase text-4xl sm:text-5xl md:text-6xl text-[#1C1C21] leading-[0.94] tracking-[-0.01em]">
               MY STORY:
               <br />
-              <span className="text-[#1D4ED8]">
+              <span className="text-[#B45309]">
                 FROM A SMALL VILLAGE TO THE WORLD STAGE
               </span>
             </h2>
@@ -242,11 +242,11 @@ export default function AboutJourney() {
                       )}
                       <div className="relative z-10 flex items-center gap-1.5 mb-0.5">
                         <Icon
-                          className={`w-3.5 h-3.5 ${isSelected ? "text-[#A67C52]" : "text-[#1D4ED8]"
+                          className={`w-3.5 h-3.5 ${isSelected ? "text-[#A67C52]" : "text-[#B45309]"
                             }`}
                         />
                         <span
-                          className={`text-[10px] font-bold uppercase tracking-[0.14em] ${isSelected ? "text-[#A67C52]" : "text-[#1D4ED8]"
+                          className={`text-[10px] font-bold uppercase tracking-[0.14em] ${isSelected ? "text-[#A67C52]" : "text-[#B45309]"
                             }`}
                         >
                           {chapter.tabLabel}
@@ -271,7 +271,7 @@ export default function AboutJourney() {
                   className="space-y-4"
                 >
                   <div>
-                    <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#1D4ED8] mb-1">
+                    <p className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#B45309] mb-1">
                       Chapter {current.number} &bull; {current.subtitle}
                     </p>
                     <h3 className="font-editorial font-extrabold uppercase text-3xl sm:text-4xl text-[#1C1C21] leading-none">
@@ -311,7 +311,7 @@ export default function AboutJourney() {
                         href="https://dhwajam.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-xl bg-[#1D4ED8] hover:bg-[#1E40AF] text-[#EFEFEF] px-6 py-3.5 text-sm font-bold uppercase tracking-wider transition-colors"
+                        className="inline-flex items-center gap-2 rounded-xl bg-[#B45309] hover:bg-[#92400E] text-[#EFEFEF] px-6 py-3.5 text-sm font-bold uppercase tracking-wider transition-colors"
                       >
                         <span>Visit Dhwajam Academy</span>
                         <ArrowUpRight className="w-4 h-4" />
@@ -341,7 +341,7 @@ export default function AboutJourney() {
                     setActiveChapterIdx((i) => Math.min(BOOK_CHAPTERS.length - 1, i + 1))
                   }
                   disabled={activeChapterIdx === BOOK_CHAPTERS.length - 1}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.14em] text-[#1D4ED8] disabled:opacity-35 cursor-pointer disabled:cursor-not-allowed"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.14em] text-[#B45309] disabled:opacity-35 cursor-pointer disabled:cursor-not-allowed"
                 >
                   <span>Next Chapter</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -378,13 +378,13 @@ export default function AboutJourney() {
               <div className="pt-5 flex flex-col sm:flex-row sm:items-center justify-between gap-5">
                 <div className="space-y-2.5 text-xs sm:text-sm text-[#E2E2E5]/85">
                   <div className="flex items-start gap-2.5 leading-relaxed">
-                    <MapPin className="w-4 h-4 text-[#1D4ED8] shrink-0 mt-1" />
+                    <MapPin className="w-4 h-4 text-[#B45309] shrink-0 mt-1" />
                     <span>
                       Inside Botanical Garden, Kondapur, Gachibowli, Hyderabad, Telangana
                     </span>
                   </div>
                   <div className="flex items-center gap-2.5">
-                    <Phone className="w-4 h-4 text-[#1D4ED8] shrink-0" />
+                    <Phone className="w-4 h-4 text-[#B45309] shrink-0" />
                     <div className="flex flex-wrap items-center gap-2">
                       <a
                         href={`tel:${coachProfile.phoneRaw}`}
@@ -409,7 +409,7 @@ export default function AboutJourney() {
                   rel="noopener noreferrer"
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-[#1D4ED8] hover:bg-[#1E40AF] text-[#EFEFEF] px-6 py-3.5 text-sm font-bold uppercase tracking-wider shrink-0 transition-colors cursor-pointer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl bg-[#B45309] hover:bg-[#92400E] text-[#EFEFEF] px-6 py-3.5 text-sm font-bold uppercase tracking-wider shrink-0 transition-colors cursor-pointer"
                 >
                   <span>EXPLORE DHWAJAM ACADEMY</span>
                   <ArrowUpRight className="w-4 h-4" />
@@ -445,8 +445,8 @@ export default function AboutJourney() {
                     />
                     <div className="p-3 pt-3.5">
                       <div className="flex items-center gap-2 mb-1">
-                        <Award className="w-3.5 h-3.5 text-[#1D4ED8] shrink-0" />
-                        <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#1D4ED8]">
+                        <Award className="w-3.5 h-3.5 text-[#B45309] shrink-0" />
+                        <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#B45309]">
                           {photo.eyebrow}
                         </span>
                       </div>
@@ -461,7 +461,7 @@ export default function AboutJourney() {
 
             {/* Compact Stats Strip */}
             <div className="rounded-2xl border border-[#1C1C21]/12 bg-[#E2E2E5]/65 p-5 sm:p-6 shadow-sm">
-              <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#1D4ED8] mb-3">
+              <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#B45309] mb-3">
                 Track-Tested &bull; Science-Backed
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-0 sm:divide-x sm:divide-[#1C1C21]/12">

@@ -28,8 +28,8 @@ export default function CoachingInteractive({ onOpenConnect }) {
           >
             <div>
               <div className="flex items-center gap-3 mb-3">
-                <span className="h-[2px] w-8 bg-[#1D4ED8]" />
-                <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#1D4ED8]">
+                <span className="h-[2px] w-8 bg-[#B45309]" />
+                <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#B45309]">
                   My Coaching Method
                 </p>
               </div>
@@ -43,13 +43,13 @@ export default function CoachingInteractive({ onOpenConnect }) {
           </motion.div>
 
           {/* Coach Raju's Fitness Philosophy Quote (Sportstar, Sept 2024) */}
-          <blockquote className="mb-8 rounded-2xl border border-[#1C1C21]/10 border-l-4 border-l-[#1D4ED8] bg-[#EFEFEF] p-5 sm:p-6 shadow-xs flex items-start gap-3.5">
+          <blockquote className="mb-8 rounded-2xl border border-[#1C1C21]/10 border-l-4 border-l-[#B45309] bg-[#EFEFEF] p-5 sm:p-6 shadow-xs flex items-start gap-3.5">
             <Quote className="w-5 h-5 text-[#A67C52] shrink-0 mt-0.5" />
             <div>
               <p className="text-sm sm:text-base font-semibold text-[#1C1C21] leading-relaxed">
                 &ldquo;Once an athlete masters the basics and skills, the focus has to be on fitness—without that foundation, it is never easy to stay consistent at the highest level.&rdquo;
               </p>
-              <footer className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#1D4ED8] mt-2">
+              <footer className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#B45309] mt-2">
                 &mdash; Lomada Raju (Sportstar, Sept 2024)
               </footer>
             </div>
@@ -79,7 +79,7 @@ export default function CoachingInteractive({ onOpenConnect }) {
                     <div className="flex items-center justify-between mb-3">
                       <span
                         className={`font-editorial font-extrabold text-3xl leading-none ${
-                          isExpanded ? "text-[#1D4ED8]" : "text-[#A67C52]"
+                          isExpanded ? "text-[#B45309]" : "text-[#A67C52]"
                         }`}
                       >
                         {pillar.number}
@@ -98,7 +98,7 @@ export default function CoachingInteractive({ onOpenConnect }) {
                     </h3>
                     <p
                       className={`text-[11px] font-bold uppercase tracking-[0.12em] mb-3 ${
-                        isExpanded ? "text-[#A67C52]" : "text-[#1D4ED8]"
+                        isExpanded ? "text-[#A67C52]" : "text-[#B45309]"
                       }`}
                     >
                       {pillar.subtitle}
@@ -212,7 +212,7 @@ export default function CoachingInteractive({ onOpenConnect }) {
                   <button
                     type="button"
                     onClick={() => onOpenConnect("team")}
-                    className="inline-flex items-center gap-1.5 rounded-xl bg-[#1D4ED8] hover:bg-[#1E40AF] text-[#EFEFEF] px-4 py-3 text-xs font-bold uppercase tracking-[0.14em] transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-1.5 rounded-xl bg-[#B45309] hover:bg-[#92400E] text-[#EFEFEF] px-4 py-3 text-xs font-bold uppercase tracking-[0.14em] transition-colors cursor-pointer"
                   >
                     <span>Consult</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
@@ -233,8 +233,8 @@ export default function CoachingInteractive({ onOpenConnect }) {
         >
           <div className="lg:col-span-4">
             <div className="flex items-center gap-2.5 mb-2">
-              <HelpCircle className="w-4 h-4 text-[#1D4ED8]" />
-              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#1D4ED8]">
+              <HelpCircle className="w-4 h-4 text-[#B45309]" />
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#B45309]">
                 Programme Clarity
               </p>
             </div>
@@ -261,7 +261,7 @@ export default function CoachingInteractive({ onOpenConnect }) {
                       {item.q}
                     </span>
                     <ChevronDown
-                      className={`w-4 h-4 shrink-0 text-[#1D4ED8] transition-transform duration-200 ${
+                      className={`w-4 h-4 shrink-0 text-[#B45309] transition-transform duration-200 ${
                         isOpen ? "rotate-180" : ""
                       }`}
                     />

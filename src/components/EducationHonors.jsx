@@ -34,8 +34,8 @@ export default function EducationHonors() {
           className="pb-8 border-b border-[#1C1C21]/14"
         >
           <div className="flex items-center gap-3 mb-3">
-            <span className="h-[2px] w-8 bg-[#1D4ED8]" />
-            <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#1D4ED8]">
+            <span className="h-[2px] w-8 bg-[#B45309]" />
+            <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#B45309]">
               Academic Foundation &amp; State Recognition
             </p>
           </div>
@@ -107,7 +107,7 @@ export default function EducationHonors() {
                             {item.institution}
                           </p>
                         </div>
-                        <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#1D4ED8] shrink-0">
+                        <span className="text-xs font-bold uppercase tracking-[0.14em] text-[#B45309] shrink-0">
                           {item.year}
                         </span>
                       </div>
@@ -167,7 +167,7 @@ export default function EducationHonors() {
               {honorsAndAwards.map((honor) => (
                 <div
                   key={honor.title}
-                  className="border-l-2 border-[#1D4ED8] pl-4"
+                  className="border-l-2 border-[#B45309] pl-4"
                 >
                   <span className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#A67C52] block mb-1">
                     {honor.year}

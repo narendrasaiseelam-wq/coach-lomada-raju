@@ -39,8 +39,8 @@ export default function PersonalisedGuidance({ onOpenConnect }) {
         >
           <div className="lg:col-span-7">
             <div className="flex items-center gap-3 mb-3">
-              <span className="h-[2px] w-8 bg-[#1D4ED8]" />
-              <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#1D4ED8]">
+              <span className="h-[2px] w-8 bg-[#B45309]" />
+              <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#B45309]">
                 {eyebrow}
               </p>
             </div>
@@ -111,11 +111,11 @@ export default function PersonalisedGuidance({ onOpenConnect }) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.12 }}
                   transition={{ duration: 0.4, delay: idx * 0.05, ease: "easeOut" }}
-                  className="rounded-2xl bg-[#EFEFEF] border border-[#1C1C21]/12 p-6 flex flex-col justify-between gap-5 hover:border-[#1D4ED8]/40 hover:shadow-sm transition-all"
+                  className="rounded-2xl bg-[#EFEFEF] border border-[#1C1C21]/12 p-6 flex flex-col justify-between gap-5 hover:border-[#B45309]/40 hover:shadow-sm transition-all"
                 >
                   <div>
                     <div className="flex items-center justify-between gap-3 mb-4">
-                      <span className="w-10 h-10 rounded-xl bg-[#1D4ED8]/10 border border-[#1D4ED8]/25 text-[#1D4ED8] flex items-center justify-center shrink-0">
+                      <span className="w-10 h-10 rounded-xl bg-[#B45309]/10 border border-[#B45309]/25 text-[#B45309] flex items-center justify-center shrink-0">
                         <Icon className="w-5 h-5" />
                       </span>
                       <span className="text-[10px] font-bold uppercase tracking-[0.15em] px-2.5 py-1 rounded-full border border-[#A67C52]/45 text-[#8A6238] bg-[#F5F4F0]">
@@ -136,7 +136,7 @@ export default function PersonalisedGuidance({ onOpenConnect }) {
                     <button
                       type="button"
                       onClick={() => onOpenConnect("general")}
-                      className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.14em] text-[#1D4ED8] hover:text-[#1E40AF] transition-colors cursor-pointer"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.14em] text-[#B45309] hover:text-[#92400E] transition-colors cursor-pointer"
                     >
                       <span>Book Personal Assessment</span>
                       <ArrowUpRight className="w-3.5 h-3.5" />

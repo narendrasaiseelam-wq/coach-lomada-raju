@@ -76,7 +76,7 @@ export default function Navbar({ onOpenConnect }) {
           onClick={(e) => handleNavClick(e, "home")}
           className="flex items-center gap-3 group shrink-0"
         >
-          <span className="w-9 h-9 rounded-lg bg-[#1C1C21] text-[#EFEFEF] font-editorial font-extrabold text-lg tracking-wider flex items-center justify-center border border-[#1C1C21] group-hover:bg-[#1D4ED8] group-hover:border-[#1D4ED8] transition-colors">
+          <span className="w-9 h-9 rounded-lg bg-[#1C1C21] text-[#EFEFEF] font-editorial font-extrabold text-lg tracking-wider flex items-center justify-center border border-[#1C1C21] group-hover:bg-[#B45309] group-hover:border-[#B45309] transition-colors">
             {coachProfile.monogram}
           </span>
           <div className="flex flex-col leading-none">
@@ -107,7 +107,7 @@ export default function Navbar({ onOpenConnect }) {
                   <motion.span
                     layoutId="nav-active-underline"
                     transition={{ type: "spring", stiffness: 380, damping: 32 }}
-                    className="absolute left-0 right-0 bottom-0 h-[2px] bg-[#1D4ED8]"
+                    className="absolute left-0 right-0 bottom-0 h-[2px] bg-[#B45309]"
                   />
                 )}
               </a>
@@ -120,7 +120,7 @@ export default function Navbar({ onOpenConnect }) {
           <button
             type="button"
             onClick={() => onOpenConnect()}
-            className="inline-flex items-center gap-1.5 rounded-xl bg-[#1D4ED8] hover:bg-[#1E40AF] text-[#EFEFEF] px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold tracking-wider uppercase shadow-xs transition-colors cursor-pointer"
+            className="inline-flex items-center gap-1.5 rounded-xl bg-[#B45309] hover:bg-[#92400E] text-[#EFEFEF] px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold tracking-wider uppercase shadow-xs transition-colors cursor-pointer"
           >
             <span>CONNECT</span>
             <ArrowUpRight className="w-4 h-4" />
@@ -158,12 +158,12 @@ export default function Navbar({ onOpenConnect }) {
                     onClick={(e) => handleNavClick(e, link.id)}
                     className={`py-3.5 px-4 text-base font-medium rounded-xl flex items-center justify-between tracking-wide uppercase transition-colors ${
                       isActive
-                        ? "bg-[#1D4ED8]/10 text-[#1D4ED8] font-semibold"
+                        ? "bg-[#B45309]/10 text-[#B45309] font-semibold"
                         : "text-[#1C1C21] hover:bg-[#E2E2E5]/70"
                     }`}
                   >
                     <span>{link.label}</span>
-                    {isActive && <span className="w-2 h-2 rounded-full bg-[#1D4ED8]" />}
+                    {isActive && <span className="w-2 h-2 rounded-full bg-[#B45309]" />}
                   </a>
                 );
               })}
@@ -176,7 +176,7 @@ export default function Navbar({ onOpenConnect }) {
                     document.body.style.overflow = "";
                     onOpenConnect();
                   }}
-                  className="w-full py-3.5 px-5 rounded-xl bg-[#1D4ED8] hover:bg-[#1E40AF] text-[#EFEFEF] text-sm font-bold tracking-wider uppercase flex items-center justify-center gap-2 shadow-sm transition-colors cursor-pointer"
+                  className="w-full py-3.5 px-5 rounded-xl bg-[#B45309] hover:bg-[#92400E] text-[#EFEFEF] text-sm font-bold tracking-wider uppercase flex items-center justify-center gap-2 shadow-sm transition-colors cursor-pointer"
                 >
                   <span>START YOUR TRAINING JOURNEY / CONNECT</span>
                   <ArrowUpRight className="w-4 h-4" />

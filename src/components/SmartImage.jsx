@@ -26,10 +26,10 @@ export default function SmartImage({
         aria-label={alt}
       >
         <div className="w-12 h-12 rounded-full border border-[#A67C52]/40 bg-[#EFEFEF] flex items-center justify-center mb-4">
-          <ImageIcon className="w-5 h-5 text-[#9E2A2B]" strokeWidth={1.6} />
+          <ImageIcon className="w-5 h-5 text-[#1D4ED8]" strokeWidth={1.6} />
         </div>
 
-        <p className="font-editorial text-sm tracking-[0.14em] uppercase text-[#9E2A2B] font-bold mb-1">
+        <p className="font-editorial text-sm tracking-[0.14em] uppercase text-[#1D4ED8] font-bold mb-1">
           {label || "Editorial Photograph"}
         </p>
         <p className="text-xs font-semibold text-[#1C1C21] tracking-wide mb-2">

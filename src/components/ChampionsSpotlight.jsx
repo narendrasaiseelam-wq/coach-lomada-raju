@@ -94,11 +94,10 @@ export default function ChampionsSpotlight() {
                   key={champion.id}
                   type="button"
                   onClick={() => handleSelectChampion(champion.id)}
-                  className={`w-full text-left px-4 py-3.5 rounded-2xl flex items-center justify-between gap-3 border transition-all cursor-pointer ${
-                    isSelected
-                      ? "bg-[#EFEFEF]/[0.1] border-[#9E2A2B] shadow-md"
+                  className={`w-full text-left px-4 py-3.5 rounded-2xl flex items-center justify-between gap-3 border transition-all cursor-pointer ${isSelected
+                      ? "bg-[#EFEFEF]/[0.1] border-[#1D4ED8] shadow-md"
                       : "bg-[#EFEFEF]/[0.02] border-[#EFEFEF]/10 hover:bg-[#EFEFEF]/[0.05] hover:border-[#EFEFEF]/25"
-                  }`}
+                    }`}
                 >
                   <div className="flex items-start gap-3">
                     <span className="font-editorial font-bold text-base text-[#A67C52] tabular-nums pt-0.5">
@@ -120,9 +119,8 @@ export default function ChampionsSpotlight() {
                     </div>
                   </div>
                   <ChevronRight
-                    className={`w-4 h-4 shrink-0 transition-transform ${
-                      isSelected ? "text-[#9E2A2B] translate-x-0.5" : "text-[#E2E2E5]/40"
-                    }`}
+                    className={`w-4 h-4 shrink-0 transition-transform ${isSelected ? "text-[#60A5FA] translate-x-0.5" : "text-[#E2E2E5]/40"
+                      }`}
                   />
                 </button>
               );
@@ -156,7 +154,7 @@ export default function ChampionsSpotlight() {
                 {/* Champion Story & Complete Achievement Claims */}
                 <div className="md:col-span-7">
                   <div className="flex flex-wrap items-center gap-2 mb-4">
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#9E2A2B] text-[#EFEFEF] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em]">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#1D4ED8] text-[#EFEFEF] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em]">
                       <Trophy className="w-3 h-3" />
                       {activeChampion.badge}
                     </span>
@@ -173,7 +171,7 @@ export default function ChampionsSpotlight() {
                     {activeChampion.achievement}
                   </p>
 
-                  <div className="border-l-2 border-[#9E2A2B] pl-4">
+                  <div className="border-l-2 border-[#1D4ED8] pl-4">
                     <p className="text-sm sm:text-base text-[#E2E2E5]/90 leading-relaxed">
                       {activeChampion.story}
                     </p>
@@ -239,7 +237,7 @@ export default function ChampionsSpotlight() {
                 <button
                   type="button"
                   onClick={() => setMobileModalOpen(false)}
-                  className="inline-flex items-center gap-1.5 rounded-lg bg-[#EFEFEF]/10 hover:bg-[#9E2A2B] text-[#EFEFEF] px-3 py-1.5 text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 rounded-lg bg-[#EFEFEF]/10 hover:bg-[#1D4ED8] text-[#EFEFEF] px-3 py-1.5 text-xs font-bold uppercase tracking-wider transition-colors cursor-pointer"
                   aria-label="Close champion details"
                 >
                   <span>Close</span>
@@ -262,7 +260,7 @@ export default function ChampionsSpotlight() {
 
                 <div className="space-y-3">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#9E2A2B] text-[#EFEFEF] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em]">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#1D4ED8] text-[#EFEFEF] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em]">
                       <Trophy className="w-3 h-3" />
                       {activeChampion.badge}
                     </span>
@@ -279,7 +277,7 @@ export default function ChampionsSpotlight() {
                     {activeChampion.achievement}
                   </p>
 
-                  <div className="border-l-2 border-[#9E2A2B] pl-4">
+                  <div className="border-l-2 border-[#1D4ED8] pl-4">
                     <p className="text-sm text-[#E2E2E5]/90 leading-relaxed">
                       {activeChampion.story}
                     </p>
@@ -300,7 +298,7 @@ export default function ChampionsSpotlight() {
                 <button
                   type="button"
                   onClick={handleNextChampion}
-                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#9E2A2B] hover:bg-[#7F2021] px-3.5 py-2.5 text-xs font-bold uppercase tracking-wider text-[#EFEFEF] transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 rounded-xl bg-[#1D4ED8] hover:bg-[#1E40AF] px-3.5 py-2.5 text-xs font-bold uppercase tracking-wider text-[#EFEFEF] transition-colors cursor-pointer"
                 >
                   <span>Next Champion</span>
                   <ArrowRight className="w-3.5 h-3.5" />

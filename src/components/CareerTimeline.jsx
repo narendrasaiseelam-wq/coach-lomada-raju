@@ -37,8 +37,8 @@ export default function CareerTimeline() {
         >
           <div>
             <div className="flex items-center gap-3 mb-3">
-              <span className="h-[2px] w-8 bg-[#9E2A2B]" />
-              <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#9E2A2B]">
+              <span className="h-[2px] w-8 bg-[#1D4ED8]" />
+              <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#1D4ED8]">
                 1999 — Present
               </p>
             </div>
@@ -83,7 +83,7 @@ export default function CareerTimeline() {
             {/* Animated Championship Crimson Progress Spine */}
             <motion.div
               style={{ scaleY: lineScaleY, transformOrigin: "top" }}
-              className="absolute left-2 sm:left-3 top-2 bottom-2 w-[2px] bg-[#9E2A2B]"
+              className="absolute left-2 sm:left-3 top-2 bottom-2 w-[2px] bg-[#1D4ED8]"
             />
 
             <AnimatePresence mode="popLayout">
@@ -100,7 +100,7 @@ export default function CareerTimeline() {
                     className="relative scroll-mt-28 rounded-2xl border border-[#1C1C21]/12 bg-[#E2E2E5]/55 p-6 shadow-sm hover:shadow-md transition-all"
                   >
                     {/* Spine Node Marker */}
-                    <span className="absolute -left-[27px] sm:-left-[35px] top-7 w-3.5 h-3.5 rounded-full bg-[#EFEFEF] border-2 border-[#9E2A2B]" />
+                    <span className="absolute -left-[27px] sm:-left-[35px] top-7 w-3.5 h-3.5 rounded-full bg-[#EFEFEF] border-2 border-[#1D4ED8]" />
 
                     <div className="flex flex-wrap items-center justify-between gap-2 mb-3">
                       <div className="flex items-center gap-2.5">
@@ -113,11 +113,11 @@ export default function CareerTimeline() {
                             />
                           </span>
                         ) : (
-                          <span className="w-8 h-8 rounded-lg bg-[#9E2A2B]/10 border border-[#9E2A2B]/30 text-[#9E2A2B] flex items-center justify-center shrink-0">
+                          <span className="w-8 h-8 rounded-lg bg-[#1D4ED8]/10 border border-[#1D4ED8]/30 text-[#1D4ED8] flex items-center justify-center shrink-0">
                             <Award className="w-4 h-4" />
                           </span>
                         )}
-                        <span className="font-editorial font-bold text-lg tracking-wider uppercase text-[#9E2A2B]">
+                        <span className="font-editorial font-bold text-lg tracking-wider uppercase text-[#1D4ED8]">
                           {item.period}
                         </span>
                       </div>
@@ -179,7 +179,7 @@ export default function CareerTimeline() {
                 <div className="font-editorial font-extrabold text-3xl sm:text-4xl text-[#EFEFEF] leading-none mb-1">
                   3:16.43
                 </div>
-                <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#9E2A2B]">
+                <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#60A5FA]">
                   National Meet Record
                 </p>
                 <p className="text-[11px] text-[#E2E2E5]/65 mt-0.5">
@@ -226,7 +226,7 @@ export default function CareerTimeline() {
                         ? "border-[#A67C52] text-[#A67C52] bg-[#A67C52]/10"
                         : row.medal === "Silver"
                         ? "border-[#E2E2E5]/40 text-[#E2E2E5]"
-                        : "border-[#9E2A2B] text-[#EFEFEF] bg-[#9E2A2B]/30"
+                        : "border-[#1D4ED8] text-[#EFEFEF] bg-[#1D4ED8]/30"
                     }`}
                   >
                     <Medal className="w-3 h-3" />

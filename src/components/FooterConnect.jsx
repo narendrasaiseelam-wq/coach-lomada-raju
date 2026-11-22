@@ -138,7 +138,7 @@ export default function FooterConnect({ onOpenConnect }) {
             <div className="lg:col-span-5 space-y-8">
               <div>
                 <div className="flex items-center gap-3 mb-3">
-                  <span className="h-[2px] w-8 bg-[#9E2A2B]" />
+                  <span className="h-[2px] w-8 bg-[#1D4ED8]" />
                   <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#A67C52]">
                     Direct Connection
                   </p>
@@ -154,7 +154,7 @@ export default function FooterConnect({ onOpenConnect }) {
               {/* Direct Phones & Professional Email */}
               <div className="rounded-2xl border border-[#EFEFEF]/12 bg-[#EFEFEF]/[0.04] p-6 space-y-4">
                 <div className="flex items-start gap-3">
-                  <Mail className="w-4 h-4 text-[#9E2A2B] shrink-0 mt-1" />
+                  <Mail className="w-4 h-4 text-[#1D4ED8] shrink-0 mt-1" />
                   <div>
                     <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#A67C52] mb-0.5">
                       Professional Email
@@ -169,7 +169,7 @@ export default function FooterConnect({ onOpenConnect }) {
                 </div>
 
                 <div className="flex items-start gap-3 pt-3 border-t border-[#EFEFEF]/10">
-                  <Phone className="w-4 h-4 text-[#9E2A2B] shrink-0 mt-1" />
+                  <Phone className="w-4 h-4 text-[#1D4ED8] shrink-0 mt-1" />
                   <div>
                     <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#A67C52] mb-0.5">
                       Direct Phone
@@ -200,7 +200,7 @@ export default function FooterConnect({ onOpenConnect }) {
                 </div>
 
                 <div className="flex items-start gap-3 pt-3 border-t border-[#EFEFEF]/10">
-                  <MapPin className="w-4 h-4 text-[#9E2A2B] shrink-0 mt-1" />
+                  <MapPin className="w-4 h-4 text-[#1D4ED8] shrink-0 mt-1" />
                   <div>
                     <p className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#A67C52] mb-0.5">
                       Training Base
@@ -228,7 +228,7 @@ export default function FooterConnect({ onOpenConnect }) {
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label={`Coach Lomada Raju on ${social.label}`}
-                          className="group inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-[#9E2A2B] bg-[#9E2A2B]/20 hover:bg-[#9E2A2B] text-sm font-semibold text-[#EFEFEF] transition-colors"
+                          className="group inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-[#1D4ED8] bg-[#1D4ED8]/20 hover:bg-[#1D4ED8] text-sm font-semibold text-[#EFEFEF] transition-colors"
                         >
                           <Icon className="w-4 h-4 text-[#A67C52] group-hover:text-[#EFEFEF] transition-colors" />
                           <span>{social.label}</span>
@@ -272,7 +272,7 @@ export default function FooterConnect({ onOpenConnect }) {
             <div className="lg:col-span-7 rounded-2xl border border-[#EFEFEF]/15 bg-[#EFEFEF] text-[#1C1C21] p-6 sm:p-8 shadow-xl">
               <div className="pb-5 mb-6 border-b border-[#1C1C21]/12 flex items-center justify-between gap-4">
                 <div>
-                  <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#9E2A2B] mb-1">
+                  <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#1D4ED8] mb-1">
                     Send an Enquiry
                   </p>
                   <h3 className="font-editorial font-extrabold uppercase text-3xl text-[#1C1C21] leading-none">
@@ -299,7 +299,7 @@ export default function FooterConnect({ onOpenConnect }) {
                       value={fullName}
                       onChange={(e) => setFullName(e.target.value)}
                       placeholder="Your full name"
-                      className="w-full rounded-xl bg-[#E2E2E5]/70 border border-[#1C1C21]/18 focus:border-[#9E2A2B] focus:outline-none px-4 py-3 text-sm text-[#1C1C21] placeholder:text-[#4A4A52]/60"
+                      className="w-full rounded-xl bg-[#E2E2E5]/70 border border-[#1C1C21]/18 focus:border-[#1D4ED8] focus:outline-none px-4 py-3 text-sm text-[#1C1C21] placeholder:text-[#4A4A52]/60"
                     />
                   </div>
 
@@ -316,7 +316,7 @@ export default function FooterConnect({ onOpenConnect }) {
                       value={contactInfo}
                       onChange={(e) => setContactInfo(e.target.value)}
                       placeholder="you@example.com / +91..."
-                      className="w-full rounded-xl bg-[#E2E2E5]/70 border border-[#1C1C21]/18 focus:border-[#9E2A2B] focus:outline-none px-4 py-3 text-sm text-[#1C1C21] placeholder:text-[#4A4A52]/60"
+                      className="w-full rounded-xl bg-[#E2E2E5]/70 border border-[#1C1C21]/18 focus:border-[#1D4ED8] focus:outline-none px-4 py-3 text-sm text-[#1C1C21] placeholder:text-[#4A4A52]/60"
                     />
                   </div>
                 </div>
@@ -332,7 +332,7 @@ export default function FooterConnect({ onOpenConnect }) {
                     id="contact-role"
                     value={roleSport}
                     onChange={(e) => setRoleSport(e.target.value)}
-                    className="w-full rounded-xl bg-[#E2E2E5]/70 border border-[#1C1C21]/18 focus:border-[#9E2A2B] focus:outline-none px-4 py-3 text-sm text-[#1C1C21]"
+                    className="w-full rounded-xl bg-[#E2E2E5]/70 border border-[#1C1C21]/18 focus:border-[#1D4ED8] focus:outline-none px-4 py-3 text-sm text-[#1C1C21]"
                   >
                     {ROLE_OPTIONS.map((opt) => (
                       <option key={opt} value={opt}>
@@ -355,12 +355,12 @@ export default function FooterConnect({ onOpenConnect }) {
                     value={messageText}
                     onChange={(e) => setMessageText(e.target.value)}
                     placeholder="Share your sport, upcoming tournament calendar, or consultation requirements..."
-                    className="w-full rounded-xl bg-[#E2E2E5]/70 border border-[#1C1C21]/18 focus:border-[#9E2A2B] focus:outline-none px-4 py-3 text-sm text-[#1C1C21] placeholder:text-[#4A4A52]/60 resize-none"
+                    className="w-full rounded-xl bg-[#E2E2E5]/70 border border-[#1C1C21]/18 focus:border-[#1D4ED8] focus:outline-none px-4 py-3 text-sm text-[#1C1C21] placeholder:text-[#4A4A52]/60 resize-none"
                   />
                 </div>
 
                 {formError && (
-                  <p className="text-xs font-semibold text-[#9E2A2B]" role="alert">
+                  <p className="text-xs font-semibold text-[#1D4ED8]" role="alert">
                     {formError}
                   </p>
                 )}
@@ -370,7 +370,7 @@ export default function FooterConnect({ onOpenConnect }) {
                     type="submit"
                     whileHover={{ y: -1 }}
                     whileTap={{ scale: 0.99 }}
-                    className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] px-6 py-3.5 text-sm font-bold uppercase tracking-wider shadow-sm transition-colors cursor-pointer"
+                    className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl bg-[#1D4ED8] hover:bg-[#1E40AF] text-[#EFEFEF] px-6 py-3.5 text-sm font-bold uppercase tracking-wider shadow-sm transition-colors cursor-pointer"
                   >
                     <MessageCircle className="w-4 h-4" />
                     <span>Send via WhatsApp</span>
@@ -382,7 +382,7 @@ export default function FooterConnect({ onOpenConnect }) {
                     onClick={handleEmailCompose}
                     className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#1C1C21]/25 hover:border-[#1C1C21] bg-[#E2E2E5]/60 hover:bg-[#E2E2E5] text-[#1C1C21] px-6 py-3.5 text-sm font-bold uppercase tracking-wider transition-colors cursor-pointer"
                   >
-                    <Send className="w-4 h-4 text-[#9E2A2B]" />
+                    <Send className="w-4 h-4 text-[#1D4ED8]" />
                     <span>Compose Email</span>
                   </button>
                 </div>
@@ -393,7 +393,7 @@ export default function FooterConnect({ onOpenConnect }) {
           {/* Footer Navigation & Copyright */}
           <div className="pt-10 pb-8 border-b border-[#EFEFEF]/12 flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <span className="w-9 h-9 rounded-lg bg-[#9E2A2B] text-[#EFEFEF] font-editorial font-extrabold text-lg tracking-wider flex items-center justify-center">
+              <span className="w-9 h-9 rounded-lg bg-[#1D4ED8] text-[#EFEFEF] font-editorial font-extrabold text-lg tracking-wider flex items-center justify-center">
                 {coachProfile.monogram}
               </span>
               <div>
@@ -448,7 +448,7 @@ export default function FooterConnect({ onOpenConnect }) {
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.97 }}
             onClick={() => onOpenConnect()}
-            className="hidden md:inline-flex fixed bottom-5 right-5 z-40 items-center gap-2 rounded-full bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] border border-[#EFEFEF]/20 shadow-lg cursor-pointer"
+            className="hidden md:inline-flex fixed bottom-5 right-5 z-40 items-center gap-2 rounded-full bg-[#1D4ED8] hover:bg-[#1E40AF] text-[#EFEFEF] px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] border border-[#EFEFEF]/20 shadow-lg cursor-pointer"
             aria-label="Message Coach Lomada Raju"
           >
             <MessageCircle className="w-4 h-4" />

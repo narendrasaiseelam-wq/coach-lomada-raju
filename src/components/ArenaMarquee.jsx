@@ -17,7 +17,7 @@ function MarqueeTrack() {
           <span className="font-editorial font-bold uppercase text-sm sm:text-base tracking-[0.22em] text-[#EFEFEF]/90">
             {arena}
           </span>
-          <span className="w-1.5 h-1.5 bg-[#9E2A2B] rotate-45 shrink-0" />
+          <span className="w-1.5 h-1.5 bg-[#1D4ED8] rotate-45 shrink-0" />
         </div>
       ))}
     </div>

@@ -84,7 +84,7 @@ export default function Hero() {
                 key={org.shortName}
                 type="button"
                 onClick={() => scrollToSection(org.targetId, -96)}
-                className="flex items-center gap-2.5 bg-white/95 rounded-xl border border-[#1C1C21]/10 px-3 py-2 shadow-xs cursor-pointer hover:border-[#9E2A2B] hover:shadow-md transition-all text-left"
+                className="flex items-center gap-2.5 bg-white/95 rounded-xl border border-[#1C1C21]/10 px-3 py-2 shadow-xs cursor-pointer hover:border-[#1D4ED8] hover:shadow-md transition-all text-left"
                 title={`Jump to ${org.name}`}
               >
                 <img
@@ -110,8 +110,8 @@ export default function Hero() {
           >
             {/* Eyebrow */}
             <div className="flex items-center gap-3 mb-4">
-              <span className="h-[2px] w-8 bg-[#9E2A2B]" />
-              <p className="text-xs sm:text-[13px] font-bold tracking-[0.2em] uppercase text-[#9E2A2B]">
+              <span className="h-[2px] w-8 bg-[#1D4ED8]" />
+              <p className="text-xs sm:text-[13px] font-bold tracking-[0.2em] uppercase text-[#1D4ED8]">
                 {coachProfile.title}
               </p>
             </div>
@@ -122,7 +122,7 @@ export default function Hero() {
             </h1>
 
             {/* Explicit Professional Experience & Specialisation (Two-Line Block) */}
-            <p className="text-sm sm:text-base font-bold text-[#9E2A2B] leading-snug max-w-2xl mb-4 border-l-2 border-[#A67C52] pl-3.5">
+            <p className="text-sm sm:text-base font-bold text-[#1D4ED8] leading-snug max-w-2xl mb-4 border-l-2 border-[#A67C52] pl-3.5">
               15+ Years International Strength &amp; Conditioning Specialist &mdash;
               <br />
               Olympic &amp; Para-Badminton, National Cricket, Athletics &amp; Sports Yoga Science.
@@ -140,7 +140,7 @@ export default function Hero() {
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => scrollToSection("coaching")}
-                className="inline-flex items-center gap-2 bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] px-6 py-3.5 rounded-xl text-sm font-bold tracking-wider uppercase shadow-sm hover:shadow-md transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 bg-[#1D4ED8] hover:bg-[#1E40AF] text-[#EFEFEF] px-6 py-3.5 rounded-xl text-sm font-bold tracking-wider uppercase shadow-sm hover:shadow-md transition-all cursor-pointer"
               >
                 <span>Explore coaching</span>
                 <ArrowDownRight className="w-4 h-4" />
@@ -154,7 +154,7 @@ export default function Hero() {
                 className="inline-flex items-center gap-2 border border-[#1C1C21]/25 hover:border-[#1C1C21]/50 bg-[#EFEFEF] hover:bg-[#E2E2E5] text-[#1C1C21] px-6 py-3.5 rounded-xl text-sm font-bold tracking-wider uppercase shadow-xs hover:shadow-sm transition-all cursor-pointer"
               >
                 <span>Contact coach</span>
-                <ArrowUpRight className="w-4 h-4 text-[#9E2A2B]" />
+                <ArrowUpRight className="w-4 h-4 text-[#1D4ED8]" />
               </motion.button>
             </div>
 
@@ -166,7 +166,7 @@ export default function Hero() {
                     <div className="font-editorial font-extrabold text-xl sm:text-2xl text-[#1C1C21] tracking-tight leading-none mb-1.5 tabular-nums whitespace-nowrap">
                       <AnimatedMetric value={item.metric} />
                     </div>
-                    <div className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#9E2A2B] mb-1">
+                    <div className="text-[11px] font-bold uppercase tracking-[0.12em] text-[#1D4ED8] mb-1">
                       {item.label}
                     </div>
                     <div className="text-[11px] text-[#4A4A52] leading-snug">

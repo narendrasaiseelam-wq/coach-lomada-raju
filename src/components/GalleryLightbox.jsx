@@ -137,8 +137,8 @@ export default function GalleryLightbox() {
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div>
               <div className="flex items-center gap-3 mb-3">
-                <span className="h-[2px] w-8 bg-[#9E2A2B]" />
-                <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#9E2A2B]">
+                <span className="h-[2px] w-8 bg-[#1D4ED8]" />
+                <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#1D4ED8]">
                   Courtside, Stadiums &amp; Press
                 </p>
               </div>
@@ -170,7 +170,7 @@ export default function GalleryLightbox() {
                       <motion.span
                         layoutId="gallery-filter-pill"
                         transition={{ type: "spring", stiffness: 380, damping: 32 }}
-                        className="absolute inset-0 rounded-lg bg-[#9E2A2B]"
+                        className="absolute inset-0 rounded-lg bg-[#1D4ED8]"
                       />
                     )}
                     <span className="relative z-10 whitespace-nowrap">{category}</span>
@@ -229,7 +229,7 @@ export default function GalleryLightbox() {
                         <span className="relative z-10 whitespace-nowrap">{sub}</span>
                         <span
                           className={`relative z-10 text-[10px] tabular-nums ${
-                            isSubSelected ? "text-[#A67C52]" : "text-[#9E2A2B]"
+                            isSubSelected ? "text-[#A67C52]" : "text-[#1D4ED8]"
                           }`}
                         >
                           ({subCount})
@@ -283,7 +283,7 @@ export default function GalleryLightbox() {
 
                 <div className="p-5 flex flex-col gap-2.5">
                   <div className="flex flex-wrap items-center justify-between gap-2">
-                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#9E2A2B]/10 text-[10px] font-bold uppercase tracking-[0.14em] text-[#9E2A2B]">
+                    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-[#1D4ED8]/10 text-[10px] font-bold uppercase tracking-[0.14em] text-[#1D4ED8]">
                       {item.subCategory || item.category}
                     </span>
                     <span className="inline-flex items-center gap-1 text-[11px] font-medium text-[#A67C52]">
@@ -366,7 +366,7 @@ export default function GalleryLightbox() {
                 <button
                   type="button"
                   onClick={closeLightbox}
-                  className="p-2 rounded-lg border border-[#EFEFEF]/20 hover:border-[#9E2A2B] hover:bg-[#9E2A2B] transition-colors cursor-pointer"
+                  className="p-2 rounded-lg border border-[#EFEFEF]/20 hover:border-[#1D4ED8] hover:bg-[#1D4ED8] transition-colors cursor-pointer"
                   aria-label="Close lightbox"
                 >
                   <X className="w-4 h-4" />
@@ -426,7 +426,7 @@ export default function GalleryLightbox() {
               <aside className="lg:col-span-4 border-t lg:border-t-0 lg:border-l border-[#EFEFEF]/12 bg-[#1C1C21] p-6 sm:p-8 flex flex-col justify-between gap-6 overflow-y-auto">
                 <div className="space-y-5">
                   <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#9E2A2B] text-[#EFEFEF] text-[10px] font-bold uppercase tracking-[0.16em]">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-[#1D4ED8] text-[#EFEFEF] text-[10px] font-bold uppercase tracking-[0.16em]">
                       {activeItem.category}
                     </span>
                     {activeItem.subCategory && (

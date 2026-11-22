@@ -148,7 +148,7 @@ export default function ConnectModal({ isOpen, onClose, initialAudienceId = "ath
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Enter your full name"
-                  className="w-full rounded-xl bg-[#E2E2E5]/70 border border-[#1C1C21]/20 focus:border-[#9E2A2B] focus:outline-none px-4 py-3 text-sm text-[#1C1C21] placeholder:text-[#4A4A52]/60"
+                  className="w-full rounded-xl bg-[#E2E2E5]/70 border border-[#1C1C21]/20 focus:border-[#1D4ED8] focus:outline-none px-4 py-3 text-sm text-[#1C1C21] placeholder:text-[#4A4A52]/60"
                 />
               </div>
 
@@ -190,13 +190,13 @@ export default function ConnectModal({ isOpen, onClose, initialAudienceId = "ath
                   value={goalNote}
                   onChange={(e) => setGoalNote(e.target.value)}
                   placeholder="e.g., Badminton conditioning, tournament prep, or speaking event"
-                  className="w-full rounded-xl bg-[#E2E2E5]/70 border border-[#1C1C21]/20 focus:border-[#9E2A2B] focus:outline-none px-4 py-3 text-sm text-[#1C1C21] placeholder:text-[#4A4A52]/60"
+                  className="w-full rounded-xl bg-[#E2E2E5]/70 border border-[#1C1C21]/20 focus:border-[#1D4ED8] focus:outline-none px-4 py-3 text-sm text-[#1C1C21] placeholder:text-[#4A4A52]/60"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full rounded-xl bg-[#9E2A2B] hover:bg-[#7F2021] text-[#EFEFEF] py-3.5 px-5 text-xs font-bold uppercase tracking-[0.16em] flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                className="w-full rounded-xl bg-[#1D4ED8] hover:bg-[#1E40AF] text-[#EFEFEF] py-3.5 px-5 text-xs font-bold uppercase tracking-[0.16em] flex items-center justify-center gap-2 transition-colors cursor-pointer"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Send WhatsApp Message</span>
@@ -206,7 +206,7 @@ export default function ConnectModal({ isOpen, onClose, initialAudienceId = "ath
               {/* Direct Contact Footer */}
               <div className="pt-4 border-t border-[#1C1C21]/14 text-xs text-[#4A4A52] space-y-1.5">
                 <div className="flex items-center gap-2">
-                  <Phone className="w-3.5 h-3.5 text-[#9E2A2B] shrink-0" />
+                  <Phone className="w-3.5 h-3.5 text-[#1D4ED8] shrink-0" />
                   <span>
                     Direct: <strong className="text-[#1C1C21]">{coachProfile.phonePrimary}</strong> &bull;{" "}
                     <strong className="text-[#1C1C21]">{coachProfile.phoneAlt}</strong> &bull;{" "}
@@ -214,7 +214,7 @@ export default function ConnectModal({ isOpen, onClose, initialAudienceId = "ath
                   </span>
                 </div>
                 <div className="flex items-start gap-2">
-                  <MapPin className="w-3.5 h-3.5 text-[#9E2A2B] shrink-0 mt-0.5" />
+                  <MapPin className="w-3.5 h-3.5 text-[#1D4ED8] shrink-0 mt-0.5" />
                   <span>{coachProfile.location}</span>
                 </div>
                 <div className="flex flex-wrap items-center gap-3 pt-1">
@@ -222,7 +222,7 @@ export default function ConnectModal({ isOpen, onClose, initialAudienceId = "ath
                     href="https://www.linkedin.com/in/raju-lomada-b47640108/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 font-semibold text-[#1C1C21] hover:text-[#9E2A2B] transition-colors"
+                    className="inline-flex items-center gap-1 font-semibold text-[#1C1C21] hover:text-[#1D4ED8] transition-colors"
                   >
                     <span>LinkedIn</span>
                     <ArrowUpRight className="w-3 h-3" />
@@ -232,7 +232,7 @@ export default function ConnectModal({ isOpen, onClose, initialAudienceId = "ath
                     href="https://www.instagram.com/rajulomada_21/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 font-semibold text-[#1C1C21] hover:text-[#9E2A2B] transition-colors"
+                    className="inline-flex items-center gap-1 font-semibold text-[#1C1C21] hover:text-[#1D4ED8] transition-colors"
                   >
                     <span>Instagram (@rajulomada_21)</span>
                     <ArrowUpRight className="w-3 h-3" />

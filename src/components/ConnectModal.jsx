@@ -217,6 +217,27 @@ export default function ConnectModal({ isOpen, onClose, initialAudienceId = "ath
                   <MapPin className="w-3.5 h-3.5 text-[#9E2A2B] shrink-0 mt-0.5" />
                   <span>{coachProfile.location}</span>
                 </div>
+                <div className="flex flex-wrap items-center gap-3 pt-1">
+                  <a
+                    href="https://www.linkedin.com/in/raju-lomada-b47640108/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 font-semibold text-[#1C1C21] hover:text-[#9E2A2B] transition-colors"
+                  >
+                    <span>LinkedIn</span>
+                    <ArrowUpRight className="w-3 h-3" />
+                  </a>
+                  <span className="text-[#4A4A52]/40">&bull;</span>
+                  <a
+                    href="https://www.instagram.com/rajulomada_21/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 font-semibold text-[#1C1C21] hover:text-[#9E2A2B] transition-colors"
+                  >
+                    <span>Instagram (@rajulomada_21)</span>
+                    <ArrowUpRight className="w-3 h-3" />
+                  </a>
+                </div>
               </div>
             </form>
           </motion.div>

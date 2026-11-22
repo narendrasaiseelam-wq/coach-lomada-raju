@@ -26,8 +26,18 @@ export const coachProfile = {
   dhwajamLogo: "/images/04-dhwajam-logo.png",
   socialLinks: [
     { label: "WhatsApp", href: "https://wa.me/919666692021", handle: "+91 96666 92021", active: true },
-    { label: "Instagram", href: null, handle: "Coming Soon", active: false },
-    { label: "LinkedIn", href: null, handle: "Coming Soon", active: false },
+    {
+      label: "Instagram",
+      href: "https://www.instagram.com/rajulomada_21/",
+      handle: "@rajulomada_21",
+      active: true,
+    },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/raju-lomada-b47640108/",
+      handle: "Lomada Raju",
+      active: true,
+    },
     { label: "Facebook", href: null, handle: "Coming Soon", active: false },
   ],
 };

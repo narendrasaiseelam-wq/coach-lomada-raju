@@ -227,9 +227,10 @@ export default function FooterConnect({ onOpenConnect }) {
                           href={social.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-[#9E2A2B] bg-[#9E2A2B]/20 hover:bg-[#9E2A2B] text-sm font-semibold text-[#EFEFEF] transition-colors"
+                          aria-label={`Coach Lomada Raju on ${social.label}`}
+                          className="group inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-[#9E2A2B] bg-[#9E2A2B]/20 hover:bg-[#9E2A2B] text-sm font-semibold text-[#EFEFEF] transition-colors"
                         >
-                          <Icon className="w-4 h-4 text-[#A67C52]" />
+                          <Icon className="w-4 h-4 text-[#A67C52] group-hover:text-[#EFEFEF] transition-colors" />
                           <span>{social.label}</span>
                         </a>
                       );
@@ -246,7 +247,7 @@ export default function FooterConnect({ onOpenConnect }) {
                   })}
                 </div>
                 <p className="text-xs text-[#E2E2E5]/65 leading-relaxed">
-                  Official social handles launching soon &mdash; message directly on{" "}
+                  Connect on Instagram &amp; LinkedIn, or message directly on{" "}
                   <a
                     href={`https://wa.me/${coachProfile.whatsappNumber}`}
                     target="_blank"

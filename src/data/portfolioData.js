@@ -217,6 +217,80 @@ export const trainingPillars = [
   },
 ];
 
+export const personalisedGuidanceData = {
+  eyebrow: "BEYOND THE STADIUM • ONE-ON-ONE GUIDANCE",
+  heading: "NO COMMON TEMPLATE — A PERSONALISED PATH FOR EVERY BODY",
+  lead:
+    "People often see my work with Olympic and World Champions and assume I only train professional athletes. In reality, a big part of my life is guiding IAS and IPS officers, legislators, doctors, film celebrities, students, and everyday people dealing with pain, stress, or stiffness. Every person walks in with a different body and a different problem—so I never use a common pattern. First, I observe how you move, find the exact root cause of your pain or limitation, and then build a safe, individualised training and recovery pattern made strictly for you.",
+  steps: [
+    {
+      step: "01. OBSERVE & LISTEN",
+      description:
+        "I start by watching your posture, natural movement, breathing, and daily lifestyle stress before prescribing a single exercise.",
+    },
+    {
+      step: "02. FIND THE EXACT PROBLEM",
+      description:
+        "Whether it is lower-back pain, knee stiffness, fatigue, or postural strain, I pinpoint the specific root issue instead of guessing.",
+    },
+    {
+      step: "03. BUILD YOUR INDIVIDUAL PATTERN",
+      description:
+        "Zero copy-paste routines. You get a custom progression blending scientific strength, mobility, and sports yoga tailored to your body.",
+    },
+  ],
+  audiences: [
+    {
+      id: "ias-ips",
+      title: "IAS & IPS OFFICERS",
+      focusTag: "STRESS ADAPTATION & STAMINA",
+      iconKey: "shield",
+      description:
+        "Building core strength, endurance, agility, and mental resilience for physically and mentally demanding public service.",
+    },
+    {
+      id: "legislators",
+      title: "LEGISLATORS & PUBLIC LEADERS",
+      focusTag: "POSTURE, ENERGY & LONGEVITY",
+      iconKey: "landmark",
+      description:
+        "Improving functional energy, spinal posture, stamina, and stress management across relentless travel and public schedules.",
+    },
+    {
+      id: "doctors",
+      title: "DOCTORS & SURGEONS",
+      focusTag: "PAIN RELIEF & FUNCTIONAL STRENGTH",
+      iconKey: "stethoscope",
+      description:
+        "Relieving neck, back, and standing fatigue while restoring stamina and injury protection for high-demand hospital routines.",
+    },
+    {
+      id: "celebrities",
+      title: "CELEBRITIES & ARTISTS",
+      focusTag: "AGILITY, CONDITIONING & RECOVERY",
+      iconKey: "sparkles",
+      description:
+        "Tailored physique readiness, movement sharpness, and fast recovery designed around demanding shoot and travel calendars.",
+    },
+    {
+      id: "students",
+      title: "KIDS & STUDENTS",
+      focusTag: "FOUNDATION & HEALTHY GROWTH",
+      iconKey: "graduation",
+      description:
+        "Developing natural coordination, flexibility, posture, and injury-free athletic potential alongside academic focus.",
+    },
+    {
+      id: "everyday",
+      title: "EVERYDAY INDIVIDUALS & PAIN RECOVERY",
+      focusTag: "TARGETED HEALING & MOBILITY",
+      iconKey: "heart",
+      description:
+        "Personalised guidance for working professionals, homemakers, and seniors seeking relief from joint pain, stiffness, and low energy.",
+    },
+  ],
+};
+
 export const coachingFaqs = [
   {
     q: "How do you customize a programme to my tournament calendar?",

@@ -5,6 +5,7 @@ import ArenaMarquee from "./components/ArenaMarquee";
 import ChampionsSpotlight from "./components/ChampionsSpotlight";
 import AboutJourney from "./components/AboutJourney";
 import CoachingInteractive from "./components/CoachingInteractive";
+import PersonalisedGuidance from "./components/PersonalisedGuidance";
 import CareerTimeline from "./components/CareerTimeline";
 import GalleryLightbox from "./components/GalleryLightbox";
 import PodcastsSection from "./components/PodcastsSection";
@@ -31,6 +32,7 @@ export default function App() {
         <ChampionsSpotlight />
         <AboutJourney />
         <CoachingInteractive onOpenConnect={handleOpenConnect} />
+        <PersonalisedGuidance onOpenConnect={handleOpenConnect} />
         <CareerTimeline />
         <GalleryLightbox />
         <PodcastsSection />

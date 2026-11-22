@@ -264,6 +264,7 @@ export const careerTimeline = [
     type: "State Honour",
     orgLogo: null,
     image: "/images/career-telangana-icon-2024.jpg",
+    imagePosition: "object-[50%_55%]",
     description:
       "I was honoured with the Telangana ICON Award in recognition of 15 years of work in sports science and conditioning India's international athletes.",
   },

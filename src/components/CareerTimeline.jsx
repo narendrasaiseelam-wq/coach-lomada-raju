@@ -138,11 +138,11 @@ export default function CareerTimeline() {
                       </div>
 
                       {item.image && (
-                        <div className="w-full sm:w-36 h-28 shrink-0 rounded-xl overflow-hidden border border-[#1C1C21]/12 bg-[#EFEFEF]">
+                        <div className="w-full sm:w-44 h-36 shrink-0 rounded-xl overflow-hidden border border-[#1C1C21]/12 bg-[#EFEFEF]">
                           <img
                             src={item.image}
                             alt={item.role}
-                            className="w-full h-full object-cover object-top"
+                            className={`w-full h-full object-cover ${item.imagePosition || "object-center"}`}
                           />
                         </div>
                       )}

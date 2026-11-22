@@ -89,7 +89,7 @@ export default function Hero() {
               >
                 <img
                   src={org.logo}
-                  alt={org.name}
+                  alt={`Coach Lomada Raju — ${org.name} official affiliation emblem`}
                   className="w-7 h-7 object-contain shrink-0"
                 />
                 <span className="text-[11px] font-bold text-[#1C1C21] leading-tight">
@@ -191,7 +191,7 @@ export default function Hero() {
               <div className="aspect-[4/5] w-full overflow-hidden bg-[#1C1C21]">
                 <img
                   src={coachProfile.heroImage}
-                  alt="Coach Lomada Raju receiving National Excellence recognition"
+                  alt="Coach Lomada Raju receiving National Excellence recognition in Strength and Conditioning"
                   className="w-full h-full object-cover object-[48%_22%] block"
                 />
               </div>

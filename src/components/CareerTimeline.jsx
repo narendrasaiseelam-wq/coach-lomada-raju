@@ -108,7 +108,7 @@ export default function CareerTimeline() {
                           <span className="w-8 h-8 rounded-lg bg-white border border-[#1C1C21]/10 p-1 flex items-center justify-center shrink-0">
                             <img
                               src={item.orgLogo}
-                              alt=""
+                              alt={`${item.role} official organization logo`}
                               className="w-full h-full object-contain"
                             />
                           </span>
@@ -141,7 +141,7 @@ export default function CareerTimeline() {
                         <div className="w-full sm:w-44 h-36 shrink-0 rounded-xl overflow-hidden border border-[#1C1C21]/12 bg-[#EFEFEF]">
                           <img
                             src={item.image}
-                            alt={item.role}
+                            alt={`Coach Lomada Raju — ${item.role} (${item.period})`}
                             className={`w-full h-full object-cover ${item.imagePosition || "object-top"}`}
                           />
                         </div>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://coach-lomada-raju.vercel.app/sitemap.xml

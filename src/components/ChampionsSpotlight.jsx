@@ -145,7 +145,7 @@ export default function ChampionsSpotlight() {
                   <div className="rounded-xl border border-[#EFEFEF]/15 bg-[#1C1C21] p-1.5 overflow-hidden">
                     <SmartImage
                       src={activeChampion.image}
-                      alt={`${activeChampion.name} with Coach Lomada Raju`}
+                      alt={`Coach Lomada Raju with ${activeChampion.name} — ${activeChampion.category} (${activeChampion.achievement})`}
                       fit="contain"
                       className="rounded-lg"
                       label={activeChampion.name}
@@ -252,7 +252,7 @@ export default function ChampionsSpotlight() {
                 <div className="rounded-xl border border-[#EFEFEF]/15 bg-[#141418] p-1.5 overflow-hidden">
                   <SmartImage
                     src={activeChampion.image}
-                    alt={`${activeChampion.name} with Coach Lomada Raju`}
+                    alt={`Coach Lomada Raju with ${activeChampion.name} — ${activeChampion.category} (${activeChampion.achievement})`}
                     fit="contain"
                     objectPosition="object-top"
                     className="rounded-lg max-h-[320px] mx-auto"

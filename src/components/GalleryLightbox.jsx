@@ -268,7 +268,7 @@ export default function GalleryLightbox() {
                 <div className="relative p-2.5 bg-[#E2E2E5]/55 border-b border-[#1C1C21]/10">
                   <SmartImage
                     src={item.image}
-                    alt={item.title}
+                    alt={`Coach Lomada Raju — ${item.title} (${item.location})`}
                     fit="contain"
                     className="rounded-xl"
                     label={item.subCategory || item.category}
@@ -401,7 +401,7 @@ export default function GalleryLightbox() {
                 >
                   <img
                     src={activeItem.image}
-                    alt={activeItem.title}
+                    alt={`Coach Lomada Raju — ${activeItem.title} (${activeItem.location})`}
                     className={
                       isZoomed
                         ? "w-[1400px] sm:w-[1800px] max-w-none h-auto mx-auto rounded-lg border border-[#EFEFEF]/20"

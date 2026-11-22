@@ -244,6 +244,7 @@ export const careerTimeline = [
     type: "MY TRAINING CENTRE • HYDERABAD",
     orgLogo: "/images/04-dhwajam-logo.png",
     image: "/images/02-about-desk-portrait.jpg",
+    imagePosition: "object-top",
     description:
       "Today, I lead Dhwajam Strength & Conditioning Centre inside Botanical Garden, Kondapur, Hyderabad—mentoring emerging athletes, national competitors, and fitness seekers through science-backed conditioning and sports yoga.",
   },
@@ -254,6 +255,7 @@ export const careerTimeline = [
     type: "FRANCHISE CRICKET & INTERNATIONAL DUTY",
     orgLogo: "/images/logos/telugu-warriors-ccl.png",
     image: "/images/ccl-stadium-lineup.jpg",
+    imagePosition: "object-center",
     description:
       "Led team-based strength, warm-up, and match-fitness conditioning for the Telugu Warriors in the Celebrity Cricket League (CCL), alongside serving as S&C Coach for the Indian contingent at the Badminton Asia U-15 & U-17 Junior Championships in Chengdu, China.",
   },
@@ -275,6 +277,7 @@ export const careerTimeline = [
     type: "National Certification",
     orgLogo: "/images/logos/sai.png",
     image: "/images/press-eenadu-athletics-raju.jpg",
+    imagePosition: "object-top",
     description:
       "I completed my Strength & Conditioning Certification from the National Institute of Sports (NIS), Patiala, adding to my Sports Authority of India (SAI) certification.",
   },
@@ -285,6 +288,7 @@ export const careerTimeline = [
     type: "State Honour",
     orgLogo: null,
     image: "/images/press-sakshi-2019-feature.jpg",
+    imagePosition: "object-center",
     description:
       "I was deeply humbled to be felicitated at Raj Bhavan by the Hon'ble Governor of Telangana and at AP Stadium, Vijayawada by the Government of Andhra Pradesh after India's World Championship wins.",
   },
@@ -295,6 +299,7 @@ export const careerTimeline = [
     type: "National Squad",
     orgLogo: "/images/logos/bai.png",
     image: "/images/career-indian-badminton-squad.jpg",
+    imagePosition: "object-center",
     description:
       "For nine years, I supported Indian badminton and para-badminton stars across major international tours: South Asian Games in Nepal (Gold Medal), All England Open (UK), Swiss Open (Switzerland), Thomas & Uber Cup (Denmark), Sudirman Cup (Finland), Badminton Asia Championships in Manila, Philippines (Bronze Medal), and BWF Super Series (Singapore & Malaysia).",
   },
@@ -305,6 +310,7 @@ export const careerTimeline = [
     type: "League Badminton",
     orgLogo: "/images/logos/chennai-smashers.png",
     image: "/images/career-chennai-smashers-pbl.jpg",
+    imagePosition: "object-center",
     description:
       "I designed and ran high-tempo team conditioning programs for Chennai Smashers during the Premier Badminton League season.",
   },
@@ -335,6 +341,7 @@ export const careerTimeline = [
     type: "Competitive Career",
     orgLogo: "/images/logos/athletics-india.png",
     image: "/images/03-track-bib-11.jpg",
+    imagePosition: "object-top",
     description:
       "I spent over 13 years racing on the track, winning 43 medals: 14 National Medals (4 Gold, 5 Silver, 5 Bronze — including Youth Nationals Gold Bangalore 2005, Junior Federation Cup Gold & Unbroken Meet Record 03:16.43 Chennai 2006, Inter-Zonal Meet Gold Allahabad 2006, Junior Nationals Silver Bangalore 2006, and Junior Federation Cup Bronze Madurai 2007) and 29 State Medals (17 Gold, 10 Silver, 2 Bronze).",
   },

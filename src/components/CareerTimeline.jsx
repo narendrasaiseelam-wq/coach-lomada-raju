@@ -142,7 +142,7 @@ export default function CareerTimeline() {
                           <img
                             src={item.image}
                             alt={item.role}
-                            className={`w-full h-full object-cover ${item.imagePosition || "object-center"}`}
+                            className={`w-full h-full object-cover ${item.imagePosition || "object-top"}`}
                           />
                         </div>
                       )}

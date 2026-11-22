@@ -152,7 +152,7 @@ export const sportsAndTeams = [
   {
     sport: "Badminton",
     level: "Indian National Team (2015–2024) & Olympic / Para-Badminton Squads",
-    image: "/images/intl-gopichand-academy.jpg",
+    image: "/images/spec-badminton-huddle.jpg",
     events:
       "I travelled and worked with our national squads at the All England Open, Swiss Open, Thomas & Uber Cup (Denmark), Sudirman Cup (Finland), South Asian Games (Nepal — Gold), Asia Championships (Philippines — Bronze), BWF Super Series, and Chennai Smashers in PBL (2016).",
   },
@@ -173,7 +173,7 @@ export const sportsAndTeams = [
   {
     sport: "Kabaddi, Basketball & Tennis",
     level: "National, International & South Central Railway Squads",
-    image: "/images/intl-nce-coaches.jpg",
+    image: "/images/spec-kabaddi-conditioning.jpg",
     events:
       "I spent 3 years coaching South Central Railway Badminton and Kabaddi teams (2010–2012), and have conditioned international court and mat athletes including Kabaddi star Mamatha Poojary.",
   },
@@ -877,6 +877,16 @@ export const galleryItems = [
     image: "/images/03-track-bib-11.jpg",
     description:
       "Me on the athletics track wearing Bib #11 during my 13 years of competitive running. Winning 43 state and national medals gave me the real-world experience I share with my athletes today.",
+  },
+  {
+    id: "kabaddi-endurance-conditioning",
+    title: "Outdoor Morning Endurance Run — Indian Railways & Kabaddi Squad",
+    category: "Press & Track Archives",
+    location: "South Central Railway Grounds, Hyderabad",
+    year: "2010–2012",
+    image: "/images/spec-kabaddi-conditioning.jpg",
+    description:
+      "Leading an outdoor morning endurance conditioning run alongside Indian Railways, Kabaddi, and court athletes. Building aerobic stamina and grit on the ground has always been the backbone of my coaching.",
   },
 ];
 

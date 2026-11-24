@@ -5,6 +5,19 @@ import { careerTimeline, trackRecordMedals } from "../data/portfolioData";
 
 const FILTERS = ["All", "Coaching Career", "Track Athlete"];
 
+function renderFormattedText(text) {
+  return text.split(/(\*\*.*?\*\*)/g).map((part, idx) => {
+    if (part.startsWith("**") && part.endsWith("**")) {
+      return (
+        <strong key={idx} className="font-semibold text-[#1C1C21]">
+          {part.slice(2, -2)}
+        </strong>
+      );
+    }
+    return part;
+  });
+}
+
 export default function CareerTimeline() {
   const [filter, setFilter] = useState("All");
   const timelineRef = useRef(null);
@@ -132,9 +145,26 @@ export default function CareerTimeline() {
                           {item.role}
                         </h3>
 
-                        <p className="text-sm text-[#4A4A52] leading-relaxed">
-                          {item.description}
-                        </p>
+                        {item.description && (
+                          <p className="text-sm text-[#4A4A52] leading-relaxed">
+                            {item.description}
+                          </p>
+                        )}
+
+                        {item.bullets && item.bullets.length > 0 && (
+                          <ul
+                            className={`space-y-1.5 text-sm text-[#4A4A52] leading-relaxed ${
+                              item.description ? "mt-2.5" : ""
+                            }`}
+                          >
+                            {item.bullets.map((bullet, bIdx) => (
+                              <li key={bIdx} className="flex items-start gap-2">
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#B45309] shrink-0 mt-2" />
+                                <span>{renderFormattedText(bullet)}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
 
                       {item.image && (
@@ -188,10 +218,10 @@ export default function CareerTimeline() {
               </div>
               <div className="py-4 pl-4">
                 <div className="font-editorial font-extrabold text-3xl sm:text-4xl text-[#EFEFEF] leading-none mb-1">
-                  43 Medals
+                  98 Medals
                 </div>
                 <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#A67C52]">
-                  14 National &bull; 29 State
+                  14 National &bull; 29 State &bull; 55 University &amp; District
                 </p>
                 <p className="text-[11px] text-[#E2E2E5]/65 mt-0.5">
                   400m &amp; 4&times;400m Relay

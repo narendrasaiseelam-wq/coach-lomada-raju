@@ -59,7 +59,7 @@ export const affiliations = [
 export const keyHighlights = [
   { metric: "15+", label: "Years Coaching", detail: "Strength & conditioning since 2010" },
   { metric: "3:16.43", label: "National Record", detail: "4×400m relay, Junior Federation Cup (2006)" },
-  { metric: "43", label: "Track Medals", detail: "14 National & 29 State medals (1999–2013)" },
+  { metric: "98", label: "Track Medals", detail: "14 National, 29 State & 55 University/District" },
   { metric: "BAI - SAI & NIS", label: "Certified", detail: "Badminton Association of India, SAI & NIS Patiala" },
 ];
 
@@ -182,7 +182,7 @@ export const sportsAndTeams = [
     level: "13+ Years Competitive Track & Speed-Power Conditioning",
     image: "/images/03-track-bib-11.jpg",
     events:
-      "Having won 43 state and national medals myself (including a 3:16.43 National Meet Record in the 4×400m relay), I bring real track sprint mechanics and lactic tolerance directly to my athletes.",
+      "Having won 98 national, state, and university/district medals myself (including a 3:16.43 National Meet Record in the 4×400m relay), I bring real track sprint mechanics and lactic tolerance directly to my athletes.",
   },
   {
     sport: "Kabaddi, Basketball & Tennis",
@@ -331,21 +331,20 @@ export const careerTimeline = [
     role: "Founder & Head Coach — Dhwajam Strength & Conditioning Centre",
     type: "MY TRAINING CENTRE • HYDERABAD",
     orgLogo: "/images/04-dhwajam-logo.png",
-    image: "/images/02-about-desk-portrait.jpg",
-    imagePosition: "object-top",
+    image: null,
     description:
       "Today, I lead Dhwajam Strength & Conditioning Centre inside Botanical Garden, Kondapur, Hyderabad—mentoring emerging athletes, national competitors, and fitness seekers through science-backed conditioning and sports yoga.",
   },
   {
     id: "milestone-2025",
     period: "2025",
-    role: "Head S&C Coach — Telugu Warriors (CCL) & India Junior Contingent",
-    type: "FRANCHISE CRICKET & INTERNATIONAL DUTY",
+    role: "Head S&C Coach — Telugu Warriors (CCL)",
+    type: "FRANCHISE CRICKET",
     orgLogo: "/images/logos/telugu-warriors-ccl.png",
     image: "/images/ccl-stadium-lineup.jpg",
     imagePosition: "object-center",
     description:
-      "Led team-based strength, warm-up, and match-fitness conditioning for the Telugu Warriors in the Celebrity Cricket League (CCL), alongside serving as S&C Coach for the Indian contingent at the Badminton Asia U-15 & U-17 Junior Championships in Chengdu, China.",
+      "Led team-based strength, warm-up, and match-fitness conditioning for the Telugu Warriors in the Celebrity Cricket League (CCL).",
   },
   {
     id: "milestone-2024",
@@ -389,7 +388,14 @@ export const careerTimeline = [
     image: "/images/career-indian-badminton-squad.jpg",
     imagePosition: "object-center",
     description:
-      "For nine years, I supported Indian badminton and para-badminton stars across major international tours: South Asian Games in Nepal (Gold Medal), All England Open (UK), Swiss Open (Switzerland), Thomas & Uber Cup (Denmark), Sudirman Cup (Finland), Badminton Asia Championships in Manila, Philippines (Bronze Medal), and BWF Super Series (Singapore & Malaysia).",
+      "For nine years, I supported Indian badminton and para-badminton stars across major international tours:",
+    bullets: [
+      "**Nepal:** Gold Medal at the South Asian Games",
+      "**Philippines:** Bronze Medal at the Badminton Asia Championships (Manila)",
+      "**United Kingdom & Switzerland:** All England Open (**UK**) & Swiss Open (**Switzerland**)",
+      "**Denmark & Finland:** BWF Thomas & Uber Cup (**Denmark**) & Sudirman Cup (**Finland**)",
+      "**Singapore & Malaysia:** BWF World Tour Super Series events",
+    ],
   },
   {
     id: "milestone-pbl",
@@ -400,7 +406,7 @@ export const careerTimeline = [
     image: "/images/career-chennai-smashers-pbl.jpg",
     imagePosition: "object-center",
     description:
-      "I designed and ran high-tempo team conditioning programs for Chennai Smashers during the Premier Badminton League season.",
+      "I designed and ran high-tempo team conditioning programs for Chennai Smashers during the Premier Badminton League season, alongside serving as S&C Coach for the Indian contingent at the Badminton Asia U-15 & U-17 Junior Championships in Chengdu, China.",
   },
   {
     id: "milestone-hca",
@@ -415,23 +421,28 @@ export const careerTimeline = [
   {
     id: "milestone-railways",
     period: "2010 – 2012",
-    role: "Indian Railways & South Central Railway Teams",
+    role: "South Central Railway Teams",
     type: "Institutional Sport",
     orgLogo: "/images/logos/south-central-railway.png",
     image: null,
     description:
-      "My first major coaching role after transitioning from competitive athletics—I served as S&C Coach for Indian Railways Badminton and Kabaddi teams.",
+      "My first major coaching role after transitioning from competitive athletics—I served as S&C Coach for South Central Railway Badminton and Kabaddi teams.",
   },
   {
     id: "milestone-athletics",
     period: "1999 – 2013",
-    role: "National Track & Field Athlete — 43 Medals & 3:16.43 Record",
+    role: "National Track & Field Athlete — 98 Medals & 3:16.43 Record",
     type: "Competitive Career",
     orgLogo: "/images/logos/athletics-india.png",
     image: "/images/03-track-bib-11.jpg",
     imagePosition: "object-top",
-    description:
-      "I spent over 13 years racing on the track, winning 43 medals: 14 National Medals (4 Gold, 5 Silver, 5 Bronze — including Youth Nationals Gold Bangalore 2005, Junior Federation Cup Gold & Unbroken Meet Record 03:16.43 Chennai 2006, Inter-Zonal Meet Gold Allahabad 2006, Junior Nationals Silver Bangalore 2006, and Junior Federation Cup Bronze Madurai 2007) and 29 State Medals (17 Gold, 10 Silver, 2 Bronze).",
+    description: null,
+    bullets: [
+      "**98 Total Track Medals:** 14 National (4 Gold, 5 Silver, 5 Bronze), 29 State (17 Gold, 10 Silver, 2 Bronze) & 55 University and District medals",
+      "**Unbroken National Meet Record (03:16.43):** 4×400m Relay Gold — Junior Federation Cup, **Chennai** (2006)",
+      "**Gold Medal (4×400m Relay):** Youth Nationals Athletic Meet, **Bangalore** (2005) & Inter-Zonal Athletic Meet, **Allahabad** (2006)",
+      "**Silver & Bronze Medals (4×400m Relay):** Junior Nationals Silver, **Bangalore** (2006) & Junior Federation Cup Bronze, **Madurai** (2007)",
+    ],
   },
 ];
 
@@ -972,7 +983,7 @@ export const galleryItems = [
     year: "1999–2013",
     image: "/images/03-track-bib-11.jpg",
     description:
-      "Me on the athletics track wearing Bib #11 during my 13 years of competitive running. Winning 43 state and national medals gave me the real-world experience I share with my athletes today.",
+      "Me on the athletics track wearing Bib #11 during my 13 years of competitive running. Winning 98 national, state, and university/district medals gave me the real-world experience I share with my athletes today.",
   },
   {
     id: "kabaddi-endurance-conditioning",

@@ -79,7 +79,7 @@ const BOOK_CHAPTERS = [
         objectPosition: "object-top",
         eyebrow: "1999 — 2013 TRACK ERA",
         caption:
-          "Competing in the 400m & 4×400m relay — 43 National & State medals and 3:16.43 National Meet Record (2006).",
+          "Competing in the 400m & 4×400m relay — 98 National, State & University/District medals and 3:16.43 National Meet Record (2006).",
         alt: "Lomada Raju competing on the athletics track in Bib 11",
       },
       {
@@ -374,6 +374,30 @@ export default function AboutJourney() {
                   </p>
                 </div>
               </div>
+
+              <ul className="py-4 border-b border-[#EFEFEF]/12 space-y-2 text-xs sm:text-sm text-[#E2E2E5]/90">
+                <li className="flex items-start gap-2.5 leading-relaxed">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-2" />
+                  <span>
+                    <strong className="text-white font-semibold">Personalised 1-on-1 Assessment:</strong>{" "}
+                    Individual movement &amp; pain-root diagnosis before any training begins
+                  </span>
+                </li>
+                <li className="flex items-start gap-2.5 leading-relaxed">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-2" />
+                  <span>
+                    <strong className="text-white font-semibold">Multi-Sport &amp; Health Coaching:</strong>{" "}
+                    Athletes, IAS/IPS officers, doctors, legislators &amp; everyday fitness seekers
+                  </span>
+                </li>
+                <li className="flex items-start gap-2.5 leading-relaxed">
+                  <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0 mt-2" />
+                  <span>
+                    <strong className="text-white font-semibold">Science + Sports Yoga:</strong>{" "}
+                    Blending Olympic S&amp;C methods with M.Sc. Yoga recovery &amp; longevity
+                  </span>
+                </li>
+              </ul>
 
               <div className="pt-5 flex flex-col sm:flex-row sm:items-center justify-between gap-5">
                 <div className="space-y-2.5 text-xs sm:text-sm text-[#E2E2E5]/85">

@@ -20,8 +20,8 @@ function AnimatedMetric({ value }) {
       return () => controls.stop();
     }
 
-    if (value === "43") {
-      const controls = animate(0, 43, {
+    if (value === "98") {
+      const controls = animate(0, 98, {
         duration: 1.3,
         ease: "easeOut",
         onUpdate: (latest) => setDisplay(`${Math.round(latest)}`),

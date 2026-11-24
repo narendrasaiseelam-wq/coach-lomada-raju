@@ -4,13 +4,10 @@ import { ArrowLeft, ChevronLeft, ChevronRight, Info, Award, X } from "lucide-rea
 import { affiliationsData } from "../data/portfolioData";
 
 export default function AffiliationModal({ activeId, onSelectOrg, onClose }) {
-  const [slideIdx, setSlideIdx] = useState(0);
+  const [slideState, setSlideState] = useState({ id: activeId, idx: 0 });
 
   const activeOrg = affiliationsData.find((org) => org.id === activeId) || null;
-
-  useEffect(() => {
-    setSlideIdx(0);
-  }, [activeId]);
+  const slideIdx = slideState.id === activeId ? slideState.idx : 0;
 
   useEffect(() => {
     if (!activeOrg) return undefined;
@@ -21,9 +18,18 @@ export default function AffiliationModal({ activeId, onSelectOrg, onClose }) {
       if (e.key === "Escape") {
         onClose();
       } else if (e.key === "ArrowRight" && activeOrg.photos.length > 1) {
-        setSlideIdx((prev) => (prev + 1) % activeOrg.photos.length);
+        setSlideState((prev) => {
+          const cur = prev.id === activeId ? prev.idx : 0;
+          return { id: activeId, idx: (cur + 1) % activeOrg.photos.length };
+        });
       } else if (e.key === "ArrowLeft" && activeOrg.photos.length > 1) {
-        setSlideIdx((prev) => (prev - 1 + activeOrg.photos.length) % activeOrg.photos.length);
+        setSlideState((prev) => {
+          const cur = prev.id === activeId ? prev.idx : 0;
+          return {
+            id: activeId,
+            idx: (cur - 1 + activeOrg.photos.length) % activeOrg.photos.length,
+          };
+        });
       }
     };
 
@@ -32,7 +38,7 @@ export default function AffiliationModal({ activeId, onSelectOrg, onClose }) {
       document.body.style.overflow = originalOverflow;
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [activeOrg, onClose]);
+  }, [activeId, activeOrg, onClose]);
 
   if (!activeOrg) return null;
 
@@ -206,7 +212,10 @@ export default function AffiliationModal({ activeId, onSelectOrg, onClose }) {
                       <button
                         type="button"
                         onClick={() =>
-                          setSlideIdx((prev) => (prev - 1 + photos.length) % photos.length)
+                          setSlideState({
+                            id: activeId,
+                            idx: (safeSlideIdx - 1 + photos.length) % photos.length,
+                          })
                         }
                         aria-label="Previous photo"
                         className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[#1C1C21]/80 hover:bg-[#B45309] text-[#EFEFEF] border border-[#EFEFEF]/20 flex items-center justify-center transition-colors cursor-pointer shadow-md"
@@ -215,7 +224,12 @@ export default function AffiliationModal({ activeId, onSelectOrg, onClose }) {
                       </button>
                       <button
                         type="button"
-                        onClick={() => setSlideIdx((prev) => (prev + 1) % photos.length)}
+                        onClick={() =>
+                          setSlideState({
+                            id: activeId,
+                            idx: (safeSlideIdx + 1) % photos.length,
+                          })
+                        }
                         aria-label="Next photo"
                         className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-[#1C1C21]/80 hover:bg-[#B45309] text-[#EFEFEF] border border-[#EFEFEF]/20 flex items-center justify-center transition-colors cursor-pointer shadow-md"
                       >
@@ -237,7 +251,7 @@ export default function AffiliationModal({ activeId, onSelectOrg, onClose }) {
                         <button
                           key={p.src}
                           type="button"
-                          onClick={() => setSlideIdx(idx)}
+                          onClick={() => setSlideState({ id: activeId, idx })}
                           aria-label={`View photo ${idx + 1}`}
                           className={`h-2 rounded-full transition-all cursor-pointer ${
                             idx === safeSlideIdx

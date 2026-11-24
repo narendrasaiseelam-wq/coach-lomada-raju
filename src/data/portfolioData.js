@@ -3,11 +3,15 @@ export const coachProfile = {
   monogram: "LR",
   title: "International Strength & Conditioning Coach",
   specialisationLine:
-    "15+ Years International Strength & Conditioning Specialist — Olympic & Para-Badminton, National Cricket, Athletics & Sports Yoga Science.",
+    "15+ Years International Strength & Conditioning Coaching Specialist — Olympic & Para-Badminton | National Cricket | Athletics | Sports Yoga Science",
   tagline:
     "Fifteen years preparing India's Olympic badminton stars, national cricketers, and champions of every kind.",
   personalIntro:
-    "Hello, I am Lomada Raju. Before I ever coached India's Olympic and World Champions, I spent 13 years running on the athletics track—starting from a small village called Chilamkuru in Kadapa district. For the last 15+ years, my work has been simple: helping athletes and teams build real strength, speed, and injury-free longevity.",
+    "Hello, I am Lomada Raju, an M.Sc. in Yoga postgraduate and an International Strength & Conditioning Coaching Specialist with over 15 years of experience in elite sports performance. Long before I had the privilege of working with India's Olympic and World Champions, I spent 13 years as an athlete on the track, beginning my journey in the small village of Chilamkuru in Kadapa District.",
+  holisticApproach:
+    "My academic foundation in Yoga Science combined with extensive experience in strength and conditioning has enabled me to develop a holistic approach to athletic performance. Over the past 15+ years, I have dedicated my career to helping athletes and sports enthusiasts develop the strength, speed, resilience, and longevity needed to perform at their highest level while staying injury-free.",
+  mission:
+    "My mission is simple: to empower athletes to achieve peak performance through scientifically designed training, recovery, movement efficiency, and sustainable performance strategies that support success at the highest level of sport.",
   originStory:
     "I was born to Ankalaiah and Ankalamma in Bhadrampalle / Chilamkuru (YSR Kadapa District). I moved to Hyderabad on a sports-quota seat at Railway Degree College and secured State First Rank in my B.P.Ed. After 13+ years competing as a national 400m and 4×400m relay athlete, I dedicated my life to sports science—blending SAI & NIS strength conditioning with an M.Sc. in Yoga.",
   location: "Inside Botanical Garden, Kondapur, Gachibowli, Hyderabad, India",

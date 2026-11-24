@@ -123,9 +123,9 @@ export default function Hero() {
 
             {/* Explicit Professional Experience & Specialisation (Two-Line Block) */}
             <p className="text-sm sm:text-base font-bold text-[#B45309] leading-snug max-w-2xl mb-4 border-l-2 border-[#A67C52] pl-3.5">
-              15+ Years International Strength &amp; Conditioning Specialist &mdash;
+              15+ Years International Strength &amp; Conditioning Coaching Specialist
               <br />
-              Olympic &amp; Para-Badminton, National Cricket, Athletics &amp; Sports Yoga Science.
+              Olympic &amp; Para-Badminton | National Cricket | Athletics | Sports Yoga Science
             </p>
 
             {/* Conversational First-Person Intro */}

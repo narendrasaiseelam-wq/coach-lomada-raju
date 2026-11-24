@@ -487,6 +487,38 @@ export default function AboutJourney() {
             </div>
           </div>
         </div>
+
+        {/* Holistic Approach & My Mission */}
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.45, ease: "easeOut" }}
+          className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch"
+        >
+          <div className="lg:col-span-7 rounded-2xl border border-[#1C1C21]/12 bg-[#E2E2E5]/60 p-6 sm:p-8 shadow-sm flex flex-col justify-center">
+            <div className="flex items-center gap-2.5 mb-3">
+              <span className="h-[2px] w-6 bg-[#B45309]" />
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#B45309]">
+                Holistic Approach
+              </p>
+            </div>
+            <p className="text-sm sm:text-base text-[#1C1C21]/90 leading-relaxed">
+              {coachProfile.holisticApproach}
+            </p>
+          </div>
+
+          <div className="lg:col-span-5 rounded-2xl border border-[#1C1C21]/12 border-l-4 border-l-[#B45309] bg-[#EFEFEF] p-6 sm:p-8 shadow-sm flex flex-col justify-center">
+            <div className="mb-3">
+              <span className="inline-flex items-center rounded-full bg-[#B45309] text-[#EFEFEF] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.18em]">
+                MY MISSION
+              </span>
+            </div>
+            <p className="text-sm sm:text-base font-medium text-[#1C1C21] leading-relaxed">
+              &ldquo;{coachProfile.mission}&rdquo;
+            </p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -307,20 +307,28 @@ export const personalisedGuidanceData = {
 
 export const coachingFaqs = [
   {
-    q: "How do you customize a programme to my tournament calendar?",
-    a: "I start every athlete with a simple movement and fitness check. From there, I map out your tournament dates—building heavy strength in the off-season and reducing workload before major competitions so you feel light, fast, and ready on match day.",
+    q: "Why should I approach Coach Lomada Raju instead of a regular gym trainer?",
+    a: "Most gym routines follow a common chart—the same exercises and weights for everyone. I spent 13 years competing on the national athletics track (winning 98 medals and holding a 3:16.43 national meet record) and 15+ years conditioning India's Olympic, Paralympic, and World Champions. Before giving you a single exercise, I observe how you move, find any hidden weakness or pain point, and build a scientific plan made strictly for your body—never a copy-paste routine.",
   },
   {
-    q: "Can I train with you in Hyderabad or online from another city?",
-    a: "Yes, both options are open. In Hyderabad, we train in person at Dhwajam Strength & Conditioning Centre (Inside Botanical Garden, Kondapur, Gachibowli). If you live outside Hyderabad or travel on tour, I guide you with weekly plans and video form checks.",
+    q: "What is your special advantage that makes your training different?",
+    a: "My strength lies in combining three worlds that rarely come together: real track-athlete experience, SAI, BAI & NIS Patiala sports-science conditioning, and a postgraduate M.Sc. in Yoga (currently pursuing my Ph.D.). Strength training builds speed and power, while Sports Yoga builds joint mobility, breathing efficiency, and deep recovery—helping you perform at your best without injuries.",
   },
   {
-    q: "How does your M.Sc. Yoga background help prevent injuries?",
-    a: "Court and field sports put heavy repetitive stress on the lower back, hips, and shoulders. Combining Yoga breathing and mobility with strength training keeps muscles supple, improves recovery sleep, and prevents common non-contact injuries.",
+    q: "I am not a professional player—I have back pain, stiffness, or stress. Can you help me?",
+    a: "Yes. Alongside elite athletes, I regularly guide IAS and IPS officers, legislators, doctors, film celebrities, students, and everyday people dealing with pain, posture strain, or fatigue. Because every person carries a different problem, I first observe your posture and movement to find the exact root cause, then guide you with a safe, personalised recovery and strength pattern tailored solely to you.",
   },
   {
-    q: "How can sports teams or academies book a conditioning camp?",
-    a: "Coaches, academies, and team managers can message me directly through the Contact section below or on WhatsApp (+91 96666 92021). We can plan pre-season fitness testing, short intensive camps, or full-season S&C support.",
+    q: "How do you help young athletes and players improve speed without getting injured?",
+    a: "Many talented players break down because they push heavy workloads without proper movement mechanics or recovery. I map your training around your tournament calendar—building foundational strength and joint resilience in the off-season, and reducing fatigue before major competitions so you step onto the court or field explosive, sharp, and pain-free.",
+  },
+  {
+    q: "Can I train with you in person in Hyderabad or online from another city?",
+    a: "Both options are open. In Hyderabad, you can meet me at Dhwajam Strength & Conditioning Centre (inside Botanical Garden, Kondapur, Gachibowli) for an individual movement and fitness assessment. If you are based in another city or abroad, I offer structured online assessments, custom weekly training plans, and video check-ins.",
+  },
+  {
+    q: "How can academies, schools, or sports teams book a conditioning camp?",
+    a: "Drawing from my experience with the Indian National Badminton Team, South Central Railway, Hyderabad Cricket Association, and Telugu Warriors (CCL), I conduct custom pre-season fitness camps, injury-prevention workshops, and athlete testing for squads and institutions. Click the Connect button to share your team details and schedule.",
   },
 ];
 

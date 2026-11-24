@@ -242,7 +242,7 @@ export default function CoachingInteractive({ onOpenConnect }) {
               RELEVANT QUESTIONS ABOUT COACHING PROGRAMMES
             </h3>
             <p className="text-sm text-[#4A4A52] leading-relaxed">
-              Clear answers for competitive athletes, parents, and sports teams preparing for upcoming seasons.
+              Clear answers for athletes, parents, working professionals, and teams on why my approach is different and how we work together.
             </p>
           </div>
 

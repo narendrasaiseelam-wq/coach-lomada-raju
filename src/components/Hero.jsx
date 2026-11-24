@@ -89,11 +89,11 @@ export default function Hero() {
                 className="group flex flex-col items-center text-center gap-2 bg-white/95 rounded-2xl border border-[#1C1C21]/10 px-3 py-3.5 shadow-xs cursor-pointer hover:border-[#B45309] hover:shadow-md transition-all"
                 title={`View Coach Lomada Raju's role with ${org.fullName}`}
               >
-                <div className="w-14 h-14 rounded-xl bg-white border border-[#1C1C21]/8 p-1.5 flex items-center justify-center shrink-0">
+                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-white border border-[#1C1C21]/8 p-1.5 flex items-center justify-center shrink-0">
                   <img
                     src={org.logo}
                     alt={`Coach Lomada Raju — ${org.fullName} official affiliation emblem`}
-                    className="w-11 h-11 object-contain"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="space-y-0.5">

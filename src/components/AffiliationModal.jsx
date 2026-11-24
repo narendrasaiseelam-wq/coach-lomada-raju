@@ -98,7 +98,7 @@ export default function AffiliationModal({ activeId, onSelectOrg, onClose }) {
                     key={org.id}
                     type="button"
                     onClick={() => onSelectOrg(org.id)}
-                    className={`inline-flex items-center gap-2 rounded-full px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.12em] transition-colors cursor-pointer ${
+                    className={`inline-flex items-center gap-2.5 rounded-full py-2 px-3.5 text-[11px] font-bold uppercase tracking-[0.12em] transition-colors cursor-pointer ${
                       isSelected
                         ? "bg-[#B45309] text-[#EFEFEF]"
                         : "bg-[#EFEFEF]/8 text-[#E2E2E5]/75 hover:bg-[#EFEFEF]/16 hover:text-[#EFEFEF]"
@@ -107,7 +107,7 @@ export default function AffiliationModal({ activeId, onSelectOrg, onClose }) {
                     <img
                       src={org.logo}
                       alt=""
-                      className="w-4 h-4 object-contain rounded-xs bg-white p-0.5 shrink-0"
+                      className="w-7 h-7 sm:w-8 sm:h-8 bg-white rounded-lg p-0.5 object-contain shrink-0"
                     />
                     <span>{org.shortName}</span>
                   </button>
@@ -120,11 +120,11 @@ export default function AffiliationModal({ activeId, onSelectOrg, onClose }) {
           <div className="p-6 sm:p-8 space-y-7">
             {/* 1. Large Logo Badge + Bold Title + Full Form + Role & Years Pill */}
             <div className="flex flex-col sm:flex-row sm:items-center gap-5 pb-6 border-b border-[#1C1C21]/12">
-              <div className="w-20 h-20 rounded-2xl bg-white border border-[#1C1C21]/12 p-2.5 flex items-center justify-center shrink-0 shadow-sm">
+              <div className="w-28 h-28 sm:w-32 sm:h-32 bg-white rounded-2xl p-2 shadow-md border border-black/10 flex items-center justify-center shrink-0">
                 <img
                   src={activeOrg.logo}
                   alt={activeOrg.fullName}
-                  className="w-full h-full object-contain"
+                  className="w-full h-full object-contain p-1.5"
                 />
               </div>
 

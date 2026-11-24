@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { animate, motion, useInView, useScroll, useTransform } from "framer-motion";
 import { ArrowDownRight, ArrowUpRight, ShieldCheck } from "lucide-react";
-import { affiliations, coachProfile, keyHighlights } from "../data/portfolioData";
+import { affiliationsData, coachProfile, keyHighlights } from "../data/portfolioData";
+import AffiliationModal from "./AffiliationModal";
 
 function AnimatedMetric({ value }) {
   const ref = useRef(null);
@@ -47,6 +48,7 @@ function AnimatedMetric({ value }) {
 }
 
 export default function Hero() {
+  const [activeAffiliationId, setActiveAffiliationId] = useState(null);
   const portraitWrapperRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: portraitWrapperRef,
@@ -75,26 +77,34 @@ export default function Hero() {
           transition={{ duration: 0.45, ease: "easeOut" }}
           className="pb-6 mb-8 border-b border-stone-200/80"
         >
-          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#4A4A52] mb-3">
-            National &amp; League Affiliations &bull; Click to Jump to Milestone
+          <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#4A4A52] mb-3.5">
+            National &amp; League Affiliations &bull; Click any crest to view full experience
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5">
-            {affiliations.map((org) => (
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-3">
+            {affiliationsData.map((org) => (
               <button
-                key={org.shortName}
+                key={org.id}
                 type="button"
-                onClick={() => scrollToSection(org.targetId, -96)}
-                className="flex items-center gap-2.5 bg-white/95 rounded-xl border border-[#1C1C21]/10 px-3 py-2 shadow-xs cursor-pointer hover:border-[#B45309] hover:shadow-md transition-all text-left"
-                title={`Jump to ${org.name}`}
+                onClick={() => setActiveAffiliationId(org.id)}
+                className="group flex flex-col items-center text-center gap-2 bg-white/95 rounded-2xl border border-[#1C1C21]/10 px-3 py-3.5 shadow-xs cursor-pointer hover:border-[#B45309] hover:shadow-md transition-all"
+                title={`View Coach Lomada Raju's role with ${org.fullName}`}
               >
-                <img
-                  src={org.logo}
-                  alt={`Coach Lomada Raju — ${org.name} official affiliation emblem`}
-                  className="w-7 h-7 object-contain shrink-0"
-                />
-                <span className="text-[11px] font-bold text-[#1C1C21] leading-tight">
-                  {org.shortName}
-                </span>
+                <div className="w-14 h-14 rounded-xl bg-white border border-[#1C1C21]/8 p-1.5 flex items-center justify-center shrink-0">
+                  <img
+                    src={org.logo}
+                    alt={`Coach Lomada Raju — ${org.fullName} official affiliation emblem`}
+                    className="w-11 h-11 object-contain"
+                  />
+                </div>
+                <div className="space-y-0.5">
+                  <span className="block text-xs font-bold text-[#1C1C21] leading-tight">
+                    {org.shortName}
+                  </span>
+                  <span className="inline-flex items-center gap-0.5 text-[10px] font-bold uppercase tracking-[0.12em] text-[#B45309] group-hover:text-[#92400E] transition-colors">
+                    <span>View Role</span>
+                    <ArrowUpRight className="w-3 h-3" />
+                  </span>
+                </div>
               </button>
             ))}
           </div>
@@ -214,6 +224,12 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
+
+      <AffiliationModal
+        activeId={activeAffiliationId}
+        onSelectOrg={setActiveAffiliationId}
+        onClose={() => setActiveAffiliationId(null)}
+      />
     </section>
   );
 }

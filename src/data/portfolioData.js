@@ -46,14 +46,226 @@ export const coachProfile = {
   ],
 };
 
-export const affiliations = [
-  { name: "Sports Authority of India", shortName: "SAI", logo: "/images/logos/sai.png", targetId: "education" },
-  { name: "Badminton Association of India", shortName: "BAI", logo: "/images/logos/bai.png", targetId: "milestone-bai" },
-  { name: "Chennai Smashers (PBL)", shortName: "Chennai Smashers", logo: "/images/logos/chennai-smashers.png", targetId: "milestone-pbl" },
-  { name: "Indian Athletics", shortName: "Athletics India", logo: "/images/logos/athletics-india.png", targetId: "milestone-athletics" },
-  { name: "Hyderabad Cricket Association", shortName: "HCA", logo: "/images/logos/hca.png", targetId: "milestone-hca" },
-  { name: "Telugu Warriors (CCL)", shortName: "Telugu Warriors", logo: "/images/logos/telugu-warriors-ccl.png", targetId: "milestone-2025" },
-  { name: "South Central Railway", shortName: "South Central Railway", logo: "/images/logos/south-central-railway.png", targetId: "milestone-railways" },
+export const affiliationsData = [
+  {
+    id: "sai",
+    shortName: "SAI & NIS Patiala",
+    fullName:
+      "Sports Authority of India (SAI) & Netaji Subhas National Institute of Sports (NIS), Patiala",
+    logo: "/images/logos/sai.png",
+    period: "Certified • 2022",
+    roleTitle: "SAI & NIS Patiala Certified Strength & Conditioning Coach",
+    aboutOrg:
+      "The Sports Authority of India (SAI) is the apex national sports body under the Ministry of Youth Affairs & Sports, Government of India. Its flagship academic wing, NIS Patiala, is Asia’s premier sports institute that trains and certifies India’s top national coaches.",
+    coachExperience: {
+      summary:
+        "I earned my Strength & Conditioning certification from SAI and NIS Patiala—including being the sole candidate selected from South India among 30 coaches nationwide—bridging my 13+ years on the track with elite sports-science methodology.",
+      bullets: [
+        "Selected as the sole South Indian candidate among 30 coaches nationwide for specialised NIS Patiala S&C certification (2022).",
+        "Completed NIS 6-Week Certificate in Health & Fitness alongside official Sports Authority of India coaching credentials.",
+        "Applied SAI periodization, load monitoring, and injury-prevention frameworks across Olympic, Paralympic, and junior national camps.",
+      ],
+    },
+    photos: [
+      {
+        src: "/images/press-eenadu-athletics-raju.jpg",
+        caption:
+          "Eenadu feature highlighting my selection as the sole South Indian candidate among 30 coaches at NIS Patiala.",
+      },
+      {
+        src: "/images/03-track-bib-11.jpg",
+        caption:
+          "My 13+ years of competitive national track racing laid the practical foundation for my SAI & NIS Patiala coaching science.",
+      },
+    ],
+  },
+  {
+    id: "bai",
+    shortName: "BAI",
+    fullName:
+      "Badminton Association of India (BAI) — Indian National & Para-Badminton Squads",
+    logo: "/images/logos/bai.png",
+    period: "2015 – 2024",
+    roleTitle: "Strength & Conditioning Coach — Indian National & Para-Badminton Teams",
+    aboutOrg:
+      "The Badminton Association of India (BAI) is the national governing body for badminton in India, overseeing the senior, junior, and para-badminton national teams across Olympic, Paralympic, and BWF World Tour competitions.",
+    coachExperience: {
+      summary:
+        "For nine years under Chief Coach Pullela Gopichand and BAI, I conditioned India’s Olympic, Paralympic, and junior national shuttlers across major world championships, multi-sport games, and international tours.",
+      bullets: [
+        "Conditioned Olympic & World Champions including P. V. Sindhu, Kidambi Srikanth, B. Sai Praneeth, Satwiksairaj Rankireddy, Chirag Shetty, and Lakshya Sen.",
+        "Led Para-Badminton physical preparation for Paralympic Silver medallist Thulasimathi Murugesan, World Champion Manasi Joshi, Pramod Bhagat, and Vikram Umesh.",
+        "Supported Team India at the All England Open (UK), Swiss Open, Thomas & Uber Cup (Denmark), Sudirman Cup (Finland), South Asian Games (Nepal — Gold), and Asia Championships (Manila — Bronze).",
+        "Served as S&C Coach for the official Indian U-15 & U-17 contingent at the Badminton Asia Junior Championships in Chengdu, China.",
+      ],
+    },
+    photos: [
+      {
+        src: "/images/career-indian-badminton-squad.jpg",
+        caption:
+          "With the Indian National Badminton Team squad in official blue kits during international championship duty.",
+      },
+      {
+        src: "/images/intl-chengdu-court-squad.jpg",
+        caption:
+          "Full Indian U-15 & U-17 contingent courtside at the Badminton Asia Junior Championships in Chengdu, China.",
+      },
+      {
+        src: "/images/intl-chengdu-blazer-squad.jpg",
+        caption:
+          "Indian U-15 & U-17 national squad and coaching staff in formal Team India blazers.",
+      },
+      {
+        src: "/images/press-sakshi-2019-feature.jpg",
+        caption:
+          "Sakshi newspaper feature on conditioning P. V. Sindhu and World Champion Manasi Joshi, and Raj Bhavan felicitation.",
+      },
+    ],
+  },
+  {
+    id: "chennai-smashers",
+    shortName: "Chennai Smashers",
+    fullName: "Chennai Smashers — Premier Badminton League (PBL)",
+    logo: "/images/logos/chennai-smashers.png",
+    period: "2016",
+    roleTitle: "Strength & Conditioning Coach — Premier Badminton League",
+    aboutOrg:
+      "Chennai Smashers is a flagship franchise in India’s Premier Badminton League (PBL), bringing together Olympic medallists and top international shuttlers in a fast-paced, high-intensity franchise tournament format.",
+    coachExperience: {
+      summary:
+        "During the 2016 Premier Badminton League season, I designed and executed high-tempo match-readiness, court-speed, and rapid-recovery programmes for the Chennai Smashers franchise.",
+      bullets: [
+        "Managed daily warm-up activation, explosive court-agility drills, and post-match recovery for international and Indian stars.",
+        "Kept players sharp across back-to-back tie days and inter-city travel schedules.",
+        "Coordinated closely with head coaches on workload tapering so key singles and doubles players peaked for knockout ties.",
+      ],
+    },
+    photos: [
+      {
+        src: "/images/career-chennai-smashers-pbl.jpg",
+        caption:
+          "With the Chennai Smashers squad in yellow team kits during the 2016 Premier Badminton League season.",
+      },
+    ],
+  },
+  {
+    id: "athletics-india",
+    shortName: "Athletics India",
+    fullName: "Athletics Federation of India (AFI) — National Track & Field",
+    logo: "/images/logos/athletics-india.png",
+    period: "1999 – 2013",
+    roleTitle: "National Track & Field Athlete — 98 Medals & 3:16.43 Meet Record",
+    aboutOrg:
+      "The Athletics Federation of India (AFI) is the apex national body governing track and field across India, organizing National Championships, Federation Cups, and Inter-Zonal meets.",
+    coachExperience: {
+      summary:
+        "Before transitioning into strength and conditioning, I competed for over 13 years in 400m and 4×400m relay events—winning 98 medals and setting an unbroken National Meet Record.",
+      bullets: [
+        "Won 98 total track medals: 14 National (4 Gold, 5 Silver, 5 Bronze), 29 State (17 Gold, 10 Silver, 2 Bronze), and 55 University & District medals.",
+        "Set the unbroken 4×400m Relay National Meet Record of 03:16.43 at the Junior Federation Cup in Chennai (2006).",
+        "Won Gold medals at Youth Nationals (Bangalore 2005) and Inter-Zonal Athletic Meet (Allahabad 2006), plus Silver (Bangalore 2006) and Bronze (Madurai 2007).",
+      ],
+    },
+    photos: [
+      {
+        src: "/images/03-track-bib-11.jpg",
+        caption:
+          "Competing on the national athletics track wearing Bib #11 during my 13+ years as a 400m and 4×400m relay runner.",
+      },
+      {
+        src: "/images/press-eenadu-athletics-raju.jpg",
+        caption:
+          "Eenadu Daily feature profiling my track journey from Chilamkuru village to national championships.",
+      },
+    ],
+  },
+  {
+    id: "hca",
+    shortName: "HCA",
+    fullName: "Hyderabad Cricket Association (HCA) — BCCI State Cricket",
+    logo: "/images/logos/hca.png",
+    period: "2013 – 2014",
+    roleTitle: "Strength & Conditioning Coach — Hyderabad U-16, U-19 & U-23 Squads",
+    aboutOrg:
+      "The Hyderabad Cricket Association (HCA) is the official BCCI-affiliated governing body for cricket in Hyderabad and Telangana, developing state age-group and senior squads for national tournaments.",
+    coachExperience: {
+      summary:
+        "I served as Strength & Conditioning Coach with the Hyderabad Cricket Association, building athletic durability, bowling/throwing shoulder resilience, and multi-day match stamina for emerging state cricketers.",
+      bullets: [
+        "Trained Hyderabad Under-16, Under-19, and Under-23 squads through pre-season and tournament conditioning blocks.",
+        "Focused on sprint mechanics, rotational core power, and hamstring/shoulder injury prevention for fast bowlers and fielders.",
+        "Implemented fitness testing benchmarks to track aerobic capacity and agility across the domestic season.",
+      ],
+    },
+    photos: [],
+  },
+  {
+    id: "telugu-warriors",
+    shortName: "Telugu Warriors",
+    fullName: "Telugu Warriors — Celebrity Cricket League (CCL)",
+    logo: "/images/logos/telugu-warriors-ccl.png",
+    period: "2025 – Present",
+    roleTitle: "Head Strength & Conditioning Coach — Telugu Warriors (CCL)",
+    aboutOrg:
+      "Telugu Warriors is the four-time champion franchise representing the Telugu film industry in India’s Celebrity Cricket League (CCL), competing in packed stadium fixtures across the country.",
+    coachExperience: {
+      summary:
+        "I lead team-wide strength, pre-match activation, and match-fitness conditioning for the Telugu Warriors squad—keeping film stars and athletes explosive, agile, and injury-free under stadium floodlights.",
+      bullets: [
+        "Run structured locker-room mobility activations and pitch-side dynamic warm-ups before every CCL fixture.",
+        "Design custom individualised conditioning and recovery routines tailored to each player’s shooting and travel schedule.",
+        "Worked closely with squad leaders including Akhil Akkineni and team management across stadium tours.",
+      ],
+    },
+    photos: [
+      {
+        src: "/images/ccl-stadium-lineup.jpg",
+        caption:
+          "With the Telugu Warriors squad lined up on the stadium turf ahead of a Celebrity Cricket League fixture.",
+      },
+      {
+        src: "/images/ccl-pitch-huddle.jpg",
+        caption:
+          "Pitch-side team huddle and pre-match readiness briefing with Telugu Warriors.",
+      },
+      {
+        src: "/images/ccl-locker-room-briefing.jpg",
+        caption:
+          "Locker-room conditioning and activation briefing before taking the field.",
+      },
+      {
+        src: "/images/ccl-karnataka-dycm.jpg",
+        caption:
+          "With dignitaries and team representatives during the Celebrity Cricket League tournament.",
+      },
+    ],
+  },
+  {
+    id: "south-central-railway",
+    shortName: "South Central Railway",
+    fullName: "South Central Railway (SCR) Sports Association",
+    logo: "/images/logos/south-central-railway.png",
+    period: "2010 – 2012",
+    roleTitle: "Strength & Conditioning Coach — SCR Badminton & Kabaddi Teams",
+    aboutOrg:
+      "South Central Railway (SCR) is one of India’s premier institutional sports powerhouses, fielding championship-winning national teams in badminton, kabaddi, and athletics.",
+    coachExperience: {
+      summary:
+        "My first major coaching appointment after transitioning from competitive athletics—leading ground endurance, strength, and agility conditioning for South Central Railway Badminton and Kabaddi squads.",
+      bullets: [
+        "Conditioned institutional and international mat/court athletes including Kabaddi star Mamatha Poojary.",
+        "Led early-morning outdoor endurance runs, speed-agility circuits, and contact-strength blocks.",
+        "Built injury-resilient physical foundations for players competing in All India Railway and National Championships.",
+      ],
+    },
+    photos: [
+      {
+        src: "/images/spec-kabaddi-conditioning.jpg",
+        caption:
+          "Leading an outdoor morning endurance conditioning run alongside South Central Railway Kabaddi and court athletes.",
+      },
+    ],
+  },
 ];
 
 export const keyHighlights = [

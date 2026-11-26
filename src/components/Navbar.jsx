@@ -77,9 +77,13 @@ export default function Navbar({ onOpenConnect }) {
           onClick={(e) => handleNavClick(e, "home")}
           className="flex items-center gap-3 group shrink-0"
         >
-          <span className="w-9 h-9 rounded-lg bg-[#1C1C21] text-[#EFEFEF] font-editorial font-extrabold text-lg tracking-wider flex items-center justify-center border border-[#1C1C21] group-hover:bg-[#B45309] group-hover:border-[#B45309] transition-colors">
-            {coachProfile.monogram}
-          </span>
+          <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden border-2 border-[#B45309]/40 group-hover:border-[#B45309] shadow-sm shrink-0 transition-colors">
+            <img
+              src="/images/nav-coach-avatar.jpg"
+              alt="Coach Lomada Raju"
+              className="w-full h-full object-cover object-top"
+            />
+          </div>
           <div className="flex flex-col leading-none">
             <span className="font-editorial font-bold text-xl tracking-[0.06em] uppercase text-[#1C1C21]">
               {coachProfile.fullName}

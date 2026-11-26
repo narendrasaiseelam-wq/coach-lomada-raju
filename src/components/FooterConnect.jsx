@@ -438,9 +438,13 @@ export default function FooterConnect({ onOpenConnect }) {
           {/* Footer Navigation & Copyright */}
           <div className="pt-10 pb-8 border-b border-[#EFEFEF]/12 flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div className="flex items-center gap-3">
-              <span className="w-9 h-9 rounded-lg bg-[#B45309] text-[#EFEFEF] font-editorial font-extrabold text-lg tracking-wider flex items-center justify-center">
-                {coachProfile.monogram}
-              </span>
+              <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden border-2 border-[#B45309]/60 shadow-sm shrink-0">
+                <img
+                  src="/images/nav-coach-avatar.jpg"
+                  alt="Coach Lomada Raju"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
               <div>
                 <p className="font-editorial font-bold uppercase text-xl tracking-wider leading-none text-[#EFEFEF]">
                   {coachProfile.fullName}

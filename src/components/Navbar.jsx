@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { coachProfile } from "../data/portfolioData";
+import ArenaMarquee from "./ArenaMarquee";
 
 const NAV_LINKS = [
   { id: "home", label: "HOME" },
@@ -21,7 +22,7 @@ export default function Navbar({ onOpenConnect }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 140;
+      const scrollPosition = window.scrollY + 170;
       for (let i = NAV_LINKS.length - 1; i >= 0; i--) {
         const el = document.getElementById(NAV_LINKS[i].id);
         if (el && el.offsetTop <= scrollPosition) {
@@ -60,7 +61,7 @@ export default function Navbar({ onOpenConnect }) {
       }
       const el = document.getElementById(targetId);
       if (el) {
-        const yOffset = -84;
+        const yOffset = -116;
         const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
         window.scrollTo({ top: y, behavior: "smooth" });
       }
@@ -137,6 +138,9 @@ export default function Navbar({ onOpenConnect }) {
           </button>
         </div>
       </div>
+
+      {/* Persistent Scrolling Credential Ticker */}
+      <ArenaMarquee />
 
       {/* Responsive Mobile Menu Drawer */}
       <AnimatePresence>

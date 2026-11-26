@@ -67,7 +67,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative bg-[#EFEFEF] border-b border-[#1C1C21]/14 overflow-hidden scroll-mt-24"
+      className="relative bg-[#EFEFEF] border-b border-[#1C1C21]/14 overflow-hidden scroll-mt-32"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pt-8 lg:pt-10 pb-16">
         {/* Top Bar: Interactive National & League Affiliations (7 Official Logos) */}

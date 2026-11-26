@@ -110,7 +110,7 @@ export default function CareerTimeline() {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
-                    className="relative scroll-mt-28 rounded-2xl border border-[#1C1C21]/12 bg-[#E2E2E5]/55 p-6 shadow-sm hover:shadow-md transition-all"
+                    className="relative scroll-mt-32 rounded-2xl border border-[#1C1C21]/12 bg-[#E2E2E5]/55 p-6 shadow-sm hover:shadow-md transition-all"
                   >
                     {/* Spine Node Marker */}
                     <span className="absolute -left-[27px] sm:-left-[35px] top-7 w-3.5 h-3.5 rounded-full bg-[#EFEFEF] border-2 border-[#B45309]" />

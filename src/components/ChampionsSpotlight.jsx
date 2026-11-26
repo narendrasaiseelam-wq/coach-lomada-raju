@@ -56,7 +56,7 @@ export default function ChampionsSpotlight() {
   return (
     <section
       id="champions"
-      className="bg-[#1C1C21] text-[#EFEFEF] border-b border-[#EFEFEF]/10 py-16 md:py-24 scroll-mt-24"
+      className="bg-[#1C1C21] text-[#EFEFEF] border-b border-[#EFEFEF]/10 py-16 md:py-24 scroll-mt-32"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 space-y-12">
         {/* Section Header */}

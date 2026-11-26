@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import ArenaMarquee from "./components/ArenaMarquee";
 import TrackAchievementsTable from "./components/TrackAchievementsTable";
 import ChampionsSpotlight from "./components/ChampionsSpotlight";
 import AboutJourney from "./components/AboutJourney";
@@ -29,7 +28,6 @@ export default function App() {
 
       <main className="flex-1">
         <Hero onOpenConnect={handleOpenConnect} />
-        <ArenaMarquee />
         <TrackAchievementsTable />
         <ChampionsSpotlight />
         <AboutJourney />

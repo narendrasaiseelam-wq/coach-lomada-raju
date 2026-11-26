@@ -11,13 +11,15 @@ const ARENAS = [
 
 function MarqueeTrack() {
   return (
-    <div className="flex items-center gap-8 pr-8 shrink-0">
+    <div className="flex items-center gap-6 pr-6 shrink-0">
       {ARENAS.map((arena) => (
-        <div key={arena} className="flex items-center gap-8 shrink-0">
-          <span className="font-editorial font-bold uppercase text-sm sm:text-base tracking-[0.22em] text-[#EFEFEF]/90">
+        <div key={arena} className="flex items-center gap-6 shrink-0">
+          <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-white/95">
             {arena}
           </span>
-          <span className="w-1.5 h-1.5 bg-[#B45309] rotate-45 shrink-0" />
+          <span className="text-[10px] text-[#F59E0B] shrink-0" aria-hidden="true">
+            &#9830;
+          </span>
         </div>
       ))}
     </div>
@@ -27,7 +29,7 @@ function MarqueeTrack() {
 export default function ArenaMarquee() {
   return (
     <div
-      className="bg-[#1C1C21] border-b border-[#EFEFEF]/12 py-3.5 overflow-hidden select-none"
+      className="bg-[#1C1C21] text-white border-b border-white/10 py-2 overflow-hidden select-none"
       aria-label="International Arenas and Credentials"
     >
       <motion.div

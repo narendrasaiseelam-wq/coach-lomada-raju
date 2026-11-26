@@ -14,15 +14,15 @@ const HERO_SLIDES = [
   {
     src: "/images/hero-portrait-blazer.jpg",
     objectPos: "object-[50%_15%]",
-    tag: "VERIFIED NATIONAL CREDENTIAL",
-    line: "Indian National Badminton S&C • BAI, SAI & NIS Certified",
+    tag: "OLYMPIC & NATIONAL CREDENTIAL",
+    line: "Indian National & Olympic Badminton S&C Coach • BAI, SAI & NIS Certified",
     alt: "Coach Lomada Raju in Team India blazer on the badminton court",
   },
   {
     src: "/images/hero-slides/02-pv-sindhu-gym.jpg",
     objectPos: "object-[50%_20%]",
     tag: "OLYMPIC CONDITIONING",
-    line: "1-on-1 Strength & Conditioning with Two-Time Olympic Medallist P.V. Sindhu",
+    line: "1-on-1 Olympic Strength & Conditioning with Two-Time Medallist P.V. Sindhu",
     alt: "Coach Lomada Raju with two-time Olympic medallist P.V. Sindhu in the gym",
   },
   {
@@ -36,8 +36,8 @@ const HERO_SLIDES = [
     src: "/images/hero-slides/04-wuhan-2017.jpg",
     objectPos: "object-center",
     tag: "BADMINTON ASIA CHAMPIONSHIPS",
-    line: "Team India S&C Duty at the 2017 Asian Championships in Wuhan, China",
-    alt: "Coach Lomada Raju on Team India duty at the 2017 Badminton Asia Championships in Wuhan",
+    line: "Team India S&C Coach at the 2017 Asian Championships in Wuhan, China",
+    alt: "Coach Lomada Raju as Team India S&C Coach at the 2017 Badminton Asia Championships in Wuhan",
   },
   {
     src: "/images/hero-slides/05-gopichand-camp.jpg",
@@ -56,9 +56,9 @@ const HERO_SLIDES = [
   {
     src: "/images/hero-slides/07-indian-team-blue.jpg",
     objectPos: "object-[50%_20%]",
-    tag: "THOMAS & UBER CUP DUTY",
-    line: "Indian National Badminton Squad on International Tour Duty",
-    alt: "Coach Lomada Raju with the Indian National Badminton Squad on international tour duty",
+    tag: "THOMAS & UBER CUP COACH",
+    line: "Indian National Badminton Squad — International Tour S&C Coach",
+    alt: "Coach Lomada Raju with the Indian National Badminton Squad as International Tour S&C Coach",
   },
   {
     src: "/images/hero-slides/08-ccl-karnataka-dycm.jpg",

@@ -103,7 +103,7 @@ export const affiliationsData = [
       {
         src: "/images/career-indian-badminton-squad.jpg",
         caption:
-          "With the Indian National Badminton Team squad in official blue kits during international championship duty.",
+          "With the Indian National Badminton Team squad in official blue kits on international championship tours.",
       },
       {
         src: "/images/intl-chengdu-court-squad.jpg",
@@ -878,7 +878,7 @@ export const galleryItems = [
     year: "2021",
     image: "/images/intl-sudirman-cup.jpg",
     description:
-      "Standing beside the Sudirman Cup trophy while on national S&C duty. Team championships require coordinating warm-ups and recovery across singles and doubles players all day.",
+      "Standing beside the Sudirman Cup trophy as National Team S&C Coach. Team championships require coordinating warm-ups and recovery across singles and doubles players all day.",
   },
   {
     id: "intl-wuhan-2017",

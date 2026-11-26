@@ -126,7 +126,7 @@ const BOOK_CHAPTERS = [
         objectPosition: "object-top",
         eyebrow: "GOPICHAND BADMINTON ACADEMY",
         caption:
-          "Working alongside Chief National Coach Pullela Gopichand during national squad duty in Hyderabad.",
+          "Working alongside Chief National Coach Pullela Gopichand as National Squad S&C Coach in Hyderabad.",
         alt: "Lomada Raju with Chief National Coach Pullela Gopichand",
       },
     ],

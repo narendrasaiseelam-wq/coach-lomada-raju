@@ -321,67 +321,145 @@ export const championsTrained = [
     id: "pv-sindhu",
     name: "P. V. Sindhu",
     achievement:
-      "Olympic Silver Medallist (Rio 2016), Olympic Bronze Medallist (Tokyo 2020) & BWF World Champion",
+      "Olympic Silver Medallist (Rio 2016), Olympic Bronze Medallist (Tokyo 2020), 2019 BWF World Champion & Chennai Smashers PBL",
     category: "Olympic Badminton",
     badge: "2× Olympic Medallist",
     image: "/images/champ-pv-sindhu-medal.jpg",
     secondaryImage: "/images/champ-pv-sindhu-training.jpg",
+    photos: [
+      {
+        src: "/images/champ-pv-sindhu-medal.jpg",
+        caption: "Celebrating medal triumphs with P. V. Sindhu inside the Gopichand Academy.",
+      },
+      {
+        src: "/images/sindhu/02-rio-olympic-silver-medal.jpg",
+        caption: "Rio 2016 Olympic Silver Medal celebration with two-time Olympic medallist P. V. Sindhu.",
+      },
+      {
+        src: "/images/sindhu/03-gym-lunges-conditioning.jpg",
+        caption: "Lower-body lunge strength and eccentric deceleration conditioning in the academy gym.",
+      },
+      {
+        src: "/images/sindhu/04-stall-bar-core-strength.jpg",
+        caption: "Swedish stall-bar core stability and trunk control work for explosive overhead smashes.",
+      },
+      {
+        src: "/images/sindhu/05-field-hip-mobility-stretch.jpg",
+        caption: "Outdoor field hip-mobility and dynamic stretching for long-term joint protection.",
+      },
+      {
+        src: "/images/sindhu/06-court-training-session.jpg",
+        caption: "Court-side footwork conditioning and multi-shuttle endurance at Gopichand Academy.",
+      },
+      {
+        src: "/images/sindhu/07-pbl-chennai-smashers-squad.jpg",
+        caption: "Team camaraderie with P. V. Sindhu and the Chennai Smashers Premier Badminton League squad.",
+      },
+      {
+        src: "/images/sindhu/08-recovery-and-video-review.jpg",
+        caption: "Post-session recovery and movement mechanics review between tournament blocks.",
+      },
+      {
+        src: "/images/sindhu/09-outdoor-track-prep.jpg",
+        caption: "Outdoor track stamina and speed-endurance preparation ahead of BWF World Tour events.",
+      },
+      {
+        src: "/images/sindhu/10-academy-morning-session.jpg",
+        caption: "Early-morning activation and strength readiness inside the Hyderabad training centre.",
+      },
+      {
+        src: "/images/sindhu/11-international-tour-travel.jpg",
+        caption: "Travelling with the national contingent for international BWF World Tour campaigns.",
+      },
+    ],
     story:
-      "I worked with Sindhu at the Pullela Gopichand Badminton Academy and on international tours. When an athlete plays as many back-to-back tournaments as she does, my main focus is keeping her legs fresh, protecting her joints, and making sure she still has explosive court speed in the third game of a tough match.",
+      "Over nine years of daily training at Pullela Gopichand Academy and on international tours (2015–2024), I supported Sindhu across her historic Rio 2016 Olympic Silver, 2019 BWF World Championships Gold, Tokyo 2020 Olympic Bronze, and Chennai Smashers PBL campaigns. When an athlete plays as many back-to-back tournaments as she does, my main focus is keeping her legs fresh, protecting her knees and shoulders, and ensuring she retains explosive court speed in the third game of a tough match.",
+    focusPoints: [
+      "Eccentric lower-limb deceleration & knee/ankle stability for deep court lunges",
+      "Shoulder-rotator resilience & Swedish stall-bar core stability for overhead smashes",
+      "Multi-tournament load tapering & Sports Yoga recovery between BWF Super Series stops",
+    ],
   },
   {
     id: "mansi-joshi",
     name: "Mansi Joshi",
-    achievement: "BWF Para-Badminton World Champion & Gold Medallist (Basel 2019, Singles SL3)",
+    achievement:
+      "BWF Para-Badminton World Champion & Gold Medallist (Basel 2019, Singles SL3) • Telangana Raj Bhavan Felicitation",
     category: "Para-Badminton",
     badge: "World Champion",
     image: "/images/champ-manasi-joshi-trophy.jpg",
     secondaryImage: "/images/champ-manasi-joshi-rehab.jpg",
     story:
-      "When Chief Coach Pullela Gopichand asked me to prepare Manasi for the 2019 World Championships, it was a special challenge. Because she plays on one leg, she couldn't run or cycle, and landing put heavy pressure on her lower back. We built custom non-impact stamina and single-leg balance sessions for four months—and watching her win World Championship Gold in Basel was one of the proudest moments of my life.",
+      "When Chief Coach Pullela Gopichand asked me to prepare Manasi for the 2019 BWF Para-Badminton World Championships in Basel, Switzerland, it was a special challenge. Because she plays on one leg, she could not run or cycle, and landing put heavy pressure on her lower back. We built custom non-impact stamina and single-leg balance sessions for four months—and watching her win World Championship Gold in Basel (followed by our Raj Bhavan felicitation by the Hon'ble Governor of Telangana) was one of the proudest moments of my life.",
+    focusPoints: [
+      "Asymmetric load balancing & lower-back spinal protection on single-leg landings",
+      "Prosthetic-stride endurance & non-impact aerobic conditioning circuits",
+      "Core stability & court-agility footwork tailored to SL3 Para-Badminton",
+    ],
   },
   {
     id: "thulasimathi",
     name: "Thulasimathi Murugesan",
     achievement:
-      "Paralympic Silver Medallist (Paris 2024 — Women's Singles SU5), BWF World Championships Silver (Thailand 2024) & Asian Para Games Gold, Silver & Bronze",
+      "Paralympic Silver Medallist (Paris 2024 — Women's Singles SU5), 2022 Asian Para Games Gold & BWF World Championships Silver",
     category: "Para-Badminton",
     badge: "Paralympic Silver",
     image: "/images/champ-tulasi-murugesan.jpg",
     story:
-      "When Thulasimathi joined me at Gopichand Academy about two years before Paris, she was still chasing her first major international medal. Because a congenital left-hand condition affected her grip and balance during forehand smashes, we built a custom programme around sand training, targeted weights, and medicine-ball work—carefully balancing her workload so she grew stronger without overloading. Watching her fight through tough sessions to win Asian Para Games Gold and become the first Indian woman para-shuttler to win a Paralympic Silver medal in Paris was unforgettable.",
+      "When Thulasimathi joined me at Gopichand Academy about two years before Paris 2024, she was still chasing her first major international medal. Because a congenital left-hand condition affected her grip and balance during forehand smashes, we built a custom programme around sand training, targeted weights, and medicine-ball work—carefully balancing her workload so she grew stronger without overloading. Watching her fight through tough sessions to win 2022 Asian Para Games Gold and become the first Indian woman para-shuttler to win a Paralympic Silver medal in Paris was unforgettable.",
+    focusPoints: [
+      "Explosive overhead jump-smash power via sand training & medicine-ball work",
+      "Shoulder durability & upper-body rotational balance for SU5 singles",
+      "Rapid between-rally heart-rate recovery & injury-free load progression",
+    ],
   },
   {
     id: "srikanth",
     name: "Srikanth Kidambi",
     achievement:
-      "Rio 2016 Olympian, Former World No. 1 & South Asian Games Gold Medallist (2019)",
+      "Former BWF World No. 1, 4 Superseries Titles in 2017, Rio 2016 Olympian & 13th South Asian Games Gold Medallist",
     category: "Olympic Badminton",
     badge: "Former World No. 1",
     image: "/images/champ-srikanth-sag-gold.jpg",
     story:
-      "I supported Srikanth as part of the Indian National Badminton S&C team during his World No. 1 rise and international tours. We focused heavily on quick direction changes, lower-body power, and fast recovery between BWF Super Series rounds and the 2019 South Asian Games.",
+      "I supported Srikanth as part of the Indian National Badminton S&C team during his historic rise to BWF World No. 1—including his four Superseries titles in a single calendar year (2017), Rio 2016 Olympics, and 13th South Asian Games Gold in Kathmandu. We focused on keeping his lower body explosive while helping his joints absorb the demands of attacking singles badminton.",
+    focusPoints: [
+      "Repeated high-intensity rally recovery & aerobic-anaerobic threshold training",
+      "Ankle & knee joint resilience for sharp change-of-direction lunges",
+      "Between-round regeneration across consecutive BWF Superseries weeks",
+    ],
   },
   {
     id: "satwik-chirag",
     name: "Satwiksairaj Rankireddy & Chirag Shetty",
     achievement:
-      "Tokyo 2020 & Paris 2024 Olympians, Asian Games Gold Medallists & World No. 1 Men's Doubles Pair",
+      "Tokyo 2020 & Paris 2024 Olympians, Asian Games Gold, Thomas Cup Gold & BWF Super 1000 Champions",
     category: "Olympic Badminton",
     badge: "Asian Games Gold",
     image: "/images/champ-sai-praneeth-satwik.jpg",
     story:
-      "Men's doubles at the World No. 1 level demands explosive speed and shoulder durability. Working with Satwiksairaj Rankireddy and Chirag Shetty, I focused on shoulder stability for heavy jump-smashes, rapid net-recovery footwork, and high-intensity stamina for long three-set battles.",
+      "Men's doubles at the World No. 1 level demands blistering reaction speed and heavy smash power. Working with Satwiksairaj Rankireddy and Chirag Shetty across Tokyo 2020 & Paris 2024 Olympic cycles, Asian Games Gold, Thomas Cup Gold, and BWF Super 1000 campaigns, I focused on explosive jump-smash plyometrics, multi-directional court speed, and protecting their shoulders and lower backs.",
+    focusPoints: [
+      "Explosive jump-smash plyometrics & posterior-chain power",
+      "Multi-directional court reaction speed & rapid net-recovery footwork",
+      "Shoulder-cuff & lower-back injury prevention for high-volume doubles",
+    ],
   },
   {
     id: "sai-praneeth",
     name: "B. Sai Praneeth",
-    achievement: "BWF World Championships Bronze Medallist & Tokyo 2020 Olympian",
+    achievement:
+      "2019 BWF World Championships Bronze Medallist (Ending 36-Year Wait) & Tokyo 2020 Olympian",
     category: "Olympic Badminton",
     badge: "World Bronze",
     image: "/images/champ-sai-praneeth-medal.jpg",
     story:
-      "I worked closely with Sai Praneeth on rally endurance, core strength, and joint care across demanding World Championship and Olympic qualification seasons—helping his body stay ready for long, tactical singles matches.",
+      "I worked closely with Sai Praneeth on sustained three-game stamina, hip mobility, and joint longevity across demanding World Championship and Tokyo 2020 Olympic qualification seasons—supporting his historic 2019 BWF World Championships Bronze Medal that ended India's 36-year men's singles World medal wait.",
+    focusPoints: [
+      "Sustained 3-game stamina & late-set movement efficiency",
+      "Hip mobility & lower-limb joint longevity for tactical singles rallies",
+      "Core stability & post-match recovery protocols on international tours",
+    ],
   },
   {
     id: "vikram-umesh",
@@ -392,17 +470,27 @@ export const championsTrained = [
     image: "/images/champ-vikram-umesh.jpg",
     story:
       "Alongside Manasi Joshi, Chief Coach Pullela Gopichand entrusted me with Vikram Umesh's physical preparation ahead of the 2019 BWF Para-Badminton World Championships in Basel. We built custom court-movement stability, core endurance, and recovery protocols tailored to para-badminton demands—helping him bring home a World Championship Bronze medal for India.",
+    focusPoints: [
+      "Para-badminton strength & court-movement stability",
+      "Match-endurance conditioning & trunk-core control",
+      "Structured recovery blocks across multi-round World Championship play",
+    ],
   },
   {
     id: "indian-junior-squad",
     name: "Indian Junior Squad (U-15 & U-17)",
     achievement:
-      "Badminton Asia U-17 & U-15 Junior Championships — Official Indian Contingent (Chengdu, China)",
+      "Badminton Asia U-17 & U-15 Junior Championships — Official Indian Contingent S&C Coach (Chengdu, China)",
     category: "National Junior Contingent",
     badge: "BADMINTON ASIA • CHENGDU",
     image: "/images/intl-chengdu-court-squad.jpg",
     story:
-      "Preparing India's U-15 and U-17 national squads for the Badminton Asia Junior Championships in Chengdu, China was about building strong athletic foundations early. Working closely with the coaching team, I focused on movement agility, core stability, and match recovery so our young shuttlers could compete fearlessly on the international stage.",
+      "Serving as official S&C Coach for India's U-15 and U-17 national contingent at the Badminton Asia Junior Championships in Chengdu, China was about establishing strong athletic foundations early. Working closely with the national coaching team, I instilled proper movement mechanics, warm-up discipline, and injury-free habits so our young shuttlers could compete fearlessly on the international stage.",
+    focusPoints: [
+      "Foundational movement mechanics & safe landing technique for junior shuttlers",
+      "Pre-match warm-up discipline & dynamic activation routines",
+      "Age-appropriate agility, core stability & injury-free athletic habits",
+    ],
   },
 ];
 
@@ -1255,6 +1343,61 @@ export const galleryItems = [
     image: "/images/spec-kabaddi-conditioning.jpg",
     description:
       "Leading an outdoor morning endurance conditioning run alongside Indian Railways, Kabaddi, and court athletes. Building aerobic stamina and grit on the ground has always been the backbone of my coaching.",
+  },
+  {
+    id: "sindhu-rio-olympic-silver-celebration",
+    title: "Rio 2016 Olympic Silver Celebration with P. V. Sindhu",
+    category: "Champions & Podiums",
+    subCategory: "P. V. Sindhu",
+    location: "Hyderabad",
+    year: "2016",
+    image: "/images/sindhu/02-rio-olympic-silver-medal.jpg",
+    description:
+      "Celebrating P. V. Sindhu's historic Rio 2016 Olympic Silver medal—the result of years of disciplined daily court conditioning and injury-free preparation.",
+  },
+  {
+    id: "sindhu-stall-bar-core-gallery",
+    title: "Swedish Stall-Bar Core Stability with P. V. Sindhu",
+    category: "Champions & Podiums",
+    subCategory: "P. V. Sindhu",
+    location: "Pullela Gopichand Academy, Hyderabad",
+    year: "2018",
+    image: "/images/sindhu/04-stall-bar-core-strength.jpg",
+    description:
+      "Targeted trunk and core stability work on the Swedish stall bars to build rotational control for overhead smashes and protect the lower back.",
+  },
+  {
+    id: "sindhu-court-training-gallery",
+    title: "Court-Side Multi-Shuttle Conditioning with P. V. Sindhu",
+    category: "Champions & Podiums",
+    subCategory: "P. V. Sindhu",
+    location: "Pullela Gopichand Academy, Hyderabad",
+    year: "2019",
+    image: "/images/sindhu/06-court-training-session.jpg",
+    description:
+      "Monitoring footwork speed, recovery heart rate, and movement efficiency during high-intensity court sessions at Gopichand Academy.",
+  },
+  {
+    id: "sindhu-pbl-chennai-smashers-gallery",
+    title: "P. V. Sindhu & Chennai Smashers PBL Squad",
+    category: "Champions & Podiums",
+    subCategory: "P. V. Sindhu",
+    location: "Premier Badminton League",
+    year: "2016",
+    image: "/images/sindhu/07-pbl-chennai-smashers-squad.jpg",
+    description:
+      "Franchise camaraderie with P. V. Sindhu and the Chennai Smashers squad during the Premier Badminton League campaign.",
+  },
+  {
+    id: "sindhu-outdoor-track-prep-gallery",
+    title: "Outdoor Track Speed & Stamina Preparation",
+    category: "Champions & Podiums",
+    subCategory: "P. V. Sindhu",
+    location: "Hyderabad",
+    year: "2019",
+    image: "/images/sindhu/09-outdoor-track-prep.jpg",
+    description:
+      "Bringing athletics track speed-endurance mechanics outdoors to build third-game stamina ahead of major BWF World Tour tournaments.",
   },
 ];
 

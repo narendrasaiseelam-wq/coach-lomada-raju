@@ -149,37 +149,6 @@ export const affiliationsData = [
     ],
   },
   {
-    id: "athletics-india",
-    shortName: "Athletics India",
-    fullName: "Athletics Federation of India (AFI) — National Track & Field",
-    logo: "/images/logos/athletics-india.png",
-    period: "1999 – 2013",
-    roleTitle: "National Track & Field Athlete — 98 Medals & 3:16.43 Meet Record",
-    aboutOrg:
-      "The Athletics Federation of India (AFI) is the apex national body governing track and field across India, organizing National Championships, Federation Cups, and Inter-Zonal meets.",
-    coachExperience: {
-      summary:
-        "Before transitioning into strength and conditioning, I competed for over 13 years in 400m and 4×400m relay events—winning 98 medals and setting an unbroken National Meet Record.",
-      bullets: [
-        "Won 98 total track medals: 14 National (4 Gold, 5 Silver, 5 Bronze), 29 State (17 Gold, 10 Silver, 2 Bronze), and 55 University & District medals.",
-        "Set the unbroken 4×400m Relay National Meet Record of 03:16.43 at the Junior Federation Cup in Chennai (2006).",
-        "Won Gold medals at Youth Nationals (Bangalore 2005) and Inter-Zonal Athletic Meet (Allahabad 2006), plus Silver (Bangalore 2006) and Bronze (Madurai 2007).",
-      ],
-    },
-    photos: [
-      {
-        src: "/images/03-track-bib-11.jpg",
-        caption:
-          "Competing on the national athletics track wearing Bib #11 during my 13+ years as a 400m and 4×400m relay runner.",
-      },
-      {
-        src: "/images/press-eenadu-athletics-raju.jpg",
-        caption:
-          "Eenadu Daily feature profiling my track journey from Chilamkuru village to national championships.",
-      },
-    ],
-  },
-  {
     id: "hca",
     shortName: "HCA",
     fullName: "Hyderabad Cricket Association (HCA) — BCCI State Cricket",

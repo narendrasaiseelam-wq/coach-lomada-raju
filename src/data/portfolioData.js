@@ -1290,3 +1290,24 @@ export const stateAchievements = [
   { sno: 15, competition: "Osmania University Athletic Meet", year: "2010", event: "100m / 200m / 400m", medals: [{ type: "gold", label: "Gold Medal (100m)" }, { type: "gold", label: "Gold Medal (200m)" }, { type: "silver", label: "Silver Medal (400m)" }], venue: "Artillery Centre, Golconda" },
   { sno: 16, competition: "Nagpur University Athletic Meet", year: "2011", event: "100m / 200m / 400m", medals: [{ type: "gold", label: "Gold Medal (100m)" }, { type: "silver", label: "Silver Medal (200m)" }, { type: "silver", label: "Silver Medal (400m)" }], venue: "Nagpur" },
 ];
+
+export const consultationSteps = [
+  {
+    step: "Step 01",
+    title: "1-ON-1 CONVERSATION & POSTURE OBSERVATION",
+    description:
+      "We start by talking through your daily routine, past injuries, pain points, or tournament goals—and I carefully observe how your body moves before any training begins.",
+  },
+  {
+    step: "Step 02",
+    title: "ROOT-CAUSE ASSESSMENT",
+    description:
+      "I identify the exact mobility restriction, strength imbalance, or recovery gap holding you back—never guessing and never using a one-size-fits-all chart.",
+  },
+  {
+    step: "Step 03",
+    title: "YOUR PERSONALISED ROADMAP",
+    description:
+      "You walk away with a clear, practical training and Sports Yoga recovery plan built around your body, schedule, and long-term injury-free longevity.",
+  },
+];

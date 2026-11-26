@@ -8,7 +8,7 @@ import {
   Phone,
   Send,
 } from "lucide-react";
-import { coachProfile } from "../data/portfolioData";
+import { coachProfile, consultationSteps } from "../data/portfolioData";
 
 const CURRENT_YEAR = new Date().getFullYear();
 
@@ -126,6 +126,51 @@ export default function FooterConnect({ onOpenConnect }) {
     <>
       <footer id="contact" className="bg-[#1C1C21] text-[#EFEFEF] pt-16 md:pt-24 pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+          {/* Closing Chapter: What Happens When You Visit or Consult Me */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.15 }}
+            transition={{ duration: 0.45, ease: "easeOut" }}
+            className="mb-14 pb-12 border-b border-[#EFEFEF]/12"
+          >
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-7">
+              <div>
+                <div className="flex items-center gap-3 mb-2.5">
+                  <span className="h-[2px] w-8 bg-[#B45309]" />
+                  <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#F59E0B]">
+                    Your First Session
+                  </p>
+                </div>
+                <h2 className="font-editorial font-extrabold uppercase text-3xl sm:text-4xl text-[#EFEFEF] leading-none">
+                  WHAT HAPPENS WHEN YOU VISIT OR CONSULT ME
+                </h2>
+              </div>
+              <p className="text-xs sm:text-sm text-[#E2E2E5]/70 max-w-md leading-relaxed">
+                Whether you are an athlete, parent, doctor, officer, or everyday fitness seeker—every journey begins with clarity.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              {consultationSteps.map((item) => (
+                <div
+                  key={item.step}
+                  className="rounded-2xl border border-[#EFEFEF]/12 bg-[#EFEFEF]/[0.04] p-5 sm:p-6 flex flex-col gap-2.5"
+                >
+                  <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#F59E0B]">
+                    {item.step}
+                  </span>
+                  <h3 className="font-editorial font-bold uppercase text-xl text-[#EFEFEF] leading-tight">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-[#E2E2E5]/80 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
           {/* Elevated 2-Column Contact Section */}
           <motion.div
             initial={{ opacity: 0, y: 18 }}

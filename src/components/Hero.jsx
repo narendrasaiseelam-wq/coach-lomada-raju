@@ -1,8 +1,80 @@
 import { useEffect, useRef, useState } from "react";
 import { animate, motion, useInView, useScroll, useTransform } from "framer-motion";
-import { ArrowDownRight, ArrowUpRight, ShieldCheck } from "lucide-react";
+import {
+  ArrowDownRight,
+  ArrowUpRight,
+  ChevronLeft,
+  ChevronRight,
+  ShieldCheck,
+} from "lucide-react";
 import { affiliationsData, coachProfile, keyHighlights } from "../data/portfolioData";
 import AffiliationModal from "./AffiliationModal";
+
+const HERO_SLIDES = [
+  {
+    src: "/images/hero-portrait-blazer.jpg",
+    objectPos: "object-[50%_15%]",
+    tag: "VERIFIED NATIONAL CREDENTIAL",
+    line: "Indian National Badminton S&C • BAI, SAI & NIS Certified",
+    alt: "Coach Lomada Raju in Team India blazer on the badminton court",
+  },
+  {
+    src: "/images/hero-slides/02-pv-sindhu-gym.jpg",
+    objectPos: "object-[50%_20%]",
+    tag: "OLYMPIC CONDITIONING",
+    line: "1-on-1 Strength & Conditioning with Two-Time Olympic Medallist P.V. Sindhu",
+    alt: "Coach Lomada Raju with two-time Olympic medallist P.V. Sindhu in the gym",
+  },
+  {
+    src: "/images/hero-slides/03-srikanth-sag-gold.jpg",
+    objectPos: "object-[50%_15%]",
+    tag: "13TH SOUTH ASIAN GAMES • GOLD",
+    line: "Gold Medal Podium with Former World No. 1 Kidambi Srikanth",
+    alt: "Coach Lomada Raju and Kidambi Srikanth on the South Asian Games Gold Medal podium",
+  },
+  {
+    src: "/images/hero-slides/04-wuhan-2017.jpg",
+    objectPos: "object-center",
+    tag: "BADMINTON ASIA CHAMPIONSHIPS",
+    line: "Team India S&C Duty at the 2017 Asian Championships in Wuhan, China",
+    alt: "Coach Lomada Raju on Team India duty at the 2017 Badminton Asia Championships in Wuhan",
+  },
+  {
+    src: "/images/hero-slides/05-gopichand-camp.jpg",
+    objectPos: "object-[50%_20%]",
+    tag: "NATIONAL ELITE CAMP",
+    line: "Conditioning Session with Chief Coach Pullela Gopichand & National Squad",
+    alt: "Coach Lomada Raju with Chief Coach Pullela Gopichand and the Indian National Squad",
+  },
+  {
+    src: "/images/hero-slides/06-satwik-chirag.jpg",
+    objectPos: "object-[50%_15%]",
+    tag: "WORLD DOUBLES CHAMPIONS",
+    line: "Court-Side Training with Asian Games Champions Satwik & Chirag",
+    alt: "Coach Lomada Raju with Asian Games champions Satwiksairaj Rankireddy and Chirag Shetty",
+  },
+  {
+    src: "/images/hero-slides/07-indian-team-blue.jpg",
+    objectPos: "object-[50%_20%]",
+    tag: "THOMAS & UBER CUP DUTY",
+    line: "Indian National Badminton Squad on International Tour Duty",
+    alt: "Coach Lomada Raju with the Indian National Badminton Squad on international tour duty",
+  },
+  {
+    src: "/images/hero-slides/08-ccl-karnataka-dycm.jpg",
+    objectPos: "object-[50%_25%]",
+    tag: "CELEBRITY CRICKET LEAGUE",
+    line: "Telugu Warriors Squad Reception with Hon'ble Karnataka DyCM D.K. Shivakumar",
+    alt: "Coach Lomada Raju and Telugu Warriors squad with Karnataka DyCM D.K. Shivakumar",
+  },
+  {
+    src: "/images/hero-slides/09-ccl-nagarjuna.jpg",
+    objectPos: "object-[50%_15%]",
+    tag: "TELUGU WARRIORS • HEAD S&C",
+    line: "Match-Day Readiness with Telugu Warriors Mentor Akkineni Nagarjuna",
+    alt: "Coach Lomada Raju with Telugu Warriors mentor Akkineni Nagarjuna",
+  },
+];
 
 function AnimatedMetric({ value }) {
   const ref = useRef(null);
@@ -49,7 +121,19 @@ function AnimatedMetric({ value }) {
 
 export default function Hero() {
   const [activeAffiliationId, setActiveAffiliationId] = useState(null);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const portraitWrapperRef = useRef(null);
+
+  useEffect(() => {
+    if (isPaused) return undefined;
+    const timer = setInterval(() => {
+      setActiveSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+    }, 2500);
+    return () => clearInterval(timer);
+  }, [isPaused]);
+
+  const currentSlide = HERO_SLIDES[activeSlide];
   const { scrollYProgress } = useScroll({
     target: portraitWrapperRef,
     offset: ["start end", "end start"],
@@ -197,27 +281,86 @@ export default function Hero() {
             style={{ y: portraitY }}
             className="lg:col-span-5 relative flex justify-center lg:justify-end"
           >
-            <div className="w-full max-w-[440px] rounded-2xl overflow-hidden border border-stone-200 shadow-xl bg-[#1C1C21]">
-              <div className="aspect-[4/5] w-full overflow-hidden bg-[#1C1C21]">
-                <img
-                  src={coachProfile.heroImage}
-                  alt="Coach Lomada Raju in Team India blazer on the badminton court"
-                  className="w-full h-full object-cover object-[50%_15%] block"
-                />
+            <div
+              className="w-full max-w-[440px] rounded-2xl overflow-hidden border border-stone-200 shadow-xl bg-[#1C1C21]"
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseLeave={() => setIsPaused(false)}
+            >
+              <div className="relative h-[440px] sm:h-[490px] w-full overflow-hidden bg-[#1C1C21] group">
+                {HERO_SLIDES.map((slide, idx) => {
+                  const isActive = idx === activeSlide;
+                  return (
+                    <img
+                      key={slide.src}
+                      src={slide.src}
+                      alt={slide.alt}
+                      className={`absolute inset-0 w-full h-full object-cover ${slide.objectPos} transition-all duration-700 ease-in-out ${
+                        isActive
+                          ? "opacity-100 scale-100 z-10"
+                          : "opacity-0 scale-105 z-0 pointer-events-none"
+                      }`}
+                    />
+                  );
+                })}
+
+                {/* Prev / Next Controls */}
+                <button
+                  type="button"
+                  onClick={() =>
+                    setActiveSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length)
+                  }
+                  aria-label="Previous highlight photo"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-[#1C1C21]/70 hover:bg-[#B45309] text-[#EFEFEF] border border-white/15 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all cursor-pointer"
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setActiveSlide((prev) => (prev + 1) % HERO_SLIDES.length)}
+                  aria-label="Next highlight photo"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-[#1C1C21]/70 hover:bg-[#B45309] text-[#EFEFEF] border border-white/15 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all cursor-pointer"
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </button>
               </div>
 
               {/* Seamless Integrated Footer Bar */}
-              <div className="bg-[#1C1C21] text-[#EFEFEF] p-4 sm:px-5 sm:py-4 border-t border-[#A67C52]/30">
-                <div className="flex items-start gap-3">
-                  <ShieldCheck className="w-5 h-5 text-[#A67C52] shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-[11px] font-bold tracking-[0.16em] uppercase text-[#A67C52] mb-0.5">
-                      Verified National Credential
+              <div className="bg-[#1C1C21] text-[#EFEFEF] p-4 sm:px-5 sm:py-4 border-t border-[#A67C52]/30 space-y-3">
+                <div className="flex items-start gap-3 min-h-[54px]">
+                  <ShieldCheck className="w-5 h-5 text-[#F59E0B] shrink-0 mt-0.5" />
+                  <div className="min-w-0">
+                    <p className="text-[11px] font-bold tracking-[0.16em] uppercase text-[#F59E0B] mb-0.5 truncate">
+                      {currentSlide.tag}
                     </p>
-                    <p className="text-xs sm:text-sm font-semibold text-[#EFEFEF] leading-snug">
-                      Indian National Badminton S&amp;C &bull; BAI, SAI &amp; NIS Certified
+                    <p className="text-xs sm:text-sm font-semibold text-[#EFEFEF] leading-snug line-clamp-2">
+                      {currentSlide.line}
                     </p>
                   </div>
+                </div>
+
+                {/* Clickable Mini Progress Dots (1-9) */}
+                <div className="flex items-center justify-between gap-2 pt-1 border-t border-white/10">
+                  <div className="flex items-center gap-1.5">
+                    {HERO_SLIDES.map((slide, idx) => {
+                      const isActive = idx === activeSlide;
+                      return (
+                        <button
+                          key={slide.src}
+                          type="button"
+                          onClick={() => setActiveSlide(idx)}
+                          aria-label={`View slide ${idx + 1}: ${slide.tag}`}
+                          className={`h-1.5 rounded-full transition-all cursor-pointer ${
+                            isActive
+                              ? "w-5 bg-[#F59E0B]"
+                              : "w-1.5 bg-white/25 hover:bg-white/55"
+                          }`}
+                        />
+                      );
+                    })}
+                  </div>
+                  <span className="text-[10px] font-bold tracking-[0.14em] uppercase text-white/55">
+                    {activeSlide + 1} / {HERO_SLIDES.length}
+                  </span>
                 </div>
               </div>
             </div>

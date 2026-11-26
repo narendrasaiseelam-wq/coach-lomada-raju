@@ -127,6 +127,49 @@ export const affiliationsData = [
     ],
   },
   {
+    id: "gopichand-academy",
+    shortName: "Gopichand Academy",
+    fullName:
+      "Pullela Gopichand Badminton Academy — High-Performance National Centre, Hyderabad",
+    logo: "/images/logos/gopichand-academy.png",
+    period: "2015 – 2024",
+    roleTitle: "Senior Strength & Conditioning Specialist — High-Performance Centre",
+    aboutOrg:
+      "Founded by All England Champion and Dronacharya Awardee Pullela Gopichand in Gachibowli, Hyderabad, the Pullela Gopichand Badminton Academy is India’s premier high-performance badminton institute that has produced Olympic medallists, World Champions, and World No. 1 shuttlers.",
+    coachExperience: {
+      summary:
+        "Working daily at the Gopichand Academy for nine years alongside Chief Coach Pullela Gopichand and international coaching legends transformed how I connect track-and-field science with court-specific badminton movement, injury prevention, and championship readiness.",
+      bullets: [
+        "Collaborated closely with Chief Coach Pullela Gopichand and renowned Indonesian coach Mulyo Handoyo on daily periodized conditioning, footwork explosiveness, and aerobic-anaerobic court endurance.",
+        "Led individualized strength, shoulder-stability, and lower-limb injury-prevention programs for Olympic medallists P. V. Sindhu, Kidambi Srikanth, B. Sai Praneeth, Satwiksairaj Rankireddy, Chirag Shetty, and Ruthvika Shivani.",
+        "Integrated Sports Yoga breathing, joint mobility, and post-session recovery protocols into intense multi-session daily academy schedules.",
+        "Mentored emerging junior and senior national campers in movement mechanics, load management, and long-term athletic durability.",
+      ],
+    },
+    photos: [
+      {
+        src: "/images/hero-slides/05-gopichand-camp.jpg",
+        caption:
+          "On-court high-performance training session with Chief Coach Pullela Gopichand, Mulyo Handoyo, and Indian national shuttlers at the academy.",
+      },
+      {
+        src: "/images/hero-slides/02-pv-sindhu-gym.jpg",
+        caption:
+          "1-on-1 Olympic strength and lower-body conditioning session with two-time Olympic medallist P. V. Sindhu.",
+      },
+      {
+        src: "/images/hero-slides/06-satwik-chirag.jpg",
+        caption:
+          "Court-side conditioning with Asian Games & World Tour doubles champions Satwiksairaj Rankireddy and Chirag Shetty.",
+      },
+      {
+        src: "/images/bai/07-national-elite-camp-squad.jpg",
+        caption:
+          "Daily academy conditioning group with India’s top singles and doubles players.",
+      },
+    ],
+  },
+  {
     id: "chennai-smashers",
     shortName: "Chennai Smashers",
     fullName: "Chennai Smashers — Premier Badminton League (PBL)",

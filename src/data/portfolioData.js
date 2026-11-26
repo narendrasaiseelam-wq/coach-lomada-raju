@@ -90,9 +90,14 @@ export const affiliationsData = [
     },
     photos: [
       {
-        src: "/images/career-indian-badminton-squad.jpg",
+        src: "/images/bai/01-thomas-cup-thailand.jpg",
         caption:
-          "With the Indian National Badminton Team squad in official blue kits on international championship tours.",
+          "Indian National Badminton Squad & Coaching Staff at the Thomas & Uber Cup in Bangkok, Thailand.",
+      },
+      {
+        src: "/images/bai/02-asia-team-manila-court.jpg",
+        caption:
+          "Indian Men’s Squad courtside at the Badminton Asia Team Championships in Manila, Philippines.",
       },
       {
         src: "/images/intl-chengdu-court-squad.jpg",
@@ -100,9 +105,24 @@ export const affiliationsData = [
           "Full Indian U-15 & U-17 contingent courtside at the Badminton Asia Junior Championships in Chengdu, China.",
       },
       {
-        src: "/images/intl-chengdu-blazer-squad.jpg",
+        src: "/images/bai/04-chengdu-official-banner.jpg",
         caption:
-          "Indian U-15 & U-17 national squad and coaching staff in formal Team India blazers.",
+          "Official Indian U-15 & U-17 contingent & coaching staff at the Badminton Asia Junior Championships in Chengdu, China.",
+      },
+      {
+        src: "/images/bai/05-asia-championships-bronze-manila.jpg",
+        caption:
+          "Bronze Medal podium celebration with the Indian Men’s Team at the Badminton Asia Championships in Manila, Philippines.",
+      },
+      {
+        src: "/images/bai/06-all-england-open-uk.jpg",
+        caption:
+          "Indian National Squad & coaching team during the prestigious All England Open Championships in Birmingham, UK.",
+      },
+      {
+        src: "/images/bai/07-national-elite-camp-squad.jpg",
+        caption:
+          "High-performance conditioning camp with India’s top men’s singles & doubles stars ahead of international BWF tours.",
       },
     ],
   },

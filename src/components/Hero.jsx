@@ -201,8 +201,8 @@ export default function Hero() {
               <div className="aspect-[4/5] w-full overflow-hidden bg-[#1C1C21]">
                 <img
                   src={coachProfile.heroImage}
-                  alt="Coach Lomada Raju receiving National Excellence recognition in Strength and Conditioning"
-                  className="w-full h-full object-cover object-[48%_22%] block"
+                  alt="Coach Lomada Raju in Team India blazer on the badminton court"
+                  className="w-full h-full object-cover object-top block"
                 />
               </div>
 

@@ -24,7 +24,7 @@ export const coachProfile = {
   email: "lomada.raju1988@gmail.com",
   centreName: "Dhwajam Strength & Conditioning Centre",
   centreMotto: "Roots Build Resilience",
-  heroImage: "/images/hero-national-excellence.jpg",
+  heroImage: "/images/hero-portrait-blazer.jpg",
   aboutImage: "/images/about-assam-inauguration.jpg",
   trackImage: "/images/03-track-bib-11.jpg",
   dhwajamLogo: "/images/04-dhwajam-logo.png",
@@ -1228,7 +1228,7 @@ export const podcasts = [
     youtubeUrl: "https://www.youtube.com/watch?v=NW-LeV7rHco",
     videoId: "NW-LeV7rHco",
     thumbnail: "/images/podcast-sumantv.png",
-    fallbackImage: "/images/hero-national-excellence.jpg",
+    fallbackImage: "/images/hero-portrait-blazer.jpg",
     description:
       "In this conversation with SumanTV, I share why daily sweat and physical discipline are the true foundation of health, and what it takes to keep world-class athletes sharp and injury-free.",
   },

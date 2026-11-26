@@ -191,6 +191,26 @@ export const affiliationsData = [
         caption:
           "With dignitaries and team representatives during the Celebrity Cricket League tournament.",
       },
+      {
+        src: "/images/ccl/ccl-akhil-akkineni.jpg",
+        caption:
+          "Match-day pitch conditioning and post-game celebration with Telugu Warriors captain Akhil Akkineni.",
+      },
+      {
+        src: "/images/ccl/ccl-ss-rajamouli.jpg",
+        caption:
+          "Floodlit night practice and match-readiness session alongside director S.S. Rajamouli.",
+      },
+      {
+        src: "/images/ccl/ccl-nagarjuna-locker.jpg",
+        caption:
+          "Pre-match locker room readiness with Telugu Warriors mentor Akkineni Nagarjuna.",
+      },
+      {
+        src: "/images/ccl/ccl-dugout-focus.jpg",
+        caption:
+          "Monitoring player workload, hydration, and match intensity from the Telugu Warriors dugout.",
+      },
     ],
   },
   {

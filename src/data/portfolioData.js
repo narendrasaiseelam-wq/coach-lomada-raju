@@ -146,7 +146,33 @@ export const affiliationsData = [
         "Mentored emerging junior and senior national campers in movement mechanics, load management, and long-term athletic durability.",
       ],
     },
-    photos: [],
+    photos: [
+      {
+        src: "/images/gopichand-academy/01-academy-track-conditioning.jpg",
+        caption:
+          "Outdoor track speed and endurance conditioning session with Chief Coach Pullela Gopichand and Gopichand Academy athletes.",
+      },
+      {
+        src: "/images/gopichand-academy/02-gopichand-coach-portrait.jpg",
+        caption:
+          "Inside the Pullela Gopichand Badminton Academy in Hyderabad alongside Chief National Coach Pullela Gopichand.",
+      },
+      {
+        src: "/images/gopichand-academy/03-court-dignitary-welcome.jpg",
+        caption:
+          "On-court introduction with Chief Coach Pullela Gopichand and visiting dignitaries at the Gachibowli High-Performance Centre.",
+      },
+      {
+        src: "/images/gopichand-academy/04-court-felicitation-gopichand.jpg",
+        caption:
+          "Honoured courtside with Chief Coach Pullela Gopichand following international championship representation for Team India.",
+      },
+      {
+        src: "/images/gopichand-academy/05-academy-team-fellowship.jpg",
+        caption:
+          "Off-court fellowship with Chief Coach Pullela Gopichand, former World No. 1 Kidambi Srikanth, and the academy coaching unit.",
+      },
+    ],
   },
   {
     id: "chennai-smashers",

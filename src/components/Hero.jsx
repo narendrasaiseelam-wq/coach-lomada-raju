@@ -200,7 +200,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, ease: "easeOut" }}
-            className="lg:col-span-7 flex flex-col"
+            className="lg:col-span-6 flex flex-col"
           >
             {/* Eyebrow */}
             <div className="flex items-center gap-3 mb-4">
@@ -279,10 +279,10 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.1, ease: "easeOut" }}
             style={{ y: portraitY }}
-            className="lg:col-span-5 relative flex justify-center lg:justify-end"
+            className="lg:col-span-6 relative flex justify-center lg:justify-end"
           >
             <div
-              className="w-full max-w-[440px] rounded-2xl overflow-hidden border border-stone-200 shadow-xl bg-[#1C1C21]"
+              className="w-full max-w-[540px] rounded-2xl overflow-hidden border border-stone-200 shadow-xl bg-[#1C1C21]"
               onMouseEnter={() => setIsPaused(true)}
               onMouseLeave={() => setIsPaused(false)}
             >
@@ -290,16 +290,28 @@ export default function Hero() {
                 {HERO_SLIDES.map((slide, idx) => {
                   const isActive = idx === activeSlide;
                   return (
-                    <img
+                    <div
                       key={slide.src}
-                      src={slide.src}
-                      alt={slide.alt}
-                      className={`absolute inset-0 w-full h-full object-cover ${slide.objectPos} transition-all duration-700 ease-in-out ${
+                      className={`absolute inset-0 overflow-hidden transition-all duration-700 ease-in-out ${
                         isActive
                           ? "opacity-100 scale-100 z-10"
                           : "opacity-0 scale-105 z-0 pointer-events-none"
                       }`}
-                    />
+                    >
+                      {/* Ambient Background Layer */}
+                      <img
+                        src={slide.src}
+                        alt=""
+                        aria-hidden="true"
+                        className="absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-45 brightness-75"
+                      />
+                      {/* Main 100% Uncropped Photo Layer */}
+                      <img
+                        src={slide.src}
+                        alt={slide.alt}
+                        className="relative z-10 w-full h-full object-contain transition-transform duration-700 ease-out"
+                      />
+                    </div>
                   );
                 })}
 

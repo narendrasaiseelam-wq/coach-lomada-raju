@@ -146,28 +146,7 @@ export const affiliationsData = [
         "Mentored emerging junior and senior national campers in movement mechanics, load management, and long-term athletic durability.",
       ],
     },
-    photos: [
-      {
-        src: "/images/hero-slides/05-gopichand-camp.jpg",
-        caption:
-          "On-court high-performance training session with Chief Coach Pullela Gopichand, Mulyo Handoyo, and Indian national shuttlers at the academy.",
-      },
-      {
-        src: "/images/hero-slides/02-pv-sindhu-gym.jpg",
-        caption:
-          "1-on-1 Olympic strength and lower-body conditioning session with two-time Olympic medallist P. V. Sindhu.",
-      },
-      {
-        src: "/images/hero-slides/06-satwik-chirag.jpg",
-        caption:
-          "Court-side conditioning with Asian Games & World Tour doubles champions Satwiksairaj Rankireddy and Chirag Shetty.",
-      },
-      {
-        src: "/images/bai/07-national-elite-camp-squad.jpg",
-        caption:
-          "Daily academy conditioning group with India’s top singles and doubles players.",
-      },
-    ],
+    photos: [],
   },
   {
     id: "chennai-smashers",

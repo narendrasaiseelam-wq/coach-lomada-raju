@@ -66,18 +66,7 @@ export const affiliationsData = [
         "Applied SAI periodization, load monitoring, and injury-prevention frameworks across Olympic, Paralympic, and junior national camps.",
       ],
     },
-    photos: [
-      {
-        src: "/images/press-eenadu-athletics-raju.jpg",
-        caption:
-          "Eenadu feature highlighting my selection as the sole South Indian candidate among 30 coaches at NIS Patiala.",
-      },
-      {
-        src: "/images/03-track-bib-11.jpg",
-        caption:
-          "My 13+ years of competitive national track racing laid the practical foundation for my SAI & NIS Patiala coaching science.",
-      },
-    ],
+    photos: [],
   },
   {
     id: "bai",
@@ -114,11 +103,6 @@ export const affiliationsData = [
         src: "/images/intl-chengdu-blazer-squad.jpg",
         caption:
           "Indian U-15 & U-17 national squad and coaching staff in formal Team India blazers.",
-      },
-      {
-        src: "/images/press-sakshi-2019-feature.jpg",
-        caption:
-          "Sakshi newspaper feature on conditioning P. V. Sindhu and World Champion Manasi Joshi, and Raj Bhavan felicitation.",
       },
     ],
   },

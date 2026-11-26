@@ -202,7 +202,7 @@ export default function Hero() {
                 <img
                   src={coachProfile.heroImage}
                   alt="Coach Lomada Raju in Team India blazer on the badminton court"
-                  className="w-full h-full object-cover object-top block"
+                  className="w-full h-full object-cover object-[50%_15%] block"
                 />
               </div>
 

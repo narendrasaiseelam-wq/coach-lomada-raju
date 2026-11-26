@@ -82,7 +82,7 @@ export const affiliationsData = [
       summary:
         "For nine years under Chief Coach Pullela Gopichand and BAI, I conditioned India’s Olympic, Paralympic, and junior national shuttlers across major world championships, multi-sport games, and international tours.",
       bullets: [
-        "Conditioned Olympic & World Champions including P. V. Sindhu, Kidambi Srikanth, B. Sai Praneeth, Satwiksairaj Rankireddy, Chirag Shetty, and Lakshya Sen.",
+        "Conditioned Olympic, World & International Champions including P. V. Sindhu, Kidambi Srikanth, B. Sai Praneeth, Satwiksairaj Rankireddy, Chirag Shetty, and Ruthvika Shivani.",
         "Led Para-Badminton physical preparation for Paralympic Silver medallist Thulasimathi Murugesan, World Champion Manasi Joshi, Pramod Bhagat, and Vikram Umesh.",
         "Supported Team India at the All England Open (UK), Swiss Open, Thomas & Uber Cup (Denmark), Sudirman Cup (Finland), South Asian Games (Nepal — Gold), and Asia Championships (Manila — Bronze).",
         "Served as S&C Coach for the official Indian U-15 & U-17 contingent at the Badminton Asia Junior Championships in Chengdu, China.",

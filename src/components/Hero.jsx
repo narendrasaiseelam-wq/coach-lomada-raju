@@ -33,6 +33,13 @@ const HERO_SLIDES = [
     alt: "Coach Lomada Raju and Kidambi Srikanth on the South Asian Games Gold Medal podium",
   },
   {
+    src: "/images/governor-raj-bhavan-felicitation.jpg",
+    objectPos: "object-center",
+    tag: "RAJ BHAVAN FELICITATION",
+    line: "Honoured by the Hon'ble Governor of Telangana for Conditioning World Champions P.V. Sindhu & Manasi Joshi",
+    alt: "Coach Lomada Raju honoured with a ceremonial shawl by the Hon'ble Governor of Telangana at Raj Bhavan alongside P.V. Sindhu and Manasi Joshi",
+  },
+  {
     src: "/images/hero-slides/04-wuhan-2017.jpg",
     objectPos: "object-center",
     tag: "BADMINTON ASIA CHAMPIONSHIPS",

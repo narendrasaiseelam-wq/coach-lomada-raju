@@ -178,6 +178,15 @@ export default function EducationHonors() {
                   <p className="text-xs text-[#E2E2E5]/70 mt-0.5">
                     {honor.venue}
                   </p>
+                  {honor.image && (
+                    <div className="mt-3 rounded-xl overflow-hidden border border-[#EFEFEF]/15 bg-[#141418] p-1">
+                      <img
+                        src={honor.image}
+                        alt={`Coach Lomada Raju — ${honor.title} (${honor.venue})`}
+                        className="w-full max-h-48 object-contain rounded-lg"
+                      />
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

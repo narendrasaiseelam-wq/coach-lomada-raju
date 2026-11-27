@@ -387,8 +387,25 @@ export const championsTrained = [
       "BWF Para-Badminton World Champion & Gold Medallist (Basel 2019, Singles SL3) • Telangana Raj Bhavan Felicitation",
     category: "Para-Badminton",
     badge: "World Champion",
-    image: "/images/champ-manasi-joshi-trophy.jpg",
-    secondaryImage: "/images/champ-manasi-joshi-rehab.jpg",
+    image: "/images/governor-raj-bhavan-felicitation.jpg",
+    secondaryImage: "/images/champ-manasi-joshi-trophy.jpg",
+    photos: [
+      {
+        src: "/images/governor-raj-bhavan-felicitation.jpg",
+        caption:
+          "Raj Bhavan felicitation by the Hon'ble Governor of Telangana celebrating Manasi Joshi's 2019 BWF World Championships Gold Medal.",
+      },
+      {
+        src: "/images/champ-manasi-joshi-trophy.jpg",
+        caption:
+          "Celebrating Manasi Joshi's historic 2019 BWF Para-Badminton World Championships Gold Medal triumph.",
+      },
+      {
+        src: "/images/champ-manasi-joshi-rehab.jpg",
+        caption:
+          "Custom non-impact stamina and single-leg balance conditioning ahead of Basel 2019.",
+      },
+    ],
     story:
       "When Chief Coach Pullela Gopichand asked me to prepare Manasi for the 2019 BWF Para-Badminton World Championships in Basel, Switzerland, it was a special challenge. Because she plays on one leg, she could not run or cycle, and landing put heavy pressure on her lower back. We built custom non-impact stamina and single-leg balance sessions for four months—and watching her win World Championship Gold in Basel (followed by our Raj Bhavan felicitation by the Hon'ble Governor of Telangana) was one of the proudest moments of my life.",
     focusPoints: [
@@ -817,7 +834,12 @@ export const educationAndCertifications = [
 
 export const honorsAndAwards = [
   { year: "2024", title: "Telangana ICON Award", venue: "Telangana" },
-  { year: "2019", title: "Felicitated by the Hon'ble Governor of Telangana", venue: "Raj Bhavan, Hyderabad" },
+  {
+    year: "2019",
+    title: "Felicitated by the Hon'ble Governor of Telangana",
+    venue: "Raj Bhavan, Hyderabad",
+    image: "/images/governor-raj-bhavan-felicitation.jpg",
+  },
   { year: "2019", title: "Felicitated by the Government of Andhra Pradesh", venue: "AP Stadium, Vijayawada" },
 ];
 
@@ -1398,6 +1420,17 @@ export const galleryItems = [
     image: "/images/sindhu/09-outdoor-track-prep.jpg",
     description:
       "Bringing athletics track speed-endurance mechanics outdoors to build third-game stamina ahead of major BWF World Tour tournaments.",
+  },
+  {
+    id: "governor-raj-bhavan-felicitation-gallery",
+    title: "Raj Bhavan Felicitation by Hon'ble Governor of Telangana",
+    category: "Champions & Podiums",
+    subCategory: "Manasi Joshi",
+    location: "Raj Bhavan, Hyderabad",
+    year: "2019",
+    image: "/images/governor-raj-bhavan-felicitation.jpg",
+    description:
+      "Honoured with a ceremonial shawl by the Hon'ble Governor of Telangana at Raj Bhavan alongside World Champions P.V. Sindhu and Manasi Joshi.",
   },
 ];
 

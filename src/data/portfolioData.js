@@ -198,6 +198,11 @@ export const affiliationsData = [
         caption:
           "With the Chennai Smashers squad in yellow team kits during the 2016 Premier Badminton League season.",
       },
+      {
+        src: "/images/gallery/chennai-smashers-white-jackets.jpg",
+        caption:
+          "Chennai Smashers Premier Badminton League squad in white and gold team jackets courtside.",
+      },
     ],
   },
   {
@@ -405,6 +410,16 @@ export const championsTrained = [
         caption:
           "Custom non-impact stamina and single-leg balance conditioning ahead of Basel 2019.",
       },
+      {
+        src: "/images/champions/manasi-gym-leg-extension.jpg",
+        caption:
+          "Targeted lower-limb strength and joint-protection work on the leg-extension machine in the academy gym.",
+      },
+      {
+        src: "/images/champions/manasi-10k-foundation.jpg",
+        caption:
+          "Alongside Chief Coach Pullela Gopichand and Manasi Joshi at the Hyderabad 10K Run Foundation event.",
+      },
     ],
     story:
       "When Chief Coach Pullela Gopichand asked me to prepare Manasi for the 2019 BWF Para-Badminton World Championships in Basel, Switzerland, it was a special challenge. Because she plays on one leg, she could not run or cycle, and landing put heavy pressure on her lower back. We built custom non-impact stamina and single-leg balance sessions for four months—and watching her win World Championship Gold in Basel (followed by our Raj Bhavan felicitation by the Hon'ble Governor of Telangana) was one of the proudest moments of my life.",
@@ -422,6 +437,28 @@ export const championsTrained = [
     category: "Para-Badminton",
     badge: "Paralympic Silver",
     image: "/images/champ-tulasi-murugesan.jpg",
+    photos: [
+      {
+        src: "/images/champ-tulasi-murugesan.jpg",
+        caption:
+          "With Paris 2024 Paralympic Silver medallist Thulasimathi Murugesan following her historic podium finish.",
+      },
+      {
+        src: "/images/champions/tulasi-track-medal-ceremony.jpg",
+        caption:
+          "Presenting Thulasimathi Murugesan with her medal on the outdoor conditioning track.",
+      },
+      {
+        src: "/images/champions/tulasi-track-podium.jpg",
+        caption:
+          "Celebrating track-speed and endurance milestones with Thulasimathi Murugesan.",
+      },
+      {
+        src: "/images/champ-tulasi-core.jpg",
+        caption:
+          "Core stability and sand/medicine-ball preparation for Paris 2024 Paralympic SU5 singles.",
+      },
+    ],
     story:
       "When Thulasimathi joined me at Gopichand Academy about two years before Paris 2024, she was still chasing her first major international medal. Because a congenital left-hand condition affected her grip and balance during forehand smashes, we built a custom programme around sand training, targeted weights, and medicine-ball work—carefully balancing her workload so she grew stronger without overloading. Watching her fight through tough sessions to win 2022 Asian Para Games Gold and become the first Indian woman para-shuttler to win a Paralympic Silver medal in Paris was unforgettable.",
     focusPoints: [
@@ -438,6 +475,33 @@ export const championsTrained = [
     category: "Olympic Badminton",
     badge: "Former World No. 1",
     image: "/images/champ-srikanth-sag-gold.jpg",
+    photos: [
+      {
+        src: "/images/champ-srikanth-sag-gold.jpg",
+        caption:
+          "With former World No. 1 Kidambi Srikanth during the 13th South Asian Games Gold Medal campaign.",
+      },
+      {
+        src: "/images/hero-slides/03-srikanth-sag-gold.jpg",
+        caption:
+          "South Asian Games Gold Medal podium celebration alongside Kidambi Srikanth in Kathmandu.",
+      },
+      {
+        src: "/images/champions/srikanth-framed-award.jpg",
+        caption:
+          "Sharing a proud milestone moment with Kidambi Srikanth at the training centre.",
+      },
+      {
+        src: "/images/gopichand-academy/05-academy-team-fellowship.jpg",
+        caption:
+          "Alongside Chief Coach Pullela Gopichand, Kidambi Srikanth, and the academy coaching unit.",
+      },
+      {
+        src: "/images/bai/02-asia-team-manila-court.jpg",
+        caption:
+          "Indian Men's Squad courtside with Srikanth at the Badminton Asia Team Championships in Manila.",
+      },
+    ],
     story:
       "I supported Srikanth as part of the Indian National Badminton S&C team during his historic rise to BWF World No. 1—including his four Superseries titles in a single calendar year (2017), Rio 2016 Olympics, and 13th South Asian Games Gold in Kathmandu. We focused on keeping his lower body explosive while helping his joints absorb the demands of attacking singles badminton.",
     focusPoints: [
@@ -454,6 +518,38 @@ export const championsTrained = [
     category: "Olympic Badminton",
     badge: "Asian Games Gold",
     image: "/images/champ-sai-praneeth-satwik.jpg",
+    photos: [
+      {
+        src: "/images/champ-sai-praneeth-satwik.jpg",
+        caption:
+          "With Satwiksairaj Rankireddy and B. Sai Praneeth during international tour preparation.",
+      },
+      {
+        src: "/images/champions/satwik-chirag-all-india-2020.jpg",
+        caption:
+          "With Satwiksairaj Rankireddy and Chirag Shetty holding trophies at the All India Senior Ranking Tournament 2020.",
+      },
+      {
+        src: "/images/hero-slides/06-satwik-chirag.jpg",
+        caption:
+          "Court-side conditioning with Asian Games & World Tour champions Satwik and Chirag.",
+      },
+      {
+        src: "/images/champions/satwik-evening-tour.jpg",
+        caption:
+          "Evening tour recovery walk with Satwiksairaj Rankireddy during international competition.",
+      },
+      {
+        src: "/images/bai/07-national-elite-camp-squad.jpg",
+        caption:
+          "High-performance conditioning camp with Satwik, Chirag, and India's top men's squad.",
+      },
+      {
+        src: "/images/bai/05-asia-championships-bronze-manila.jpg",
+        caption:
+          "Bronze Medal podium celebration with the Indian Men's Team in Manila, Philippines.",
+      },
+    ],
     story:
       "Men's doubles at the World No. 1 level demands blistering reaction speed and heavy smash power. Working with Satwiksairaj Rankireddy and Chirag Shetty across Tokyo 2020 & Paris 2024 Olympic cycles, Asian Games Gold, Thomas Cup Gold, and BWF Super 1000 campaigns, I focused on explosive jump-smash plyometrics, multi-directional court speed, and protecting their shoulders and lower backs.",
     focusPoints: [
@@ -470,6 +566,38 @@ export const championsTrained = [
     category: "Olympic Badminton",
     badge: "World Bronze",
     image: "/images/champ-sai-praneeth-medal.jpg",
+    photos: [
+      {
+        src: "/images/champ-sai-praneeth-medal.jpg",
+        caption:
+          "With 2019 BWF World Championships Bronze medallist and Tokyo Olympian B. Sai Praneeth.",
+      },
+      {
+        src: "/images/champions/sai-praneeth-sameer-verma.jpg",
+        caption:
+          "Courtside with B. Sai Praneeth and Sameer Verma during national team competition.",
+      },
+      {
+        src: "/images/champions/mens-squad-court-group.jpg",
+        caption:
+          "With B. Sai Praneeth, Sameer Verma, and national squad shuttlers after court conditioning.",
+      },
+      {
+        src: "/images/champions/court-recovery-stretch.jpg",
+        caption:
+          "On-court hip-flexor and groin mobility stretching between high-intensity sessions.",
+      },
+      {
+        src: "/images/hero-slides/05-gopichand-camp.jpg",
+        caption:
+          "National elite camp with Chief Coach Pullela Gopichand, Mulyo Handoyo, and India's men's singles unit.",
+      },
+      {
+        src: "/images/bai/06-all-england-open-uk.jpg",
+        caption:
+          "Team India coaching and players group at the All England Open Championships in Birmingham, UK.",
+      },
+    ],
     story:
       "I worked closely with Sai Praneeth on sustained three-game stamina, hip mobility, and joint longevity across demanding World Championship and Tokyo 2020 Olympic qualification seasons—supporting his historic 2019 BWF World Championships Bronze Medal that ended India's 36-year men's singles World medal wait.",
     focusPoints: [
@@ -485,6 +613,18 @@ export const championsTrained = [
     category: "Para-Badminton",
     badge: "WORLD PARA BRONZE",
     image: "/images/champ-vikram-umesh.jpg",
+    photos: [
+      {
+        src: "/images/champ-vikram-umesh.jpg",
+        caption:
+          "With 2019 BWF Para-Badminton World Championships Bronze medallist Vikram Umesh.",
+      },
+      {
+        src: "/images/champions/tulasi-track-podium.jpg",
+        caption:
+          "Para-Badminton national camp track-endurance and medal preparation in Hyderabad.",
+      },
+    ],
     story:
       "Alongside Manasi Joshi, Chief Coach Pullela Gopichand entrusted me with Vikram Umesh's physical preparation ahead of the 2019 BWF Para-Badminton World Championships in Basel. We built custom court-movement stability, core endurance, and recovery protocols tailored to para-badminton demands—helping him bring home a World Championship Bronze medal for India.",
     focusPoints: [
@@ -501,6 +641,23 @@ export const championsTrained = [
     category: "National Junior Contingent",
     badge: "BADMINTON ASIA • CHENGDU",
     image: "/images/intl-chengdu-court-squad.jpg",
+    photos: [
+      {
+        src: "/images/intl-chengdu-court-squad.jpg",
+        caption:
+          "Full Indian U-15 & U-17 contingent courtside at the Badminton Asia Junior Championships in Chengdu, China.",
+      },
+      {
+        src: "/images/bai/04-chengdu-official-banner.jpg",
+        caption:
+          "Official Indian U-15 & U-17 contingent and coaching staff in Chengdu, China.",
+      },
+      {
+        src: "/images/intl-chengdu-camp-squad.jpg",
+        caption:
+          "Indian junior squad in white Team India training kits during pre-tournament conditioning.",
+      },
+    ],
     story:
       "Serving as official S&C Coach for India's U-15 and U-17 national contingent at the Badminton Asia Junior Championships in Chengdu, China was about establishing strong athletic foundations early. Working closely with the national coaching team, I instilled proper movement mechanics, warm-up discipline, and injury-free habits so our young shuttlers could compete fearlessly on the international stage.",
     focusPoints: [
@@ -1431,6 +1588,91 @@ export const galleryItems = [
     image: "/images/governor-raj-bhavan-felicitation.jpg",
     description:
       "Honoured with a ceremonial shawl by the Hon'ble Governor of Telangana at Raj Bhavan alongside World Champions P.V. Sindhu and Manasi Joshi.",
+  },
+  {
+    id: "tulasi-track-medal-gallery",
+    title: "Track Medal Ceremony with Thulasimathi Murugesan",
+    category: "Champions & Podiums",
+    subCategory: "Thulasimathi & Para-Badminton",
+    location: "Hyderabad",
+    year: "2023",
+    image: "/images/champions/tulasi-track-medal-ceremony.jpg",
+    description:
+      "Celebrating track-speed and endurance milestones with Paralympic Silver medallist Thulasimathi Murugesan.",
+  },
+  {
+    id: "manasi-gym-leg-extension-gallery",
+    title: "Targeted Leg-Extension Strength with Manasi Joshi",
+    category: "Champions & Podiums",
+    subCategory: "Manasi Joshi",
+    location: "Pullela Gopichand Academy, Hyderabad",
+    year: "2019",
+    image: "/images/champions/manasi-gym-leg-extension.jpg",
+    description:
+      "Custom single-leg strength and joint-protection work in the gym ahead of Manasi Joshi's World Championship Gold in Basel.",
+  },
+  {
+    id: "satwik-chirag-all-india-2020-gallery",
+    title: "All India Senior Ranking Champions — Satwik & Chirag",
+    category: "Champions & Podiums",
+    subCategory: "Srikanth & Men's Squad",
+    location: "All India Senior Ranking Tournament",
+    year: "2020",
+    image: "/images/champions/satwik-chirag-all-india-2020.jpg",
+    description:
+      "With Satwiksairaj Rankireddy and Chirag Shetty holding their men's doubles championship trophies.",
+  },
+  {
+    id: "ruthvika-tata-open-2017-gallery",
+    title: "Tata Open India International Challenge — Ruthvika Shivani",
+    category: "Champions & Podiums",
+    subCategory: "Sikki Reddy & Lakshya Sen",
+    location: "Mumbai",
+    year: "2017",
+    image: "/images/champions/ruthvika-tata-open-2017.jpg",
+    description:
+      "With international shuttler Ruthvika Shivani after her podium finish at the 2017 Tata Open India International Challenge.",
+  },
+  {
+    id: "ruthvika-medal-court-gallery",
+    title: "Courtside Medal Celebration with Ruthvika Shivani",
+    category: "Champions & Podiums",
+    subCategory: "Sikki Reddy & Lakshya Sen",
+    location: "International Badminton Circuit",
+    year: "2018",
+    image: "/images/champions/ruthvika-medal-court.jpg",
+    description:
+      "Standing courtside with Ruthvika Shivani celebrating her international medal performance.",
+  },
+  {
+    id: "chennai-smashers-white-jackets-gallery",
+    title: "Chennai Smashers Squad — Premier Badminton League",
+    category: "International Tours",
+    location: "Premier Badminton League",
+    year: "2016",
+    image: "/images/gallery/chennai-smashers-white-jackets.jpg",
+    description:
+      "With the Chennai Smashers Premier Badminton League squad in white and gold team jackets courtside.",
+  },
+  {
+    id: "court-recovery-stretch-gallery",
+    title: "On-Court Hip & Mobility Recovery Session",
+    category: "International Tours",
+    location: "Pullela Gopichand Academy, Hyderabad",
+    year: "2019",
+    image: "/images/champions/court-recovery-stretch.jpg",
+    description:
+      "Guided on-court hip-flexor and groin mobility stretching between high-intensity badminton sessions.",
+  },
+  {
+    id: "telugu-press-badminton-squad-gallery",
+    title: "Telugu Press Feature: Indian Badminton Squad Triumph",
+    category: "Press & Track Archives",
+    location: "Andhra Pradesh & Telangana Press",
+    year: "2019",
+    image: "/images/press/telugu-press-badminton-squad.jpg",
+    description:
+      "Telugu daily feature celebrating India's badminton squad comeback victories and team conditioning.",
   },
 ];
 

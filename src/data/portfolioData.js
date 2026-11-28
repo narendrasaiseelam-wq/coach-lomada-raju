@@ -866,7 +866,6 @@ export const careerTimeline = [
     orgLogo: null,
     image: "/images/governor-raj-bhavan-felicitation.jpg",
     imagePosition: "object-center",
-    imagePosition: "object-center",
     description:
       "I was deeply humbled to be felicitated at Raj Bhavan by the Hon'ble Governor of Telangana and at AP Stadium, Vijayawada by the Government of Andhra Pradesh after India's World Championship wins.",
   },

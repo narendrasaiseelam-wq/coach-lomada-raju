@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { AnimatePresence, motion, useScroll, useTransform } from "framer-motion";
-import { Award, Medal, Trophy } from "lucide-react";
-import { careerTimeline, trackRecordMedals } from "../data/portfolioData";
+import { Award } from "lucide-react";
+import { careerTimeline } from "../data/portfolioData";
 
 const FILTERS = ["All", "Coaching Career", "Track Athlete"];
 
@@ -60,37 +60,45 @@ export default function CareerTimeline() {
             </h2>
           </div>
 
-          {/* Filter Pills */}
-          <div className="inline-flex flex-wrap rounded-xl border border-[#1C1C21]/15 bg-[#E2E2E5]/70 p-1.5 self-start lg:self-auto shadow-xs">
-            {FILTERS.map((f) => {
-              const isActive = filter === f;
-              return (
-                <button
-                  key={f}
-                  type="button"
-                  onClick={() => setFilter(f)}
-                  className={`relative px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-[0.14em] transition-colors cursor-pointer ${
-                    isActive ? "text-[#EFEFEF]" : "text-[#4A4A52] hover:text-[#1C1C21]"
-                  }`}
-                >
-                  {isActive && (
-                    <motion.span
-                      layoutId="career-filter-pill"
-                      transition={{ type: "spring", stiffness: 380, damping: 32 }}
-                      className="absolute inset-0 rounded-lg bg-[#1C1C21]"
-                    />
-                  )}
-                  <span className="relative z-10">{f}</span>
-                </button>
-              );
-            })}
+          {/* Filter Pills + Archive Link */}
+          <div className="flex flex-col items-start lg:items-end gap-3 self-start lg:self-auto">
+            <a
+              href="#archive"
+              className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-[#B45309] hover:text-[#1C1C21] transition-colors"
+            >
+              Explore 1999–2013 Athletics Archive &uarr;
+            </a>
+
+            <div className="inline-flex flex-wrap rounded-xl border border-[#1C1C21]/15 bg-[#E2E2E5]/70 p-1.5 shadow-xs">
+              {FILTERS.map((f) => {
+                const isActive = filter === f;
+                return (
+                  <button
+                    key={f}
+                    type="button"
+                    onClick={() => setFilter(f)}
+                    className={`relative px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-[0.14em] transition-colors cursor-pointer ${
+                      isActive ? "text-[#EFEFEF]" : "text-[#4A4A52] hover:text-[#1C1C21]"
+                    }`}
+                  >
+                    {isActive && (
+                      <motion.span
+                        layoutId="career-filter-pill"
+                        transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                        className="absolute inset-0 rounded-lg bg-[#1C1C21]"
+                      />
+                    )}
+                    <span className="relative z-10">{f}</span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
         </motion.div>
 
-        {/* Main 2-Column Content: Timeline (Left) + Track Medals Showcase (Right) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-12 items-start">
-          {/* Left: Vertical Career Timeline with Scroll-Animated Spine */}
-          <div ref={timelineRef} className="lg:col-span-7 relative pl-7 sm:pl-10">
+        {/* Single-Column Vertical Career Timeline with Scroll-Animated Spine */}
+        <div className="pt-12 max-w-5xl">
+          <div ref={timelineRef} className="relative pl-7 sm:pl-10">
             {/* Background Hairline Spine */}
             <div className="absolute left-2 sm:left-3 top-2 bottom-2 w-[2px] bg-[#1C1C21]/12" />
             {/* Animated Championship Crimson Progress Spine */}
@@ -168,7 +176,7 @@ export default function CareerTimeline() {
                       </div>
 
                       {item.image && (
-                        <div className="w-full sm:w-44 h-36 shrink-0 rounded-xl overflow-hidden border border-[#1C1C21]/12 bg-[#EFEFEF]">
+                        <div className="w-full sm:w-52 h-40 shrink-0 rounded-xl overflow-hidden border border-[#1C1C21]/12 bg-[#EFEFEF]">
                           <img
                             src={item.image}
                             alt={`Coach Lomada Raju — ${item.role} (${item.period})`}
@@ -182,90 +190,6 @@ export default function CareerTimeline() {
               </div>
             </AnimatePresence>
           </div>
-
-          {/* Right: Track Record Medal Showcase */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.15 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-            className="lg:col-span-5 rounded-2xl bg-[#1C1C21] text-[#EFEFEF] border border-[#1C1C21] p-6 sm:p-8 shadow-md lg:sticky lg:top-24"
-          >
-            <div className="flex items-center justify-between gap-4 pb-5 border-b border-[#EFEFEF]/15">
-              <div>
-                <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-[#A67C52] mb-1">
-                  Competitive Athletics (1999–2013)
-                </p>
-                <h3 className="font-editorial font-extrabold uppercase text-3xl text-[#EFEFEF] leading-none">
-                  NATIONAL TRACK MEDALS
-                </h3>
-              </div>
-              <Trophy className="w-7 h-7 text-[#A67C52] shrink-0" />
-            </div>
-
-            {/* Record & Medal Totals Callout */}
-            <div className="grid grid-cols-2 border-b border-[#EFEFEF]/15 divide-x divide-[#EFEFEF]/15">
-              <div className="py-4 pr-4">
-                <div className="font-editorial font-extrabold text-3xl sm:text-4xl text-[#EFEFEF] leading-none mb-1">
-                  3:16.43
-                </div>
-                <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#F59E0B]">
-                  National Meet Record
-                </p>
-                <p className="text-[11px] text-[#E2E2E5]/65 mt-0.5">
-                  4&times;400m Relay • Chennai 2006
-                </p>
-              </div>
-              <div className="py-4 pl-4">
-                <div className="font-editorial font-extrabold text-3xl sm:text-4xl text-[#EFEFEF] leading-none mb-1">
-                  98 Medals
-                </div>
-                <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-[#A67C52]">
-                  14 National &bull; 29 State &bull; 55 University &amp; District
-                </p>
-                <p className="text-[11px] text-[#E2E2E5]/65 mt-0.5">
-                  400m &amp; 4&times;400m Relay
-                </p>
-              </div>
-            </div>
-
-            {/* Verified Medal List */}
-            <div className="divide-y divide-[#EFEFEF]/12 pt-2">
-              {trackRecordMedals.map((row) => (
-                <div
-                  key={`${row.year}-${row.event}`}
-                  className="py-4 flex items-start justify-between gap-4"
-                >
-                  <div>
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="text-xs font-bold tracking-[0.14em] text-[#A67C52]">
-                        {row.year}
-                      </span>
-                      <span className="text-[11px] text-[#E2E2E5]/60">&bull;</span>
-                      <span className="text-xs font-semibold text-[#EFEFEF]">
-                        {row.discipline}
-                      </span>
-                    </div>
-                    <p className="text-xs text-[#E2E2E5]/75 leading-snug">
-                      {row.event}
-                    </p>
-                  </div>
-                  <span
-                    className={`inline-flex items-center gap-1 shrink-0 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.14em] border ${
-                      row.medal === "Gold"
-                        ? "border-[#A67C52] text-[#A67C52] bg-[#A67C52]/10"
-                        : row.medal === "Silver"
-                        ? "border-[#E2E2E5]/40 text-[#E2E2E5]"
-                        : "border-[#B45309] text-[#EFEFEF] bg-[#B45309]/30"
-                    }`}
-                  >
-                    <Medal className="w-3 h-3" />
-                    {row.medal}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>

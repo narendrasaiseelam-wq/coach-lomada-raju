@@ -192,8 +192,8 @@ export default function TrackAchievementsTable() {
 
   return (
     <section
-      id="track-achievements"
-      className="bg-[#EFEFEF] border-b border-[#1C1C21]/14 py-16 md:py-24"
+      id="archive"
+      className="bg-[#EFEFEF] border-b border-[#1C1C21]/14 py-16 md:py-24 scroll-mt-32"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 space-y-8">
         {/* Section Header + 2-Slide Switcher */}

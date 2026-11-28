@@ -6,6 +6,7 @@ import ArenaMarquee from "./ArenaMarquee";
 
 const NAV_LINKS = [
   { id: "home", label: "HOME" },
+  { id: "archive", label: "ARCHIVE" },
   { id: "champions", label: "CHAMPIONS" },
   { id: "about", label: "ABOUT" },
   { id: "coaching", label: "COACHING" },
@@ -13,7 +14,6 @@ const NAV_LINKS = [
   { id: "gallery", label: "GALLERY" },
   { id: "podcasts", label: "PODCASTS" },
   { id: "education", label: "EDUCATION" },
-  { id: "contact", label: "CONTACT" },
 ];
 
 export default function Navbar({ onOpenConnect }) {
@@ -103,9 +103,8 @@ export default function Navbar({ onOpenConnect }) {
                 key={link.id}
                 href={`#${link.id}`}
                 onClick={(e) => handleNavClick(e, link.id)}
-                className={`relative py-2 text-xs font-bold tracking-[0.14em] uppercase transition-colors ${
-                  isActive ? "text-[#1C1C21]" : "text-[#4A4A52] hover:text-[#1C1C21]"
-                }`}
+                className={`relative py-2 text-xs font-bold tracking-[0.14em] uppercase transition-colors ${isActive ? "text-[#1C1C21]" : "text-[#4A4A52] hover:text-[#1C1C21]"
+                  }`}
               >
                 {link.label}
                 {isActive && (
@@ -164,11 +163,10 @@ export default function Navbar({ onOpenConnect }) {
                     key={link.id}
                     href={`#${link.id}`}
                     onClick={(e) => handleNavClick(e, link.id)}
-                    className={`py-3.5 px-4 text-base font-medium rounded-xl flex items-center justify-between tracking-wide uppercase transition-colors ${
-                      isActive
+                    className={`py-3.5 px-4 text-base font-medium rounded-xl flex items-center justify-between tracking-wide uppercase transition-colors ${isActive
                         ? "bg-[#B45309]/10 text-[#B45309] font-semibold"
                         : "text-[#1C1C21] hover:bg-[#E2E2E5]/70"
-                    }`}
+                      }`}
                   >
                     <span>{link.label}</span>
                     {isActive && <span className="w-2 h-2 rounded-full bg-[#B45309]" />}

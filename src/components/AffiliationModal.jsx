@@ -161,32 +161,9 @@ export default function AffiliationModal({ activeId, onSelectOrg, onClose }) {
               </p>
             </div>
 
-            {/* 3. My Work & Experience Section */}
-            <div className="space-y-3.5">
-              <div className="flex items-center gap-2.5">
-                <span className="h-[2px] w-6 bg-[#B45309]" />
-                <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-[#B45309]">
-                  My Work &amp; Experience
-                </h3>
-              </div>
-
-              <p className="text-sm sm:text-base text-[#1C1C21] leading-relaxed">
-                {activeOrg.coachExperience.summary}
-              </p>
-
-              <ul className="space-y-2 text-sm text-[#4A4A52] leading-relaxed pt-1">
-                {activeOrg.coachExperience.bullets.map((bullet, idx) => (
-                  <li key={idx} className="flex items-start gap-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#B45309] shrink-0 mt-2" />
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* 4. Large Photo Viewer & Slide Carousel (hidden if photos is empty) */}
+            {/* 3. Large Photo Viewer & Slide Carousel (hidden if photos is empty) */}
             {photos.length > 0 && currentPhoto && (
-              <div className="space-y-3 pt-2">
+              <div className="space-y-3">
                 <div className="flex items-center justify-between gap-4">
                   <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#4A4A52]">
                     Official Highlights &amp; Moments
@@ -265,6 +242,29 @@ export default function AffiliationModal({ activeId, onSelectOrg, onClose }) {
                 </div>
               </div>
             )}
+
+            {/* 4. My Work & Experience Section */}
+            <div className="space-y-3.5">
+              <div className="flex items-center gap-2.5">
+                <span className="h-[2px] w-6 bg-[#B45309]" />
+                <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-[#B45309]">
+                  My Work &amp; Experience
+                </h3>
+              </div>
+
+              <p className="text-sm sm:text-base text-[#1C1C21] leading-relaxed">
+                {activeOrg.coachExperience.summary}
+              </p>
+
+              <ul className="space-y-2 text-sm text-[#4A4A52] leading-relaxed pt-1">
+                {activeOrg.coachExperience.bullets.map((bullet, idx) => (
+                  <li key={idx} className="flex items-start gap-2.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#B45309] shrink-0 mt-2" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </motion.div>
       </motion.div>

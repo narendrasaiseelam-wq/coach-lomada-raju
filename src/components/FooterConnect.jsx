@@ -42,13 +42,13 @@ function FacebookIcon({ className }) {
 
 const QUICK_LINKS = [
   { id: "home", label: "Home" },
+  { id: "archive", label: "Archive" },
   { id: "champions", label: "Champions" },
   { id: "about", label: "About" },
   { id: "coaching", label: "Coaching" },
   { id: "career", label: "Career" },
   { id: "gallery", label: "Gallery" },
   { id: "education", label: "Education" },
-  { id: "contact", label: "Contact" },
 ];
 
 const ROLE_OPTIONS = [

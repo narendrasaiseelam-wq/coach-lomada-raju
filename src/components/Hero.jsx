@@ -224,15 +224,43 @@ export default function Hero() {
 
             {/* Explicit Professional Experience & Specialisation (Two-Line Block) */}
             <p className="text-sm sm:text-base font-bold text-[#B45309] leading-snug max-w-2xl mb-4 border-l-2 border-[#A67C52] pl-3.5">
-              15+ Years International Strength &amp; Conditioning Coaching Specialist
+              15+ Years International Olympic &amp; Para-Badminton S&amp;C Coach
               <br />
-              Olympic &amp; Para-Badminton | National Cricket | Athletics | Sports Yoga Science
+              Private 1-on-1 Conditioning at Dhwajam Strength &amp; Conditioning Centre, Hyderabad
             </p>
 
             {/* Conversational First-Person Intro */}
-            <p className="text-sm sm:text-base text-[#4A4A52] leading-relaxed max-w-2xl mb-8">
+            <p className="text-sm sm:text-base text-[#4A4A52] leading-relaxed max-w-2xl mb-5">
               {coachProfile.personalIntro}
             </p>
+
+            {/* 3-Audience Selector Strip */}
+            <div className="flex flex-wrap gap-2 mb-7">
+              <button
+                type="button"
+                onClick={() => scrollToSection("champions")}
+                className="inline-flex items-center gap-1.5 rounded-full border border-[#1C1C21]/15 bg-white/85 hover:bg-[#1C1C21] hover:text-[#EFEFEF] hover:border-[#1C1C21] text-[#1C1C21] px-3.5 py-2 text-xs font-semibold transition-colors cursor-pointer shadow-2xs"
+              >
+                <span aria-hidden="true">🏅</span>
+                <span>Competitive &amp; Olympic Athletes</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => scrollToSection("personal-coaching")}
+                className="inline-flex items-center gap-1.5 rounded-full border border-[#1C1C21]/15 bg-white/85 hover:bg-[#1C1C21] hover:text-[#EFEFEF] hover:border-[#1C1C21] text-[#1C1C21] px-3.5 py-2 text-xs font-semibold transition-colors cursor-pointer shadow-2xs"
+              >
+                <span aria-hidden="true">🛡️</span>
+                <span>Ministers, IAS/IPS &amp; Celebrities</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => scrollToSection("personal-coaching")}
+                className="inline-flex items-center gap-1.5 rounded-full border border-[#1C1C21]/15 bg-white/85 hover:bg-[#1C1C21] hover:text-[#EFEFEF] hover:border-[#1C1C21] text-[#1C1C21] px-3.5 py-2 text-xs font-semibold transition-colors cursor-pointer shadow-2xs"
+              >
+                <span aria-hidden="true">🌱</span>
+                <span>Students, Parents &amp; Pain-Free Living</span>
+              </button>
+            </div>
 
             {/* Exact Required CTA Buttons */}
             <div className="flex flex-wrap items-center gap-4 mb-10">

@@ -16,9 +16,15 @@ import ConnectModal from "./components/ConnectModal";
 export default function App() {
   const [connectOpen, setConnectOpen] = useState(false);
   const [connectAudience, setConnectAudience] = useState("athlete");
+  const [connectGoalNote, setConnectGoalNote] = useState("");
 
-  const handleOpenConnect = (audienceId = "athlete") => {
+  const handleOpenConnect = (audienceId = "athlete", profileTitle = "") => {
     setConnectAudience(audienceId);
+    setConnectGoalNote(
+      profileTitle
+        ? `Confidential 1-on-1 Strength, Mobility & Posture Assessment — ${profileTitle}`
+        : ""
+    );
     setConnectOpen(true);
   };
 
@@ -45,6 +51,7 @@ export default function App() {
         isOpen={connectOpen}
         onClose={() => setConnectOpen(false)}
         initialAudienceId={connectAudience}
+        initialGoalNote={connectGoalNote}
       />
     </div>
   );

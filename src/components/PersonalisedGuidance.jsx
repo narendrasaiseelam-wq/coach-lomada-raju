@@ -25,8 +25,8 @@ export default function PersonalisedGuidance({ onOpenConnect }) {
 
   return (
     <section
-      id="personalised-guidance"
-      className="bg-[#F5F4F0] border-b border-[#1C1C21]/14 py-16 md:py-24"
+      id="personal-coaching"
+      className="bg-[#F5F4F0] border-b border-[#1C1C21]/14 py-16 md:py-24 scroll-mt-32"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 space-y-12">
         {/* 1. Header & First-Person Philosophy */}
@@ -135,7 +135,7 @@ export default function PersonalisedGuidance({ onOpenConnect }) {
                   <div className="pt-4 border-t border-[#1C1C21]/10">
                     <button
                       type="button"
-                      onClick={() => onOpenConnect("general")}
+                      onClick={() => onOpenConnect("personal", audience.title)}
                       className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-[0.14em] text-[#B45309] hover:text-[#92400E] transition-colors cursor-pointer"
                     >
                       <span>Book Personal Assessment</span>

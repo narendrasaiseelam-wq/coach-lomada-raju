@@ -399,6 +399,39 @@ export default function AboutJourney() {
                 </li>
               </ul>
 
+              {/* What Happens in Your First Visit — 3-Step Micro-Bar */}
+              <div className="py-4 border-b border-[#EFEFEF]/12">
+                <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-amber-400/90 mb-3">
+                  What Happens in Your First Visit
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                  <div className="rounded-xl bg-[#EFEFEF]/[0.05] border border-[#EFEFEF]/10 p-3">
+                    <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-white mb-1">
+                      01. Movement, Posture &amp; Injury History
+                    </p>
+                    <p className="text-[11px] text-[#E2E2E5]/75 leading-relaxed">
+                      Listen to your daily routine, stress load, or sport goals before prescribing any exercise.
+                    </p>
+                  </div>
+                  <div className="rounded-xl bg-[#EFEFEF]/[0.05] border border-[#EFEFEF]/10 p-3">
+                    <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-white mb-1">
+                      02. Root-Cause Joint &amp; Mobility Screen
+                    </p>
+                    <p className="text-[11px] text-[#E2E2E5]/75 leading-relaxed">
+                      Identify the exact biomechanical restriction behind back pain, stiffness, or performance plateaus.
+                    </p>
+                  </div>
+                  <div className="rounded-xl bg-[#EFEFEF]/[0.05] border border-[#EFEFEF]/10 p-3">
+                    <p className="text-[11px] font-bold uppercase tracking-[0.12em] text-white mb-1">
+                      03. Custom Sports-Yoga &amp; S&amp;C Blueprint
+                    </p>
+                    <p className="text-[11px] text-[#E2E2E5]/75 leading-relaxed">
+                      A safe, progressive plan built strictly around your schedule and body.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               <div className="pt-5 flex flex-col sm:flex-row sm:items-center justify-between gap-5">
                 <div className="space-y-2.5 text-xs sm:text-sm text-[#E2E2E5]/85">
                   <div className="flex items-start gap-2.5 leading-relaxed">

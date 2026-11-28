@@ -17,8 +17,14 @@ const ENQUIRY_OPTIONS = [
       "I would like to discuss strength & conditioning consultation for a sports team, franchise, or academy.",
   },
   {
+    id: "personal",
+    label: "Personal / VIP / 1-on-1 Assessment",
+    prompt:
+      "I would like to book a confidential 1-on-1 Strength, Mobility & Posture Assessment.",
+  },
+  {
     id: "media",
-    label: "Media / Event / Speaking Invitation",
+    label: "Media / Event / Speaking Request",
     prompt:
       "I am reaching out regarding a media feature, sports event, or speaking invitation.",
   },
@@ -29,15 +35,22 @@ const ENQUIRY_OPTIONS = [
   },
 ];
 
-export default function ConnectModal({ isOpen, onClose, initialAudienceId = "athlete" }) {
+export default function ConnectModal({
+  isOpen,
+  onClose,
+  initialAudienceId = "athlete",
+  initialGoalNote = "",
+}) {
   const [name, setName] = useState("");
   const [userSelection, setUserSelection] = useState(null);
-  const [goalNote, setGoalNote] = useState("");
+  const [userGoalNote, setUserGoalNote] = useState(null);
 
   const selectedOptionId = userSelection ?? initialAudienceId;
+  const goalNote = userGoalNote ?? initialGoalNote;
 
   const handleClose = () => {
     setUserSelection(null);
+    setUserGoalNote(null);
     onClose();
   };
 
@@ -45,6 +58,7 @@ export default function ConnectModal({ isOpen, onClose, initialAudienceId = "ath
     const handleKeyDown = (e) => {
       if (e.key === "Escape") {
         setUserSelection(null);
+        setUserGoalNote(null);
         onClose();
       }
     };
@@ -188,7 +202,7 @@ export default function ConnectModal({ isOpen, onClose, initialAudienceId = "ath
                   id="visitor-goal"
                   type="text"
                   value={goalNote}
-                  onChange={(e) => setGoalNote(e.target.value)}
+                  onChange={(e) => setUserGoalNote(e.target.value)}
                   placeholder="e.g., Badminton conditioning, tournament prep, or speaking event"
                   className="w-full rounded-xl bg-[#E2E2E5]/70 border border-[#1C1C21]/20 focus:border-[#B45309] focus:outline-none px-4 py-3 text-sm text-[#1C1C21] placeholder:text-[#4A4A52]/60"
                 />

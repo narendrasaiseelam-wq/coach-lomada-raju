@@ -1121,12 +1121,12 @@ export const galleryItems = [
       "With World Bronze medallist B. Sai Praneeth and Asian Games Gold medallist Satwiksairaj Rankireddy at camp. I loved balancing Satwik's explosive smash power with Sai's rally endurance.",
   },
 
-  // --- Champions & Podiums: Sikki Reddy & Lakshya Sen ---
+  // --- Champions & Podiums: Sikki Reddy & Ruthvika Shivani ---
   {
     id: "champ-sikki-reddy-group",
     title: "With N. Sikki Reddy & Women's Doubles Squad",
     category: "Champions & Podiums",
-    subCategory: "Sikki Reddy & Lakshya Sen",
+    subCategory: "Sikki Reddy & Ruthvika Shivani",
     location: "Hyderabad National Camp",
     year: "2020",
     image: "/images/champ-sikki-reddy-group.jpg",
@@ -1134,15 +1134,15 @@ export const galleryItems = [
       "A group conditioning session with Arjuna Awardee N. Sikki Reddy and our women's doubles squad. Quick reaction speed and shoulder care were part of our daily routine.",
   },
   {
-    id: "champ-lakshya-sen-pbl",
-    title: "With Lakshya Sen on the League & National Circuit",
+    id: "champ-pbl-international-squad",
+    title: "With International Stars on the Premier Badminton League Circuit",
     category: "Champions & Podiums",
-    subCategory: "Sikki Reddy & Lakshya Sen",
-    location: "National & League Circuit",
+    subCategory: "Sikki Reddy & Ruthvika Shivani",
+    location: "Premier Badminton League",
     year: "2022",
-    image: "/images/champ-lakshya-sen-pbl.jpg",
+    image: "/images/champ-pbl-international-squad.jpg",
     description:
-      "Alongside Commonwealth Games Gold medallist Lakshya Sen during squad preparation. His work ethic in high-tempo footwork and recovery drills has always stood out.",
+      "Alongside world-class international and Indian shuttlers during Premier Badminton League (PBL) tournament travel, focusing on rapid match-to-match recovery and court readiness.",
   },
 
   // --- International Tours ---
@@ -1573,7 +1573,7 @@ export const galleryItems = [
     id: "ruthvika-tata-open-2017-gallery",
     title: "Tata Open India International Challenge — Ruthvika Shivani",
     category: "Champions & Podiums",
-    subCategory: "Sikki Reddy & Lakshya Sen",
+    subCategory: "Sikki Reddy & Ruthvika Shivani",
     location: "Mumbai",
     year: "2017",
     image: "/images/champions/ruthvika-tata-open-2017.jpg",
@@ -1584,7 +1584,7 @@ export const galleryItems = [
     id: "ruthvika-medal-court-gallery",
     title: "Courtside Medal Celebration with Ruthvika Shivani",
     category: "Champions & Podiums",
-    subCategory: "Sikki Reddy & Lakshya Sen",
+    subCategory: "Sikki Reddy & Ruthvika Shivani",
     location: "International Badminton Circuit",
     year: "2018",
     image: "/images/champions/ruthvika-medal-court.jpg",

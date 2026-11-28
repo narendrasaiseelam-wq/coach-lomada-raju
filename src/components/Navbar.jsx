@@ -164,8 +164,8 @@ export default function Navbar({ onOpenConnect }) {
                     href={`#${link.id}`}
                     onClick={(e) => handleNavClick(e, link.id)}
                     className={`py-3.5 px-4 text-base font-medium rounded-xl flex items-center justify-between tracking-wide uppercase transition-colors ${isActive
-                        ? "bg-[#B45309]/10 text-[#B45309] font-semibold"
-                        : "text-[#1C1C21] hover:bg-[#E2E2E5]/70"
+                      ? "bg-[#B45309]/10 text-[#B45309] font-semibold"
+                      : "text-[#1C1C21] hover:bg-[#E2E2E5]/70"
                       }`}
                   >
                     <span>{link.label}</span>

@@ -27,7 +27,7 @@ const CHAMPION_SUBCATEGORIES = [
   "Manasi Joshi",
   "Thulasimathi & Para-Badminton",
   "Srikanth & Men's Squad",
-  "Sikki Reddy & Lakshya Sen",
+  "Sikki Reddy & Ruthvika Shivani",
 ];
 
 export default function GalleryLightbox() {

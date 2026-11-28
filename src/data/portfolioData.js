@@ -558,29 +558,9 @@ export const championsTrained = [
           "With 2019 BWF World Championships Bronze medallist and Tokyo Olympian B. Sai Praneeth.",
       },
       {
-        src: "/images/champions/sai-praneeth-sameer-verma.jpg",
-        caption:
-          "Courtside with B. Sai Praneeth and Sameer Verma during national team competition.",
-      },
-      {
-        src: "/images/champions/mens-squad-court-group.jpg",
-        caption:
-          "With B. Sai Praneeth, Sameer Verma, and national squad shuttlers after court conditioning.",
-      },
-      {
         src: "/images/champions/court-recovery-stretch.jpg",
         caption:
           "On-court hip-flexor and groin mobility stretching between high-intensity sessions.",
-      },
-      {
-        src: "/images/hero-slides/05-gopichand-camp.jpg",
-        caption:
-          "National elite camp with Chief Coach Pullela Gopichand, Mulyo Handoyo, and India's men's singles unit.",
-      },
-      {
-        src: "/images/bai/06-all-england-open-uk.jpg",
-        caption:
-          "Team India coaching and players group at the All England Open Championships in Birmingham, UK.",
       },
     ],
     story:

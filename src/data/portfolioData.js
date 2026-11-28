@@ -392,14 +392,9 @@ export const championsTrained = [
       "BWF Para-Badminton World Champion & Gold Medallist (Basel 2019, Singles SL3) • Telangana Raj Bhavan Felicitation",
     category: "Para-Badminton",
     badge: "World Champion",
-    image: "/images/governor-raj-bhavan-felicitation.jpg",
-    secondaryImage: "/images/champ-manasi-joshi-trophy.jpg",
+    image: "/images/champ-manasi-joshi-trophy.jpg",
+    secondaryImage: "/images/champ-manasi-joshi-rehab.jpg",
     photos: [
-      {
-        src: "/images/governor-raj-bhavan-felicitation.jpg",
-        caption:
-          "Raj Bhavan felicitation by the Hon'ble Governor of Telangana celebrating Manasi Joshi's 2019 BWF World Championships Gold Medal.",
-      },
       {
         src: "/images/champ-manasi-joshi-trophy.jpg",
         caption:
@@ -479,12 +474,7 @@ export const championsTrained = [
       {
         src: "/images/champ-srikanth-sag-gold.jpg",
         caption:
-          "With former World No. 1 Kidambi Srikanth during the 13th South Asian Games Gold Medal campaign.",
-      },
-      {
-        src: "/images/hero-slides/03-srikanth-sag-gold.jpg",
-        caption:
-          "South Asian Games Gold Medal podium celebration alongside Kidambi Srikanth in Kathmandu.",
+          "South Asian Games Gold Medal podium celebration alongside former World No. 1 Kidambi Srikanth in Kathmandu.",
       },
       {
         src: "/images/champions/srikanth-framed-award.jpg",
@@ -522,17 +512,12 @@ export const championsTrained = [
       {
         src: "/images/champ-sai-praneeth-satwik.jpg",
         caption:
-          "With Satwiksairaj Rankireddy and B. Sai Praneeth during international tour preparation.",
+          "Court-side conditioning with Asian Games & World Tour champions Satwiksairaj Rankireddy and Chirag Shetty.",
       },
       {
         src: "/images/champions/satwik-chirag-all-india-2020.jpg",
         caption:
           "With Satwiksairaj Rankireddy and Chirag Shetty holding trophies at the All India Senior Ranking Tournament 2020.",
-      },
-      {
-        src: "/images/hero-slides/06-satwik-chirag.jpg",
-        caption:
-          "Court-side conditioning with Asian Games & World Tour champions Satwik and Chirag.",
       },
       {
         src: "/images/champions/satwik-evening-tour.jpg",
@@ -613,18 +598,6 @@ export const championsTrained = [
     category: "Para-Badminton",
     badge: "WORLD PARA BRONZE",
     image: "/images/champ-vikram-umesh.jpg",
-    photos: [
-      {
-        src: "/images/champ-vikram-umesh.jpg",
-        caption:
-          "With 2019 BWF Para-Badminton World Championships Bronze medallist Vikram Umesh.",
-      },
-      {
-        src: "/images/champions/tulasi-track-podium.jpg",
-        caption:
-          "Para-Badminton national camp track-endurance and medal preparation in Hyderabad.",
-      },
-    ],
     story:
       "Alongside Manasi Joshi, Chief Coach Pullela Gopichand entrusted me with Vikram Umesh's physical preparation ahead of the 2019 BWF Para-Badminton World Championships in Basel. We built custom court-movement stability, core endurance, and recovery protocols tailored to para-badminton demands—helping him bring home a World Championship Bronze medal for India.",
     focusPoints: [
@@ -651,11 +624,6 @@ export const championsTrained = [
         src: "/images/bai/04-chengdu-official-banner.jpg",
         caption:
           "Official Indian U-15 & U-17 contingent and coaching staff in Chengdu, China.",
-      },
-      {
-        src: "/images/intl-chengdu-camp-squad.jpg",
-        caption:
-          "Indian junior squad in white Team India training kits during pre-tournament conditioning.",
       },
     ],
     story:

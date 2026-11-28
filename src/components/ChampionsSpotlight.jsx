@@ -274,7 +274,7 @@ export default function ChampionsSpotlight() {
               >
                 {/* Champion Photograph / Multi-Photo Slideshow */}
                 <div className="md:col-span-5">
-                  <ChampionVisual champion={activeChampion} />
+                  <ChampionVisual key={activeChampion.id} champion={activeChampion} />
                 </div>
 
                 {/* Champion Story & Complete Achievement Claims */}
@@ -383,7 +383,7 @@ export default function ChampionsSpotlight() {
 
               {/* Scrollable Content */}
               <div className="p-5 overflow-y-auto space-y-5">
-                <ChampionVisual champion={activeChampion} compact />
+                <ChampionVisual key={activeChampion.id} champion={activeChampion} compact />
 
                 <div className="space-y-3">
                   <div className="flex flex-wrap items-center gap-2">
